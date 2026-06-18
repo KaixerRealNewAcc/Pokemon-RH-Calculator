@@ -200,15 +200,17 @@ $(".mode").change(function () {
 	params.set('mode', $(this).attr("id"));
 	var mode = params.get('mode');
 	if (mode === 'randoms') {
-		window.location.replace('randoms.html?' + params);
-	} else if (mode === 'champions') {
-		window.location.replace('champions.html?' + params);
+		window.location.replace('randoms' + linkExtension + '?' + params);
 	} else if (mode === 'one-vs-one') {
-		window.location.replace('index.html?' + params);
+		window.location.replace('index' + linkExtension + '?' + params);
+	} else if (mode === 'normal') {
+		window.location.replace('normal' + linkExtension + '?' + params);
+	} else if (mode === 'hardcore') {
+		window.location.replace('hardcore' + linkExtension + '?' + params);
 	} else if (mode === "oms") {
-		window.location.replace('oms.html');
+		window.location.replace('oms' + linkExtension);
 	} else {
-		window.location.replace('honkalculate.html?' + params);
+		window.location.replace('honkalculate' + linkExtension + '?' + params);
 	}
 });
 
@@ -220,28 +222,42 @@ $(document).ready(function () {
 	var params = new URLSearchParams(window.location.search);
 	var m = params.get('mode');
 	if (m) {
-		if (m !== 'one-vs-one' && m !== 'randoms' && m !== 'champions') {
-			window.location.replace('honkalculate.html?' + params);
+		if (m !== 'one-vs-one' && m !== 'randoms' && m !== 'normal' && m !== 'hardcore') {
+			window.location.replace('honkalculate' + linkExtension + '?' + params);
 		} else {
-			if ($('#randoms').prop('checked')) {
+			if ($('randoms').prop('checked')) {
 				if (m === 'one-vs-one') {
-					window.location.replace('index.html?' + params);
+					window.location.replace('index' + linkExtension + '?' + params);
+				} else if (m === 'normal') {
+					window.location.replace('normal' + linkExtension + '?' + params);
+				} else if (m === 'hardcore') {
+					window.location.replace('hardcore' + linkExtension + '?' + params);
+				}
+			} else if ($('normal').prop('checked')) {
+				if (m === 'one-vs-one') {
+					window.location.replace('index' + linkExtension + '?' + params);
+				} else if (m === 'randoms') {
+					window.location.replace('randoms' + linkExtension + '?' + params);
+				} else if (m === 'hardcore') {
+					window.location.replace('hardcore' + linkExtension + '?' + params);
+				}
+			} else if ($('hardcore').prop('checked')) {
+				if (m === 'one-vs-one') {
+					window.location.replace('index' + linkExtension + '?' + params);
+				} else if (m === 'randoms') {
+					window.location.replace('randoms' + linkExtension + '?' + params);
+				} else if (m === 'normal') {
+					window.location.replace('normal' + linkExtension + '?' + params);
 				}
 			} else {
 				if (m === 'randoms') {
-					window.location.replace('randoms.html?' + params);
+					window.location.replace('randoms' + linkExtension + '?' + params);
+				} else if (m === 'normal') {
+					window.location.replace('normal' + linkExtension + '?' + params);
+				} else if (m === 'hardcore') {
+					window.location.replace('hardcore' + linkExtension + '?' + params);
 				}
 			}
-		}
-	}
-
-	var importParam = params.get('import');
-	if (importParam) {
-		try {
-			var decodedImport = atob(importParam); // Decode base64
-			$('.import-team-text').val(decodedImport); // Set value to text area
-		} catch (e) {
-			console.error('Failed to decode Import parameter:', e);
 		}
 	}
 

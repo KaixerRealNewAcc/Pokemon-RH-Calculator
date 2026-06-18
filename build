@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 'use strict';
 
 const path = require('path');
@@ -7,17 +6,18 @@ const crypto = require('crypto');
 
 const rootDir = '.';
 
+const VERSION = "Beta 1.0";
+const CHANGELOG = `
+
+If you're new here, make sure to check out the Settings tab and set your selected trainer gender and starter Pokémon, so the calculator can navigate to the correct rival sets. Good luck!`
+.trim().replaceAll("\n", "\\n").replaceAll('"', "'");
+
 // update version
 function makeCachebuster(template, output) {
 	let indexContents = fs.readFileSync(path.resolve(rootDir, template), {encoding: 'utf8'});
-	let templateContents = fs.readFileSync(path.resolve(rootDir, 'src/shared.template.html'), {encoding: 'utf8'});
 
 	// add hashes to js and css files
 	process.stdout.write("Updating hashes... ");
-	indexContents = /<!-- START WRAPPER -->[\s\S]*?<!-- END WRAPPER -->/.exec(indexContents)[0];
-	indexContents = templateContents.replace('[content]', indexContents);
-	fs.writeFileSync(path.resolve(rootDir, template), indexContents);
-
 	indexContents = indexContents.replace(/(src|href)="\.\/(.*?)\?[a-z0-9]*?"/g, function (a, b, c) {
 		let hash = Math.random(); // just in case creating the hash fails
 		try {
@@ -27,7 +27,9 @@ function makeCachebuster(template, output) {
 		} catch (e) {}
 
 		return b + '="./' + c + '?' + hash + '"';
-	});
+	}).replace(/\.template\.html/g, '.html')
+	  .replace("{VERSION}", VERSION)
+	  .replace("{CHANGELOG}", CHANGELOG)
 	process.stdout.write("Writing new `" + output + "` file... ");
 	fs.writeFileSync(path.resolve(rootDir, output), indexContents);
 	console.log("DONE");
@@ -48,12 +50,7 @@ function cpdir(src, dest) {
 			var symlink = fs.readlinkSync(path.join(src, file));
 			fs.symlinkSync(symlink, path.join(dest, file));
 		} else if (file.endsWith('.js')) {
-			let contents = fs.readFileSync(path.join(src, file), 'utf8').replace(/^exports.* = void 0;$/gm, '');
-			// Minify the sets so we save bandwith
-			if (src === 'src/js/data/sets') {
-				const brkOpenIdx = contents.indexOf('{');
-				contents = `${contents.slice(0, brkOpenIdx)}${JSON.stringify(JSON.parse(contents.slice(brkOpenIdx, -2)))};`
-			}
+			const contents = fs.readFileSync(path.join(src, file), 'utf8').replace(/^exports.* = void 0;$/gm, '');
 			fs.writeFileSync(path.join(dest, file), contents);
 		} else {
 			fs.copyFileSync(path.join(src, file),path.join(dest, file));
@@ -67,8 +64,6 @@ if (process.argv[2] !== 'view') {
 
 cpdir('src', 'dist');
 cpdir('calc/dist', 'dist/calc');
-makeCachebuster('src/champions.html', 'dist/champions.html');
-makeCachebuster('src/honkalculate.html', 'dist/honkalculate.html');
 makeCachebuster('src/index.html', 'dist/index.html');
-makeCachebuster('src/randoms.html', 'dist/randoms.html');
-makeCachebuster('src/oms.html', 'dist/oms.html');
+makeCachebuster('dist/hardcore.html', 'dist/hardcore.html');
+
