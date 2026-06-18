@@ -522,9 +522,13 @@ const ZA_MEGA_STONES: {[item: string]: {[megaEvolves: string]: string}} = {
   Zeraorite: {Zeraora: 'Zeraora-Mega'},
   Zygardite: {'Zygarde-Complete': 'Zygarde-Mega'},
 };
+const RR_MEGA_STONES: {[item: string]: {[megaEvolves: string]: string}} = {
+
+};
 const SV = SS.concat(
   [
     ...Object.keys(ZA_MEGA_STONES),
+    ...Object.keys(RR_MEGA_STONES),
     'Adamant Crystal',
     'Auspicious Armor',
     'Ability Shield',
@@ -748,7 +752,7 @@ const BERRIES: {[berry: string]: {t: I.TypeName; p: number}} = {
   'Yache Berry': {t: 'Ice', p: 80},
 };
 
-export const MEGA_STONES = Object.assign({}, GEN_6_MEGA_STONES, ZA_MEGA_STONES);
+export const MEGA_STONES = Object.assign({}, GEN_6_MEGA_STONES, ZA_MEGA_STONES, RR_MEGA_STONES);
 
 export const ITEMS = [CHAMPIONS, RBY, GSC, ADV, DPP, BW, XY, SM, SS, SV];
 
