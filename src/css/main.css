@@ -168,8 +168,8 @@ html, body {
 
 .wrapper {
     padding: 0 1em;
-    max-width: 1285px;
-    margin: 0 auto;
+    max-width: 1250px;
+    margin: 30px auto 0 auto;
 }
 .credits {
     clear: both;

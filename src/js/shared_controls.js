@@ -629,7 +629,12 @@ $(".set-selector").change(function () {
 			var pok_name = next_poks[i].split("]")[1].split(" (")[0]
 			if (pok_name == "Zygarde-10%") {
 				pok_name = "Zygarde-10%25"
-			}//this ruined my day
+			}
+			if (pok_name.includes("Vivillon")) {
+				pok_name = "Vivillon";
+			}
+			
+			//this ruined my day
 			var pok = `<img class="trainer-pok right-side" src="https://raw.githubusercontent.com/May8th1995/sprites/master/${pok_name}.png" data-id="${CURRENT_TRAINER_POKS[i].split("]")[1]}" title="${next_poks[i]}, ${next_poks[i]} BP">`
 			trpok_html += pok
 		}
@@ -879,6 +884,17 @@ function setSelectValueIfValid(select, value, fallback) {
 	select.val(!value ? fallback : select.children("option[value='" + value + "']").length ? value : fallback);
 }
 
+// and the award for worst named function goes to...
+function setSetName(setName, arrayOfNames) {
+	for (var trainerName of arrayOfNames) {
+		if (setName.includes(trainerName)) {
+			return trainerName;
+		}
+	}
+	return setName;
+}
+
+
 $(".teraToggle").change(function () {
 	var pokeObj = $(this).closest(".poke-info");
 	stellarButtonsVisibility(pokeObj, pokeObj.find(".teraType").val() === "Stellar" && this.checked);
@@ -982,6 +998,39 @@ $(".forme").change(function () {
 		container.find(".item").val($(this).val().split("-")[1] + " Mask").keyup();
 	} else {
 		container.find(".item").prop("disabled", false);
+	}
+});
+
+$("#p2 .forme").change(function(e) {
+	if (!e.originalEvent) { return; }
+	var altForme = pokedex[$(this).val()],
+	container = $(this).closest(".info-group").siblings(),
+	fullSetName = container.find(".select2-chosen").first().text(),
+	pokemonName = fullSetName.substring(0, fullSetName.indexOf(" (")),
+	setName = fullSetName.substring(fullSetName.indexOf("(") + 1, fullSetName.lastIndexOf(")"));
+
+	var isRandoms = $("#randoms").prop("checked");
+	var pokemonSets = isRandoms ? randdex[pokemonName] : setdex[pokemonName];
+	var chosenSet = pokemonSets && pokemonSets[setName];
+
+	// console.log(setName); // DEBUG
+
+	// overwrite ability if a mega has forme switched
+	if (pokemonName.indexOf("-Mega") !== -1) {
+		if (setName.includes("Trainer Rival")) {
+			setName = "Pokemon Trainer May";
+		}
+
+		setName = setSetName(setName, []);
+		
+		// console.log(MEGA_BASE_ABILITIES[setName]); // DEBUG
+
+		// if forme is != mega
+		if ($(this).val().indexOf("-Mega") === -1) {
+			container.find(".ability").val(MEGA_BASE_ABILITIES[setName][pokemonName.split("-Mega")[0]]);
+		} else { // if mega form use mega ability
+			container.find(".ability").val(chosenSet.ability);
+		}
 	}
 });
 
@@ -1474,7 +1523,7 @@ var RANDDEX = [
 	GEN8RANDSETS,
 	GEN9RANDSETS,
 ];
-var gen, genWasChanged, notation, pokedex, setdex, randdex, typeChart, moves, abilities, items, calcHP, calcStat, GENERATION;
+var gen, genWasChanged, notation, pokedex, setdex, randdex,  typeChart, moves, abilities, items, calcHP, calcStat, GENERATION;
 
 TR_NAMES = get_trainer_names()
 
@@ -1819,6 +1868,51 @@ function loadDefaultLists() {
 					}
 				}
 			}
+			if (query.term && !$("#randoms").prop("checked")) {
+                var tokens = query.term.toUpperCase().split(" ");
+                var bySetBest = {};
+                var seenBestId = {};
+                for (var r = 0; r < results.length; r++) {
+                    var opt = results[r];
+                    var setNameUpper = opt.set ? opt.set.toUpperCase() : "";
+                    if (!opt.set || setNameUpper === "BLANK SET") continue; // don't dedupe headers or Blank Set
+                    var matchesSet = tokens.every(function (term) {
+                        return setNameUpper.indexOf(term) === 0 || setNameUpper.indexOf("-" + term) >= 0 || setNameUpper.indexOf(" " + term) >= 0;
+                    });
+                    if (!matchesSet) continue;
+                    var idx = Infinity;
+                    try {
+                        if (window.setdex && setdex[opt.pokemon] && setdex[opt.pokemon][opt.set] && typeof setdex[opt.pokemon][opt.set].index !== 'undefined') {
+                            idx = setdex[opt.pokemon][opt.set].index;
+                        }
+                    } catch (e) { /* ignore lookup issues */ }
+                    if (!(setNameUpper in bySetBest) || idx < bySetBest[setNameUpper].idx) {
+                        bySetBest[setNameUpper] = { idx: idx, option: opt };
+                    }
+                }
+                if (Object.keys(bySetBest).length) {
+                    var filtered = [];
+                    var chosenIds = {};
+                    for (var r2 = 0; r2 < results.length; r2++) {
+                        var opt2 = results[r2];
+                        if (opt2.set) {
+                            var setUpper = opt2.set.toUpperCase();
+                            if (bySetBest[setUpper]) {
+                                var bestOpt = bySetBest[setUpper].option;
+                                if (!chosenIds[setUpper]) {
+                                    filtered.push(bestOpt);
+                                    chosenIds[setUpper] = true;
+                                }
+                                // skip additional entries for this set
+                                continue;
+                            }
+                        }
+                        // keep non-set matches and headers as-is
+                        filtered.push(opt2);
+                    }
+                    results = filtered;
+                }
+            }
 			query.callback({
 				results: results.slice((query.page - 1) * pageSize, query.page * pageSize),
 				more: results.length >= query.page * pageSize
@@ -1878,10 +1972,12 @@ function get_trainer_names() {
 
 	for (const [pok_name, poks] of Object.entries(all_poks)) {
 		var pok_tr_names = Object.keys(poks)
+		var monName = pok_name;
+		if (monName.includes("Vivillon")) { monName = "Vivillon"; }
 		for (i in pok_tr_names) {
 			var index = (poks[pok_tr_names[i]]["index"])
 			var trainer_name = pok_tr_names[i]
-			trainer_names.push(`[${index}]${pok_name} (${trainer_name})`)
+			trainer_names.push(`[${index}]${monName} (${trainer_name})`)
 		}
 	}
 	return trainer_names
@@ -1988,7 +2084,7 @@ function previousTrainer() {
 }
 
 function resetTrainer() {
-	if (confirm(`Are you sure you want to reset? This will clear all imported sets and change your current trainer back to Younger Calvin. This cannot be undone.`)){
+	if (confirm(`Are you sure you want to reset? This will clear all imported sets and change your current trainer back to Rival Oaks Lab [Squirtle]. This cannot be undone.`)){
 		selectTrainer(1);
 		localStorage.removeItem("customsets");
 		$(allPokemon("#importedSetsOptions")).hide();
@@ -2283,6 +2379,10 @@ $(document).ready(function () {
 
 		$(".set-selector").val(getFirstValidSetOption().id);
 		$(".set-selector").change();
+
+		$("#previous-trainer").click(previousTrainer);
+		$("#next-trainer").click(nextTrainer);
+		$("#reset-trainer").click(resetTrainer)
 	}
 	$("#gen" + g).prop("checked", true);
 	$("#gen" + g).change();
@@ -2297,7 +2397,7 @@ $(document).ready(function () {
 	$(".terrain-trigger").bind("change keyup", getTerrainEffects);
 	$("#previous-trainer").click(previousTrainer);
 	$("#next-trainer").click(nextTrainer);
-	$("#reset-trainer").click(resetTrainer);
+	$("#reset-trainer").click(resetTrainer)
 	$('#show-cc').click(showColorCodes);
 	$('#hide-cc').click(hideColorCodes);
 	$('#refr-cc').click(refreshColorCode);

@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8" />
     <title>Pok&eacute;mon Radical Red Calculator By Kaixer.</title>
+    <title>For simplicity sake, the calc always assumes you are at the level cap</title>
+    <title>and the calc uses the chronological order for bosses.</title>
     <link type="text/css" rel="stylesheet" href="./js/vendor/select2/select2.css" />
     <link type="text/css" rel="stylesheet" href="./css/main.css?" />
     <link type="text/css" rel="stylesheet" href="./css/settings.css?" />
@@ -38,21 +40,18 @@
 </head>
 
 <body class="dark-theme">
+    <div class="hide" id="popup-container"></div>
 
-<div class="wrapper">
-
-    <div aria-label="Settings" role="region">
-        <legend align="center">
-            Pok&eacute;mon Radical Red Calculator By Kaixer.</legend>
-        <legend align="center">
-            If a pokemon is Highest Lv -x the calc will put the Level of the mon -x the level cap.</legend>
+<div class="wrapper" id="calc-wrapper">
+        <span class="title-text"><legend align="center">Pok&eacute;mon Radical Red Calculator By Kaixer.</legend></span>
+        <span class="title-text"><legend align="center">For simplicity sake, the calc always assumes you are at the level cap</legend></span>
+        <span class="title-text"><legend align="center">and the calc uses the chronological order for bosses.</legend></span>
         <div class="settings" aria-label="Settings" role="region">
             <span class="tabSelection" aria-labelledby="tabSelectionInstruction" role="radiogroup" title="Select the current tab.">
                 <span class="visually-hidden" id="tabSelectionInstruction">Select the current tab.</span>
                 <input class="tab visually-hidden" type="radio" name="tab" id="calc" value="calc" checked="checked" /><label class="btn btn-wide btn-left" for="calc">Calculator</label>
                 <input class="tab visually-hidden" type="radio" name="tab" id="settings" value="settings" /><label class="btn btn-right" for="settings">Settings</label>
             </span>
-        </div>
         <span class="genSelection" aria-labelledby="selectGenInstruction" role="radiogroup" title="Select the generation.">
             <span class="visually-hidden" id="selectGenInstruction">Select the generation.</span>
             <input class="gen visually-hidden" type="radio" name="gen" value="9" id="gen9" checked="checked" />
@@ -62,11 +61,11 @@
             <input class="notation visually-hidden" type="radio" name="notation" id="pixels" value="px" />
             <input class="notation visually-hidden" type="radio" name="notation" id="percentage" value="%" />
         </span>
-        <span class="modeSelection" aria-labelledby="selectModeInstruction" role="radiogroup" title="Select the calculator's mode of function.">
-            <span class="visually-hidden" id="selectModeInstruction">Select the calculator's mode of function.</span>
-            <input class="mode visually-hidden" type="radio" name="mode" id="normal" /><label class="btn btn-small" for="normal">Normal</label>
-            <input class="mode visually-hidden" type="radio" name="mode" id="hardcore" checked="checked" /><label class="btn btn-small" for="hardcore">Hardcore</label>
-        </span>
+            <span class="modeSelection" aria-labelledby="selectModeInstruction" role="radiogroup" title="Select the calculator's mode of function.">
+                <span class="visually-hidden" id="selectModeInstruction">Select the calculator's mode of function.</span>
+                <input class="mode visually-hidden" type="radio" name="mode" id="normal" /><label class="btn btn-left" for="normal">Normal</label>
+                <input class="mode visually-hidden" type="radio" name="mode" id="hardcore" checked="checked" /><label class="btn btn-wide btn-right" for="hardcore">Hardcore</label>
+            </span>
     </div>
     <hr />
     <div aria-label="Move selection" class="move-result-group" role="region" title="Select a move to show detailed results.">
@@ -1133,7 +1132,7 @@
                         <select aria-label="Type 2" class="type2 terrain-trigger calc-trigger"></select>
                         <small class="right">(<a class="analysis links-lighten" target="_blank" href="">Smogon&nbsp;analysis</a>)</small>
                     </div>
-                    <div class="gen-specific g9">
+                    <div class="hide">
                         <label>Tera Type</label>
                         <select class="teraType terrain-trigger calc-trigger"></select>
                         <input type="checkbox" title= "Has this Pok&eacute;mon terastalized?" class="teraToggle terrain-trigger calc-trigger">
@@ -1723,6 +1722,29 @@
     <script type="text/javascript" src="./js/index_randoms_controls.js?"></script>
     <script type="text/javascript" src="./js/moveset_import.js?"></script>
 </div>
+
+    <div class="wrapper hide" id="settings-wrapper">
+        <span class="title-text">Platinum Kaizo Damage Calculator</span>
+        <div class="settings" aria-label="Settings" role="region"></div>
+        <hr />
+        <fieldset class="settings-container">
+            <p class="label" align="center">Starter</p>
+            <span class="starterSelection" aria-labelledby="selectStarterInstruction" role="radiogroup" title="Select your starter Pokémon.">
+                <span class="visually-hidden" id="selectStarterInstruction">Select your starter Pokémon.</span>
+                <input class="visually-hidden" type="radio" name="starter" value="Grass" id="grass" checked="checked" /><label class="btn btn-wide btn-left" for="grass">Grass</label>
+                <input class="visually-hidden" type="radio" name="starter" value="Fire" id="fire" /><label class="btn btn-wide btn-mid" for="fire">Fire</label>
+                <input class="visually-hidden" type="radio" name="starter" value="Water" id="water" /><label class="btn btn-wide btn-right" for="water">Water</label>
+            </span>
+            <hr />
+            <p class="label" align="center">Theme</p>
+            <span class="themeSelection" aria-labelledby="selectThemeInstruction" role="radiogroup" title="Select the calculator theme.">
+                <span class="visually-hidden" id="selectThemeInstruction">Select the calculator theme.</span>
+                <input class="visually-hidden" type="radio" name="theme" value="Dark" id="dark" checked="checked" /><label class="btn btn-left" for="dark">Dark</label>
+                <input class="visually-hidden" type="radio" name="theme" value="Light" id="light" /><label class="btn btn-right" for="light">Light</label>
+            </span>
+            <hr />
+        </fieldset>
+    </div>
 
 <div class="credits">Modification by ForwardFeed Originaly Created by Honko, maintained by Austin and Kris, Special thanks to Hzla
     <ul>

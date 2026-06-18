@@ -298,6 +298,7 @@ function updateDex(customsets) {
 		}
 	}
 	localStorage.customsets = JSON.stringify(customsets);
+	reloadEncounters();
 }
 
 function addSets(pokes, name) {

@@ -27,3 +27,15 @@ $(document).ready(function() {
     });
         saveSettings();
 });
+
+function setStarters() {
+	switch (SETTINGS.starter) {
+		case "Grass":
+			RIVAL_STARTER_1 = "Charmander";
+			RIVAL_STARTER_2 = "Charmeleon";
+			RIVAL_STARTER_3 = "Charizard";
+			RIVAL_STARTER_MEGA_1 = "Mega Charizard X";
+			RIVAL_STARTER_MEGA_2 = "Mega Charizard Y";
+			break;
+	}
+}
