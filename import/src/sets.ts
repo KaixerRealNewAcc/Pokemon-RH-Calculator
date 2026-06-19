@@ -90,11 +90,6 @@ export async function importSets(dir: string) {
     for (const pokemon of Object.keys(calc.SPECIES[gen]).sort()) {
       await importSetsForPokemon(pokemon, gen, setsByPokemon);
       let sets = setsByPokemon[pokemon];
-      // If we can't find any sets for Gen 9 yet, just copy the Gen 8 sets instead...
-      if (!sets && gen === 9) {
-        await importSetsForPokemon(pokemon, 8, setsByPokemon);
-        sets = setsByPokemon[pokemon];
-      }
       if (sets) {
         const sorted = Object.keys(sets);
         const tier = TO_TIER[gen][toID(pokemon)];

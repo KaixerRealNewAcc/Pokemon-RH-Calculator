@@ -203,11 +203,6 @@ function toggleMNM() {
 	shouldUseMnM = !shouldUseMnM;
 	autoUpdateStats('#p1');
 	autoUpdateStats('#p2');
-	// mnm CAN change abilities and field conditions, we want to reset it just in case
-	autosetWeather($("#p1 .ability").val(), 0);
-	autosetTerrain($("#p1 .ability").val(), 0);
-	autosetWeather($("#p2 .ability").val(), 0);
-	autosetTerrain($("#p2 .ability").val(), 0);
 }
 
 var shouldUseTS = false;

@@ -1,12 +1,14 @@
-var PC_HANDLER = function () {
-	setTimeout(performCalculations, 0);
-};
-var damageResults;
-
 $("#p2 .ability").bind("keyup change", function () {
 	autosetWeather($(this).val(), 1);
 	autosetTerrain($(this).val(), 1);
 });
+
+$("#p2 .item").bind("keyup change", function () {
+	autosetStatus("#p2", $(this).val());
+});
+
+lastManualStatus["#p2"] = "Healthy";
+lastAutoStatus["#p1"] = "Healthy";
 
 var resultLocations = [[], []];
 for (var i = 0; i < 4; i++) {
@@ -20,6 +22,7 @@ for (var i = 0; i < 4; i++) {
 	});
 }
 
+var damageResults;
 function performCalculations() {
 	var p1info = $("#p1");
 	var p2info = $("#p2");
@@ -94,6 +97,92 @@ function performCalculations() {
 	$("#resultHeaderR").text(p2.name + "'s Moves (select one to show detailed results)");
 }
 
+
+function calculationsColors(p1info, p2) {
+	if (!p2) {
+		var p2info = $("#p2");
+		var p2 = createPokemon(p2info);
+	}
+	var p1 = createPokemon(p1info);
+	var p1field = createField();
+	var p2field = p1field.clone().swap();
+
+	damageResults = calculateAllMoves(gen, p1, p1field, p2, p2field);
+	p1 = damageResults[0][0].attacker;
+	p2 = damageResults[1][0].attacker;
+	p1.maxDamages = [];
+	p2.maxDamages = [];
+	var p1s = p1.stats.spe;
+	var p2s = p2.stats.spe;
+	//Faster Tied Slower
+	var fastest = p1s > p2s ? "F" : p1s < p2s ? "S" : p1s === p2s ? "T" : undefined;
+	var result, highestRoll, lowestRoll, damage = 0;
+	//goes from the most optimist to the least optimist
+	var p1KO = 0, p2KO = 0;
+	//Highest damage
+	var p1HD = 0, p2HD = 0;
+	for (var i = 0; i < 4; i++) {
+		// P1
+		result = damageResults[0][i];
+		//lowest rolls in %
+		damage = result.damage[0] ? result.damage[0] : result.damage;
+		lowestRoll = damage * p1.moves[i].hits / p2.stats.hp * 100;
+		damage = result.damage[15] ? result.damage[15] : result.damage;
+		highestRoll = damage * p1.moves[i].hits / p2.stats.hp * 100;
+		if (highestRoll > p1HD) {
+			p1HD = highestRoll;
+		}
+		if (lowestRoll >= 100) {
+			p1KO = 1;
+		} else { //if lowest kill obviously highest will
+			//highest rolls in %
+			if (highestRoll >= 100) {
+				if (p1KO == 0) {
+					p1KO = 2;
+				}
+			}
+		}
+
+		// P2
+		result = damageResults[1][i];
+		//some damage like sonic boom acts a bit weird.
+		damage = result.damage[0] ? result.damage[0] : result.damage;
+		lowestRoll = damage * p2.moves[i].hits / p1.stats.hp * 100;
+		damage = result.damage[15] ? result.damage[15] : result.damage;
+		highestRoll = damage * p2.moves[i].hits / p1.stats.hp * 100;
+		if (highestRoll > p2HD) {
+			p2HD = highestRoll;
+		}
+		if (lowestRoll >= 100) {
+			p2KO = 4;
+		} else {
+			if (highestRoll >= 100) {
+				if (p2KO < 3) {
+					p2KO = 3;
+				}
+			}
+		}
+	}
+	// Checks if the pokemon walls it
+	// i wouldn't mind change this algo for a smarter one.
+
+	// if the adversary don't three shots our pokemon
+	if (Math.round(p2HD * 3) < 100) {
+		// And if our pokemon does more damage
+		if (p1HD > p2HD) {
+			if (p1HD > 100) {
+				// Then i consider it a wall that may OHKO
+				return {speed: fastest, code: "WMO"};
+			}
+			// if not Then i consider it a good wall
+			return {speed: fastest, code: "W"};
+		}
+	}
+	p1KO = p1KO > 0 ? p1KO.toString() : "";
+	p2KO = p2KO > 0 ? p2KO.toString() : "";
+	return {speed: fastest, code: p1KO + p2KO};
+}
+
 $(".result-move").change(function () {
 	if (damageResults) {
 		var result = findDamageResult($(this));
@@ -101,62 +190,22 @@ $(".result-move").change(function () {
 			var desc = result.fullDesc(notation, false);
 			if (desc.indexOf('--') === -1) desc += ' -- possibly the worst move ever';
 			$("#mainResult").text(desc);
-			var summary = displayDamageHits(result.damage);
-			var rest = "";
-			var newLine = summary.indexOf('\n');
-			if (newLine > -1) {
-				rest = summary.substring(newLine + 1);
-				summary = summary.substring(0, newLine);
-			}
-			$("#firstDmgValues").text("Possible damage amounts: (" + summary + ")");
-			if (rest !== "") $("#restDmgValues").text("(" + rest + ")");
-
-			if (rest.trim() === "") {
-				$("#firstDmgValues").css("display", "block");
-				$("#restDmgValues").text("");
-			} else {
-				$("#damageValues").removeAttr("open");
-				$("#firstDmgValues").css("display", "revert");
-			}
+			$("#damageValues").text("Possible damage amounts: (" + displayDamageHits(result.damage) + ")");
 		}
 	}
 });
 
 function displayDamageHits(damage) {
 	// Fixed Damage
-	if (typeof damage === 'number') return damage.toString();
+	if (typeof damage === 'number') return damage;
 	// Standard Damage
-	if (damage.length > 2 && typeof damage[0] === 'number')
-		return damage.join(', ');
+	if (damage.length > 2) return damage.join(', ');
 	// Fixed Parental Bond Damage
 	if (typeof damage[0] === 'number' && typeof damage[1] === 'number') {
 		return '1st Hit: ' + damage[0] + '; 2nd Hit: ' + damage[1];
 	}
-	// Multihit Damage
-	var fullText = "";
-	for (var i = 1; i <= damage.length; i++) {
-		var txt = toOrdinal(i) + " Hit: " + damage[i - 1].join(', ');
-		if (i > 1 && i < damage.length) txt += "; ";
-		fullText += txt;
-		if (i % 2 == 1 && i < damage.length) fullText += "\n";
-	}
-	return fullText;
-}
-
-function toOrdinal(num) {
-	if (typeof num !== "number" || !Number.isInteger(num)) {
-		return "Input must be an integer.";
-	}
-	switch (num) {
-	case 1:
-		return num + "st";
-	case 2:
-		return num + "nd";
-	case 3:
-		return num + "rd";
-	default:
-		return num + "th";
-	}
+	// Parental Bond Damage
+	return '1st Hit: ' + damage[0].join(', ') + '; 2nd Hit: ' + damage[1].join(', ');
 }
 
 function findDamageResult(resultMoveObj) {
@@ -220,6 +269,16 @@ $(".notation").change(function () {
 
 $(document).ready(function () {
 	var params = new URLSearchParams(window.location.search);
+	var importParam = params.get('import');
+	if (importParam) {
+		try {
+			var decodedImport = atob(importParam); // Decode base64
+			$('.import-team-text').val(decodedImport); // Set value to text area
+		} catch (e) {
+			console.error('Failed to decode Import parameter:', e);
+		}
+	}
+	
 	var m = params.get('mode');
 	if (m) {
 		if (m !== 'one-vs-one' && m !== 'randoms' && m !== 'normal' && m !== 'hardcore') {
@@ -261,7 +320,19 @@ $(document).ready(function () {
 		}
 	}
 
-	$(".calc-trigger").bind("change keyup", PC_HANDLER);
+	$(".calc-trigger").bind("change keyup", function (ev) {
+		/*
+			This prevents like 8 performCalculations out of 8 that were useless
+			without causing bugs (so far)
+		*/
+		if (window.NO_CALC) {
+			return;
+		}
+		if (document.getElementById("cc-auto-refr").checked) {
+			window.refreshColorCode();
+		}
+		performCalculations();
+	});
 	performCalculations();
 });
 

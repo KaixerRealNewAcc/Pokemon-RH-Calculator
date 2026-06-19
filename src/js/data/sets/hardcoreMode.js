@@ -17,6 +17,7 @@ var SETDEX_SV = {
    },
    //End of template
 
+   //Gen 1
    "Charmander": {
     "Rival Route 22 Charmander": {
         "level": 16,
@@ -105,6 +106,22 @@ var SETDEX_SV = {
   "Arbok": {
   },
   "Pikachu": {
+    //Pikacha-Flying
+  },
+  "Pikachu-Flying": {
+    "Route 3 Lass Sally": {
+        "level": 21,
+        "ability": "Lighting Rod",
+        "moves":[
+            "Zippy Zap",
+            "Hidden Power Flying",
+            "Extreme Speed",
+            "Grass Knot",
+        ],
+        "nature":"Naive",
+        "item":"Light Ball",
+        "index": 32,
+    },
   },
   "Raichu": {
   },
@@ -226,6 +243,32 @@ var SETDEX_SV = {
   "Rapidash": {
   },
   "Slowpoke": {
+    "Rival Route 22 Charmander": {
+        "level": 15,
+        "ability": "Regenerator",
+        "moves":[
+            "Teleport",
+            "Water Pulse",
+            "Psybeam",
+            "Thunder Wave"
+        ],
+        "nature":"Bold",
+        "item":"Leftovers",
+        "index":5,
+    },
+    "Rival Route 22 Bulbasaur": {
+        "level": 15,
+        "ability": "Regenerator",
+        "moves":[
+            "Teleport",
+            "Water Pulse",
+            "Psybeam",
+            "Thunder Wave"
+        ],
+        "nature":"Bold",
+        "item":"Leftovers",
+        "index":7,
+    },
   },
   "Slowbro": {
   },
@@ -233,7 +276,22 @@ var SETDEX_SV = {
   },
   "Magneton": {
   },
-  "Farfetchd": {
+  "Farfetch’d": {
+  },
+  "Farfetch’d-Galar": {
+    "Leader Falkner": {
+        "level": 14,
+        "ability": "Scrappy",
+        "moves":[
+            "Rock Smash",
+            "Slam",
+            "Brutal Swing",
+            "Roost",
+        ],
+        "nature":"Bashful",
+        "item":"Stick",
+        "index":25,
+    },
   },
   "Doduo": {
   },
@@ -269,6 +327,21 @@ var SETDEX_SV = {
   },
   "Voltorb": {
   },
+  "Voltorb-Hisui": {
+    "Mt. Moon Super Nerd Miguel": {
+        "level": 22,
+        "ability": "Reckless",
+        "moves":[
+            "Mega Drain",
+            "Self-Destruct",
+            "Volt Switch",
+            "Hidden Power Ice",
+        ],
+        "nature":"Naive",
+        "item":"Focus Sash",
+        "index": 37,
+    },
+  },
   "Electrode": {
   },
   "Exeggcute": {
@@ -291,21 +364,202 @@ var SETDEX_SV = {
   },
   "Weezng-Galar": {
   },
-  
-  "Farfetch’d-Galar": {
-    "Leader Falkner": {
-        "level": 14,
-        "ability": "Scrappy",
-        "moves":[
-            "Rock Smash",
-            "Slam",
-            "Brutal Swing",
-            "Roost",
-        ],
-        "nature":"Bashful",
-        "item":"Stick",
-        "index":25,
-    },
+  "Rhyhorn": {
+  },
+  "Rhydon":{
+  },
+  "Chansey":{
+  },
+  "Tangela":{
+  },
+  "Khangaskan":{
+  },
+  "Khangaskan-Mega":{
+  },
+  "Horsea":{
+  },
+  "Seadra":{
+  },
+  "Goldeen":{
+  },
+  "Seaking":{
+  },
+  "Staryu":{
+  },
+  "Starmie":{
+  },
+  "Mr. Mime":{
+  },
+  "Mr. Mime-Galar":{
+  },
+  "Scyther":{
+  },
+  "Jynx":{
+  },
+  "Electabuzz":{
+  },
+  "Magmar":{
+  },
+  "Pinsir":{
+  },
+  "Pinsir-Mega":{
+  },
+  "Tauros":{
+  },
+  "Tauros-Paldea-Combat":{
+  },
+  "Tauros-Paldea-Blaze":{
+  },
+  "Tauros-Paldea-Aqua":{
+  },
+  "Magikarp":{
+  },
+  "Gyarados":{
+  },
+  "Gyarados-Mega":{
+  },
+  "Lapras":{
+  },
+  "Lapras-Gmax":{
+  },
+  "Ditto":{
+  },
+  "Eevee":{
+  },
+  "Vaporeon":{
+  },
+  "Jolteon":{
+  },
+  "Flareon":{
+  },
+  "Porygon":{
+  },
+  "Omanyte":{
+  },
+  "Omastar":{
+  },
+  "Kabuto":{
+  },
+  "Kabutops":{
+  },
+  "Aerodactyl":{
+  },
+  "Aerodactyl-Mega":{
+  },
+  "Snorlax":{
+  },
+  "Snorlax-Gmax":{
+  },
+  "Articuno":{
+  },
+  "Articuno-Galar":{
+  },
+  "Zapdos":{
+  },
+  "Zapdos-Galar":{
+  },
+  "Moltres":{
+  },
+  "Moltres-Galar":{
+  },
+  "Dratini":{
+  },
+  "Dragonair":{
+  },
+  "Dragonite":{
+  },
+  "Mewtwo":{
+  },
+  "Mew":{
+  },
+  //Gen 2
+  "Chikorita":{
+  },
+  "Bayleef":{
+  },
+  "Meganium":{
+  },
+  "Cyndaquil":{
+  },
+  "Quilava":{
+  },
+  "Typhlosion":{
+  },
+  "Totodile":{
+  },
+  "Croconaw":{
+  },
+  "Feraligatr":{
+  },
+  "Sentret":{
+  },
+  "Furret":{
+  },
+  "Hoothoot":{
+  },
+  "Noctowl":{
+  },
+  "Ledyba":{
+  },
+  "Ledian":{
+  },
+  "Spinarak":{
+  },
+  "Ariados":{
+  },
+  "Crobat":{
+  },
+  "Chinchou":{
+  },
+  "Lanturn":{
+  },
+  "Pichu":{
+  },
+  "Cleffa":{
+  },
+  "Igglybuff":{
+  },
+  "Togepi":{
+  },
+  "Togetic":{
+  },
+  "Togekiss":{
+  },
+  "Natu":{
+  },
+  "Xatu":{
+  },
+  "Mareep":{
+  },
+  "Flaafy":{
+  },
+  "Ampharos":{
+  },
+  "Ampharos-Mega":{
+  },
+  "Bellosom":{
+  },
+  "Marill":{
+  },
+  "Azumarill":{
+  },
+  "Sudowoodo":{
+  },
+  "Politoed":{
+  },
+  "Hoppip":{
+  },
+  "Skiploom":{
+  },
+  "Jumpluff":{
+  },
+  "Aimpom":{
+  },
+  "Ambipom":{
+  },
+  "Sunkern":{
+  },
+  "Sunflora":{
   },
   "Yanma": {
     "Leader Falkner": {
@@ -321,6 +575,44 @@ var SETDEX_SV = {
         "item":"Lum Berry",
         "index":23,
     },
+  },
+  "Wooper":{
+  },
+  "Wooper-Paldea":{
+  },
+  "Quagsire":{
+  },
+  "Clodsire":{
+  },
+  "Espeon":{
+  },
+  "Umbreon":{
+  },
+  "Murkow":{
+  },
+  "Slowking":{
+  },
+  "Slowking-Galar":{
+  },
+  "Misdreavus":{
+  },
+  "Unown":{
+  },
+  "Wobbufet":{
+  },
+  "Girafarig":{
+  },
+  "Pineco":{
+  },
+  "Forretress":{
+  },
+  "Dunsparce":{
+  },
+  "Gligar":{
+  },
+  "Steelix":{
+  },
+  "Steelix-Mega":{
   },
   "Snubbull": {
     "Rival Route 22 Squirtle": {
@@ -363,48 +655,282 @@ var SETDEX_SV = {
         "index":6, 
     },
   },
-  "Litleo": {
-    "Rival Route 22 Squirtle": {
-        "level": 15,
-        "ability": "Rivalry",
+  "Granbull":{
+  },
+  "Qwilfish":{
+  },
+  "Qwilfish-Hisui":{
+  },
+  "Scizor":{
+  },
+  "Scizor-Mega":{
+  },
+  "Shuckle":{
+  },
+  "Heracross":{
+  },
+  "Heracross-Mega":{
+  },
+  "Sneasel":{
+  },
+  "Sneasel-Hisui":{
+  },
+  "Teddiursa":{
+  },
+  "Ursaring":{
+  },
+  "Slugma":{   
+  },
+  "Magcargo":{   
+  },
+  "Swinub":{   
+  },
+  "Piloswine":{   
+  },
+  "Corsola":{   
+  },
+  "Corsola-Galar":{   
+  },
+  "Remoraid":{   
+  },
+  "Octillery":{   
+  },
+  "Delibird":{   
+  },
+  "Mantine":{   
+  },
+  "Skarmory":{   
+  },
+  "Houndour":{   
+  },
+  "Houndoom":{   
+  },
+  "Houndoom-Mega":{   
+  },
+  "Kingdra":{   
+  },
+  "Phanpy":{   
+  },
+  "Donphan":{   
+  },
+  "Porygon2":{   
+  },
+  "Stantler":{   
+  },
+  "Tyrogue":{   
+  },
+  "Hitmontop":{   
+  },
+  "Smoochum":{   
+  },
+  "Elekid":{   
+  },
+  "Magby":{   
+  },
+  "Miltank":{   
+  },
+  "Blissey":{   
+  },
+  "Raikou":{   
+  },
+  "Entei":{   
+  },
+  "Suicune":{   
+  },
+  "Larvitar":{   
+  },
+  "Pupitar":{   
+  },
+  "Tyranitar":{   
+  },
+  "Tyranitar-Mega":{   
+  },
+  "Lugia":{   
+  },
+  "Ho-Oh":{   
+  },
+  "Celebi":{   
+  },
+  //gen 3
+  "Treecko": {
+    "Viridian Forest Brendan": {
+        "level": 16,
+        "ability": "Unburden",
         "moves":[
-            "Incinerate",
-            "Round",
-            "Hidden Power Grass",
-            "Sleep Talk"
+            "Power-Up Punch",
+            "Bullet Seed",
+            "Drain Punch",
+            "Rock Tomb",
         ],
-        "nature":"Timid",
-        "item":"Wise Glasses",
-        "index":2,
+        "nature":"Adamant",
+        "item":"Oran Berry",
+        "index":13,
     },
   },
-  "Slowpoke": {
-    "Rival Route 22 Charmander": {
-        "level": 15,
-        "ability": "Regenerator",
+  "Grovyle":{   
+  },
+  "Sceptile":{   
+  },
+  "Sceptile-Mega":{   
+  },
+  "Torchic":{   
+  },
+  "Combusken":{   
+  },
+  "Blaziken":{   
+  },
+  "Blaziken-Mega":{   
+  },
+  "Mudskip":{   
+  },
+  "Marshtomp":{   
+  },
+  "Swampert":{   
+  },
+  "Swampert-Mega":{   
+  },
+  "Poochyena":{   
+  },
+  "Mightyena":{   
+  },
+  "Zigzagoon":{   
+  },
+  "Zigzagoon-Galar":{   
+  },
+  "Linoone":{   
+  },
+  "Linoone-Galar":{   
+  },
+  "Wurmple":{   
+  },
+  "Silcoon":{   
+  },
+  "Beautifly":{   
+  },
+  "Cascoon":{   
+  },
+  "Dustox":{   
+    "Viridian Forest Bug Catcher Sammy": {
+        "level": 14,
+        "ability": "Shield Dust",
         "moves":[
-            "Teleport",
-            "Water Pulse",
+            "Toxic",
+            "Protect",
+            "Roost",
             "Psybeam",
-            "Thunder Wave"
         ],
         "nature":"Bold",
-        "item":"Leftovers",
-        "index":5,
+        "item":"Black Sludge",
+        "index":20, 
     },
-    "Rival Route 22 Bulbasaur": {
-        "level": 15,
-        "ability": "Regenerator",
+  },
+  "Lotad":{   
+  },
+  "Lombre":{   
+  },
+  "Ludicolo":{   
+  },
+  "Seedot":{   
+  },
+  "Nuzleaf":{   
+  },
+  "Shiftry":{   
+  },
+  "Taillow":{   
+  },
+  "Swellow":{   
+  },
+  "Wingull":{   
+  },
+  "Pelipper":{   
+  },
+  "Ralts":{   
+  },
+  "Kirlia":{   
+  },
+  "Gardevoir":{   
+  },
+  "Gardevoir-Mega":{   
+  },
+  "Surskit":{   
+  },
+  "Masquerain":{   
+  },
+  "Shroomish":{   
+  },
+  "Breloom":{   
+  },
+  "Slakoth":{   
+  },
+  "Vigoroth":{   
+  },
+  "Slaking":{   
+  },
+  "Nincada":{   
+  },
+  "Ninjask":{   
+  },
+  "Shedinja":{   
+  },
+  "Whismur":{   
+  },
+  "Loudred":{   
+  },
+  "Exploud":{   
+  },
+  "Makuhita":{   
+  },
+  "Hariyama":{   
+  },
+  "Azurill":{   
+  },
+  "Nosepass":{   
+  },
+  "Skitty":{   
+  },
+  "Delcatty":{   
+  },
+  "Sableye": {
+    "Mt. Moon Super Nerd Miguel": {
+        "level": 22,
+        "ability": "Prankster",
         "moves":[
-            "Teleport",
-            "Water Pulse",
-            "Psybeam",
-            "Thunder Wave"
+            "Will-O-Wisp",
+            "Recover",
+            "Protect",
+            "Foul Play",
         ],
-        "nature":"Bold",
+        "nature":"Careful",
         "item":"Leftovers",
-        "index":7,
+        "index": 40,
     },
+  },
+  "Sableye-Mega":{   
+  },
+  "Mawile": {
+    "Route 3 Lass Sally": {
+        "level": 21,
+        "ability": "Initimidate",
+        "moves":[
+            "Toxic",
+            "Covet",
+            "Metal Claw",
+            "Fire Fang",
+        ],
+        "nature":"Impish",
+        "item":"Leftovers",
+        "index": 35,
+    },
+  },
+  "Mawile-Mega":{   
+  },
+  "Aron":{   
+  },
+  "Lairon":{   
+  },
+  "Aggron":{   
+  },
+  "Aggron-Mega":{   
   },
   "Meditite": {
     "Viridian Forest Brendan": {
@@ -421,21 +947,66 @@ var SETDEX_SV = {
         "index":10,
     },
   },
-  "Corphish": {
-    "Viridian Forest Brendan": {
-        "level": 15,
-        "ability": "Adaptability",
+  "Medicham":{   
+  },
+  "Medicham-Mega":{   
+  },
+  "Electrike":{   
+  },
+  "Manectric":{   
+  },
+  "Manectric-Mega":{   
+  },
+  "Plusle":{   
+  },
+  "Minun":{   
+  },
+  "Volbeat":{ 
+    "Viridian Forest Bug Catcher Sammy": {
+        "level": 13,
+        "ability": "Prankster",
         "moves":[
-            "Aqua Jet",
-            "Rock Tomb",
-            "Knock Off",
-            "Aerial Ace",
+            "Hidden Power Bug",
+            "Mega Drain",
+            "Flash",
+            "Water Pulse",
         ],
-        "nature":"Adamant",
-        "item":"Mystic Water",
-        "index":11,
+        "nature":"Bashful",
+        "item":"Lum Berry",
+        "index":21,
+    },  
+  },
+  "Illumise":{   
+  },
+  "Roselia":{   
+  },
+  "Gulpin":{   
+    "Viridian Forest Ace Trainer Nelle": {
+        "level": 15,
+        "ability": "Gluttony",
+        "moves":[
+            "Belch",
+            "Sludge",
+            "Bullet Seed",
+            "Sleep Talk",
+        ],
+        "nature":"Bashful",
+        "item":"Iapapa Berry",
+        "index":18,
     },
-  }, 
+  },
+  "Swalot":{   
+  },
+  "Carvanha":{   
+  },
+  "Sharpedo":{   
+  },
+  "Sharpedo-Mega":{   
+  },
+  "Wailmer":{   
+  },
+  "Wailord":{   
+  },
   "Numel": {
     "Viridian Forest Brendan": {
         "level": 15,
@@ -451,66 +1022,350 @@ var SETDEX_SV = {
         "index":12,
     },
   },
-  "Treecko": {
-    "Viridian Forest Brendan": {
-        "level": 16,
-        "ability": "Unburden",
+  "Camerupt":{   
+  },
+  "Camerupt-Mega":{   
+  },
+  "Torkoal":{   
+  },
+  "Spoink":{   
+  },
+  "Grumpig":{   
+  },
+  "Spinda":{   
+  },
+  "Trapinch":{   
+  },
+  "Vibrava":{
+  },
+  "Flygon":{
+  },
+  "Cacnea":{
+    "Leader Brock": {
+        "level": 15,
+        "ability": "Sand Rush",
         "moves":[
             "Power-Up Punch",
             "Bullet Seed",
-            "Drain Punch",
-            "Rock Tomb",
-        ],
-        "nature":"Adamant",
-        "item":"Oran Berry",
-        "index":13,
-    },
-  },
-  "Gulpin": {
-    "Viridian Forest Ace Trainer Nelle": {
-        "level": 15,
-        "ability": "Gluttony",
-        "moves":[
-            "Belch",
-            "Sludge",
-            "Bullet Seed",
-            "Sleep Talk",
+            "Thunder Punch",
+            "Pin Missile",
         ],
         "nature":"Bashful",
-        "item":"Iapapa Berry",
-        "index":18,
+        "item":"Eviolite",
+        "index": 27,
     },
   },
-  "Volbeat": {
-    "Viridian Forest Bug Catcher Sammy": {
-        "level": 13,
-        "ability": "Prankster",
+  "Cacturne":{
+  },
+  "Swablu":{
+  },
+  "Altaria":{
+  },
+  "Altaria-Mega":{
+  },
+  "Zangoose":{
+  },
+  "Serviper":{
+  },
+  "Lunatone":{
+    "Leader Brock": {
+        "level": 14,
+        "ability": "Levitate",
         "moves":[
-            "Hidden Power Bug",
-            "Mega Drain",
-            "Flash",
-            "Water Pulse",
+            "Ancient Power",
+            "Psybeam",
+            "Hidden Power Ground",
+            "Icy Wind",
         ],
         "nature":"Bashful",
         "item":"Lum Berry",
-        "index":21,
+        "index": 28,
     },
   },
-  "Dustox": {
-    "Viridian Forest Bug Catcher Sammy": {
-        "level": 14,
-        "ability": "Shield Dust",
+  "Solrock":{
+  },
+  "Barboach":{
+  },
+  "Whiscash":{
+  },
+  "Corphish": {
+    "Viridian Forest Brendan": {
+        "level": 15,
+        "ability": "Adaptability",
         "moves":[
-            "Toxic",
-            "Protect",
-            "Roost",
-            "Psybeam",
+            "Aqua Jet",
+            "Rock Tomb",
+            "Knock Off",
+            "Aerial Ace",
+        ],
+        "nature":"Adamant",
+        "item":"Mystic Water",
+        "index":11,
+    },
+  }, 
+  "Crawdaunt":{
+  },
+  "Baltoy":{
+  },
+  "Claydol":{
+  },
+  "Lileep":{
+    "Leader Brock": {
+        "level": 16,
+        "ability": "Storm Drain",
+        "moves":[
+            "Stockpile",
+            "Recover",
+            "Hidden Power Rock",
+            "Mega Drain",
         ],
         "nature":"Bold",
-        "item":"Black Sludge",
-        "index":20, 
+        "item":"Oran Berry",
+        "index": 29,
     },
   },
+  "Cradily":{
+  },
+  "Anorith":{
+  },
+  "Armaldo":{
+  },
+  "Feebas":{
+  },
+  "Milotic":{
+  },
+  "Castform":{
+  },
+  "Castform-Sunny":{
+  },
+  "Castform-Rainy":{
+  },
+  "Castform-Snowy":{
+  },
+  "Kecleon":{
+  },
+  "Shupper":{
+  },
+  "Banette":{
+  },
+  "Banette-Mega":{
+  },
+  "Duskull":{
+  },
+  "Dusclops":{
+  },
+  "Tropius":{
+  },
+  "Chimecho":{
+  },
+  "Absol":{
+  },
+  "Absol-Mega":{
+  },
+  "Whynaut":{
+  },
+  "Snorunt":{
+  },
+  "Glalie":{
+  },
+  "Glalie-Mega":{
+  },
+  "Frosslass":{
+  },
+  "Spheal":{
+  },
+  "Sealeo":{
+  },
+  "Walrein":{
+  },
+  "Clamperl":{
+  },
+  "Gorebyss":{
+  },
+  "Huntail":{
+  },
+  "Relicanth":{
+  },
+  "Luvdisc":{
+  },
+  "Bagon":{
+  },
+  "Shelgon":{
+  },
+  "Salamence":{
+  },
+  "Salamence-Mega":{
+  },
+  "Beldum":{
+  },
+  "Metang":{
+  },
+  "Metagross":{
+  },
+  "Metagross-Mega":{
+  },
+  "Regirock":{
+  },
+  "Regice":{
+  },
+  "Registeel":{
+  },
+  "Latias":{
+  },
+  "Latias-Mega":{
+  },
+  "Latios":{
+  },
+  "Latios-Mega":{
+  },
+  "Kyorge":{
+  },
+  "Kyorge-Primal":{
+  },
+  "Groudon":{
+  },
+  "Groudon-Primal":{
+  },
+  "Rayquaza":{
+  },
+  "Rayquaza-Mega":{
+  },
+  "Jirachi":{
+  },
+  "Deoxys":{
+  },
+  "Deoxys-Attack":{
+  },
+  "Deoxys-Defense":{
+  },
+  "Deoxys-Speed":{
+  },
+  //Gen 4
+  "Turtwig":{
+  },
+  "Grotle":{
+  },
+  "Torterra":{
+  },
+  "Chimchar":{
+  },
+  "Monferno":{
+  },
+  "Infernape":{
+  },
+  "Piplup":{
+  },
+  "Prinplup":{
+  },
+  "Empoleon":{
+  },
+  "Starly":{
+  },
+  "Staravia":{
+  },
+  "":{
+  },
+  "":{
+  },
+  "":{
+  },
+  "":{
+  },
+  "":{
+  },
+  "":{
+  },
+  "":{
+  },
+  "":{
+  },
+  "":{
+  },
+  "":{
+  },
+  "":{
+  },
+  "":{
+  },
+  "":{
+  },
+
+  "Hippopotas":{
+    "Leader Brock": {
+        "level": 13,
+        "ability": "Sand Stream",
+        "moves":[
+            "Bulldoze",
+            "Rock Tomb",
+            "Toxic",
+            "Slack Off",
+        ],
+        "nature":"Careful",
+        "item":"Berry Juice",
+        "index": 26,
+    },
+  },
+  "Swoobat": {
+    "Mt. Moon Super Nerd Miguel": {
+        "level": 22,
+        "ability": "Simple",
+        "moves":[
+            "Calm Mind",
+            "Air Cutter",
+            "Psybeam",
+            "Roost",
+        ],
+        "nature":"Timid",
+        "item":"Grassy Seed",
+        "index": 38,
+    },
+  },
+  "Archen":{
+    "Leader Brock": {
+        "level": 14,
+        "ability": "Defeatist",
+        "moves":[
+            "Rock Tomb",
+            "Wing Attack",
+            "Bulldoze",
+            "Facade",
+        ],
+        "nature":"Bashful",
+        "item":"Iapapa Berry",
+        "index": 30,
+    },
+  },
+  "Litleo": {
+    "Rival Route 22 Squirtle": {
+        "level": 15,
+        "ability": "Rivalry",
+        "moves":[
+            "Incinerate",
+            "Round",
+            "Hidden Power Grass",
+            "Sleep Talk"
+        ],
+        "nature":"Timid",
+        "item":"Wise Glasses",
+        "index":2,
+    },
+  },
+  "Skiddo": {
+    "Mt. Moon Super Nerd Miguel": {
+        "level": 22,
+        "ability": "Grass Pelt",
+        "moves":[
+            "Horn Leech",
+            "Brick Break",
+            "Rock Slide",
+            "Milk Drink",
+        ],
+        "nature":"Impish",
+        "item":"Miracle Seed",
+        "index": 39,
+    },
+  },
+
   "Kricketune": {
     "Viridian Forest Bug Catcher Sammy": {
         "level": 13,
@@ -524,6 +1379,21 @@ var SETDEX_SV = {
         "nature":"Bashful",
         "item":"Lum Berry",
         "index":19,
+    },
+  },
+  "Whimsicott": {
+    "Route 3 Lass Sally": {
+        "level": 22,
+        "ability": "Prankster",
+        "moves":[
+            "Leech Seed",
+            "Hidden Power Psychic",
+            "Mega Drain",
+            "Protect",
+        ],
+        "nature":"Modest",
+        "item":"Leftovers",
+        "index": 34,
     },
   },
   "Audino": {
@@ -571,6 +1441,36 @@ var SETDEX_SV = {
         "index":21,
     },
   },
+  "Oricorio-Sensu": {
+    "Route 3 Lass Sally": {
+        "level": 22,
+        "ability": "Dancer",
+        "moves":[
+            "Calm Mind",
+            "Hidden Power Ghost",
+            "Air Cutter",
+            "Roost",
+        ],
+        "nature":"Timid",
+        "item":"Spell Tag",
+        "index": 33,
+    },
+  },
+  "Thwackey": {
+    "Mt. Moon Super Nerd Miguel": {
+        "level": 21,
+        "ability": "Grassy Surge",
+        "moves":[
+            "Fake Out",
+            "Grassy Glide",
+            "Knock Off",
+            "U-turn",
+        ],
+        "nature":"Adamant",
+        "item":"Eviolite",
+        "index": 36,
+    },
+  },
   "Wattrel": {
     "Leader Falkner": {
         "level": 16,
@@ -614,6 +1514,21 @@ var SETDEX_SV = {
         "nature":"Bashful",
         "item":"Berry Juice",
         "index":17,
+    },
+  },
+  "Varoom":{
+    "Leader Brock": {
+        "level": 15,
+        "ability": "Filter",
+        "moves":[
+            "Bulldoze",
+            "Gyro Ball",
+            "Toxic",
+            "Protect",
+        ],
+        "nature":"Careful",
+        "item":"Air Balloon",
+        "index": 31,
     },
   },
 };

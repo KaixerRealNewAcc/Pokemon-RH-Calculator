@@ -5210,6 +5210,7 @@ const XY_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
       'Pikachu-PhD',
       'Pikachu-Pop-Star',
       'Pikachu-Rock-Star',
+      'Pikachu-Flying',
     ],
   },
   Pinsir: {otherFormes: ['Pinsir-Mega']},
@@ -11300,7 +11301,7 @@ const RR_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
     types: ['Electric', 'Flying'],
     bs: {hp: 35, at: 55, df: 40, sa: 50, sd: 50, sp: 90},
     weightkg: 6,
-    abilities: {0: 'Static'},
+    abilities: {0: 'Lighting Rod'},
     baseSpecies: 'Pikachu',
   },
   'Pikachu-Surfing': {

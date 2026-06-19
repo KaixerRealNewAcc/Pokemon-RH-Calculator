@@ -4,8 +4,6 @@
 <head>
     <meta charset="UTF-8" />
     <title>Pok&eacute;mon Radical Red Calculator By Kaixer.</title>
-    <title>For simplicity sake, the calc always assumes you are at the level cap</title>
-    <title>and the calc uses the chronological order for bosses.</title>
     <link type="text/css" rel="stylesheet" href="./js/vendor/select2/select2.css" />
     <link type="text/css" rel="stylesheet" href="./css/main.css?" />
     <link type="text/css" rel="stylesheet" href="./css/settings.css?" />
@@ -142,24 +140,6 @@
         <div class="small-text"><span id="damageValues">(If you see this message for more than a few seconds, try enabling JavaScript.)</span>
         </div>
     </div>
-    <div class="left-side-pannel side-pannel">
-        <button data-set="i-f-type" class="l-side-button">
-            <i class="s-arrow arrowdown"></i>
-            <span>Type</span>
-        </button>
-        <button data-set="i-f-stats" class="l-side-button">
-            <i class="s-arrow arrowdown"></i>
-            <span>Stats</span>
-        </button>
-        <button data-set="i-f-hp" class="l-side-button">
-            <i class="s-arrow arrowdown"></i>
-            <span>HP</span>
-        </button>
-        <button data-set="i-f-move" class="l-side-button">
-            <i class="s-arrow arrowdown"></i>
-            <span>Moves</span>
-        </button>
-    </div>
     <div class="panel">
         <div aria-label="Pok&eacute;mon 1" role="region">
             <fieldset class="poke-info" id="p1">
@@ -169,6 +149,7 @@
                 <input type="text" class="set-selector calc-trigger player" />
                 <span id="importedSetsOptions" style="width:auto; display:none">
                     <input type="checkbox" id="importedSets"> Only show imported sets</input> 
+                    <button id="clearSets">Clear Imported Sets</button>
                 </span>
                 <div class="info-group top i-f-type">
                     <div>
@@ -1094,9 +1075,6 @@
                             <td><div class="left" title="Export the leftmost Pok&eacute;mon set">
                                 <button id="exportL">Export</button>
                             </div></td>
-                            <td><div class="right" title="Export the rightmost Pok&eacute;mon set">
-                                <button id="exportR">Export</button>
-                            </div></td>
                         </tr>
                     </tbody>
                 </table>
@@ -1661,24 +1639,6 @@
                 <button type="button" id="reset-trainer">Reset</button>
             </fieldset>
         </div>
-    </div>
-    <div class="right-side-pannel side-pannel">
-        <button data-set="i-f-o-type" class="r-side-button">
-            <i class="s-arrow arrowdown"></i>
-            <span>Type</span>
-        </button>
-        <button data-set="i-f-o-stats" class="r-side-button">
-            <i class="s-arrow arrowdown"></i>
-            <span>Stats</span>
-        </button>
-        <button data-set="i-f-o-hp" class="r-side-button">
-            <i class="s-arrow arrowdown"></i>
-            <span>HP</span>
-        </button>
-        <button data-set="i-f-o-move" class="r-side-button">
-            <i class="s-arrow arrowdown"></i>
-            <span>Moves</span>
-        </button>
     </div>
     <script type="text/javascript">
         var linkExtension = '.template.html';
