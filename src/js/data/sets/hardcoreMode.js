@@ -50,6 +50,21 @@ var SETDEX_SV = {
   },
   "Charizard": {
   },
+  "Charizard-Mega-X": {
+    "Silph Co. Rival Charmander": {
+        "level": 56,
+        "ability": "Tough Claws",
+        "moves":[
+            "Flare Blitz",
+            "Dragon Claw",
+            "Earthquake",
+            "Dragon Dance",
+        ],
+        "nature":"Jolly",
+        "item":"Charizardite X",
+        "index":214,
+    },
+  },
   "Bulbasaur": {
     "Rival Route 22 Bulbasaur": {
         "level": 15,
@@ -82,6 +97,21 @@ var SETDEX_SV = {
   },
   "Venusaur": {
   },
+  "Venusaur-Mega": {
+    "Silph Co. Rival Bulbasaur": {
+        "level": 56,
+        "ability": "Thick Fat",
+        "moves":[
+            "Giga Drain",
+            "Sludge Bomb",
+            "Earth Power",
+            "Sleep Powder",
+        ],
+        "nature":"Timid",
+        "item":"Venusaurite",
+        "index":220,
+    },
+  },
   "Squirtle": {
     "Rival Route 22 Squirtle": {
         "level": 16,
@@ -113,6 +143,21 @@ var SETDEX_SV = {
     },
   },
   "Blastoise": {
+  },
+  "Blastoise-Mega": {
+    "Silph Co. Rival Squirtle": {
+        "level": 56,
+        "ability": "Mega Launcher",
+        "moves":[
+            "Water Pulse",
+            "Dark Pulse",
+            "Aura Sphere",
+            "Shell Smash",
+        ],
+        "nature":"Modest",
+        "item":"Blastoiseite",
+        "index":208,
+    },
   },
   "Caterpie": {
   },
@@ -240,7 +285,37 @@ var SETDEX_SV = {
         "index": 32,
     },
   },
+  "Pikachu-Surfing": {
+    "Vermillion Gym Gentleman Tucker": {
+        "level": 35,
+        "ability": "Lighting Rod",
+        "moves":[
+            "Bouncy Bubble",
+            "Zippy Zap",
+            "Extreme Speed",
+            "Knock Off", 
+        ],
+        "nature":"Naive",
+        "item":"Light Ball",
+        "index": 123,
+    },
+  },
   "Raichu": {
+  },
+  "Raichu-Alola": {
+    "Leader Lt. Surge": {
+        "level": 36,
+        "ability": "Surge Surfer",
+        "moves":[
+            "Rising Voltage",
+            "Psyshock",
+            "Nasty Plot",
+            "Surf", 
+        ],
+        "nature":"Modest",
+        "item":"Focus Sash",
+        "index": 127,
+    },
   },
   "Sandshrew": {
   },
@@ -251,12 +326,38 @@ var SETDEX_SV = {
   "Nidorina": {
   },
   "Nidoqueen": {
+    "S.S Anne Sailor Edmond & Sailor Trevor": {
+        "level": 35,
+        "ability": "Sheer Force",
+        "moves":[
+            "Surf",
+            "Ice Beam",
+            "Earth Power",
+            "Reflect", //Why does this have reflect on a AV set?
+        ],
+        "nature":"Timid",
+        "item":"Assault Vest",
+        "index": 105,
+    },
   },
   "NidoranM": {
   },
   "Nidorino": {
   },
   "Nidoking": {
+    "Rocket Hideout Giovanni": {
+        "level": 47,
+        "ability": "Sheer Force",
+        "moves":[
+            "Earth Power",
+            "Sludge Wave",
+            "Fire Blast",
+            "Thunderbolt",
+        ],
+        "nature":"Timid",
+        "item":"Life Orb",
+        "index":178,
+    },
   },
   "Clefairy": {
     "Viridian Forest Lass Anne": {
@@ -317,6 +418,34 @@ var SETDEX_SV = {
   "Vulpix": {
   },
   "Ninetales": {
+    "Route 10 Poke Maniac Herman": {
+        "level": 42,
+        "ability": "Drought",
+        "moves":[
+            "Heat Wave",
+            "Solar Beam",
+            "Scorching Sands",
+            "Psyshock", 
+        ],
+        "nature":"Timid",
+        "item":"Air Balloon",
+        "index": 144,
+    },
+  },
+  "Ninetales-Alola": {
+    "Pkmn Tower Grunt 1": {
+        "level": 55,
+        "ability": "Serene Grace",
+        "moves":[
+            "Moonblast",
+            "Blizzard",
+            "Freeze-Dry",
+            "Weather Ball",
+        ],
+        "nature":"Timid",
+        "item":"Choice Specs",
+        "index":190,
+    },
   },
   "Jigglypuff": {
     "Nugget Bridge Lass Ali": {
@@ -334,6 +463,19 @@ var SETDEX_SV = {
     },
   },
   "Wigglytuff": {
+    "S.S Anne Lass Ann & Gentleman Brooks": {
+        "level": 36,
+        "ability": "Sheer Force",
+        "moves":[
+            "Moonblast",
+            "Thunderbolt",
+            "Flamethrower",
+            "Ice Beam",
+        ],
+        "nature":"Modest",
+        "item":"Life Orb",
+        "index": 101,
+    },
   },
   "Zubat": {
   },
@@ -356,6 +498,19 @@ var SETDEX_SV = {
   "Diglett": {
   },
   "Dugtrio": {
+    "Vermillion Gym Gentleman Tucker": {
+        "level": 36,
+        "ability": "Arena Trap",
+        "moves":[
+            "Earthquake",
+            "Rock Slide",
+            "Night Slash",
+            "Aerial Ace", 
+        ],
+        "nature":"Jolly",
+        "item":"Life Orb",
+        "index": 124,
+    },
   },
   "Meowth": {
   },
@@ -416,6 +571,21 @@ var SETDEX_SV = {
         "index": 78,
     },
   },
+  "Arcanine-Hisui": {
+    "Route 8 Super Nerd Aidan": {
+        "level": 43,
+        "ability": "Queenly Majest",
+        "moves":[
+            "Brutal Swing",
+            "Power Whip",
+            "Knock Off",
+            "U-turn",
+        ],
+        "nature":"Adamant",
+        "item":"Choice Scarf",
+        "index":150,
+    },
+  },
   "Poliwag" : {
   },
   "Poliwhirl": {
@@ -427,6 +597,19 @@ var SETDEX_SV = {
   "Kadabra": {
   },
   "Alakazam": {
+    "Vermillion Gym Gentleman Tucker": {
+        "level": 34,
+        "ability": "Magic Guard",
+        "moves":[
+            "Psyshock",
+            "Shadow Ball",
+            "Energy Ball",
+            "Hidden Power Fighting", 
+        ],
+        "nature":"Timid",
+        "item":"Focus Sash",
+        "index": 120,
+    },
   },
   "Machop": {
   },
@@ -439,6 +622,19 @@ var SETDEX_SV = {
   "Weepinbell": {
   },
   "Victreebel": {
+    "Route 10 Poke Maniac Herman": {
+        "level": 43,
+        "ability": "Chlorophyll",
+        "moves":[
+            "Giga Drain",
+            "Solar Blade",
+            "Sludge Bomb",
+            "Weather Ball", 
+        ],
+        "nature":"Rash",
+        "item":"Life Orb",
+        "index": 145,
+    },
   },
   "Tentacool": {
   },
@@ -484,11 +680,54 @@ var SETDEX_SV = {
   },
   "Slowbro": {
   },
+  "Slowbro-Galar": {
+    "Leader Erika": {
+        "level": 44,
+        "ability": "Regenerator",
+        "moves":[
+            "Thunder Wave",
+            "Sludge Bomb",
+            "Flamethrower",
+            "Teleport",
+        ],
+        "nature":"Bold",
+        "item":"Black Sludge",
+        "index":161,
+    },
+  },
   "Magnemite": {
   },
   "Magneton": {
   },
+  "Magnezone": {
+    "Pkmn Tower Grunt 3": {
+        "level": 56,
+        "ability": "Magnet Pull",
+        "moves":[
+            "Volt Switch",
+            "Flash Cannon",
+            "Thunderbolt",
+            "Hidden Power Fire",
+        ],
+        "nature":"Timid",
+        "item":"Focus Sash",
+        "index":200,
+    },
+  },
   "Farfetch’d": {
+    "Vermillion Gym Gentleman Tucker": {
+        "level": 36,
+        "ability": "Sharpness",
+        "moves":[
+            "Sacred Sword",
+            "Night Slash",
+            "Cut",
+            "Brave Bird", 
+        ],
+        "nature":"Timid",
+        "item":"Stick",
+        "index": 121,
+    },
   },
   "Farfetch’d-Galar": {
     "Leader Falkner": {
@@ -532,6 +771,19 @@ var SETDEX_SV = {
   "Drowzee": {
   },
   "Hypno": {
+    "Game Corner Grunt": {
+        "level": 47,
+        "ability": "Bad Dreams",
+        "moves":[
+            "Dark Void",
+            "Psychic",
+            "Knock Off",
+            "Shadow Ball",
+        ],
+        "nature":"Calm",
+        "item":"Colbur Berry",
+        "index":163,
+    },
   },
   "Krabby": {
   },
@@ -556,6 +808,21 @@ var SETDEX_SV = {
   },
   "Electrode": {
   },
+  "Electrode-Hisui":{
+    "Leader Lt. Surge": {
+        "level": 36,
+        "ability": "Reckless",
+        "moves":[
+            "Volt Switch",
+            "Chloroblast",
+            "Hidden Power Ice",
+            "Explosion", 
+        ],
+        "nature":"Naive",
+        "item":"Life Orb",
+        "index": 126,
+    },
+  },
   "Exeggcute": {
   },
   "Exeggutor": {
@@ -577,6 +844,19 @@ var SETDEX_SV = {
         "nature":"Jolly",
         "item":"Black Belt",
         "index": 46,
+    },
+    "Leader Lt. Surge": {
+        "level": 36,
+        "ability": "Unburden",
+        "moves":[
+            "Knock Off",
+            "Close Combat",
+            "Rock Slide",
+            "Bulk Up", 
+        ],
+        "nature":"Adamant",
+        "item":"Electric Seed",
+        "index": 128,
     },
   },
   "Hitmonchan": {
@@ -600,7 +880,20 @@ var SETDEX_SV = {
   },
   "Weezing": {
   },
-  "Weezng-Galar": {
+  "Weezing-Galar": {
+    "Rocket Hideout Left Grunt": {
+        "level": 47,
+        "ability": "Neutralizing Gas",
+        "moves":[
+            "Sludge Bomb",
+            "Strange Steam",
+            "Flamethrower",
+            "Will-O-Wisp",
+        ],
+        "nature":"Bold",
+        "item":"Shuca Berry",
+        "index":167,
+    },
   },
   "Rhyhorn": {
   },
@@ -610,9 +903,22 @@ var SETDEX_SV = {
   },
   "Tangela":{
   },
-  "Khangaskan":{
+  "Kangaskhan":{
   },
-  "Khangaskan-Mega":{
+  "Kangaskhan-Mega":{
+    "Rocket Hideout Giovanni": {
+        "level": 47,
+        "ability": "Parental Bond",
+        "moves":[
+            "Power-Up Punch",
+            "Body Slam",
+            "Crunch",
+            "Rock Tomb",
+        ],
+        "nature":"Jolly",
+        "item":"Kangaskhanite",
+        "index":182,
+    },
   },
   "Horsea":{
   },
@@ -656,14 +962,85 @@ var SETDEX_SV = {
         "index": 93,
     },
   },
+  "Mr. Rime": {
+    "Pkmn Tower Grunt 1": {
+        "level": 55,
+        "ability": "Ice Body",
+        "moves":[
+            "Freeze-Dry",
+            "Thunder",
+            "Psychic",
+            "Hypnosis",
+        ],
+        "nature":"Modest",
+        "item":"Wide Lens",
+        "index":191,
+    },
+  },
   "Scyther":{
   },
   "Jynx":{
   },
   "Electabuzz":{
   },
+  "Electivire": {
+    "Silph Co. Rival Squirtle": {
+        "level": 56,
+        "ability": "Iron Fist",
+        "moves":[
+            "Plasma Fists",
+            "Close Combat",
+            "Ice Punch",
+            "Mach Punch",
+        ],
+        "nature":"Jolly",
+        "item":"Electirizer",
+        "index":204,
+    },
+    "Silph Co. Rival Charmander": {
+        "level": 56,
+        "ability": "Iron Fist",
+        "moves":[
+            "Plasma Fists",
+            "Close Combat",
+            "Ice Punch",
+            "Mach Punch",
+        ],
+        "nature":"Jolly",
+        "item":"Electirizer",
+        "index":212,
+    },
+    "Silph Co. Rival Bulbasaur": {
+        "level": 56,
+        "ability": "Iron Fist",
+        "moves":[
+            "Plasma Fists",
+            "Close Combat",
+            "Ice Punch",
+            "Mach Punch",
+        ],
+        "nature":"Jolly",
+        "item":"Electirizer",
+        "index":217,
+    },
+  },
   "Magmar":{
   },
+  "Magmortar":{
+    "Rock Tunnel Picknicker Dana": {
+        "level": 36,
+        "ability": "Timid",
+        "moves":[
+            "Flamethrower",
+            "Aura Sphere",
+            "Thunderbolt",
+            "Dark Pulse", 
+        ],
+        "nature":"Timid",
+        "item":"Magmarizer",
+        "index": 143,
+    }, 
+  },    
   "Pinsir":{
   },
   "Pinsir-Mega":{
@@ -679,6 +1056,19 @@ var SETDEX_SV = {
   "Magikarp":{
   },
   "Gyarados":{
+    "Rocket Hideout Giovanni": {
+        "level": 47,
+        "ability": "Intimidate",
+        "moves":[
+            "Waterfall",
+            "Earthquake",
+            "Bounce",
+            "Dragon Dance",
+        ],
+        "nature":"Jolly",
+        "item":"Flyinium-Z",
+        "index":181,
+    },
   },
   "Gyarados-Mega":{
   },
@@ -734,6 +1124,34 @@ var SETDEX_SV = {
   "Jolteon":{
   },
   "Flareon":{
+    "Route 9 Picknicker Alicia": {
+        "level": 44,
+        "ability": "Toxic Boost",
+        "moves":[
+            "Flame Charge",
+            "Sacred Fire",
+            "Facade",
+            "Stomping Tantrum", 
+        ],
+        "nature":"Jolly",
+        "item":"Toxic Orb",
+        "index": 133,
+    },
+  },
+  "Sylveon": {
+    "Route 10 Poke Maniac Herman": {
+        "level": 44,
+        "ability": "Pixilate",
+        "moves":[
+            "Hyper Voice",
+            "Weather Ball",
+            "Misty Explosion",
+            "Psyshock", 
+        ],
+        "nature":"Modest",
+        "item":"Pixie Plate",
+        "index": 147,
+    },
   },
   "Porygon":{
   },
@@ -746,6 +1164,19 @@ var SETDEX_SV = {
   "Kabutops":{
   },
   "Aerodactyl":{
+    "Game Corner Grunt": {
+        "level": 46,
+        "ability": "Unnerve",
+        "moves":[
+            "Rock Slide",
+            "Dual Wingbeat",
+            "Headlong Rush",
+            "Iron Head",
+        ],
+        "nature":"Jolly",
+        "item":"Focus Sash",
+        "index":164,
+    },
   },
   "Aerodactyl-Mega":{
   },
@@ -756,6 +1187,19 @@ var SETDEX_SV = {
   "Articuno":{
   },
   "Articuno-Galar":{
+    "Silph Co. Arianna & Archer": {
+        "level": 55,
+        "ability": "Competitive",
+        "moves":[
+            "Psychic",
+            "Focus Blast",
+            "Roost",
+            "Air Slash",
+        ],
+        "nature":"Timid",
+        "item":"Colbur Berry",
+        "index":222,
+    },
   },
   "Zapdos":{
   },
@@ -853,6 +1297,19 @@ var SETDEX_SV = {
     },
   },
   "Togekiss":{
+    "Route 11 Leader Whitney": {
+        "level": 36,
+        "ability": "Serene Grace",
+        "moves":[
+            "Roost",
+            "Air Slash",
+            "Mystical Fire",
+            "Thunder Wave", 
+        ],
+        "nature":"Timid",
+        "item":"Leftovers",
+        "index": 118,
+    },
   },
   "Natu":{
   },
@@ -865,6 +1322,19 @@ var SETDEX_SV = {
   "Ampharos":{
   },
   "Ampharos-Mega":{
+    "Leader Lt. Surge": {
+        "level": 36,
+        "ability": "Mold Breaker",
+        "moves":[
+            "Volt Switch",
+            "Dragon Pulse",
+            "Focus Blast",
+            "Hidden Power Grass", 
+        ],
+        "nature":"Modest",
+        "item":"Ampharosite",
+        "index": 130,
+    },
   },
   "Bellosom":{
   },
@@ -894,6 +1364,32 @@ var SETDEX_SV = {
   "Skiploom":{
   },
   "Jumpluff":{
+    "Silph Co. Rival Squirtle": {
+        "level": 56,
+        "ability": "Aerilate",
+        "moves":[
+            "Double-Edge",
+            "Leaf Blade",
+            "Spore",
+            "Swords Dance",
+        ],
+        "nature":"Jolly",
+        "item":"Sharp Beak",
+        "index":205,
+    },
+    "Silph Co. Rival Charmander": {
+        "level": 56,
+        "ability": "Aerilate",
+        "moves":[
+            "Double-Edge",
+            "Leaf Blade",
+            "Spore",
+            "Swords Dance",
+        ],
+        "nature":"Jolly",
+        "item":"Sharp Beak",
+        "index":210,
+    },
   },
   "Aimpom":{
   },
@@ -958,6 +1454,21 @@ var SETDEX_SV = {
   },
   "Murkow":{
   },
+  "Honchkrow": {
+    "Pkmn Tower Grunt 2": {
+        "level": 56,
+        "ability": "Super Luck",
+        "moves":[
+            "Drill Peck",
+            "Night Slash",
+            "Heat Wave",
+            "Sucker Punch",
+        ],
+        "nature":"Naive",
+        "item":"Scope Lens",
+        "index":197,
+    },
+  },
   "Slowking":{
   },
   "Slowking-Galar":{
@@ -982,6 +1493,21 @@ var SETDEX_SV = {
   "Wobbufet":{
   },
   "Girafarig":{
+  },
+  "Farigiraf": {
+    "Route 11 Leader Whitney": {
+        "level": 36,
+        "ability": "Parental Bond",
+        "moves":[
+            "Charge Beam",
+            "Hyper Voice",
+            "Psychic",
+            "Dazzling Gleam", 
+        ],
+        "nature":"Timid",
+        "item":"Normal Gem",
+        "index": 115,
+    }, 
   },
   "Pineco":{
   },
@@ -1055,6 +1581,21 @@ var SETDEX_SV = {
   },
   "Qwilfish-Hisui":{
   },
+  "Overqwil": {
+    "Pkmn Tower Grunt 1": {
+        "level": 56,
+        "ability": "Swift Swim",
+        "moves":[
+            "Waterfall",
+            "Gunk Shot",
+            "Throat Chop",
+            "Destiny Bond",
+        ],
+        "nature":"Adamant",
+        "item":"Life Orb",
+        "index":189,
+    },
+  },
   "Scizor":{
   },
   "Scizor-Mega":{
@@ -1068,6 +1609,34 @@ var SETDEX_SV = {
   "Sneasel":{
   },
   "Sneasel-Hisui":{
+    "Route 9 Picknicker Caitlin": {
+        "level": 43,
+        "ability": "Inner Focus",
+        "moves":[
+            "Assist",
+            "",
+            "",
+            "", 
+        ],
+        "nature":"Bashful",
+        "item":"Eviolite",
+        "index": 137,
+    }, 
+  },
+  "Smeargle": {
+    "Route 9 Picknicker Caitlin": {
+        "level": 44,
+        "ability": "Own Tempo",
+        "moves":[
+            "V-Create",
+            "Dragon Ascent",
+            "Close Combat",
+            "Trick", 
+        ],
+        "nature":"Jolly",
+        "item":"Choice Scarf",
+        "index": 135,
+    },
   },
   "Teddiursa":{
   },
@@ -1126,6 +1695,19 @@ var SETDEX_SV = {
   "Houndoom":{   
   },
   "Houndoom-Mega":{   
+    "Silph Co. Arianna & Archer": {
+        "level": 56,
+        "ability": "Dark Aura",
+        "moves":[
+            "Fiery Wrath",
+            "Heat Wave",
+            "Scorching Sands",
+            "Pursuit",
+        ],
+        "nature":"Naive",
+        "item":"Houndoomite",
+        "index":226,
+    },
   },
   "Kingdra":{   
   },
@@ -1203,8 +1785,47 @@ var SETDEX_SV = {
   "Grovyle":{   
   },
   "Sceptile":{   
+    "S.S Anne Brendan": {
+        "level": 36,
+        "ability": "Overgrow",
+        "moves":[
+            "Swords Dance",
+            "Leaf Blade",
+            "Drain Punch",
+            "Rock Slide", 
+        ],
+        "nature":"Jolly",
+        "item":"Life Orb",
+        "index": 112,
+    },
   },
   "Sceptile-Mega":{   
+    "Leader Erika": {
+        "level": 44,
+        "ability": "Technician",
+        "moves":[
+            "Swords Dance",
+            "Bullet Seed",
+            "Draco Barrage",
+            "High Horsepower",
+        ],
+        "nature":"Jolly",
+        "item":"Sceptilite",
+        "index":159,
+    },
+    "Silph Co. Tag Partner Brendan": {
+        "level": 55,
+        "ability": "Technician",
+        "moves":[
+            "Mega Drain",
+            "Dragon Breath",
+            "Focus Blast",
+            "Hidden Power Fire",
+        ],
+        "nature":"Timid",
+        "item":"Sceptilite",
+        "index":229,
+    },
   },
   "Torchic":{   
   },
@@ -1246,6 +1867,21 @@ var SETDEX_SV = {
   "Linoone":{   
   },
   "Linoone-Galar":{   
+  },
+  "Obstagoon": {
+    "Pkmn Tower Grunt 2": {
+        "level": 56,
+        "ability": "Guts",
+        "moves":[
+            "Knock Off",
+            "Facade",
+            "Parting Shot",
+            "Close Combat",
+        ],
+        "nature":"Jolly",
+        "item":"Flame Orb",
+        "index":194,
+    },
   },
   "Wurmple":{   
   },
@@ -1294,26 +1930,104 @@ var SETDEX_SV = {
   "Nuzleaf":{   
   },
   "Shiftry":{   
+    "Rocket Hideout Right Grunt": {
+        "level": 47,
+        "ability": "Wind Rider",
+        "moves":[
+            "Ceaseless Edge",
+            "Leaf Blade",
+            "Low Kick",
+            "X-Scissor",
+        ],
+        "nature":"Jolly",
+        "item":"Focus Sash",
+        "index":174,
+    },
   },
   "Taillow":{   
   },
   "Swellow":{   
+    "Route 11 Leader Whitney": {
+        "level": 36,
+        "ability": "Guts",
+        "moves":[
+            "Brave Bird",
+            "Facade",
+            "U-turn",
+            "Quick Attack", 
+        ],
+        "nature":"Jolly",
+        "item":"Normal Gem",
+        "index": 117,
+    },
   },
   "Wingull":{   
   },
   "Pelipper":{   
+    "Pkmn Tower Grunt 1": {
+        "level": 55,
+        "ability": "Drizzle",
+        "moves":[
+            "Weather Ball",
+            "Hurricane",
+            "U-turn",
+            "Tailwind",
+        ],
+        "nature":"Modest",
+        "item":"Wacan Berry",
+        "index":188,
+    },
   },
   "Ralts":{   
   },
   "Kirlia":{   
   },
   "Gardevoir":{   
+    "S.S Anne Brendan": {
+        "level": 36,
+        "ability": "Trace",
+        "moves":[
+            "Psychic",
+            "Moonblast",
+            "Mystical Fire",
+            "Calm Mind", 
+        ],
+        "nature":"Timid",
+        "item":"Leftovers",
+        "index": 111,
+    },
   },
   "Gardevoir-Mega":{   
   },
   "Surskit":{   
   },
   "Masquerain":{   
+    "S.S Anne Sailor Edmond & Sailor Trevor": {
+        "level": 36,
+        "ability": "Intimidate",
+        "moves":[
+            "Surf",
+            "Bug Buzz",
+            "Energy Ball",
+            "Safeguard", 
+        ],
+        "nature":"Timid",
+        "item":"Sitrus Berry",
+        "index": 107,
+    },
+    "Silph Co. Tag Partner Brendan": {
+        "level": 55,
+        "ability": "Intimidate",
+        "moves":[
+            "Bug Buzz",
+            "Scald",
+            "Giga Drain",
+            "Stun Spore",
+        ],
+        "nature":"Modest",
+        "item":"Iapapa Berry",
+        "index":227,
+    },
   },
   "Shroomish":{   
   },
@@ -1324,6 +2038,32 @@ var SETDEX_SV = {
   "Vigoroth":{   
   },
   "Slaking":{   
+    "S.S Anne Brendan": {
+        "level": 36,
+        "ability": "Truant",
+        "moves":[
+            "Body Slam",
+            "Knock Off",
+            "Brick Break",
+            "Slack Off", 
+        ],
+        "nature":"Jolly",
+        "item":"Leftovers",
+        "index": 109,
+    },
+    "Rocket Hideout Left Grunt": {
+        "level": 47,
+        "ability": "Truant",
+        "moves":[
+            "Double-Edge",
+            "Fire Punch",
+            "Knock Off",
+            "Ice Punch",
+        ],
+        "nature":"Jolly",
+        "item":"Normal Gem",
+        "index":169,
+    },
   },
   "Nincada":{   
   },
@@ -1336,10 +2076,36 @@ var SETDEX_SV = {
   "Loudred":{   
   },
   "Exploud":{   
+    "Silph Co. Tag Partner Brendan": {
+        "level": 55,
+        "ability": "Punk Rock",
+        "moves":[
+            "Hyper Voice",
+            "Flamethrower",
+            "Focus Blast",
+            "Surf",
+        ],
+        "nature":"Timid",
+        "item":"Silk Scarf",
+        "index":228,
+    },
   },
   "Makuhita":{   
   },
-  "Hariyama":{   
+  "Hariyama":{  
+    "S.S Anne Brendan": {
+        "level": 36,
+        "ability": "Guts",
+        "moves":[
+            "Drain Punch",
+            "Knock Off",
+            "Bullet Punch",
+            "Fake Out", 
+        ],
+        "nature":"Adamant",
+        "item":"Flame Orb",
+        "index": 113,
+    }, 
   },
   "Azurill":{   
   },
@@ -1382,6 +2148,19 @@ var SETDEX_SV = {
     },
   },
   "Mawile-Mega":{   
+    "Silph Co. Arianna & Archer": {
+        "level": 56,
+        "ability": "Huge Power",
+        "moves":[
+            "Play Rough",
+            "Sucker Punch",
+            "Iron Head",
+            "Thunder Punch",
+        ],
+        "nature":"Adamant",
+        "item":"Mawilite",
+        "index":225,
+    },
   },
   "Aron":{   
   },
@@ -1442,6 +2221,19 @@ var SETDEX_SV = {
         "nature":"Timid",
         "item":"Shuca Berry",
         "index": 69,
+    },
+    "S.S Anne Brendan": {
+        "level": 36,
+        "ability": "Transistor",
+        "moves":[
+            "Volt Switch",
+            "Grass Knot",
+            "Surf",
+            "Hidden Power Ice", 
+        ],
+        "nature":"Timid",
+        "item":"Magnet",
+        "index": 110,
     },
   },
   "Minun":{   
@@ -1517,7 +2309,20 @@ var SETDEX_SV = {
   },
   "Grumpig":{   
   },
-  "Spinda":{   
+  "Spinda":{  
+    "Route 9 Picknicker Caitlin": {
+        "level": 44,
+        "ability": "Contrary",
+        "moves":[
+            "Assist",
+            "",
+            "",
+            "", 
+        ],
+        "nature":"Jolly",
+        "item":"Choice Scarf",
+        "index": 136,
+    }, 
   },
   "Trapinch":{   
   },
@@ -1547,6 +2352,19 @@ var SETDEX_SV = {
   "Altaria":{
   },
   "Altaria-Mega":{
+    "Route 11 Leader Whitney": {
+        "level": 36,
+        "ability": "Pixilate",
+        "moves":[
+            "Calm Mind",
+            "Hyper Voice",
+            "Flamethrower",
+            "Roost", 
+        ],
+        "nature":"Timid",
+        "item":"Altarianite",
+        "index": 119,
+    },
   },
   "Zangoose":{
   },
@@ -1602,6 +2420,19 @@ var SETDEX_SV = {
     },
   }, 
   "Crawdaunt":{
+    "S.S Anne Brendan": {
+        "level": 36,
+        "ability": "Adaptability",
+        "moves":[
+            "Aqua Jet",
+            "Liquidation",
+            "Knock Off",
+            "X-Scissor", 
+        ],
+        "nature":"Adamant",
+        "item":"Focus Sash",
+        "index": 108,
+    },
   },
   "Baltoy":{
   },
@@ -1623,6 +2454,19 @@ var SETDEX_SV = {
     },
   },
   "Cradily":{
+    "S.S Anne Sailor Edmond & Sailor Trevor": {
+        "level": 34,
+        "ability": "Storm Drain",
+        "moves":[
+            "Power Gem",
+            "Giga Drain",
+            "Earth Power",
+            "Hidden Power Fire",
+        ],
+        "nature":"Modest",
+        "item":"Assault Vest",
+        "index": 102,
+    },
   },
   "Anorith":{
   },
@@ -1692,12 +2536,51 @@ var SETDEX_SV = {
     },
   },
   "Gorebyss":{
+    "Silph Co. Rival Charmander": {
+        "level": 56,
+        "ability": "Dazzling",
+        "moves":[
+            "Surf",
+            "Moonblast",
+            "Psychic",
+            "Shell Smash",
+        ],
+        "nature":"Timid",
+        "item":"White Herb",
+        "index":213,
+    },
+    "Silph Co. Rival Bulbasaur": {
+        "level": 56,
+        "ability": "Dazzling",
+        "moves":[
+            "Surf",
+            "Moonblast",
+            "Psychic",
+            "Shell Smash",
+        ],
+        "nature":"Timid",
+        "item":"White Herb",
+        "index":218,
+    },
   },
   "Huntail":{
   },
   "Relicanth":{
   },
   "Luvdisc":{
+    "Route 11 Leader Whitney": {
+        "level": 36,
+        "ability": "Soul-Heart",
+        "moves":[
+            "Surf",
+            "Moonblast",
+            "Ice Beam",
+            "Lovely Kiss", 
+        ],
+        "nature":"Timid",
+        "item":"Mystic Water",
+        "index": 116,
+    }, 
   },
   "Bagon":{
   },
@@ -1757,12 +2640,38 @@ var SETDEX_SV = {
   "Grotle":{
   },
   "Torterra":{
+    "Rocket Hideout Giovanni": {
+        "level": 47,
+        "ability": "Rock head",
+        "moves":[
+            "Wood Hammer",
+            "Earthquake",
+            "Head Smash",
+            "Shell Smash",
+        ],
+        "nature":"Jolly",
+        "item":"White Herb",
+        "index":179,
+    },
   },
   "Chimchar":{
   },
   "Monferno":{
   },
   "Infernape":{
+    "Rocket Hideout Giovanni": {
+        "level": 47,
+        "ability": "Blaze",
+        "moves":[
+            "Pyro Ball",
+            "Close Combat",
+            "Thunder Punch",
+            "Stealth Rock",
+        ],
+        "nature":"Jolly",
+        "item":"Focus Sash",
+        "index":177,
+    },
   },
   "Piplup":{
   },
@@ -1806,10 +2715,36 @@ var SETDEX_SV = {
   "Budew":{
   },
   "Roserade":{
+    "Route 9 Picknicker Alicia": {
+        "level": 42,
+        "ability": "Technician",
+        "moves":[
+            "Clear Smog",
+            "Mega Drain",
+            "Hidden Power Fire",
+            "Sleep Powder", 
+        ],
+        "nature":"Timid",
+        "item":"Focus Sash",
+        "index": 131,
+    },
   },
   "Cranidos":{
   },
   "Rampardos":{
+    "Rock Tunnel Picknicker Dana": {
+        "level": 44,
+        "ability": "Mold Breaker",
+        "moves":[
+            "Power-Up Punch",
+            "Accelerock",
+            "Earthquake",
+            "Head Smash", 
+        ],
+        "nature":"Jolly",
+        "item":"Hard Stone",
+        "index": 142,
+    }, 
   },
   "":{
   },
@@ -1843,6 +2778,36 @@ var SETDEX_SV = {
         "index": 71,
     },
   },
+  "Drifblim":{
+    "Pkmn Tower Channeler Ruth": {
+        "level": 56,
+        "ability": "Unburden",
+        "moves":[
+            "Shadow Ball",
+            "Air Slash",
+            "Calm Mind",
+            "Strength Sap",
+        ],
+        "nature":"Modest",
+        "item":"Electric Seed",
+        "index":185,
+    },
+  },
+  "Lumineon":{
+    "S.S Anne Sailor Edmond & Sailor Trevor": {
+        "level": 36,
+        "ability": "Storm Drain",
+        "moves":[
+            "Hydro Pump",
+            "Ice Beam",
+            "Hidden Power Grass",
+            "Flip Turn",
+        ],
+        "nature":"Timid",
+        "item":"Mystic Water",
+        "index": 104,
+    },
+  },
   "Toxicroak":{
    "Leader Misty": {
         "level": 27,
@@ -1858,8 +2823,165 @@ var SETDEX_SV = {
         "index": 91,
     },
   },
-
-
+  "Cherrim": {
+    "Route 10 Poke Maniac Herman": {
+        "level": 44,
+        "ability": "Flower Gift",
+        "moves":[
+            "Solar Blade",
+            "X-Scissor",
+            "Weather Ball",
+            "Growth", 
+        ],
+        "nature":"Lonely",
+        "item":"Miracle Seed",
+        "index": 146,
+    },
+  },
+  "Chatot":{
+    "Route 9 Picknicker Alicia": {
+        "level": 44,
+        "ability": "Punk Rock",
+        "moves":[
+            "Chatter",
+            "Boomburst",
+            "Heat Wave",
+            "U-turn", 
+        ],
+        "nature":"Timid",
+        "item":"Silk Scarf",
+        "index": 134,
+    },
+  },
+  "Weavile": {
+    "Celadon Gym Ace Trainer Mary": {
+        "level": 43,
+        "ability": "Infiltrator",
+        "moves":[
+            "Surf",
+            "Knock Off",
+            "Icicle Crash",
+            "Reflect",
+        ],
+        "nature":"Jolly",
+        "item":"Focus Sash",
+        "index":153,
+    },
+  },
+  "Azelf": {
+    "Silph Co. Rival Squirtle": {
+        "level": 56,
+        "ability": "Focus Sash",
+        "moves":[
+            "Stealth Rock",
+            "Explosion",
+            "Flamethrower",
+            "Psychic",
+        ],
+        "nature":"Naive",
+        "item":"Focus Sash",
+        "index":203,
+    },
+    "Silph Co. Rival Charmander": {
+        "level": 56,
+        "ability": "Focus Sash",
+        "moves":[
+            "Stealth Rock",
+            "Explosion",
+            "Flamethrower",
+            "Psychic",
+        ],
+        "nature":"Naive",
+        "item":"Focus Sash",
+        "index":209,
+    },
+    "Silph Co. Rival Bulbasaur": {
+        "level": 56,
+        "ability": "Focus Sash",
+        "moves":[
+            "Stealth Rock",
+            "Explosion",
+            "Flamethrower",
+            "Psychic",
+        ],
+        "nature":"Naive",
+        "item":"Focus Sash",
+        "index":215,
+    },
+  },
+  "Rotom-Wash": {    
+    "Rocket Hideout Right Grunt": {
+        "level": 47,
+        "ability": "Levitate",
+        "moves":[
+            "Thunderbolt",
+            "Hydro Pump",
+            "Shadow Ball",
+            "Hidden Power Ice",
+        ],
+        "nature":"Timid",
+        "item":"Charti Berry", //Idk but it looks like this shouldn't be a Charti Berry.
+        "index":176,
+    },
+  },
+  "Rotom-Frost": {
+    "Leader Lt. Surge": {
+        "level": 35,
+        "ability": "Levitate",
+        "moves":[
+            "Thunderbolt",
+            "Blizzard",
+            "Freeze-Dry",
+            "Nasty Plot", 
+        ],
+        "nature":"Timid",
+        "item":"Icium-Z",
+        "index": 125,
+    },
+    "Rocket Hideout Left Grunt": {
+        "level": 47,
+        "ability": "Levitate",
+        "moves":[
+            "Thunderbolt",
+            "Frost Breath",
+            "Freeze-Dry",
+            "Hidden Power Fire", 
+        ],
+        "nature":"Timid",
+        "item":"Charti Berry",
+        "index":172,
+    },
+  },
+  "Cresselia":{
+    "Pkmn Tower Channeler Ruth": {
+        "level": 56,
+        "ability": "Levitate",
+        "moves":[
+            "Psyshock",
+            "Moonblast",
+            "Moonlight",
+            "Calm Mind",
+        ],
+        "nature":"Timid",
+        "item":"Electric Seed",
+        "index":186,
+    },
+  },
+  "Samurott":{
+    "S.S Anne Lass Ann & Gentleman Brooks": {
+        "level": 36,
+        "ability": "Shell Armor",
+        "moves":[
+            "Water Pledge",
+            "Flash Cannon",
+            "Ice Beam",
+            "Hidden Power Grass",
+        ],
+        "nature":"Bashful",
+        "item":"Lum Berry",
+        "index": 97,
+    },
+  },
   "Simisear": {
     "Cerulean City Rival Squirtle": {
         "level": 27,
@@ -1873,6 +2995,19 @@ var SETDEX_SV = {
         "nature":"Timid",
         "item":"Charcoal",
         "index": 49,
+    },
+    "S.S Anne Lass Ann & Gentleman Brooks": {
+        "level": 36,
+        "ability": "Sage Power",
+        "moves":[
+            "Fire Pledge",
+            "Focus Blast",
+            "Grass Knot",
+            "Hidden Power Ice",
+        ],
+        "nature":"Timid",
+        "item":"Choice Scarf",
+        "index": 99,
     },
   },
   "Simisage": {
@@ -1888,6 +3023,19 @@ var SETDEX_SV = {
         "nature":"Timid",
         "item":"Miracle Seed",
         "index": 53,
+    },
+    "S.S Anne Lass Ann & Gentleman Brooks": {
+        "level": 36,
+        "ability": "Sage Power",
+        "moves":[
+            "Grass Pledge",
+            "Focus Blast",
+            "Power Gem",
+            "Hidden Power Fire",
+        ],
+        "nature":"Timid",
+        "item":"Choice Scarf",
+        "index": 100,
     },
   },
   "Simipour": {
@@ -1905,6 +3053,36 @@ var SETDEX_SV = {
         "index": 59,
     },
   },
+  "Swanna": {
+    "Vermillion Gym Gentleman Tucker": {
+        "level": 35,
+        "ability": "No Guard",
+        "moves":[
+            "Hurricane",
+            "Hydro Pump",
+            "Ice Beam",
+            "", 
+        ],
+        "nature":"Timid",
+        "item":"Sharp Beak",
+        "index": 122,
+    },
+  },
+  "Lilligant-Hisui": {
+    "Rocket Hideout Left Grunt": {
+        "level": 47,
+        "ability": "Hustle",
+        "moves":[
+            "Leaf Blade",
+            "Close Combat",
+            "Stone Edge",
+            "Knock Off",
+        ],
+        "nature":"Jolly",
+        "item":"Miracle Seed",
+        "index":170,
+    },
+  },
   "Hippopotas":{
     "Leader Brock": {
         "level": 13,
@@ -1919,6 +3097,21 @@ var SETDEX_SV = {
         "item":"Berry Juice",
         "index": 26,
     },
+  },
+  "Liepard":{
+    "Route 9 Picknicker Caitlin": {
+        "level": 43,
+        "ability": "Prankster",
+        "moves":[
+            "Assist",
+            "",
+            "",
+            "", 
+        ],
+        "nature":"Adamant",
+        "item":"Focus Sash",
+        "index": 138,
+    }, 
   },
   "Swoobat": {
     "Mt. Moon Super Nerd Miguel": {
@@ -1948,6 +3141,36 @@ var SETDEX_SV = {
         "nature":"Bashful",
         "item":"Iapapa Berry",
         "index": 30,
+    },
+  },
+  "Braviary": {
+    "Pkmn Tower Grunt 2": {
+        "level": 56,
+        "ability": "Defiant",
+        "moves":[
+            "Brave Bird",
+            "Close Combat",
+            "Roost",
+            "Bulk Up",
+        ],
+        "nature":"Jolly",
+        "item":"Fighting Gem",
+        "index":195,
+    },
+  },
+  "Braviary-Hisui": {
+    "Route 8 Super Nerd Aidan": {
+        "level": 44,
+        "ability": "Sheer Force",
+        "moves":[
+            "Psychic",
+            "Heat Wave",
+            "Air Slash",
+            "Esper Wing",
+        ],
+        "nature":"Modest",
+        "item":"Life Orb",
+        "index":152,
     },
   },
   "Druddigon": {
@@ -1995,6 +3218,21 @@ var SETDEX_SV = {
         "index":2,
     },
   },
+  "Pyroar":{  
+    "Route 11 Leader Whitney": {
+        "level": 36,
+        "ability": "Adaptability",
+        "moves":[
+            "Torch Song",
+            "Hyper Voice",
+            "Hidden Power Grass",
+            "Sleep Talk", 
+        ],
+        "nature":"Timid",
+        "item":"Focus Sash",
+        "index": 114,
+    }, 
+  },
   "Skiddo": {
     "Mt. Moon Super Nerd Miguel": {
         "level": 22,
@@ -2025,6 +3263,36 @@ var SETDEX_SV = {
         "index": 34,
     },
   },
+  "Golurk": {
+    "Pkmn Tower Grunt 3": {
+        "level": 56,
+        "ability": "Iron Fist",
+        "moves":[
+            "Earthquake",
+            "Shadow Punch",
+            "Heat Crash",
+            "Ice Punch",
+        ],
+        "nature":"Jolly",
+        "item":"Assault Vest",
+        "index":201,
+    },
+  },
+  "Bouffalant":{
+    "Rock Tunnel Picknicker Dana": {
+        "level": 43,
+        "ability": "Bull Rush",
+        "moves":[
+            "Head Charge",
+            "Throat Chop",
+            "Earthquake",
+            "Rock Slide", 
+        ],
+        "nature":"Jolly",
+        "item":"Silk Scarf",
+        "index": 140,
+    }, 
+  },
   "Audino": {
     "Viridian Forest Lass Anne": {
         "level": 15,
@@ -2038,6 +3306,94 @@ var SETDEX_SV = {
         "nature":"Bashful",
         "item":"",
         "index":16,
+    },
+  },
+  "Maractus": {
+    "Celadon Gym Ace Trainer Mary": {
+        "level": 43,
+        "ability": "Grassy Surge",
+        "moves":[
+            "Grassy Glide",
+            "Drain Punch",
+            "Spiky Shield",
+            "Sucker Punch",
+        ],
+        "nature":"Adamant",
+        "item":"Life Orb",
+        "index":155,
+    },
+  },
+  "Darmanitan": {
+    "Silph Co. Rival Squirtle": {
+        "level": 56,
+        "ability": "Sheer Force",
+        "moves":[
+            "Flare Blitz",
+            "Rock Slide",
+            "U-turn",
+            "Earthquake",
+        ],
+        "nature":"Jolly",
+        "item":"Life Orb",
+        "index":206,
+    },
+    "Silph Co. Rival Bulbasaur": {
+        "level": 56,
+        "ability": "Sheer Force",
+        "moves":[
+            "Flare Blitz",
+            "Rock Slide",
+            "U-turn",
+            "Earthquake",
+        ],
+        "nature":"Jolly",
+        "item":"Life Orb",
+        "index":219,
+    },
+  },
+  "Hydreigon": {
+    "Pkmn Tower Grunt 3": {
+        "level": 56,
+        "ability": "Levitate",
+        "moves":[
+            "Dark Pulse",
+            "Fickle Beam",
+            "Fire Blast",
+            "U-turn",
+        ],
+        "nature":"Timid",
+        "item":"Life Orb",
+        "index":199,
+    },
+  },
+  "Clawitzer":{
+    "Rock Tunnel Picknicker Dana": {
+        "level": 44,
+        "ability": "Mega Launcher",
+        "moves":[
+            "Water Pulse",
+            "Dark Pulse",
+            "Aura Sphere",
+            "Ice Beam", 
+        ],
+        "nature":"Timid",
+        "item":"Expert Belt",
+        "index": 141,
+    }, 
+  },
+  "Talonflame": {
+    "Rocket Hideout Right Grunt": {
+        "level": 47,
+        "ability": "Gale Wings",
+        "moves":[
+            "Tailwind",
+            "Hurricane",
+            "Fire Blast",
+            "Will-O-Wisp",
+        ],
+        "nature":"Timid",
+        "item":"Wide Lens",
+        "index":173,
     },
   },
   "Amaura": {
@@ -2055,6 +3411,66 @@ var SETDEX_SV = {
         "index": 67,
     },
   },
+  "Hawlucha": {
+    "Leader Erika": {
+        "level": 44,
+        "ability": "Unburden",
+        "moves":[
+            "Swords Dance",
+            "Acrobatics",
+            "Close Combat",
+            "Stone Edge",
+        ],
+        "nature":"Adamant",
+        "item":"Grassy Seed",
+        "index":158,
+    },
+  },
+  "Klefki": {
+    "Pkmn Tower Grunt 2": {
+        "level": 55,
+        "ability": "Prankster",
+        "moves":[
+            "Spikes",
+            "Thunder Wave",
+            "Foul Play",
+            "Play Rough",
+        ],
+        "nature":"Careful",
+        "item":"Focus Sash",
+        "index":193,
+    },
+  },
+  "Slurpuff": {
+    "Pkmn Tower Grunt 3": {
+        "level": 55,
+        "ability": "Unburden",
+        "moves":[
+            "Dazzling Gleam",
+            "Misty Explosion",
+            "Fire Blast",
+            "Thunderbolt",
+        ],
+        "nature":"Timid",
+        "item":"Focus Sash",
+        "index":198,
+    },
+  },
+  "Dragalge": {
+    "Pkmn Tower Grunt 2": {
+        "level": 56,
+        "ability": "Adaptability",
+        "moves":[
+            "Dragon Pulse",
+            "Sludge Wave",
+            "Flip Turn",
+            "Scald",
+        ],
+        "nature":"Modest",
+        "item":"Black Sludge",
+        "index":196,
+    },
+  },
   "Brionne": {
     "Nugget Bridge Lass Ali": {
         "level": 26,
@@ -2068,6 +3484,64 @@ var SETDEX_SV = {
         "nature":"Bashful",
         "item":"Sitrus Berry",
         "index": 68,
+    },
+  },
+  "Primarina": {
+    "Pkmn Tower Grunt 3": {
+        "level": 56,
+        "ability": "Liquid Voice",
+        "moves":[
+            "Hyper Voice",
+            "Psychic",
+            "Draining Kiss",
+            "Calm Mind",
+        ],
+        "nature":"Timid",
+        "item":"Leftovers",
+        "index":202,
+    },
+    "Silph Co. Arianna & Archer": {
+        "level": 55,
+        "ability": "Liquid Voice",
+        "moves":[
+            "Hyper Voice",
+            "Scald",
+            "Psychic",
+            "Energy Ball",
+        ],
+        "nature":"Modest",
+        "item":"Throat Spray",
+        "index":223,
+    },
+  },
+  "Incineroar": {
+    "Silph Co. Arianna & Archer": {
+        "level": 55,
+        "ability": "Intimidate",
+        "moves":[
+            "Fake Out",
+            "Knock Off",
+            "Will-O-Wisp",
+            "Flare Blitz",
+        ],
+        "nature":"Careful",
+        "item":"Sitrus Berry",
+        "index":221,
+    },
+  },
+  "Decidueye":{
+    "S.S Anne Lass Ann & Gentleman Brooks": {
+        "level": 36,
+        "ability": "Tinted Lens",
+        "moves":[
+            "Grass Pledge",
+            "Spirit Shackle",
+            "Air Slash",
+            "Hidden Power Fire",
+        ],
+        "nature":"Bashful",
+        "item":"Miracle Seed",
+        "index": 98,
     },
   },
   "Stufful": {
@@ -2130,6 +3604,36 @@ var SETDEX_SV = {
         "index": 76,
     },
   },
+  "Ribombee":{
+    "Rock Tunnel Picknicker Dana": {
+        "level": 42,
+        "ability": "Shield Dust",
+        "moves":[
+            "Sticky Web",
+            "U-turn",
+            "Moonblast",
+            "Stun Spore", 
+        ],
+        "nature":"Naive",
+        "item":"Focus Sash",
+        "index": 139,
+    }, 
+  },
+  "Bruxish":{
+    "Route 9 Picknicker Alicia": {
+        "level": 43,
+        "ability": "Strong Jaw",
+        "moves":[
+            "Aqua Fang",
+            "Psychic Fangs",
+            "Crunch",
+            "Aqua Jet", 
+        ],
+        "nature":"Jolly",
+        "item":"Life Orb",
+        "index": 132,
+    },
+  },
   "Togedemaru": {
     "Nugget Bridge Rocket Grunt": {
         "level": 27,
@@ -2145,6 +3649,21 @@ var SETDEX_SV = {
         "index": 80,
     },
   },
+  "Tsareena": {
+    "Route 8 Super Nerd Aidan": {
+        "level": 43,
+        "ability": "Rock Head",
+        "moves":[
+            "Flare Blitz",
+            "Head Smash",
+            "Accelerock",
+            "Wild Charge",
+        ],
+        "nature":"Jolly",
+        "item":"Focus Sash",
+        "index":149,
+    },
+  },
   "Komala": {
     "Nugget Bridge Rocket Grunt": {
         "level": 28,
@@ -2158,6 +3677,77 @@ var SETDEX_SV = {
         "nature":"Adamant",
         "item":"Silk Scarf",
         "index": 81,
+    },
+  },
+  "Kartana": {
+    "Leader Erika": {
+        "level": 44,
+        "ability": "Beast Boost",
+        "moves":[
+            "Swords Dance",
+            "Grassy Glide",
+            "Cut",
+            "Sacred Sword",
+        ],
+        "nature":"Jolly",
+        "item":"Life Orb",
+        "index":162,
+    },
+  },
+  "Celesteela": {
+    "Silph Co. Rival Squirtle": {
+        "level": 56,
+        "ability": "Beast Boost",
+        "moves":[
+            "Air Slash",
+            "Flamethrower",
+            "Giga Drain",
+            "Autotomize",
+        ],
+        "nature":"Modest",
+        "item":"Weakness Policy",
+        "index":207,
+    },
+    "Silph Co. Rival Charmander": {
+        "level": 56,
+        "ability": "Beast Boost",
+        "moves":[
+            "Air Slash",
+            "Flamethrower",
+            "Giga Drain",
+            "Autotomize",
+        ],
+        "nature":"Modest",
+        "item":"Weakness Policy",
+        "index":211,
+    },
+    "Silph Co. Rival Bulbasaur": {
+        "level": 56,
+        "ability": "Beast Boost",
+        "moves":[
+            "Air Slash",
+            "Flamethrower",
+            "Giga Drain",
+            "Autotomize",
+        ],
+        "nature":"Modest",
+        "item":"Weakness Policy",
+        "index":216,
+    },
+  },
+  "Inteleon":{
+    "Game Corner Grunt": {
+        "level": 46,
+        "ability": "Sniper",
+        "moves":[
+            "Snipe Shot",
+            "Ice Beam",
+            "Dark Pulse",
+            "Air Slash",
+        ],
+        "nature":"Timid",
+        "item":"Mystic Water",
+        "index":166,
     },
   },
   "Thwackey": {
@@ -2205,6 +3795,141 @@ var SETDEX_SV = {
         "index": 95,
     },
   },
+  "Cramorant":{
+    "S.S Anne Sailor Edmond & Sailor Trevor": {
+        "level": 35,
+        "ability": "Gulp Missile",
+        "moves":[
+            "Surf",
+            "U-turn",
+            "Ice Beam",
+            "Safeguard",
+        ],
+        "nature":"Timid",
+        "item":"Focus Sash",
+        "index": 103,
+    },
+  },
+  "Coalossal": {
+    "Celadon Gym Ace Trainer Mary": {
+        "level": 44,
+        "ability": "Steam Egine",
+        "moves":[
+            "Heat Wave",
+            "Rock Slide",
+            "Earth Power",
+            "Scald",
+        ],
+        "nature":"Hasty",
+        "item":"Weakness Policy",
+        "index":154,
+    },
+  },
+  "Copperajah": {
+    "Celadon Gym Ace Trainer Mary": {
+        "level": 44,
+        "ability": "Heavy Metal",
+        "moves":[
+            "Heavy Slam",
+            "Body Press",
+            "Heat Crash",
+            "Power Whip",
+        ],
+        "nature":"Adamant",
+        "item":"Grassy Seed",
+        "index":156,
+    },
+  },
+  "Toxtricity":{   
+    "Leader Erika": {
+        "level": 44,
+        "ability": "Punk Rock",
+        "moves":[
+            "Boomburst",
+            "Volt Switch",
+            "Overdrive",
+            "Hidden Power Grass",
+        ],
+        "nature":"Timid",
+        "item":"Life Orb",
+        "index":160,
+    },
+  },
+  "Pincurchin":{
+    "Pkmn Tower Channeler Ruth": {
+        "level": 55,
+        "ability": "Electric Surge",
+        "moves":[
+            "Rising Voltage",
+            "Bouncy Bubble",
+            "Volt Switch",
+            "Spikes",
+        ],
+        "nature":"Modest",
+        "item":"Sitrus Berry",
+        "index":183,
+    },
+  },
+  "Grimmsnarl":{
+    "Pkmn Tower Channeler Ruth": {
+        "level": 56,
+        "ability": "Prankster",
+        "moves":[
+            "Spirit Break",
+            "Light Screen",
+            "Reflect",
+            "Darkest Lariat",
+        ],
+        "nature":"Careful",
+        "item":"Light Clay",
+        "index":184,
+    },
+  },
+  "Polteageist":{
+    "Pkmn Tower Channeler Ruth": {
+        "level": 56,
+        "ability": "Heatproof",
+        "moves":[
+            "Shadow Ball",
+            "Stored Power",
+            "Hidden Power Fighting",
+            "Shell Smash",
+        ],
+        "nature":"Timid",
+        "item":"White Herb",
+        "index":187,
+    },
+  },
+  "Arctovish": {
+    "Pkmn Tower Grunt 1": {
+        "level": 56,
+        "ability": "Water Absorb",
+        "moves":[
+            "Freeze-Dry",
+            "Psychic Fangs",
+            "Icicle Crash",
+            "Fishious Rend",
+        ],
+        "nature":"Jolly",
+        "item":"Water Gem",
+        "index":192,
+    },
+  },
+  "Basculegion-F": {
+    "Route 8 Super Nerd Aidan": {
+        "level": 44,
+        "ability": "Adapatability",
+        "moves":[
+            "Shadow Ball",
+            "Hydro Pump",
+            "Ice Beam",
+            "Shadow Sneak",
+        ],
+        "nature":"Naive",
+        "item":"Weakness Policy",
+        "index":151,
+    },
+  },
   "Wattrel": {
     "Leader Falkner": {
         "level": 16,
@@ -2235,6 +3960,21 @@ var SETDEX_SV = {
         "index":24,
     },
   },
+  "Orthworm":{
+    "Rocket Hideout Giovanni": {
+        "level": 47,
+        "ability": "Earth Eater",
+        "moves":[
+            "Heavy Slam",
+            "Earthquake",
+            "Body Press",
+            "Shed Tail",
+        ],
+        "nature":"Impish",
+        "item":"Sitrus Berry",
+        "index":180,
+    },
+  },
   "Charcadet": {
     "Viridian Forest Ace Trainer Nelle": {
         "level": 15,
@@ -2250,6 +3990,51 @@ var SETDEX_SV = {
         "index":17,
     },
   },
+  "Armarouge": {
+    "Route 8 Super Nerd Aidan": {
+        "level": 43,
+        "ability": "Weak Armor",
+        "moves":[
+            "Flamethrower",
+            "Stored Power",
+            "Shadow Ball",
+            "Aura Sphere",
+        ],
+        "nature":"Modest",
+        "item":"Weakness Policy",
+        "index":148,
+    },
+  },
+  "Tinkaton":{
+    "Game Corner Grunt": {
+        "level": 46,
+        "ability": "Own Tempo",
+        "moves":[
+            "Gigaton Hammer",
+            "Play Rough",
+            "Knock Off",
+            "Ice Hammer",
+        ],
+        "nature":"Jolly",
+        "item":"Steel Gem",
+        "index":165,
+    },
+  },
+ "Pawmot": {
+    "Leader Lt. Surge": {
+        "level": 36,
+        "ability": "Iron Fist",
+        "moves":[
+            "Drain Punch",
+            "Plasma Fist",
+            "Ice Punch",
+            "Close Combat", 
+        ],
+        "nature":"Jolly",
+        "item":"Punching Glove",
+        "index": 129,
+    },
+  },
   "Varoom":{
     "Leader Brock": {
         "level": 15,
@@ -2263,6 +4048,21 @@ var SETDEX_SV = {
         "nature":"Careful",
         "item":"Air Balloon",
         "index": 31,
+    },
+  },
+  "Gholdengo": {
+    "Silph Co. Arianna & Archer": {
+        "level": 55,
+        "ability": "Good As Gold",
+        "moves":[
+            "Shadow Ball",
+            "Make It Rain",
+            "Focus Blast",
+            "Recover",
+        ],
+        "nature":"Timid",
+        "item":"Ghostium-Z",
+        "index":224,
     },
   },
   "Glimmet": {
@@ -2310,4 +4110,55 @@ var SETDEX_SV = {
         "index": 85,
     },
   },
+  "Tatsugiri": {
+    "S.S Anne Sailor Edmond & Sailor Trevor": {
+        "level": 35,
+        "ability": "Storm Drain",
+        "moves":[
+            "Scald",
+            "Dragon Pulse",
+            "Icy Wind",
+            "Hidden Power Grass",
+        ],
+        "nature":"Timid",
+        "item":"Assault Vest",
+        "index": 106,
+    },
+  },
+  "Ogerpon-Cornerstone": {
+    "Leader Erika": {
+        "level": 44,
+        "ability": "Sturdy",
+        "moves":[
+            "Ivy Cudgel",
+            "U-turn",
+            "Power Whip",
+            "Knock Off",
+        ],
+        "nature":"Jolly",
+        "item":"Cornerstone Mask",
+        "index":157,
+    },
+  },
+  "Okidogi":{   
+    "Rocket Hideout Right Grunt": {
+        "level": 47,
+        "ability": "Toxic Chain",
+        "moves":[
+            "Poison Jab",
+            "Drain Punch",
+            "Mach Punch",
+            "Knock Off",
+        ],
+        "nature":"Jolly",
+        "item":"Fighting Gem",
+        "index":175,
+    },
+  },
 };
+
+var MEGA_BASE_ABILITIES = {
+    'Leader Lt. Surge' : {'Ampharos' : 'Plus'},
+    'Leader Erika' : {'Sceptile' : 'Overgrow'},
+    'Rocket Hideout Giovanni' : {'Kangaskhan' : 'Inner Focus'},
+}

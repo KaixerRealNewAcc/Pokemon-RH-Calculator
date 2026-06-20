@@ -453,10 +453,8 @@ function addSets(pokes, name) {
 		}
 	}
 	if (addedpokes > 0) {
-		alert("Successfully imported " + addedpokes + " set(s)");
 		$(allPokemon("#importedSetsOptions")).css("display", "inline");
 	} else if (addedpokes > 1) {
-		alert("Successfully imported " + addedpokes + " set(s)");
 		$(allPokemon("#importedSetsOptions")).css("display", "inline");
 		$(".import-team-text").val("");
 		applyIconColors();

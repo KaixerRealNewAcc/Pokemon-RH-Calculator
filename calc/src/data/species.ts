@@ -5569,7 +5569,7 @@ const XY_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
     types: ['Fighting', 'Flying'],
     bs: {hp: 78, at: 92, df: 75, sa: 74, sd: 63, sp: 118},
     weightkg: 21.5,
-    abilities: {0: 'Limber'},
+    abilities: {0: 'Unburden'},
   },
   Heliolisk: {
     types: ['Electric', 'Normal'],

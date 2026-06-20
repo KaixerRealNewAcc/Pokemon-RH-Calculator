@@ -985,22 +985,6 @@ export function calculateDfModsBWXY(
   if (defender.hasAbility('Marvel Scale') && defender.status && hitsPhysical) {
     dfMods.push(6144);
     desc.defenderAbility = defender.ability;
-  } else if (
-    defender.named('Cherrim') &&
-    defender.hasAbility('Flower Gift') &&
-    field.hasWeather('Sun', 'Harsh Sunshine') &&
-    !hitsPhysical
-  ) {
-    dfMods.push(6144);
-    desc.defenderAbility = defender.ability;
-    desc.weather = field.weather;
-  } else if (
-    field.defenderSide.isFlowerGift &&
-    field.hasWeather('Sun', 'Harsh Sunshine') &&
-    !hitsPhysical) {
-    dfMods.push(6144);
-    desc.weather = field.weather;
-    desc.isFlowerGiftDefender = true;
   }
 
   if (field.hasTerrain('Grassy') && defender.hasAbility('Grass Pelt') && hitsPhysical) {

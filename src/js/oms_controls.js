@@ -330,7 +330,6 @@ function performCalculationsOM() {
 	$("#resultHeaderL").text(p1.name + "'s Moves (select one to show detailed results)");
 	$("#resultHeaderR").text(p2.name + "'s Moves (select one to show detailed results)");
 }
-
 $("#p1 .item").bind("keyup change", function () {
 	autoUpdateStats("#p1");
 	autosetWeather($("#p1 .ability").val(), 0);
@@ -339,8 +338,7 @@ $("#p1 .item").bind("keyup change", function () {
 $("#p2 .item").bind("keyup change", function () {
 	autoUpdateStats("#p2");
 	autosetWeather($("#p2 .ability").val(), 0);
-});
-$(".om-trigger").prop("checked", false);
+});$(".om-trigger").prop("checked", false);
 $(".om-trigger").change();
 $(".ts-trigger").bind("change keyup", toggleTS);
 $(".mnm-trigger").bind("change keyup", toggleMNM);

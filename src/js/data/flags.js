@@ -12,9 +12,7 @@ const FLAGS_RR = {
         },
         tag: [
             {
-                enemy1: "",
-                enemy2: "",
-                partner: "",
+                partner: "Silph Co. Tag Partner Brendan",
             },
         ],
     },

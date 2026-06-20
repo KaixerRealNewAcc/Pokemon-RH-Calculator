@@ -670,8 +670,7 @@
                 <legend align="center">Team/Box</legend>
                 <div>
                     <legend align="center">Team</legend>
-                    <div id="team-poke-list" class="box-poke dropzone">
-                    </div>
+                    <div id="team-poke-list" class="box-poke dropzone"></div>
                 </div>
                 <hr>
                 <div>
@@ -1074,6 +1073,9 @@
                             <td><div class="left" title="Export the leftmost Pok&eacute;mon set">
                                 <button id="exportL">Export</button>
                             </div></td>
+                            <td><div class="left" title="Export the leftmost Pok&eacute;mon set">
+                                <button id="exportR">Export</button>
+                            </div></td>
                         </tr>
                     </tbody>
                 </table>
@@ -1107,7 +1109,6 @@
                         <label>Type</label>
                         <select aria-label="Type 1" class="type1 terrain-trigger calc-trigger"></select>
                         <select aria-label="Type 2" class="type2 terrain-trigger calc-trigger"></select>
-                        <small class="right">(<a class="analysis links-lighten" target="_blank" href="">Smogon&nbsp;analysis</a>)</small>
                     </div>
                     <div class="hide">
                         <label>Tera Type</label>
@@ -1708,7 +1709,7 @@
         <li><a href="https://github.com/smogon/damage-calc" class="links-lighten" target="_blank">Smogon GitHub repository</a></li></ul>
 
         <li>
-            <label class="unselectable" for="teamsOnTop">Box On Top</label>
+            <label class="unselectable" for="teamsOnTop">Pokemon Box On Top</label>
             <input class="" type="checkbox" name="teamsOnTop" id="teamsOnTop" aria-describedby="aiOption" checked />
         </li>
         <li>

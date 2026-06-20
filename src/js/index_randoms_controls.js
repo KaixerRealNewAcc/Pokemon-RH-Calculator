@@ -304,7 +304,7 @@ $(document).ready(function () {
 		
 		setBoxPosition(onTop);
 	});
-	
+
 	if ($("#teamsOnTop").is(":checked")) {
 		$("#teamsOnTop").change();
 	}

@@ -2610,15 +2610,6 @@ const SM_PATCH: {[name: string]: DeepPartial<MoveData>} = {
   },
   'Toxic Thread': {bp: 0, type: 'Poison'},
   'Twinkle Tackle': {bp: 1, type: 'Fairy', category: 'Physical', isZ: true},
-  'Zippy Zap': {
-    bp: 50,
-    type: 'Electric',
-    willCrit: true,
-    priority: 2,
-    makesContact: true,
-    category: 'Physical',
-    zp: 100,
-  },
   Accelerock: {
     bp: 40,
     type: 'Rock',
@@ -4923,6 +4914,15 @@ const SV_PATCH: {[name: string]: DeepPartial<MoveData>} = {
 };
 
 const RR_PATCH: {[name: string]: DeepPartial<MoveData>} = {
+  'Zippy Zap': {
+    bp: 50,
+    type: 'Electric',
+    willCrit: true,
+    priority: 1,
+    makesContact: true,
+    category: 'Physical',
+    zp: 100,
+  },
   'Aerial Ace': {isSlicing: false},
   'Aqua Step': {isKick: true, zp: 140, maxPower: 120},
   'Armor Cannon': {isPulse: true},
@@ -5073,7 +5073,6 @@ const RR_PATCH: {[name: string]: DeepPartial<MoveData>} = {
 	'Volt Tackle': {recoil: [1, 4]},
 	'Wicked Blow': {isPunch: false, zp: 190},
   'Wildbolt Storm': {maxPower: 120},
-	'Zippy Zap': {priority: 1, zp: 100, maxPower: 120},
   'Aqua Fang': {
     bp: 80,
     type: 'Water',

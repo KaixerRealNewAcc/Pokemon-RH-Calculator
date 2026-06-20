@@ -160,7 +160,7 @@ export function calculateSMSSSV(
     'Armor Tail', 'Aroma Veil', 'Aura Break', 'Battle Armor',
     'Big Pecks', 'Bulletproof', 'Clear Body', 'Contrary',
     'Damp', 'Dazzling', 'Disguise', 'Dry Skin',
-    'Earth Eater', 'Filter', 'Flash Fire', 'Flower Gift',
+    'Earth Eater', 'Filter', 'Flash Fire',
     'Flower Veil', 'Fluffy', 'Friend Guard', 'Fur Coat',
     'Good as Gold', 'Grass Pelt', 'Guard Dog', 'Heatproof',
     'Heavy Metal', 'Hyper Cutter', 'Ice Face', 'Ice Scales',
@@ -1584,22 +1584,6 @@ export function calculateDfModsSMSSSV(
   if (defender.hasAbility('Marvel Scale') && defender.status && hitsPhysical) {
     dfMods.push(6144);
     desc.defenderAbility = defender.ability;
-  } else if (
-    defender.named('Cherrim') &&
-    defender.hasAbility('Flower Gift') &&
-    field.hasWeather('Sun', 'Harsh Sunshine') &&
-    !hitsPhysical
-  ) {
-    dfMods.push(6144);
-    desc.defenderAbility = defender.ability;
-    desc.weather = field.weather;
-  } else if (
-    field.defenderSide.isFlowerGift &&
-    field.hasWeather('Sun', 'Harsh Sunshine') &&
-    !hitsPhysical) {
-    dfMods.push(6144);
-    desc.weather = field.weather;
-    desc.isFlowerGiftDefender = true;
   } else if (
     defender.hasAbility('Grass Pelt') &&
     field.hasTerrain('Grassy') &&

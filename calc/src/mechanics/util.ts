@@ -107,6 +107,11 @@ export function getFinalSpeed(gen: Generation, pokemon: Pokemon, field: Field, s
       (pokemon.hasAbility('Surge Surfer') && terrain === 'Electric')
   ) {
     speedMods.push(8192);
+  } else if (
+    (pokemon.named('Cherrim') && pokemon.hasAbility('Flower Gift') && weather.includes('Sun')) ||
+    (pokemon.hasAbility('Bull Rush', 'Quill Rush') && pokemon.abilityOn)
+  ) {
+    speedMods.push(6144);
   } else if (pokemon.hasAbility('Quick Feet') && pokemon.status) {
     speedMods.push(6144);
   } else if (pokemon.hasAbility('Slow Start') && pokemon.abilityOn) {
@@ -143,23 +148,28 @@ export function getMoveEffectiveness(
   isGhostRevealed?: boolean,
   isGravity?: boolean,
   isRingTarget?: boolean,
+  isBoneZone?: boolean,
+  isCorrosion?: boolean,
 ) {
-  if (isGhostRevealed && type === 'Ghost' && move.hasType('Normal', 'Fighting')) {
+  if ((isRingTarget || isGhostRevealed) && type === 'Ghost' && move.hasType('Normal', 'Fighting')) {
     return 1;
-  } else if (isGravity && type === 'Flying' && move.hasType('Ground')) {
+  } else if ((isRingTarget || isGravity) && type === 'Flying' && move.hasType('Ground')) {
+    return 1;
+  } else if (isCorrosion && type === 'Steel' && move.hasType('Poison')) {
     return 1;
   } else if (move.named('Freeze-Dry') && type === 'Water') {
     return 2;
-  } else if (move.named('Nihil Light') && type === 'Fairy') {
+  } else if (move.named('Flying Press')) {
+    return (
+      gen.types.get('fighting' as ID)!.effectiveness[type]! *
+      gen.types.get('flying' as ID)!.effectiveness[type]!
+    );
+  } else if (move.named('Draco Barrage') && type === 'Fairy') {
     return 1;
   } else {
-    let effectiveness = gen.types.get(toID(move.type))!.effectiveness[type]!;
-    if (effectiveness === 0 && isRingTarget) {
-      effectiveness = 1;
-    }
-    if (move.named('Flying Press')) {
-      // Can only do this because flying has no other interactions
-      effectiveness *= gen.types.get('flying' as ID)!.effectiveness[type]!;
+    const effectiveness = gen.types.get(toID(move.type))!.effectiveness[type]!;
+    if (effectiveness === 0 && isBoneZone && move.flags.bone) {
+      return 1;
     }
     return effectiveness;
   }

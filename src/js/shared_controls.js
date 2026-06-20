@@ -691,6 +691,7 @@ $(".set-selector").change(function () {
 		CURRENT_TRAINER_POKS = get_trainer_poks(fullSetName)
 		var next_poks = CURRENT_TRAINER_POKS.sort(sortmons)
 		var trpok_html = ""
+		var trpoktag_html = ""
 		var pok
 
 		var weather = "clear";
@@ -701,22 +702,17 @@ $(".set-selector").change(function () {
 			}
 		}
 
-		var isDoubles = format === ''
-		for (var newWeather in weather) {
-			if (weather[newWeather].includes(CURRENT_TRAINER)) {
-				weather = newWeather;
-				break;
-			}
-		}
-	
 		if (weather) $(`#${weather}`).prop("checked", true).change();
 		{
 			//Leaders
 			$("#sand").prop("checked", CURRENT_TRAINER == "Leader Brock");
+			$("#rain").prop("checked", CURRENT_TRAINER == "Leader Misty");
+			$("#electric").prop("checked", CURRENT_TRAINER == "Leader Lt. Surge");
 			$("#grassy").prop("checked", CURRENT_TRAINER == "Leader Erika");
 
 			//Mini Bosses
 			$("#grassy").prop("checked", CURRENT_TRAINER == "Mt. Moon Super Nerd Miguel");
+			$("#sun").prop("checked", CURRENT_TRAINER == "Route 10 Poke Maniac Herman");
 		}
 
 		for (i in next_poks) {
@@ -742,7 +738,7 @@ $(".set-selector").change(function () {
 		topPokemonIcon(fullSetName, $("#p1mon")[0])
 	}
 
-	$('.trainer-pok-list-opposing').html(trpok_html)
+	$('.trainer-pok-list-opposing').html(trpok_html);
 	var pokemonName = fullSetName.substring(0, fullSetName.indexOf(" ("));
 	var setName = fullSetName.substring(fullSetName.indexOf("(") + 1, fullSetName.lastIndexOf(")"));
 	var pokemon = pokedex[pokemonName];
