@@ -337,65 +337,50 @@ $("input[name='weather']").change(function () {
 var lastManualWeather = "";
 var lastAutoWeather = ["", ""];
 function autosetWeather(ability, i) {
-
-	if ($('.locked-weather').length) {
-		return;
-	}
-
 	var currentWeather = $("input:radio[name='weather']:checked").val();
 	if (lastAutoWeather.indexOf(currentWeather) === -1) {
 		lastManualWeather = currentWeather;
 		lastAutoWeather[1 - i] = "";
 	}
 	switch (ability) {
-	case "Drought":
-	case "Orichalcum Pulse":
-		lastAutoWeather[i] = "Sun";
-		$("#sun").prop("checked", true);
-		break;
-	case "Drizzle":
-		lastAutoWeather[i] = "Rain";
-		$("#rain").prop("checked", true);
-		break;
-	case "Sand Stream":
-		lastAutoWeather[i] = "Sand";
-		$("#sand").prop("checked", true);
-		break;
-	case "Snow Warning":
-		if (gen >= 9) {
-			lastAutoWeather[i] = "Snow";
-			$("#snow").prop("checked", true);
-		} else {
-			lastAutoWeather[i] = "Hail";
-			$("#hail").prop("checked", true);
-		}
-		break;
-	case "Desolate Land":
-		lastAutoWeather[i] = "Harsh Sunshine";
-		$("#harsh-sunshine").prop("checked", true);
-		break;
-	case "Primordial Sea":
-		lastAutoWeather[i] = "Heavy Rain";
-		$("#heavy-rain").prop("checked", true);
-		break;
-	case "Delta Stream":
-		lastAutoWeather[i] = "Strong Winds";
-		$("#strong-winds").prop("checked", true);
-		break;
-	default:
-		lastAutoWeather[i] = "";
-		var newWeather = lastAutoWeather[1 - i] !== "" ? lastAutoWeather[1 - i] : "";
-		$("input:radio[name='weather'][value='" + newWeather + "']").prop("checked", true);
-		break;
+		case "Drought":
+		case "Orichalcum Pulse":
+			lastAutoWeather[i] = "Sun";
+			$("#sun").prop("checked", true);
+			break;
+		case "Drizzle":
+			lastAutoWeather[i] = "Rain";
+			$("#rain").prop("checked", true);
+			break;
+		case "Sand Stream":
+			lastAutoWeather[i] = "Sand";
+			$("#sand").prop("checked", true);
+			break;
+		case "Snow Warning":
+			if (gen >= 9) {
+				lastAutoWeather[i] = "Snow";
+				$("#snow").prop("checked", true);
+			} else {
+				lastAutoWeather[i] = "Hail";
+				$("#hail").prop("checked", true);
+			}
+			break;
+		case "Desolate Land":
+			lastAutoWeather[i] = "Harsh Sunshine";
+			$("#harsh-sunshine").prop("checked", true);
+			break;
+		case "Primordial Sea":
+			lastAutoWeather[i] = "Heavy Rain";
+			$("#heavy-rain").prop("checked", true);
+			break;
+		case "Delta Stream":
+			lastAutoWeather[i] = "Strong Winds";
+			$("#strong-winds").prop("checked", true);
+			break;
+		default:
+			break;
 	}
 }
-
-$("input[name='terrain']").change(function () {
-	var allPokemon = $('.poke-info');
-	allPokemon.each(function () {
-		autosetQP($(this));
-	});
-});
 
 var lastManualTerrain = "";
 var lastAutoTerrain = ["", ""];
@@ -408,30 +393,30 @@ function autosetTerrain(ability, i) {
 	// terrain input uses checkbox instead of radio, need to uncheck all first
 	$("input:checkbox[name='terrain']:checked").prop("checked", false);
 	switch (ability) {
-	case "Electric Surge":
-	case "Hadron Engine":
-		lastAutoTerrain[i] = "Electric";
-		$("#electric").prop("checked", true);
-		break;
-	case "Grassy Surge":
-		lastAutoTerrain[i] = "Grassy";
-		$("#grassy").prop("checked", true);
-		break;
-	case "Misty Surge":
-		lastAutoTerrain[i] = "Misty";
-		$("#misty").prop("checked", true);
-		break;
-	case "Psychic Surge":
-		lastAutoTerrain[i] = "Psychic";
-		$("#psychic").prop("checked", true);
-		break;
-	default:
-		lastAutoTerrain[i] = "";
-		var newTerrain = lastAutoTerrain[1 - i] !== "" ? lastAutoTerrain[1 - i] : lastManualTerrain;
-		if ("No terrain" !== newTerrain) {
-			$("input:checkbox[name='terrain'][value='" + newTerrain + "']").prop("checked", true);
-		}
-		break;
+		case "Electric Surge":
+		case "Hadron Engine":
+			lastAutoTerrain[i] = "Electric";
+			$("#electric").prop("checked", true);
+			break;
+		case "Grassy Surge":
+			lastAutoTerrain[i] = "Grassy";
+			$("#grassy").prop("checked", true);
+			break;
+		case "Misty Surge":
+			lastAutoTerrain[i] = "Misty";
+			$("#misty").prop("checked", true);
+			break;
+		case "Psychic Surge":
+			lastAutoTerrain[i] = "Psychic";
+			$("#psychic").prop("checked", true);
+			break;
+		default:
+			lastAutoTerrain[i] = "";
+			var newTerrain = lastAutoTerrain[1 - i] !== "" ? lastAutoTerrain[1 - i] : lastManualTerrain;
+			if ("No terrain" !== newTerrain) {
+				$("input:checkbox[name='terrain'][value='" + newTerrain + "']").prop("checked", true);
+			}
+			break;
 	}
 }
 
@@ -705,21 +690,52 @@ $(".set-selector").change(function () {
 		topPokemonIcon(fullSetName, $("#p2mon")[0])
 		CURRENT_TRAINER_POKS = get_trainer_poks(fullSetName)
 		var next_poks = CURRENT_TRAINER_POKS.sort(sortmons)
-
 		var trpok_html = ""
+		var pok
+
+		var weather = "clear";
+		for (var newWeather in weather) {
+			if (weather[newWeather].includes(CURRENT_TRAINER)) {
+				weather = newWeather;
+				break;
+			}
+		}
+
+		var isDoubles = format === ''
+		for (var newWeather in weather) {
+			if (weather[newWeather].includes(CURRENT_TRAINER)) {
+				weather = newWeather;
+				break;
+			}
+		}
+	
+		if (weather) $(`#${weather}`).prop("checked", true).change();
+		{
+			//Leaders
+			$("#sand").prop("checked", CURRENT_TRAINER == "Leader Brock");
+			$("#grassy").prop("checked", CURRENT_TRAINER == "Leader Erika");
+
+			//Mini Bosses
+			$("#grassy").prop("checked", CURRENT_TRAINER == "Mt. Moon Super Nerd Miguel");
+		}
+
 		for (i in next_poks) {
 			if (next_poks[i][0].includes($('input.opposing').val())) {
 				continue
 			}
 			var pok_name = next_poks[i].split("]")[1].split(" (")[0]
+			pok = `<img class="trainer-pok right-side" src="https://raw.githubusercontent.com/May8th1995/sprites/master/${pok_name}.png" data-id="${CURRENT_TRAINER_POKS[i].split("]")[1]}" title="${next_poks[i]}, ${next_poks[i]} BP">`
 			if (pok_name == "Zygarde-10%") {
 				pok_name = "Zygarde-10%25"
 			}
 			if (pok_name.includes("Vivillon")) {
 				pok_name = "Vivillon";
 			}
+			if (pok_name.includes("Pikachu")) {
+				pok = `<img class="trainer-pok right-side" src="https://raw.githubusercontent.com/May8th1995/sprites/master/Pikachu.png" data-id="${CURRENT_TRAINER_POKS[i].split("]")[1]}" title="${next_poks[i]}, ${next_poks[i]} BP">`
+			}
+
 			/// this ruined my day
-			var pok = `<img class="trainer-pok right-side" src="https://raw.githubusercontent.com/May8th1995/sprites/master/${pok_name}.png" data-id="${CURRENT_TRAINER_POKS[i].split("]")[1]}" title="${next_poks[i]}, ${next_poks[i]} BP">`
 			trpok_html += pok
 		}
 	} else {
@@ -1101,12 +1117,12 @@ $("#p2 .forme").change(function(e) {
 
 	// overwrite ability if a mega has forme switched
 	if (pokemonName.indexOf("-Mega") !== -1) {
-		if (setName.includes("Trainer Rival")) {
-			setName = "Pokemon Trainer May";
+		if (setName.includes("")) {
+			setName = "";
 		}
 
-		setName = setSetName(setName, []);
-		
+		setName = setSetName(setName, ["Rocket Hideout Giovanni"]);
+
 		// console.log(MEGA_BASE_ABILITIES[setName]); // DEBUG
 
 		// if forme is != mega
@@ -2087,6 +2103,9 @@ function getSrcImgPokemon(poke) {
 	}
 	if (poke.name == "Aegislash-Shield") {
 		return `https://raw.githubusercontent.com/May8th1995/sprites/master/Aegislash.png`
+	}
+	else if (poke.name == "Pikachu-Flying" || poke.name == "Pikachu-Surfing") {
+		return `https://raw.githubusercontent.com/May8th1995/sprites/master/Pikachu.png`
 	} else {
 		return `https://raw.githubusercontent.com/May8th1995/sprites/master/${poke.name}.png`
 	}
