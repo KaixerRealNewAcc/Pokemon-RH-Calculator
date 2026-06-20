@@ -124,7 +124,7 @@ function addSavePokemon(array, dead) {
 	};
 
 	addToDex(pokemon);
-	addBoxed(pokemon)
+	addBoxed(pokemon);
 	return true;
 }
 
@@ -136,10 +136,10 @@ function parseSaveFile(data) {
 
 	var smallBlock;
 
-	if (readUInt32(smallBlock1, -8) !== 0x20060623 && readUInt32(smallBlock2, -8) !== 0x20060623) {
-		alert("The selected save file was not initialized. Make sure to save in-game again, export your new save file, and upload that save instead.");
-		return;
-	}
+	//if (readUInt32(smallBlock1, -8) !== 0x20060623 && readUInt32(smallBlock2, -8) !== 0x20060623) {
+		//alert("The selected save file was not initialized. Make sure to save in-game again, export your new save file, and upload that save instead.");
+		//return;
+	//}
 	if (readUInt32(smallBlock1, -8) !== 0x20060623) smallBlock = smallBlock2;
 	else smallBlock = readUInt32(smallBlock2, -16) > readUInt32(smallBlock1, -16) ? smallBlock2 : smallBlock1;
 
@@ -517,15 +517,15 @@ function checkExeptions(poke) {
 }
 
 $("#clearSets").click(function () {
-	if (confirm("Are you sure you want to delete your custom sets? This action cannot be undone.")) 
-	{
-		localStorage.removeItem("customsets");
-		alert("Custom Sets successfully cleared. Please refresh the page.");
-		$(allPokemon("#importedSetsOptions")).hide();
-		loadDefaultLists();
-		for (let zone of document.getElementsByClassName("dropzone")){
-			zone.innerHTML="";
-		}
+	var yes = confirm("Do you really wish to delete all your mons?")
+	if (!yes){
+		return
+	}
+	localStorage.removeItem("customsets");
+	$(allPokemon("#importedSetsOptions")).hide();
+	loadDefaultLists();
+	for (let zone of document.getElementsByClassName("dropzone")){
+		zone.innerHTML="";
 	}
 });
 

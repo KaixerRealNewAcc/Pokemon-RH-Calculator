@@ -34,6 +34,19 @@ var SETDEX_SV = {
     },
   },
   "Charmeleon": {
+    "Cerulean City Rival Charmander": {
+        "level": 28,
+        "ability": "Blaze",
+        "moves":[
+            "Dragon Dance",
+            "Fire Fang",
+            "Thunder Punch",
+            "Brick Break",
+        ],
+        "nature":"Jolly",
+        "item":"Eviolite",
+        "index": 56,
+    },
   },
   "Charizard": {
   },
@@ -53,6 +66,19 @@ var SETDEX_SV = {
     },
   },
   "Ivysaur": {
+    "Cerulean City Rival Bulbasaur": {
+        "level": 28,
+        "ability": "Overgrow",
+        "moves":[
+            "Leech seed",
+            "Protect",
+            "Sludge",
+            "Giga Drain",
+        ],
+        "nature":"Timid",
+        "item":"Eviolite",
+        "index": 62,
+    },
   },
   "Venusaur": {
   },
@@ -72,6 +98,19 @@ var SETDEX_SV = {
     },
   },
   "Wartortle": {
+    "Cerulean City Rival Squirtle": {
+        "level": 28,
+        "ability": "Torrent",
+        "moves":[
+            "Shell Smash",
+            "Water Pulse",
+            "Icy Wind",
+            "Hidden Power Electric",
+        ],
+        "nature":"Timid",
+        "item":"Eviolite",
+        "index": 51,
+    },
   },
   "Blastoise": {
   },
@@ -80,6 +119,19 @@ var SETDEX_SV = {
   "Metapod": {
   },
   "Butterfree": {
+    "Nugget Bridge Bug Catcher Cale": {
+        "level": 26,
+        "ability": "Compound Eyes",
+        "moves":[
+            "Sleep Powder",
+            "Mega Drain",
+            "Air Cutter",
+            "Bug Buzz",
+        ],
+        "nature":"Timid",
+        "item":"Eviolite",
+        "index": 64,
+    },
   },
   "Weedle": {
   },
@@ -96,14 +148,79 @@ var SETDEX_SV = {
   "Rattata": {
   },
   "Raticate": {
+    "Dig House Rocket Grunt": {
+        "level": 27,
+        "ability": "Guts",
+        "moves":[
+            "Facade",
+            "Stomping Tantrum",
+            "Sucker Punch",
+            "U-turn",
+        ],
+        "nature":"Jolly",
+        "item":"Flame Orb",
+        "index": 84,
+    },
   },
   "Spearow": {
   },
   "Fearow": {
+    "Mt. Moon Rocket Admin Archer": {
+        "level": 20,
+        "ability": "Technician",
+        "moves":[
+            "Pursuit",
+            "Pluck",
+            "Drill Run",
+            "Double Hit",
+        ],
+        "nature":"Bashful",
+        "item":"Muscle Band",
+        "index": 45,
+    },
   },
   "Ekans": {
   },
   "Arbok": {
+    "Cerulean City Rival Squirtle": {
+        "level": 28,
+        "ability": "Intimidate",
+        "moves":[
+            "Poison Jab",
+            "Sucker Punch",
+            "Crunch",
+            "Thunder Fang",
+        ],
+        "nature":"Jolly",
+        "item":"Poison Barb",
+        "index": 50,
+    },
+    "Cerulean City Rival Charmander": {
+        "level": 28,
+        "ability": "Intimidate",
+        "moves":[
+            "Poison Jab",
+            "Sucker Punch",
+            "Crunch",
+            "Thunder Fang",
+        ],
+        "nature":"Jolly",
+        "item":"Poison Barb",
+        "index": 54,
+    },
+    "Cerulean City Rival Bulbasaur": {
+        "level": 28,
+        "ability": "Intimidate",
+        "moves":[
+            "Poison Jab",
+            "Sucker Punch",
+            "Crunch",
+            "Thunder Fang",
+        ],
+        "nature":"Jolly",
+        "item":"Poison Barb",
+        "index": 60,
+    },
   },
   "Pikachu": {
     //Pikacha-Flying
@@ -157,12 +274,64 @@ var SETDEX_SV = {
     },
   },
   "Clefable": {
+    "Cerulean City Rival Squirtle": {
+        "level": 27,
+        "ability": "Magic Guard",
+        "moves":[
+            "Charge Beam",
+            "Draining Kiss",
+            "Icy Wind",
+            "Mystical Fire",
+        ],
+        "nature":"Timid",
+        "item":"Life Orb",
+        "index": 48,
+    },
+    "Cerulean City Rival Charmander": {
+        "level": 27,
+        "ability": "Magic Guard",
+        "moves":[
+            "Charge Beam",
+            "Draining Kiss",
+            "Icy Wind",
+            "Mystical Fire",
+        ],
+        "nature":"Timid",
+        "item":"Life Orb",
+        "index": 53,
+    },
+    "Cerulean City Rival Bulbasaur": {
+        "level": 27,
+        "ability": "Magic Guard",
+        "moves":[
+            "Charge Beam",
+            "Draining Kiss",
+            "Icy Wind",
+            "Mystical Fire",
+        ],
+        "nature":"Timid",
+        "item":"Life Orb",
+        "index": 58,
+    },
   },
   "Vulpix": {
   },
   "Ninetales": {
   },
   "Jigglypuff": {
+    "Nugget Bridge Lass Ali": {
+        "level": 26,
+        "ability": "Friend Guard",
+        "moves":[
+            "Round",
+            "Draining Kiss",
+            "Incinerate",
+            "Icy Wind",
+        ],
+        "nature":"Bold",
+        "item":"Eviolite",
+        "index": 66,
+    },
   },
   "Wigglytuff": {
   },
@@ -192,6 +361,36 @@ var SETDEX_SV = {
   },
   "Persian": {
   },
+  "Persian-Alola": {
+    "Dig House Rocket Grunt": {
+        "level": 26,
+        "ability": "Feline Prowess",
+        "moves":[
+            "Dark Pulse",
+            "Water Pulse",
+            "Parting Short",
+            "Shock Wave",
+        ],
+        "nature":"Timid",
+        "item":"Black Glasses",
+        "index": 82,
+    },
+  },
+  "Perrserker": {
+   "Route 6 Camper Jeff": {
+        "level": 36,
+        "ability": "Tough Claws",
+        "moves":[
+            "Fake Out",
+            "U-turn",
+            "Bullet Punch",
+            "Iron Head",
+        ],
+        "nature":"Adamant",
+        "item":"Metal Coat",
+        "index": 94,
+    },
+  },
   "Psyduck": {
   },
   "Golduck": {
@@ -203,6 +402,19 @@ var SETDEX_SV = {
   "Growlithe": {
   },
   "Arcanine": {
+    "Nugget Bridge Rocket Grunt": {
+        "level": 26,
+        "ability": "Intimidate",
+        "moves":[
+            "Dragon Rage",
+            "Flame Wheel",
+            "Thunder Fang",
+            "Bulldoze",
+        ],
+        "nature":"Jolly",
+        "item":"Sitrus Berry",
+        "index": 78,
+    },
   },
   "Poliwag" : {
   },
@@ -353,8 +565,34 @@ var SETDEX_SV = {
   "Marowak": {
   },
   "Hitmonlee": {
+    "Cerulean City Rival Squirtle": {
+        "level": 27,
+        "ability": "Striker",
+        "moves":[
+            "Bullet Punch",
+            "Knock Off",
+            "Fake Out",
+            "Low Sweep",
+        ],
+        "nature":"Jolly",
+        "item":"Black Belt",
+        "index": 46,
+    },
   },
   "Hitmonchan": {
+    "Cerulean City Rival Bulbasaur": {
+        "level": 27,
+        "ability": "Iron Fist",
+        "moves":[
+            "Drain Punch",
+            "Ice Punch",
+            "Mach Punch",
+            "Sucker Punch",
+        ],
+        "nature":"Jolly",
+        "item":"Black Belt",
+        "index": 57,
+    },
   },   
   "Lickitung": {
   },
@@ -387,10 +625,36 @@ var SETDEX_SV = {
   "Staryu":{
   },
   "Starmie":{
+   "Leader Misty": {
+        "level": 28,
+        "ability": "Analytic",
+        "moves":[
+            "Scald",
+            "Thunderbolt",
+            "Psyshock",
+            "Aurora Beam",
+        ],
+        "nature":"Modest",
+        "item":"Mystic Water",
+        "index": 90,
+    },
   },
   "Mr. Mime":{
   },
   "Mr. Mime-Galar":{
+   "Route 6 Camper Jeff": {
+        "level": 35,
+        "ability": "Ice Body",
+        "moves":[
+            "Freeze-Dry",
+            "Psyshock",
+            "Shadow Ball",
+            "Hidden Power Fire",
+        ],
+        "nature":"Timid",
+        "item":"Eviolite",
+        "index": 93,
+    },
   },
   "Scyther":{
   },
@@ -425,6 +689,45 @@ var SETDEX_SV = {
   "Ditto":{
   },
   "Eevee":{
+    "Cerulean City Rival Squirtle": {
+        "level": 26,
+        "ability": "Adaptability",
+        "moves":[
+            "Last Resort",
+            "Round",
+            "Double Kick",
+            "Bite",
+        ],
+        "nature":"Rash",
+        "item":"Eevium Z",
+        "index": 47,
+    },
+    "Cerulean City Rival Charmander": {
+        "level": 26,
+        "ability": "Adaptability",
+        "moves":[
+            "Last Resort",
+            "Round",
+            "Double Kick",
+            "Bite",
+        ],
+        "nature":"Lonely",
+        "item":"Eevium Z",
+        "index": 55,
+    },
+    "Cerulean City Rival Bulbasaur": {
+        "level": 26,
+        "ability": "Adaptability",
+        "moves":[
+            "Last Resort",
+            "Round",
+            "Double Kick",
+            "Bite",
+        ],
+        "nature":"Lonely",
+        "item":"Eevium Z",
+        "index": 61,
+    },
   },
   "Vaporeon":{
   },
@@ -508,6 +811,19 @@ var SETDEX_SV = {
   "Ariados":{
   },
   "Crobat":{
+    "Dig House Rocket Grunt": {
+        "level": 26,
+        "ability": "Sniper",
+        "moves":[
+            "Mega Drain",
+            "Cross Poison",
+            "Air Cutter",
+            "Hidden Power Fire",
+        ],
+        "nature":"Naive",
+        "item":"Scope Lens",
+        "index": 83,
+    },
   },
   "Chinchou":{
   },
@@ -522,6 +838,19 @@ var SETDEX_SV = {
   "Togepi":{
   },
   "Togetic":{
+    "Nugget Bridge Lass Reli": {
+        "level": 25,
+        "ability": "Serene Grace",
+        "moves":[
+            "Air Slash",
+            "Thunder Wave",
+            "Draining Kiss",
+            "Magical Leaf",
+        ],
+        "nature":"Bashful",
+        "item":"Eviolite",
+        "index": 73,
+    },
   },
   "Togekiss":{
   },
@@ -546,6 +875,19 @@ var SETDEX_SV = {
   "Sudowoodo":{
   },
   "Politoed":{
+    "Leader Misty": {
+        "level": 27,
+        "ability": "Drizzle",
+        "moves":[
+            "Scald",
+            "Earthquake",
+            "Flip Turn",
+            "Toxic",
+        ],
+        "nature":"Sassy",
+        "item":"Iapapa Berry",
+        "index": 86,
+    },
   },
   "Hoppip":{
   },
@@ -556,6 +898,19 @@ var SETDEX_SV = {
   "Aimpom":{
   },
   "Ambipom":{
+   "Route 6 Camper Jeff": {
+        "level": 35,
+        "ability": "Technician",
+        "moves":[
+            "Beat Up",
+            "Tail Slap",
+            "Arm Thrust",
+            "Fake Out",
+        ],
+        "nature":"Jolly",
+        "item":"Chople Berry",
+        "index": 92,
+    },
   },
   "Sunkern":{
   },
@@ -583,6 +938,19 @@ var SETDEX_SV = {
   "Quagsire":{
   },
   "Clodsire":{
+   "Leader Misty": {
+        "level": 28,
+        "ability": "Water Absorb",
+        "moves":[
+            "Bulldoze",
+            "Poison Jab",
+            "Recover",
+            "Toxic",
+        ],
+        "nature":"Careful",
+        "item":"Black Sludge",
+        "index": 89,
+    },
   },
   "Espeon":{
   },
@@ -595,6 +963,19 @@ var SETDEX_SV = {
   "Slowking-Galar":{
   },
   "Misdreavus":{
+    "Nugget Bridge Camper Ethan": {
+        "level": 26,
+        "ability": "Levitate",
+        "moves":[
+            "Hex",
+            "Will-O-Wisp",
+            "Icy Wind",
+            "Shock Wave",
+        ],
+        "nature":"Bashful",
+        "item":"Eviolite",
+        "index": 77,
+    },
   },
   "Unown":{
   },
@@ -656,6 +1037,19 @@ var SETDEX_SV = {
     },
   },
   "Granbull":{
+   "Route 6 Camper Jeff": {
+        "level": 35,
+        "ability": "Intimidate",
+        "moves":[
+            "Brick Break",
+            "Play Rough",
+            "Fire Punch",
+            "Thunder Punch",
+        ],
+        "nature":"Adamant",
+        "item":"Iapapa Berry",
+        "index": 96,
+    },
   },
   "Qwilfish":{
   },
@@ -698,10 +1092,36 @@ var SETDEX_SV = {
   "Delibird":{   
   },
   "Mantine":{   
+   "Leader Misty": {
+        "level": 27,
+        "ability": "Swift Swim",
+        "moves":[
+            "Scald",
+            "Hurricane",
+            "Roost",
+            "Hidden Power Grass",
+        ],
+        "nature":"Modest",
+        "item":"Wacan Berry",
+        "index": 88,
+    },
   },
   "Skarmory":{   
   },
   "Houndour":{   
+    "Mt. Moon Rocket Admin Archer": {
+        "level": 23,
+        "ability": "Flash Fire",
+        "moves":[
+            "Nasty Plot",
+            "Incinerate",
+            "Snarl",
+            "Hidden Power Electric",
+        ],
+        "nature":"Bashful",
+        "item":"Shuca Berry",
+        "index": 43,
+    },
   },
   "Houndoom":{   
   },
@@ -720,6 +1140,19 @@ var SETDEX_SV = {
   "Tyrogue":{   
   },
   "Hitmontop":{   
+    "Cerulean City Rival Charmander": {
+        "level": 27,
+        "ability": "Technician",
+        "moves":[
+            "Bullet Punch",
+            "Thief",
+            "Fake Out",
+            "Rock Smash",
+        ],
+        "nature":"Jolly",
+        "item":"Black Belt",
+        "index": 52,
+    },
   },
   "Smoochum":{   
   },
@@ -792,6 +1225,19 @@ var SETDEX_SV = {
   "Poochyena":{   
   },
   "Mightyena":{   
+    "Mt. Moon Rocket Admin Archer": {
+        "level": 21,
+        "ability": "Strong Jaw",
+        "moves":[
+            "Bite",
+            "Ice Fang",
+            "Poison Fang",
+            "Howl",
+        ],
+        "nature":"Bashful",
+        "item":"Berry Juice",
+        "index": 44,
+    },
   },
   "Zigzagoon":{   
   },
@@ -829,6 +1275,19 @@ var SETDEX_SV = {
   "Lombre":{   
   },
   "Ludicolo":{   
+   "Leader Misty": {
+        "level": 28,
+        "ability": "Swift Swim",
+        "moves":[
+            "Scald",
+            "Giga Drain",
+            "Thunder Punch",
+            "Aurora Beam",
+        ],
+        "nature":"Mild",
+        "item":"Sitrus Berry",
+        "index": 87,
+    },
   },
   "Seedot":{   
   },
@@ -951,13 +1410,39 @@ var SETDEX_SV = {
   },
   "Medicham-Mega":{   
   },
-  "Electrike":{   
+  "Electrike":{
+    "Nugget Bridge Youngster Timmy": {
+        "level": 26,
+        "ability": "Minus",
+        "moves":[
+            "Shock Wave",
+            "Round",
+            "Flame Burst",
+            "Signal Beam",
+        ],
+        "nature":"Timid",
+        "item":"Magnet",
+        "index": 70,
+    },  
   },
   "Manectric":{   
   },
   "Manectric-Mega":{   
   },
   "Plusle":{   
+    "Nugget Bridge Youngster Timmy": {
+        "level": 26,
+        "ability": "Plus",
+        "moves":[
+            "Grass Knot",
+            "Electro Web",
+            "Signal Beam",
+            "Charge Beam",
+        ],
+        "nature":"Timid",
+        "item":"Shuca Berry",
+        "index": 69,
+    },
   },
   "Minun":{   
   },
@@ -1065,7 +1550,20 @@ var SETDEX_SV = {
   },
   "Zangoose":{
   },
-  "Serviper":{
+  "Seviper":{
+    "Mt. Moon Rocket Admin Archer": {
+        "level": 21,
+        "ability": "Fatal Precision",
+        "moves":[
+            "Mega Drain",
+            "Poison Fang",
+            "Bulldoze",
+            "Hypnosis",
+        ],
+        "nature":"Bashful",
+        "item":"Shuca Berry",
+        "index": 42,
+    },
   },
   "Lunatone":{
     "Leader Brock": {
@@ -1179,6 +1677,19 @@ var SETDEX_SV = {
   "Walrein":{
   },
   "Clamperl":{
+    "Nugget Bridge Lass Reli": {
+        "level": 26,
+        "ability": "Shell Armor",
+        "moves":[
+            "Water Pulse",
+            "Icy Wind",
+            "Rest",
+            "Sleep Talk",
+        ],
+        "nature":"Modest",
+        "item":"Deep Sea Tooth",
+        "index": 74,
+    },
   },
   "Gorebyss":{
   },
@@ -1263,33 +1774,137 @@ var SETDEX_SV = {
   },
   "Staravia":{
   },
-  "":{
+  "Staraptor":{
+  },
+  "Bidoof":{
+  },
+  "Bibarel":{
+  },
+  "Kricketot":{
+  },
+  "Kricketune": {
+    "Viridian Forest Bug Catcher Sammy": {
+        "level": 13,
+        "ability": "Technician",
+        "moves":[
+            "Bug Bite",
+            "Bullet Seed",
+            "Bulldoze",
+            "Rock Tomb",
+        ],
+        "nature":"Bashful",
+        "item":"Lum Berry",
+        "index":19,
+    },
+  },
+  "Shinx":{
+  },
+  "Luxio":{
+  },
+  "Luxray":{
+  },
+  "Budew":{
+  },
+  "Roserade":{
+  },
+  "Cranidos":{
+  },
+  "Rampardos":{
   },
   "":{
   },
-  "":{
+  "Wormadam-Sandy": {
+    "Nugget Bridge Bug Catcher Cale": {
+        "level": 26,
+        "ability": "Overcoat",
+        "moves":[
+            "Bug Bite",
+            "Bulldoze",
+            "Rock Tomb",
+            "Sucker Punch",
+        ],
+        "nature":"Careful",
+        "item":"Rocky Helmet",
+        "index": 65,
+    },
   },
-  "":{
+  "Snover":{   
+    "Nugget Bridge Youngster Timmy": {
+        "level": 26,
+        "ability": "Ice Body",
+        "moves":[
+            "Ice Shard",
+            "Mega Drain",
+            "Icicle Crash",
+            "Water Pulse",
+        ],
+        "nature":"Bashful",
+        "item":"Occa Berry",
+        "index": 71,
+    },
   },
-  "":{
-  },
-  "":{
-  },
-  "":{
-  },
-  "":{
-  },
-  "":{
-  },
-  "":{
-  },
-  "":{
-  },
-  "":{
-  },
-  "":{
+  "Toxicroak":{
+   "Leader Misty": {
+        "level": 27,
+        "ability": "Dry Skin",
+        "moves":[
+            "Swords Dance",
+            "Drain Punch",
+            "Poison Jab",
+            "Sucker Punch",
+        ],
+        "nature":"Jolly",
+        "item":"Life Orb",
+        "index": 91,
+    },
   },
 
+
+  "Simisear": {
+    "Cerulean City Rival Squirtle": {
+        "level": 27,
+        "ability": "Sage Power",
+        "moves":[
+            "Incinerate",
+            "Grass Knot",
+            "Hidden Power Rock",
+            "Sleep Talk",
+        ],
+        "nature":"Timid",
+        "item":"Charcoal",
+        "index": 49,
+    },
+  },
+  "Simisage": {
+    "Cerulean City Rival Charmander": {
+        "level": 27,
+        "ability": "Sage Power",
+        "moves":[
+            "Mega Drain",
+            "Power Gem",
+            "Hidden Power Fire",
+            "Sleep Talk",
+        ],
+        "nature":"Timid",
+        "item":"Miracle Seed",
+        "index": 53,
+    },
+  },
+  "Simipour": {
+    "Cerulean City Rival Bulbasaur": {
+        "level": 27,
+        "ability": "Sage Power",
+        "moves":[
+            "Water Pulse",
+            "Icy Wind",
+            "Hidden Power Electric",
+            "Grass Knot",
+        ],
+        "nature":"Timid",
+        "item":"Mystic Water",
+        "index": 59,
+    },
+  },
   "Hippopotas":{
     "Leader Brock": {
         "level": 13,
@@ -1335,6 +1950,36 @@ var SETDEX_SV = {
         "index": 30,
     },
   },
+  "Druddigon": {
+    "Nugget Bridge Rocket Grunt": {
+        "level": 28,
+        "ability": "Rough Skin",
+        "moves":[
+            "Toxic",
+            "Protect",
+            "Dragon Tail",
+            "Poison Tail",
+        ],
+        "nature":"Impish",
+        "item":"Leftovers",
+        "index": 79,
+    },
+  },
+  "Vivillon": {
+    "Nugget Bridge Bug Catcher Cale": {
+        "level": 25,
+        "ability": "Friend Guard",
+        "moves":[
+            "Struggle Bug",
+            "Electroweb",
+            "Air Cutter",
+            "Draining Kiss",
+        ],
+        "nature":"Bashful",
+        "item":"Charti Berry",
+        "index": 63,
+    },
+  },
   "Litleo": {
     "Rival Route 22 Squirtle": {
         "level": 15,
@@ -1365,22 +2010,6 @@ var SETDEX_SV = {
         "index": 39,
     },
   },
-
-  "Kricketune": {
-    "Viridian Forest Bug Catcher Sammy": {
-        "level": 13,
-        "ability": "Technician",
-        "moves":[
-            "Bug Bite",
-            "Bullet Seed",
-            "Bulldoze",
-            "Rock Tomb",
-        ],
-        "nature":"Bashful",
-        "item":"Lum Berry",
-        "index":19,
-    },
-  },
   "Whimsicott": {
     "Route 3 Lass Sally": {
         "level": 22,
@@ -1409,6 +2038,36 @@ var SETDEX_SV = {
         "nature":"Bashful",
         "item":"",
         "index":16,
+    },
+  },
+  "Amaura": {
+    "Nugget Bridge Lass Ali": {
+        "level": 26,
+        "ability": "Refrigerate",
+        "moves":[
+            "Round",
+            "Ancient Power",
+            "Water Pulse",
+            "Mud Shot",
+        ],
+        "nature":"Modest",
+        "item":"Chople Berry",
+        "index": 67,
+    },
+  },
+  "Brionne": {
+    "Nugget Bridge Lass Ali": {
+        "level": 26,
+        "ability": "Liquid Voice",
+        "moves":[
+            "Round",
+            "Draining Kiss",
+            "Icy Wind",
+            "Aqua Jet",
+        ],
+        "nature":"Bashful",
+        "item":"Sitrus Berry",
+        "index": 68,
     },
   },
   "Stufful": {
@@ -1456,6 +2115,51 @@ var SETDEX_SV = {
         "index": 33,
     },
   },
+  "Salandit":{
+    "Nugget Bridge Camper Ethan": {
+        "level": 26,
+        "ability": "Corrosion",
+        "moves":[
+            "Toxic",
+            "Substitute",
+            "Protect",
+            "Incinerate",
+        ],
+        "nature":"Timid",
+        "item":"Black Sludge",
+        "index": 76,
+    },
+  },
+  "Togedemaru": {
+    "Nugget Bridge Rocket Grunt": {
+        "level": 27,
+        "ability": "Iron Barbs",
+        "moves":[
+            "U-turn",
+            "Zippy Zap",
+            "Iron Head",
+            "Nuzzle",
+        ],
+        "nature":"Careful",
+        "item":"Rocky Helmet",
+        "index": 80,
+    },
+  },
+  "Komala": {
+    "Nugget Bridge Rocket Grunt": {
+        "level": 28,
+        "ability": "Comatose",
+        "moves":[
+            "Last Resort",
+            "Sleep Talk",
+            "",
+            "",
+        ],
+        "nature":"Adamant",
+        "item":"Silk Scarf",
+        "index": 81,
+    },
+  },
   "Thwackey": {
     "Mt. Moon Super Nerd Miguel": {
         "level": 21,
@@ -1469,6 +2173,36 @@ var SETDEX_SV = {
         "nature":"Adamant",
         "item":"Eviolite",
         "index": 36,
+    },
+  },
+  "Greedent":{   
+    "Nugget Bridge Lass Reli": {
+        "level": 26,
+        "ability": "Cheeck Pouch",
+        "moves":[
+            "Stomping Tantrum",
+            "Facade",
+            "Seed Bomb",
+            "Swords Dance",
+        ],
+        "nature":"Bashful",
+        "item":"Sitrus Berry",
+        "index": 72,
+    },
+  },
+  "Boltund": {
+   "Route 6 Camper Jeff": {
+        "level": 35,
+        "ability": "Strong Jaw",
+        "moves":[
+            "Thunder Fang",
+            "Fire Fang",
+            "Ice Fang",
+            "Psychic Fangs",
+        ],
+        "nature":"Jolly",
+        "item":"Expert Belt",
+        "index": 95,
     },
   },
   "Wattrel": {
@@ -1529,6 +2263,51 @@ var SETDEX_SV = {
         "nature":"Careful",
         "item":"Air Balloon",
         "index": 31,
+    },
+  },
+  "Glimmet": {
+    "Mt. Moon Rocket Admin Archer": {
+        "level": 20,
+        "ability": "Toxic Debris",
+        "moves":[
+            "Ancient Power",
+            "Venoshock",
+            "Mud Shot",
+            "Protect",
+        ],
+        "nature":"Bashful",
+        "item":"Shuca Berry",
+        "index": 41,
+    },
+  },
+  "Mabosstiff":{
+    "Nugget Bridge Camper Ethan": {
+        "level": 26,
+        "ability": "Intimidate",
+        "moves":[
+            "Trailblaze",
+            "Bite",
+            "Fire Fang",
+            "Ice Fang",
+        ],
+        "nature":"Adamant",
+        "item":"Black Glasses",
+        "index": 75,
+    },
+  },
+  "Veluza": {
+    "Dig House Rocket Grunt": {
+        "level": 25,
+        "ability": "Sharpness",
+        "moves":[
+            "Aqua Cutter",
+            "Psycho Cut",
+            "Aqua Jet",
+            "Crunch",
+        ],
+        "nature":"Jolly",
+        "item":"Expert Belt",
+        "index": 85,
     },
   },
 };

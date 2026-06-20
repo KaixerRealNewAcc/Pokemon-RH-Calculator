@@ -468,6 +468,91 @@ $(".teraType").change(function () {
 	stellarButtonsVisibility(pokeObj, $(this).val() === "Stellar" && checked);
 });
 
+function critRateLabelsVisible() {
+	var $toggle = $("#showCritPercentages");
+	return !$toggle.length || $toggle.is(":checked");
+}
+
+function critRateLabelHtml(labelId) {
+	return '<span class="crit-rate" id="' + labelId + '">' +
+		'<span class="crit-rate-value"></span><span class="crit-rate-sign">%</span></span>';
+}
+
+function ensureCritRateLabelStructure($label) {
+	if (!$label.find(".crit-rate-value").length) {
+		$label.html('<span class="crit-rate-value"></span><span class="crit-rate-sign">%</span>');
+	}
+}
+
+function updateCritRateLabel(moveGroupObj, rate) {
+	var idSuffix = moveGroupObj.children(".move-crit").attr("id").substr(4);
+	updateCritRateLabelById(idSuffix, rate);
+}
+
+function updateCritRateLabelById(idSuffix, rate) {
+	if (!critRateLabelsVisible()) return;
+	var $label = $("#critRate" + idSuffix);
+	if (!$label.length) return;
+	ensureCritRateLabelStructure($label);
+	var value = formatCritRateValue(rate);
+	$label.find(".crit-rate-value").text(value);
+	$label.toggle(value !== "");
+}
+
+function updateCritRateLabelsFromPokemon(p1, p2, p1field, p2field) {
+	for (var i = 0; i < 4; i++) {
+		updateCritRateLabelById("L" + (i + 1), getCritRate(p1, p2, p1field, p2field, i));
+		updateCritRateLabelById("R" + (i + 1), getCritRate(p2, p1, p2field, p1field, i));
+	}
+}
+
+function setCritCheckbox(moveGroupObj, checked, autoCrit) {
+	var crit = moveGroupObj.children(".move-crit");
+	crit.data("autoCrit", autoCrit);
+	crit.prop("checked", checked).change();
+}
+
+function ensureCritRateLabels(showCritPercentages) {
+	if (showCritPercentages) {
+		$(".move-crit").each(function () {
+			var idSuffix = this.id.substr(4);
+			var labelId = "critRate" + idSuffix;
+			if (!$("#" + labelId).length) {
+				$(this).next(".crit-btn").after(critRateLabelHtml(labelId));
+			}
+		});
+	} else {
+		$(".crit-rate").remove();
+	}
+}
+
+function populateCritRateLabels() {
+	var p1info = $("#p1");
+	var p2info = $("#p2");
+	if (!p1info.length || !p2info.length) return;
+	var p1 = createPokemon(p1info);
+	var p2 = createPokemon(p2info);
+	var p1field = createField();
+	updateCritRateLabelsFromPokemon(p1, p2, p1field, p1field.clone().swap());
+}
+
+function refreshCritRateLabels() {
+	var showCritPercentages = critRateLabelsVisible();
+	$("body").toggleClass("show-crit-percentages", showCritPercentages);
+	ensureCritRateLabels(showCritPercentages);
+	if (showCritPercentages) {
+		populateCritRateLabels();
+	}
+}
+
+$(document).on("change", "#showCritPercentages", refreshCritRateLabels);
+
+$(".crit-rate").on("click", function () {
+	var suffix = this.id.substr(this.id.length - 2);
+	var $crit = $("#crit" + suffix);
+	$crit.click();
+});
+
 var lockerMove = "";
 // auto-update move details on select
 $(".move-selector").change(function () {
@@ -633,8 +718,7 @@ $(".set-selector").change(function () {
 			if (pok_name.includes("Vivillon")) {
 				pok_name = "Vivillon";
 			}
-			
-			//this ruined my day
+			/// this ruined my day
 			var pok = `<img class="trainer-pok right-side" src="https://raw.githubusercontent.com/May8th1995/sprites/master/${pok_name}.png" data-id="${CURRENT_TRAINER_POKS[i].split("]")[1]}" title="${next_poks[i]}, ${next_poks[i]} BP">`
 			trpok_html += pok
 		}
@@ -1523,7 +1607,7 @@ var RANDDEX = [
 	GEN8RANDSETS,
 	GEN9RANDSETS,
 ];
-var gen, genWasChanged, notation, pokedex, setdex, randdex,  typeChart, moves, abilities, items, calcHP, calcStat, GENERATION;
+var gen, genWasChanged, notation, pokedex, setdex, randdex, typeChart, moves, abilities, items, calcHP, calcStat, GENERATION;
 
 TR_NAMES = get_trainer_names()
 
@@ -1993,7 +2077,7 @@ function addBoxed(poke) {
 	newPoke.src = getSrcImgPokemon(poke);
 	newPoke.dataset.id = `${poke.name} (${poke.nameProp})`
 	newPoke.addEventListener("dragstart", dragstart_handler);
-	$('#box-poke-list')[0].appendChild(newPoke)
+	$('#box-poke-list')[0].appendChild(newPoke);
 }
 
 function getSrcImgPokemon(poke) {
@@ -2008,7 +2092,7 @@ function getSrcImgPokemon(poke) {
 	}
 }
 
-function get_trainer_poks(trainer_name) {
+function get_trainer_poks(trainer_name, ignore_trainer_name) {
 	var true_name = trainer_name.split("(")[1].split("\n")[0].trim()
 	window.CURRENT_TRAINER = true_name.substring(0, true_name.length -1);
 	var matches = []

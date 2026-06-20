@@ -578,7 +578,7 @@ const RR = SV.concat([
   'Surprise!',
 ]);
 
-export const ABILITIES = [CHAMPIONS, RBY, GSC, ADV, DPP, BW, XY, SM, SS, SV, RR];
+export const ABILITIES = [CHAMPIONS, RBY, GSC, ADV, DPP, BW, XY, SM, SS, RR];
  
 export class Abilities implements I.Abilities {
   private readonly gen: I.GenerationNum;

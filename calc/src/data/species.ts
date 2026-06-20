@@ -10975,7 +10975,7 @@ const RR_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
   'Sceptile-Mega': {bs: {at: 135, sa: 110}, abilities: {0: 'Technician'}},
   'Scovillain': {bs: {hp: 85, at: 78, sa: 118}},
   'Scream Tail': {bs: {at: 65, sa: 85}},
-  'Seviper': {bs: {hp: 83, df: 83, sd: 83, sp: 85}},
+  'Seviper': {bs: {hp: 83, df: 83, sd: 83, sp: 85}, abilities: {0: 'Fatal Precision'}},
   'Shiftry': {bs: {at: 120, sa: 110}},
   'Shiinotic': {bs: {hp: 75}},
   'Silvally': {bs: {hp: 100, at: 100, df: 100, sa: 100, sd: 100, sp: 100}, abilities: {0: 'Battle Armor'}},

@@ -1386,6 +1386,12 @@ export function calculateAtModsSMSSSV(
     atMods.push(6144);
     desc.attackerAbility = attacker.ability;
   } else if (
+    // Sage Power has no effect during Dynamax (Anubis)
+    (attacker.hasAbility('Sage Power') && move.category === 'Special' &&
+     !attacker.isDynamaxed)) {
+    atMods.push(6144);
+    desc.attackerAbility = attacker.ability;
+  } else if (
     (attacker.hasAbility('Guts') && attacker.status && move.category === 'Physical') ||
     (attacker.curHP() <= attacker.maxHP() / 3 &&
       ((attacker.hasAbility('Overgrow') && move.hasType('Grass')) ||
@@ -1414,7 +1420,8 @@ export function calculateAtModsSMSSSV(
     desc.attackerAbility = attacker.ability;
   } else if (
     (attacker.hasAbility('Water Bubble') && move.hasType('Water')) ||
-    (attacker.hasAbility('Huge Power', 'Pure Power') && move.category === 'Physical')
+    (attacker.hasAbility('Huge Power', 'Pure Power') && move.category === 'Physical') ||
+    (attacker.hasAbility('Feline Prowess') && move.category === 'Special')
   ) {
     atMods.push(8192);
     desc.attackerAbility = attacker.ability;
@@ -1734,6 +1741,9 @@ export function calculateFinalModsSMSSSV(
 
   if (attacker.hasAbility('Neuroforce') && typeEffectiveness > 1) {
     finalMods.push(5120);
+    desc.attackerAbility = attacker.ability;
+  } else if (attacker.hasAbility('Fatal Precision') && typeEffectiveness > 1) {
+    finalMods.push(4915);
     desc.attackerAbility = attacker.ability;
   } else if (attacker.hasAbility('Sniper') && isCritical) {
     finalMods.push(6144);
