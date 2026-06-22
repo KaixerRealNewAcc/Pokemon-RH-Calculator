@@ -41,6 +41,8 @@ export interface RawDesc {
   isBurned?: boolean;
   isProtected?: boolean;
   isReflect?: boolean;
+  isSolidRock?: boolean;
+  isMagnetRise?: boolean;
   isBattery?: boolean;
   isPowerSpot?: boolean;
   isWonderRoom?: boolean;
@@ -1068,6 +1070,12 @@ function buildDescription(description: RawDesc, attacker: Pokemon, defender: Pok
     output += ' through Reflect';
   } else if (description.isLightScreen) {
     output += ' through Light Screen';
+  }
+  if (description.isSolidRock){
+    output += ' with brock\'s aura' 
+  }
+  if (description.isMagnetRise){
+    output += ' lt. Surge is a badass'
   }
   if (description.isFlowerGiftDefender) {
     output += ' with an ally\'s Flower Gift';

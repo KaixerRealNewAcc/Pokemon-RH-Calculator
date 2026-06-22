@@ -79,6 +79,7 @@ function createCalcSide(side: Side) {
     isSR: !!side.sideConditions['steathrock'],
     isReflect: !!side.sideConditions['reflect'],
     isLightScreen: !!side.sideConditions['lightscreen'],
+    isSolidRock: !!side.sideConditions['solidrock'],
     isProtected: !!side.sideConditions['protect'],
     isSeeded: !!side.sideConditions['leechseed'],
     isForesight: !!side.sideConditions['foresight'],

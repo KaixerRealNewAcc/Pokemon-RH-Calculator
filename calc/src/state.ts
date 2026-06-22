@@ -42,6 +42,7 @@ export namespace State {
     terrain?: I.Terrain;
     isMagicRoom?: boolean;
     isWonderRoom?: boolean;
+    isTrickRoom?: boolean;
     isGravity?: boolean;
     isAuraBreak?: boolean;
     isFairyAura?: boolean;
@@ -64,11 +65,14 @@ export namespace State {
     isSR?: boolean;
     isReflect?: boolean;
     isLightScreen?: boolean;
+    isSolidRock?: boolean;
+    isMagnetRise?: boolean;
     isProtected?: boolean;
     isSeeded?: boolean;
     isSaltCured?: boolean;
     isForesight?: boolean;
     isTailwind?: boolean;
+    isTrickRoom?: boolean;
     isHelpingHand?: boolean;
     isFlowerGift?: boolean;
     isPowerTrick?: boolean;

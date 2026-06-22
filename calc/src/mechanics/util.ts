@@ -31,7 +31,8 @@ export function isGrounded(pokemon: Pokemon, field: Field) {
   return (field.isGravity || pokemon.hasItem('Iron Ball') ||
     (!pokemon.hasType('Flying') &&
       !pokemon.hasAbility('Levitate') &&
-      !pokemon.hasItem('Air Balloon')));
+      !pokemon.hasItem('Air Balloon') &&
+      !field.defenderSide.isMagnetRise));
 }
 
 export function getModifiedStat(stat: number, mod: number, gen?: Generation) {
@@ -98,6 +99,8 @@ export function getFinalSpeed(gen: Generation, pokemon: Pokemon, field: Field, s
   if (side.isTailwind) speedMods.push(8192);
   // Pledge swamp would get applied here when implemented
   // speedMods.push(1024);
+
+  if(side.isTrickRoom) speedMods.push(1024); //For Easy Use
 
   if ((pokemon.hasAbility('Unburden') && pokemon.abilityOn) ||
       (pokemon.hasAbility('Chlorophyll') && weather.includes('Sun')) ||

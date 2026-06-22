@@ -64,6 +64,19 @@ var SETDEX_SV = {
         "item":"Charizardite X",
         "index":214,
     },
+    "Route 13 Bird Keeper Sebastian": {
+        "level": 66,
+        "ability": "Tough Claws",
+        "moves":[
+            "Earthquake",
+            "Flare Blitz",
+            "Draco Barrage",
+            "Dragon Dance", 
+        ],
+        "nature":"Jolly",
+        "item":"Charizardite X",
+        "index":300,
+    },
   },
   "Bulbasaur": {
     "Rival Route 22 Bulbasaur": {
@@ -96,6 +109,19 @@ var SETDEX_SV = {
     },
   },
   "Venusaur": {
+    "Route 13 Beauty Lola & Sheila": {
+        "level": 66,
+        "ability": "Chlorophyll",
+        "moves":[
+            "Petal Blizzard",
+            "Safeguard",
+            "Earth Power",
+            "Weather Ball", 
+        ],
+        "nature":"Naive",
+        "item":"Sitrus Berry",
+        "index":315,
+    },
   },
   "Venusaur-Mega": {
     "Silph Co. Rival Bulbasaur": {
@@ -157,6 +183,19 @@ var SETDEX_SV = {
         "nature":"Modest",
         "item":"Blastoiseite",
         "index":208,
+    },
+    "Route 12 Rocker Luca": {
+        "level": 66,
+        "ability": "Mega Launcher",
+        "moves":[
+            "Blizzard",
+            "Aura Sphere",
+            "Dark Pulse",
+            "Shell Smash", 
+        ],
+        "nature":"Timid",
+        "item":"Blastoisinite",
+        "index":290,
     },
   },
   "Caterpie": {
@@ -338,6 +377,19 @@ var SETDEX_SV = {
         "nature":"Timid",
         "item":"Assault Vest",
         "index": 105,
+    },
+    "Route 12 Rocker Luca": {
+        "level": 66,
+        "ability": "Sheer Force",
+        "moves":[
+            "Earth Power",
+            "Blizzard",
+            "Fire Blast",
+            "Thunderbolt", 
+        ],
+        "nature":"Timid",
+        "item":"Life Orb",
+        "index":288,
     },
   },
   "NidoranM": {
@@ -554,6 +606,21 @@ var SETDEX_SV = {
   },
   "Primeape": {
   },
+  "Annihilape": {
+    "Saffron City Leader Chuck": {
+        "level": 57,
+        "ability": "Defiant",
+        "moves":[
+            "Drain Punch",
+            "Rage Fist",
+            "Ice Punch",
+            "Bulk Up",
+        ],
+        "nature":"Jolly",
+        "item":"Salac Berry",
+        "index":253,
+    },
+  },
   "Growlithe": {
   },
   "Arcanine": {
@@ -649,6 +716,19 @@ var SETDEX_SV = {
   "Ponyta": {
   },
   "Rapidash": {
+    "Route 13 Bird Keeper Perry": {
+        "level": 66,
+        "ability": "Blazing Soul",
+        "moves":[
+            "Fire Lash",
+            "Solar Blade",
+            "Jump Kick",
+            "High Horsepower", 
+        ],
+        "nature":"Jolly",
+        "item":"Fire Gem",
+        "index":323,
+    },
   },
   "Slowpoke": {
     "Rival Route 22 Charmander": {
@@ -747,6 +827,19 @@ var SETDEX_SV = {
   "Doduo": {
   },
   "Dodrio": {
+    "Beauty Sam B2B w/ Beauty Shelly": {
+        "level": 57,
+        "ability": "Rock Head",
+        "moves":[
+            "Brave Bird",
+            "Double-Edge",
+            "Jump Kick",
+            "Pursuit",
+        ],
+        "nature":"Jolly",
+        "item":"Focus Sash",
+        "index":246,
+    }, 
   },
   "Seel": {
   },
@@ -765,6 +858,19 @@ var SETDEX_SV = {
   "Haunter": {
   },
   "Gengar": {
+    "Camper Justin B2B w/ Andrew": {
+        "level": 66,
+        "ability": "Levitate",
+        "moves":[
+            "Shadow Ball",
+            "Focus Blast",
+            "Sludge Wave",
+            "Nasty Plot", 
+        ],
+        "nature":"Timid",
+        "item":"Ghostium Z",
+        "index":295,
+    },
   },
   "Onix": {
   },
@@ -826,6 +932,19 @@ var SETDEX_SV = {
   "Exeggcute": {
   },
   "Exeggutor": {
+    "Route 13 Bird Keeper Robert": {
+        "level": 66,
+        "ability": "Chlorophyll",
+        "moves":[
+            "Solar Beam",
+            "Psyshock",
+            "Weather Ball",
+            "Sleep Powder", 
+        ],
+        "nature":"Timid",
+        "item":"Focus Sash",
+        "index":330,
+    },
   },
   "Cubone"  : {
   },
@@ -858,6 +977,19 @@ var SETDEX_SV = {
         "item":"Electric Seed",
         "index": 128,
     },
+    "Beauty Sam B2B w/ Beauty Shelly": {
+        "level": 57,
+        "ability": "Unburden",
+        "moves":[
+            "Close Combat",
+            "Knock Off",
+            "Poison Jab",
+            "Bulk Up",
+        ],
+        "nature":"Adamant",
+        "item":"Electric Seed",
+        "index":243,
+    },  
   },
   "Hitmonchan": {
     "Cerulean City Rival Bulbasaur": {
@@ -899,9 +1031,52 @@ var SETDEX_SV = {
   },
   "Rhydon":{
   },
+  "Rhyperior": {
+    "Route 13 Bird Keeper Perry": {
+        "level": 66,
+        "ability": "Solid Rock",
+        "moves":[
+            "Earthquake",
+            "Stone Edge",
+            "Fire Punch",
+            "Stealth Rock", 
+        ],
+        "nature":"Careful",
+        "item":"Rindo Berry",
+        "index":320,
+    },
+  },
   "Chansey":{
+    "Route 13 Picknicker Alma": {
+        "level": 66,
+        "ability": "Natural Cure",
+        "moves":[
+            "Thunder Wave",
+            "Seismic Toss",
+            "Teleport",
+            "Soft-Boiled", 
+        ],
+        "nature":"Bold",
+        "item":"Eviolite",
+        "index":311,
+    },
   },
   "Tangela":{
+  },
+  "Tangrowth": {
+    "Route 13 Picknicker Alma": {
+        "level": 66,
+        "ability": "Chlorophyll",
+        "moves":[
+            "Solar Beam",
+            "Hidden Power Fire",
+            "Sludge Bomb",
+            "Knock Off", 
+        ],
+        "nature":"Timid",
+        "item":"Assault Vest",
+        "index":310,
+    },
   },
   "Kangaskhan":{
   },
@@ -1066,11 +1241,37 @@ var SETDEX_SV = {
             "Dragon Dance",
         ],
         "nature":"Jolly",
-        "item":"Flyinium-Z",
+        "item":"Flyinium Z",
         "index":181,
+    },
+    "Silph Co. Giovanni": {
+        "level": 57,
+        "ability": "Intimidate",
+        "moves":[
+            "Waterfall",
+            "Earthquake",
+            "Bounce",
+            "Dragon Dance",
+        ],
+        "nature":"Jolly",
+        "item":"Flyinium Z",
+        "index":232,
     },
   },
   "Gyarados-Mega":{
+    "Leader Misty Rematch": {
+        "level": 68,
+        "ability": "Mold Breaker",
+        "moves":[
+            "Waterfall",
+            "Crunch",
+            "Earthquake",
+            "Dragon Dance",
+        ],
+        "nature":"Jolly",
+        "item":"Gyaradosite",
+        "index":273,
+    },
   },
   "Lapras":{
   },
@@ -1120,8 +1321,34 @@ var SETDEX_SV = {
     },
   },
   "Vaporeon":{
+    "Beauty Sam B2B w/ Beauty Shelly": {
+        "level": 57,
+        "ability": "Water Absorb",
+        "moves":[
+            "Surf",
+            "Ice Beam",
+            "Hidden Power Psychic",
+            "Last Resort",
+        ],
+        "nature":"Timid",
+        "item":"Eevium Z",
+        "index":244,
+    }, 
   },
   "Jolteon":{
+    "Route 13 Bird Keeper Robert": {
+        "level": 66,
+        "ability": "Volt Absorb",
+        "moves":[
+            "Thunderbolt",
+            "Weather Ball",
+            "Hidden Power Grass",
+            "Last Resort", 
+        ],
+        "nature":"Timid",
+        "item":"Eevium Z",
+        "index":333,
+    },
   },
   "Flareon":{
     "Route 9 Picknicker Alicia": {
@@ -1152,6 +1379,19 @@ var SETDEX_SV = {
         "item":"Pixie Plate",
         "index": 147,
     },
+    "Route 13 Picknicker Susie": {
+        "level": 66,
+        "ability": "Pixilate",
+        "moves":[
+            "Hyper Voice",
+            "Weather Ball",
+            "Stored Power",
+            "Last Resort", 
+        ],
+        "nature":"Timid",
+        "item":"Eevium Z",
+        "index":306,
+    },
   },
   "Porygon":{
   },
@@ -1179,6 +1419,19 @@ var SETDEX_SV = {
     },
   },
   "Aerodactyl-Mega":{
+    "Leader Brock Rematch": {
+        "level": 68,
+        "ability": "Tough Claws",
+        "moves":[
+            "Stone Edge",
+            "Dual Wingbeat",
+            "Earthquake",
+            "Dragon Dance",
+        ],
+        "nature":"Jolly",
+        "item":"Aerodactylite",
+        "index":267,
+    },
   },
   "Snorlax":{
   },
@@ -1202,6 +1455,19 @@ var SETDEX_SV = {
     },
   },
   "Zapdos":{
+    "Saffron City Dumbass Kid": {
+        "level": 57,
+        "ability": "Static",
+        "moves":[
+            "Thunder",
+            "Hurricane",
+            "Weather Ball",
+            "Volt Switch",
+        ],
+        "nature":"Timid",
+        "item":"Flyinium Z",
+        "index":237,
+    },
   },
   "Zapdos-Galar":{
   },
@@ -1310,6 +1576,19 @@ var SETDEX_SV = {
         "item":"Leftovers",
         "index": 118,
     },
+    "Route 13 Bird Keeper Sebastian": {
+        "level": 66,
+        "ability": "Super Luck",
+        "moves":[
+            "Moonblast",
+            "Aeroblast",
+            "Fire Blast",
+            "Roost", 
+        ],
+        "nature":"Timid",
+        "item":"Scope Lens",
+        "index":301,
+    },
   },
   "Natu":{
   },
@@ -1334,6 +1613,19 @@ var SETDEX_SV = {
         "nature":"Modest",
         "item":"Ampharosite",
         "index": 130,
+    },
+    "Leader Erika Rematch": {
+        "level": 68,
+        "ability": "Thick Fat",
+        "moves":[
+            "Volt Switch",
+            "Draco Barrage",
+            "Signal Beam",
+            "Focus Blast",
+        ],
+        "nature":"Modest",
+        "item":"Ampharosite",
+        "index":285,
     },
   },
   "Bellosom":{
@@ -1411,6 +1703,19 @@ var SETDEX_SV = {
   "Sunkern":{
   },
   "Sunflora":{
+    "Route 13 Bird Keeper Perry": {
+        "level": 66,
+        "ability": "Solar Power",
+        "moves":[
+            "Solar Beam",
+            "Fiery Dance",
+            "Earth Power",
+            "Sludge Bomb", 
+        ],
+        "nature":"Calm",
+        "item":"Assault Vest",
+        "index":321,
+    },
   },
   "Yanma": {
     "Leader Falkner": {
@@ -1425,6 +1730,21 @@ var SETDEX_SV = {
         "nature":"Bashful",
         "item":"Lum Berry",
         "index":23,
+    },
+  },
+  "Yanmega": {
+    "Route 12 Rocker Luca": {
+        "level": 66,
+        "ability": "Tinted Lens",
+        "moves":[
+            "Bug Buzz",
+            "Air Slash",
+            "U-turn",
+            "Giga Drain", 
+        ],
+        "nature":"Timid",
+        "item":"Choice Specs",
+        "index":289,
     },
   },
   "Wooper":{
@@ -1597,6 +1917,19 @@ var SETDEX_SV = {
     },
   },
   "Scizor":{
+    "Saffron City Dumbass Kid": {
+        "level": 57,
+        "ability": "Technician",
+        "moves":[
+            "Bullet Punch",
+            "U-turn",
+            "Dual Wingbeat",
+            "Rock Smash",
+        ],
+        "nature":"Adamant",
+        "item":"Assault Vest",
+        "index":240,
+    },
   },
   "Scizor-Mega":{
   },
@@ -1649,6 +1982,34 @@ var SETDEX_SV = {
   "Swinub":{   
   },
   "Piloswine":{   
+  },
+  "Mamoswine": {
+    "Silph Co. Giovanni": {
+        "level": 57,
+        "ability": "Thick Fat",
+        "moves":[
+            "Stone Edge",
+            "Icicle Crash",
+            "Headlong Rush",
+            "Ice Shard",
+        ],
+        "nature":"Jolly",
+        "item":"Focus Sash",
+        "index":230,
+    },
+    "Route 13 Biker Jared": {
+        "level": 66,
+        "ability": "Thick fat",
+        "moves":[
+            "Headlong Rush",
+            "Mountain Gale",
+            "Ice Shard",
+            "Rock Tomb", 
+        ],
+        "nature":"Jolly",
+        "item":"Icium Z",
+        "index":329,
+    },
   },
   "Corsola":{   
   },
@@ -1709,7 +2070,20 @@ var SETDEX_SV = {
         "index":226,
     },
   },
-  "Kingdra":{   
+  "Kingdra":{ 
+    "Leader Misty Rematch": {
+        "level": 68,
+        "ability": "Swift Swim",
+        "moves":[
+            "Hydro Pump",
+            "Draco Barrage",
+            "Hurricane",
+            "Flip Turn",
+        ],
+        "nature":"Modest",
+        "item":"Life Orb",
+        "index":270,
+    },
   },
   "Phanpy":{   
   },
@@ -1832,6 +2206,19 @@ var SETDEX_SV = {
   "Combusken":{   
   },
   "Blaziken":{   
+    "Route 13 Bird Keeper Sebastian": {
+        "level": 66,
+        "ability": "Speed Boost",
+        "moves":[
+            "Flare Blitz",
+            "Close Combat",
+            "Thunder Punch",
+            "Swords Dance", 
+        ],
+        "nature":"Adamant",
+        "item":"Fighting Gem",
+        "index":302,
+    },
   },
   "Blaziken-Mega":{   
   },
@@ -1841,7 +2228,20 @@ var SETDEX_SV = {
   },
   "Swampert":{   
   },
-  "Swampert-Mega":{   
+  "Swampert-Mega":{ 
+    "Saffron City Dumbass Kid": {
+        "level": 57,
+        "ability": "Swift Swim",
+        "moves":[
+            "Waterfall",
+            "Earthquake",
+            "Ice Punch",
+            "Power-Up Punch",
+        ],
+        "nature":"Adamant",
+        "item":"Swampertite",
+        "index":241,
+    },  
   },
   "Poochyena":{   
   },
@@ -1943,6 +2343,19 @@ var SETDEX_SV = {
         "item":"Focus Sash",
         "index":174,
     },
+    "Route 13 Picknicker Susie": {
+        "level": 66,
+        "ability": "Chlorophyll",
+        "moves":[
+            "Fake Out",
+            "Solar Blade",
+            "Knock Off",
+            "Parting Shot", 
+        ],
+        "nature":"Adamant",
+        "item":"Life Orb",
+        "index":304,
+    },
   },
   "Taillow":{   
   },
@@ -1998,6 +2411,21 @@ var SETDEX_SV = {
     },
   },
   "Gardevoir-Mega":{   
+  },
+  "Gallade-Mega": {
+    "Saffron City Leader Chuck": {
+        "level": 57,
+        "ability": "Sharpness",
+        "moves":[
+            "Drain Punch",
+            "Psycho Cut",
+            "Night Slash",
+            "Bulk Up",
+        ],
+        "nature":"Jolly",
+        "item":"Galladite",
+        "index":255,
+    },
   },
   "Surskit":{   
   },
@@ -2207,6 +2635,19 @@ var SETDEX_SV = {
   "Manectric":{   
   },
   "Manectric-Mega":{   
+    "Leader Lt. Surge Rematch": {
+        "level": 68,
+        "ability": "Intimidate",
+        "moves":[
+            "Rising Voltage",
+            "Hidden Power Grass",
+            "Flamethrower",
+            "Volt Switch",
+        ],
+        "nature":"Timid",
+        "item":"Manectite",
+        "index":279,
+    },
   },
   "Plusle":{   
     "Nugget Bridge Youngster Timmy": {
@@ -2302,6 +2743,32 @@ var SETDEX_SV = {
   "Camerupt":{   
   },
   "Camerupt-Mega":{   
+    "Leader Sabrina": {
+        "level": 59,
+        "ability": "Sheer Force",
+        "moves":[
+            "Flamethrower",
+            "Earth Power",
+            "Steam Eruption",
+            "Slack Off",
+        ],
+        "nature":"Quiet",
+        "item":"Cameruptite",
+        "index":257,
+    },
+    "Route 13 Biker Jared": {
+        "level": 66,
+        "ability": "Sheer Force",
+        "moves":[
+            "Fire Blast",
+            "Earth Power",
+            "Solar Beam",
+            "Ancient Power", 
+        ],
+        "nature":"Modest",
+        "item":"Camperupite",
+        "index":327,
+    },
   },
   "Torkoal":{   
   },
@@ -2364,6 +2831,19 @@ var SETDEX_SV = {
         "nature":"Timid",
         "item":"Altarianite",
         "index": 119,
+    },
+    "Route 13 Picknicker Alma": {
+        "level": 66,
+        "ability": "Pixilate",
+        "moves":[
+            "Fire Blast",
+            "Hyper Voice",
+            "Earthquake",
+            "Roost", 
+        ],
+        "nature":"Bold",
+        "item":"Altarianite",
+        "index":313,
     },
   },
   "Zangoose":{
@@ -2497,6 +2977,19 @@ var SETDEX_SV = {
   "Dusclops":{
   },
   "Tropius":{
+    "Route 13 Bird Keeper Sebastian": {
+        "level": 66,
+        "ability": "Chlorophyll",
+        "moves":[
+            "Giga Drain",
+            "Weather Ball",
+            "Dragon Pulse",
+            "Focus Sash", 
+        ],
+        "nature":"Adamant",
+        "item":"Focus Sash",
+        "index":303,
+    },
   },
   "Chimecho":{
   },
@@ -2512,13 +3005,39 @@ var SETDEX_SV = {
   },
   "Glalie-Mega":{
   },
-  "Frosslass":{
+  "Froslass":{
+    "Camper Justin B2B w/ Andrew": {
+        "level": 66,
+        "ability": "Ice Body",
+        "moves":[
+            "Shadow Ball",
+            "Blizzard",
+            "Destiny Bond",
+            "Aurora Veil", 
+        ],
+        "nature":"Timid",
+        "item":"Light Clay",
+        "index":296,
+    },
   },
   "Spheal":{
   },
   "Sealeo":{
   },
   "Walrein":{
+    "Route 12 Rocker Luca": {
+        "level": 66,
+        "ability": "Ice Body",
+        "moves":[
+            "Blizzard",
+            "Subsitute",
+            "Protect",
+            "Toxic", 
+        ],
+        "nature":"Bold",
+        "item":"Leftovers",
+        "index":291,
+    },
   },
   "Clamperl":{
     "Nugget Bridge Lass Reli": {
@@ -2868,6 +3387,38 @@ var SETDEX_SV = {
         "index":153,
     },
   },
+  "Sneasler": {
+    "Saffron City Leader Chuck": {
+        "level": 57,
+        "ability": "Unburden",
+        "moves":[
+            "Close Combat",
+            "Dire Claw",
+            "Knock Off",
+            "Earthquake",
+        ],
+        "nature":"Jolly",
+        "item":"Liechi Berry",
+        "index":251,
+    },
+  },
+  "Garchomp": {
+  },
+  "Garchomp-Mega": {
+    "Silph Co. Giovanni": {
+        "level": 57,
+        "ability": "Sand Force",
+        "moves":[
+            "Earthquake",
+            "Scale Shot",
+            "Stone Edge",
+            "Swords Dance",
+        ],
+        "nature":"Jolly",
+        "item":"Garchompite",
+        "index":235,
+    },
+  },
   "Azelf": {
     "Silph Co. Rival Squirtle": {
         "level": 56,
@@ -2935,7 +3486,7 @@ var SETDEX_SV = {
             "Nasty Plot", 
         ],
         "nature":"Timid",
-        "item":"Icium-Z",
+        "item":"Icium Z",
         "index": 125,
     },
     "Rocket Hideout Left Grunt": {
@@ -2950,6 +3501,19 @@ var SETDEX_SV = {
         "nature":"Timid",
         "item":"Charti Berry",
         "index":172,
+    },
+    "Route 12 Rocker Luca": {
+        "level": 66,
+        "ability": "Levitate",
+        "moves":[
+            "Thunderbolt",
+            "Blizzard",
+            "Volt Switch",
+            "Thunder Wave", 
+        ],
+        "nature":"Timid",
+        "item":"Icium Z",
+        "index":286,
     },
   },
   "Cresselia":{
@@ -2967,6 +3531,21 @@ var SETDEX_SV = {
         "index":186,
     },
   },
+  "Serperior":{   
+    "Leader Erika Rematch": {
+        "level": 68,
+        "ability": "Contrary",
+        "moves":[
+            "Leaf Storm",
+            "Hidden Power Fire",
+            "Dragon Pulse",
+            "Knock Off",
+        ],
+        "nature":"Timid",
+        "item":"Focus Sash",
+        "index":281,
+    },
+  },
   "Samurott":{
     "S.S Anne Lass Ann & Gentleman Brooks": {
         "level": 36,
@@ -2980,6 +3559,21 @@ var SETDEX_SV = {
         "nature":"Bashful",
         "item":"Lum Berry",
         "index": 97,
+    },
+  },
+  "Emboar": {
+    "Route 13 Bird Keeper Robert": {
+        "level": 66,
+        "ability": "Bull Rush",
+        "moves":[
+            "Flare Blitz",
+            "Close Combat",
+            "Wild Charge",
+            "Solar Beam", 
+        ],
+        "nature":"Naive",
+        "item":"Fire Gem",
+        "index":332,
     },
   },
   "Simisear": {
@@ -3068,6 +3662,21 @@ var SETDEX_SV = {
         "index": 122,
     },
   },
+  "Conkeldurr": {
+    "Camper Justin B2B w/ Andrew": {
+        "level": 66,
+        "ability": "Iron Fist",
+        "moves":[
+            "Drain Punch",
+            "Knock Off",
+            "Thunder Punch",
+            "Mach Punch", 
+        ],
+        "nature":"Careful",
+        "item":"Assault Vest",
+        "index":294,
+    },
+  },
   "Lilligant-Hisui": {
     "Rocket Hideout Left Grunt": {
         "level": 47,
@@ -3143,6 +3752,21 @@ var SETDEX_SV = {
         "index": 30,
     },
   },
+  "Archeops": {
+    "Route 13 Bird Keeper Robert": {
+        "level": 66,
+        "ability": "Defeatist",
+        "moves":[
+            "Brave Bird",
+            "Head Smash",
+            "Earthquake",
+            "U-turn", 
+        ],
+        "nature":"Jolly",
+        "item":"Sharp Beak",
+        "index":331,
+    },
+  },
   "Braviary": {
     "Pkmn Tower Grunt 2": {
         "level": 56,
@@ -3173,6 +3797,21 @@ var SETDEX_SV = {
         "index":152,
     },
   },
+  "Klinklang":{
+    "Beauty Sam B2B w/ Beauty Shelly": {
+        "level": 57,
+        "ability": "Steely Spirit",
+        "moves":[
+            "Gear Grind",
+            "Volt Tackle",
+            "Superpower",
+            "Shift Gear",
+        ],
+        "nature":"Adamant",
+        "item":"Fightinium Z",
+        "index":247,
+    }, 
+  },
   "Druddigon": {
     "Nugget Bridge Rocket Grunt": {
         "level": 28,
@@ -3186,6 +3825,49 @@ var SETDEX_SV = {
         "nature":"Impish",
         "item":"Leftovers",
         "index": 79,
+    },
+    "Route 13 Bird Keeper Robert": {
+        "level": 66,
+        "ability": "Rough Skin",
+        "moves":[
+            "Dragon Hammer",
+            "Gunk Shot",
+            "Fire Punch",
+            "Glare", 
+        ],
+        "nature":"Careful",
+        "item":"Rocky Helmet",
+        "index":335,
+    },
+  },
+  "Excadrill": {
+    "Silph Co. Giovanni": {
+        "level": 57,
+        "ability": "Sand Rush",
+        "moves":[
+            "Earthquake",
+            "Iron Head",
+            "Rock Slide",
+            "Swords Dance",
+        ],
+        "nature":"Jolly",
+        "item":"Focus Sash",
+        "index":234,
+    },
+  },
+  "Beartic": {
+    "Saffron City Dumbass Kid": {
+        "level": 57,
+        "ability": "Swift Swim",
+        "moves":[
+            "Ice Hammer",
+            "Liquidation",
+            "Close Combat",
+            "Swords Dance",
+        ],
+        "nature":"Jolly",
+        "item":"Focus Sash",
+        "index":236,
     },
   },
   "Vivillon": {
@@ -3292,6 +3974,19 @@ var SETDEX_SV = {
         "item":"Silk Scarf",
         "index": 140,
     }, 
+    "Route 13 Beauty Lola & Sheila": {
+        "level": 66,
+        "ability": "Sap Sipper",
+        "moves":[
+            "Head Charge",
+            "High Horsepower",
+            "Zen Headbutt",
+            "Close Combat", 
+        ],
+        "nature":"Adamant",
+        "item":"Normal Gem",
+        "index":318,
+    },
   },
   "Audino": {
     "Viridian Forest Lass Anne": {
@@ -3349,6 +4044,21 @@ var SETDEX_SV = {
         "nature":"Jolly",
         "item":"Life Orb",
         "index":219,
+    },
+  },
+  "Darmanitan-Galar": {
+    "Camper Justin B2B w/ Andrew": {
+        "level": 66,
+        "ability": "Zen Mode",
+        "moves":[
+            "Flare Blitz",
+            "Icicle Crash",
+            "Earthquake",
+            "U-turn", 
+        ],
+        "nature":"Jolly",
+        "item":"Charti Berry",
+        "index":292,
     },
   },
   "Hydreigon": {
@@ -3425,6 +4135,19 @@ var SETDEX_SV = {
         "item":"Grassy Seed",
         "index":158,
     },
+    "Leader Erika Rematch": {
+        "level": 68,
+        "ability": "Unburden",
+        "moves":[
+            "Close Combat",
+            "Acrobatics",
+            "Stone Edge",
+            "Swords Dance",
+        ],
+        "nature":"Adamant",
+        "item":"Grassy Seed",
+        "index":282,
+    },
   },
   "Klefki": {
     "Pkmn Tower Grunt 2": {
@@ -3469,6 +4192,109 @@ var SETDEX_SV = {
         "nature":"Modest",
         "item":"Black Sludge",
         "index":196,
+    },
+  },
+  "Goodra":{
+    "Saffron City Dumbass Kid": {
+        "level": 57,
+        "ability": "Hydration",
+        "moves":[
+            "Draco Barrage",
+            "Earthquake",
+            "Curse",
+            "Rest",
+        ],
+        "nature":"Impish",
+        "item":"Leftovers",
+        "index":239,
+    },
+    "Route 13 Picknicker Susie": {
+        "level": 66,
+        "ability": "Sap Sipper",
+        "moves":[
+            "Fire Blast",
+            "Draco Barrage",
+            "Sludge Bomb",
+            "Thunderbolt", 
+        ],
+        "nature":"Modest",
+        "item":"Assault Vest",
+        "index":305,
+    },
+    "Route 13 Beauty Lola & Sheila": {
+        "level": 66,
+        "ability": "Sap Sipper",
+        "moves":[
+            "Dragon Hammer",
+            "Fire Punch",
+            "Drain Punch",
+            "Power Whip", 
+        ],
+        "nature":"Calm",
+        "item":"Assault Vest",
+        "index":317,
+    },
+  },
+  "Goodra-Hisui": {
+  },
+  "Tornadus": {
+    "Route 12 Rocker Luca": {
+        "level": 66,
+        "ability": "Defiant",
+        "moves":[
+            "Acrobatics",
+            "Superpower",
+            "Knock Off",
+            "Bulk Up", 
+        ],
+        "nature":"Jolly",
+        "item":"Flying Gem",
+        "index":287,
+    },
+  },
+  "Landorus":{   
+    "Leader Brock Rematch": {
+        "level": 68,
+        "ability": "Sand Force",
+        "moves":[
+            "U-turn",
+            "Earthquake",
+            "Stone Edge",
+            "Grass Knot",
+        ],
+        "nature":"Naive",
+        "item":"Life Orb",
+        "index":263,
+    },
+  },
+  "Landorus-Therian": {
+    "Route 13 Bird Keeper Sebastian": {
+        "level": 66,
+        "ability": "Intimidate",
+        "moves":[
+            "Earthquake",
+            "Stone Edge",
+            "U-turn",
+            "Stealth Rock", 
+        ],
+        "nature":"Jolly",
+        "item":"Yache Berry",
+        "index":299,
+    },
+  },
+  "Zygarde-Complete":{   
+    "Leader Brock Rematch": {
+        "level": 68,
+        "ability": "Power Construct",
+        "moves":[
+            "Thousand Arrows",
+            "Coil",
+            "Rest",
+            "Sleep Talk",
+        ],
+        "nature":"Careful",
+        "item":"Leftovers",
+        "index":264,
     },
   },
   "Brionne": {
@@ -3679,6 +4505,51 @@ var SETDEX_SV = {
         "index": 81,
     },
   },
+  "Kommo-o": {
+    "Saffron City Leader Chuck": {
+        "level": 57,
+        "ability": "Overcoat",
+        "moves":[
+            "Close Combat",
+            "Clangorous Soul",
+            "Poison Jab",
+            "Flamethrower",
+        ],
+        "nature":"Naive",
+        "item":"Kommonium Z",
+        "index":252,
+    },
+  },
+  "Tapu Koko":{ 
+    "Beauty Sam B2B w/ Beauty Shelly": {
+        "level": 57,
+        "ability": "Electric Surge",
+        "moves":[
+            "Volt Switch",
+            "Thunderbolt",
+            "Play Rough",
+            "Grass Knot",
+        ],
+        "nature":"Naive",
+        "item":"Focus Sash",
+        "index":242,
+    },  
+  },
+  "Tapu Fini": {
+    "Leader Sabrina": {
+        "level": 59,
+        "ability": "Misty Surge",
+        "moves":[
+            "Misty Explosion",
+            "Muddy Water",
+            "Moonblast",
+            "Flip Turn",
+        ],
+        "nature":"Quiet",
+        "item":"Focus Sash",
+        "index":256,
+    },
+  },
   "Kartana": {
     "Leader Erika": {
         "level": 44,
@@ -3692,6 +4563,19 @@ var SETDEX_SV = {
         "nature":"Jolly",
         "item":"Life Orb",
         "index":162,
+    },
+    "Leader Erika Rematch": {
+        "level": 68,
+        "ability": "Beast Boost",
+        "moves":[
+            "Grassy Glide",
+            "Cut",
+            "Sacred Sword",
+            "Swords Dance",
+        ],
+        "nature":"Jolly",
+        "item":"Life Orb",
+        "index":283,
     },
   },
   "Celesteela": {
@@ -3749,6 +4633,21 @@ var SETDEX_SV = {
         "item":"Mystic Water",
         "index":166,
     },
+  },
+  "Cinderace":{
+    "Beauty Sam B2B w/ Beauty Shelly": {
+        "level": 57,
+        "ability": "Libero",
+        "moves":[
+            "Pyro Ball",
+            "High Jump Kick",
+            "Sucker Punch",
+            "U-turn",
+        ],
+        "nature":"Jolly",
+        "item":"Life Orb",
+        "index":248,
+    }, 
   },
   "Thwackey": {
     "Mt. Moon Super Nerd Miguel": {
@@ -3840,6 +4739,21 @@ var SETDEX_SV = {
         "index":156,
     },
   },
+  "Frosmoth":{
+    "Saffron City Dumbass Kid": {
+        "level": 57,
+        "ability": "Ice Scales",
+        "moves":[
+            "Ice Beam",
+            "Hurricane",
+            "Weather Ball",
+            "Quiver Dance",
+        ],
+        "nature":"Timid",
+        "item":"Leftovers",
+        "index":238,
+    },
+  },
   "Toxtricity":{   
     "Leader Erika": {
         "level": 44,
@@ -3915,6 +4829,51 @@ var SETDEX_SV = {
         "index":192,
     },
   },
+  "Dracovish": {
+    "Silph Co. Giovanni": {
+        "level": 57,
+        "ability": "Sand Rush",
+        "moves":[
+            "Fishious Rend",
+            "Psychic Fangs",
+            "Crunch",
+            "Dragon Claw",
+        ],
+        "nature":"Adamant",
+        "item":"Water Gem",
+        "index":231,
+    },
+  },
+  "Flapple-Gmax":{
+    "Beauty Sam B2B w/ Beauty Shelly": {
+        "level": 57,
+        "ability": "Dragon's Maw",
+        "moves":[
+            "Scale Shot",
+            "Grav Apple",
+            "Draco Meteor",
+            "Sucker Punch",
+        ],
+        "nature":"Naive",
+        "item":"",
+        "index":245,
+    }, 
+  },
+  "Appletun-Gmax": {
+    "Beauty Sam B2B w/ Beauty Shelly": {
+        "level": 57,
+        "ability": "Contrary",
+        "moves":[
+            "Draco Meteor",
+            "Leaf Storm",
+            "Superpower",
+            "Recover",
+        ],
+        "nature":"Modest",
+        "item":"",
+        "index":249,
+    }, 
+  },
   "Basculegion-F": {
     "Route 8 Super Nerd Aidan": {
         "level": 44,
@@ -3928,6 +4887,79 @@ var SETDEX_SV = {
         "nature":"Naive",
         "item":"Weakness Policy",
         "index":151,
+    },
+  },
+  "Zamazenta-Crowned": {
+    "Saffron City Leader Chuck": {
+        "level": 57,
+        "ability": "Dauntless Shield",
+        "moves":[
+            "Body Press",
+            "Behememoth Bash",
+            "Wild Charge",
+            "Bulk Up",
+        ],
+        "nature":"Jolly",
+        "item":"Rusted Shield",
+        "index":254,
+    },
+  },
+  "Glastrier":{   
+    "Leader Sabrina": {
+        "level": 59,
+        "ability": "Chilling Neigh",
+        "moves":[
+            "Ice Hammer",
+            "Close Combat",
+            "High Horsepower",
+            "Swords Dance",
+        ],
+        "nature":"Brave",
+        "item":"Iapapa Berry",
+        "index":258,
+    },
+  },
+  "Magearna":{   
+    "Leader Sabrina": {
+        "level": 59,
+        "ability": "Soul-Heart",
+        "moves":[
+            "Moonblast",
+            "Flash Cannon",
+            "Focus Blast",
+            "Thunderbolt",
+        ],
+        "nature":"Quiet",
+        "item":"Fightinium Z",
+        "index":259,
+    },
+    "Leader Erika Rematch": {
+        "level": 68,
+        "ability": "Soul-Heart",
+        "moves":[
+            "Stored Power",
+            "Aura Sphere",
+            "Draining Kiss",
+            "Calm Mind",
+        ],
+        "nature":"Bold",
+        "item":"Grassy Seed",
+        "index":284,
+    },
+  },
+  "Meowscarada":{   
+    "Leader Erika Rematch": {
+        "level": 68,
+        "ability": "Protean",
+        "moves":[
+            "Flower Trick",
+            "Triple Axel",
+            "Knock Off",
+            "U-turn",
+        ],
+        "nature":"Jolly",
+        "item":"Life Orb",
+        "index":280,
     },
   },
   "Wattrel": {
@@ -4034,6 +5066,19 @@ var SETDEX_SV = {
         "item":"Punching Glove",
         "index": 129,
     },
+    "Leader Lt. Surge Rematch": {
+        "level": 68,
+        "ability": "Iron Fist",
+        "moves":[
+            "Thunder Punch",
+            "Close Combat",
+            "Ice Punch",
+            "Mach Punch",
+        ],
+        "nature":"Jolly",
+        "item":"Focus Sash",
+        "index":274,
+    },
   },
   "Varoom":{
     "Leader Brock": {
@@ -4095,6 +5140,21 @@ var SETDEX_SV = {
         "index": 75,
     },
   },
+  "Garganacl": {
+    "Silph Co. Giovanni": {
+        "level": 57,
+        "ability": "Purifying Salt",
+        "moves":[
+            "Salt Cure",
+            "Body Press",
+            "Iron Defense",
+            "Recover",
+        ],
+        "nature":"Careful",
+        "item":"Leftovers",
+        "index":233,
+    },
+  },
   "Veluza": {
     "Dig House Rocket Grunt": {
         "level": 25,
@@ -4140,6 +5200,21 @@ var SETDEX_SV = {
         "index":157,
     },
   },
+  "Ogerpon-Hearthflame": {
+    "Route 13 Bird Keeper Perry": {
+        "level": 66,
+        "ability": "Mold Breaker",
+        "moves":[
+            "Ivy Cudgel",
+            "Power Whip",
+            "Play Rough",
+            "U-turn", 
+        ],
+        "nature":"Jolly",
+        "item":"Hearthflame Mask",
+        "index":322,
+    },
+  },
   "Okidogi":{   
     "Rocket Hideout Right Grunt": {
         "level": 47,
@@ -4153,6 +5228,426 @@ var SETDEX_SV = {
         "nature":"Jolly",
         "item":"Fighting Gem",
         "index":175,
+    },
+  },
+  "Archaludon":{ 
+    "Leader Misty Rematch": {
+        "level": 68,
+        "ability": "Stamina",
+        "moves":[
+            "Body Press",
+            "Electro Shot",
+            "Dragon Pulse",
+            "Flash Cannon",
+        ],
+        "nature":"Calm",
+        "item":"Assault Vest",
+        "index":271,
+    },
+  },
+  "Cetitan": {
+    "Camper Justin B2B w/ Andrew": {
+        "level": 66,
+        "ability": "Slush Rush",
+        "moves":[
+            "Icicle Crash",
+            "Earthquake",
+            "Play Rough",
+            "Belly Drum", 
+        ],
+        "nature":"Jolly",
+        "item":"Sitrus Berry",
+        "index":293,
+    },
+  },
+  "Palafin":{
+  },
+  "Palafin-Hero": {
+    "Leader Misty Rematch": {
+        "level": 68,
+        "ability": "Mold Breaker",
+        "moves":[
+            "Jet Punch",
+            "Waterfall",
+            "Drain Punch",
+            "Bulk Up",
+        ],
+        "nature":"Jolly",
+        "item":"Mystic Water",
+        "index":269,
+    },
+  },
+  "Iron Crown": {
+    "Saffron City Leader Chuck": {
+        "level": 57,
+        "ability": "Sharpness",
+        "moves":[
+            "Psychic Noise",
+            "Tachyon Cutter",
+            "Secret Sword",
+            "Volt Switch",
+        ],
+        "nature":"Timid",
+        "item":"Rocky Helmet",
+        "index":250,
+    }, 
+  },
+  "Iron Hands":{   
+    "Leader Sabrina": {
+        "level": 59,
+        "ability": "Quark Drive",
+        "moves":[
+            "Drain Punch",
+            "Plasma Fists",
+            "Knock Off",
+            "Ice Punch",
+        ],
+        "nature":"Brave",
+        "item":"Booster Energy",
+        "index":260,
+    },
+    "Leader Lt. Surge Rematch": {
+        "level": 68,
+        "ability": "Quark Drive",
+        "moves":[
+            "Plasma Fists",
+            "Drain Punch",
+            "Ice Punch",
+            "Fake Out",
+        ],
+        "nature":"Careful",
+        "item":"Assault Vest",
+        "index":277,
+    },
+  },
+  "Iron Boulder":{   
+    "Leader Brock Rematch": {
+        "level": 68,
+        "ability": "Quark Drive",
+        "moves":[
+            "Stealth Rock",
+            "Close Combat",
+            "Mighty Cleave",
+            "Zen Headbutt",
+        ],
+        "nature":"Jolly",
+        "item":"Lum Berry",
+        "index":262,
+    },
+  },
+  "Iron Treads":{   
+    "Leader Brock Rematch": {
+        "level": 68,
+        "ability": "Quark Drive",
+        "moves":[
+            "Earthquake",
+            "Iron Head",
+            "Ice Spinner",
+            "Knock Off",
+        ],
+        "nature":"Jolly",
+        "item":"Quark Drive",
+        "index":265,
+    },
+  },
+  "Iron Bundle":{
+    "Leader Misty Rematch": {
+        "level": 68,
+        "ability": "Quark Drive",
+        "moves":[
+            "Hydro Pump",
+            "Freeze-Dry",
+            "Flip Turn",
+            "Ice Beam",
+        ],
+        "nature":"Timid",
+        "item":"Focus Sash",
+        "index":268,
+    },
+  },
+  "Iron Thorns": {
+    "Leader Lt. Surge Rematch": {
+        "level": 68,
+        "ability": "Quark Drive",
+        "moves":[
+            "Fusion Bolt",
+            "Stone Edge",
+            "Ice Punch",
+            "Dragon Dance",
+        ],
+        "nature":"Jolly",
+        "item":"Lum Berry",
+        "index":275,
+    },
+  },
+  "Iron Moth": {
+    "Leader Lt. Surge Rematch": {
+        "level": 68,
+        "ability": "Quark Drive",
+        "moves":[
+            "Fiery Dance",
+            "Sludge Wave",
+            "Energy Ball",
+            "Dazzling Gleam",
+        ],
+        "nature":"Timid",
+        "item":"Fire Gem",
+        "index":276,
+    },
+  },
+  "Miraidon": {
+    "Leader Lt. Surge Rematch": {
+        "level": 68,
+        "ability": "Hadron Engine",
+        "moves":[
+            "Parabolic Charge",
+            "Dragon Pulse",
+            "Dazzling Gleam",
+            "Calm Mind",
+        ],
+        "nature":"Timid",
+        "item":"Leftovers",
+        "index":278,
+    },
+  },
+  "Ursaluna-Bloodmoon":{   
+    "Leader Brock Rematch": {
+        "level": 68,
+        "ability": "Scappy",
+        "moves":[
+            "Blood Moon",
+            "Earth Power",
+            "Vacuum Wave",
+            "Hyper Voice",
+        ],
+        "nature":"Modest",
+        "item":"Leftovers",
+        "index":266,
+    },
+  },
+  "Jellicent":{   
+    "Leader Sabrina": {
+        "level": 59,
+        "ability": "Water Bubble",
+        "moves":[
+            "Water Spout",
+            "Shadow Ball",
+            "Strength Sap",
+            "Hydro Pump",
+        ],
+        "nature":"Quiet",
+        "item":"Mystic Water",
+        "index":261,
+    },
+  },
+  "Thundurus-Therian":{ 
+    "Leader Misty Rematch": {
+        "level": 68,
+        "ability": "Volt Absorb",
+        "moves":[
+            "Thunder",
+            "Weather Ball",
+            "Focus Blast",
+            "Nasty Plot",
+        ],
+        "nature":"Timid",
+        "item":"Fightinium Z",
+        "index":272,
+    },
+  },
+  "Barbaracle":{
+    "Camper Justin B2B w/ Andrew": {
+        "level": 66,
+        "ability": "Tough Claws",
+        "moves":[
+            "Liquidation",
+            "Stone Edge",
+            "Close Combat",
+            "Shell Smash", 
+        ],
+        "nature":"Jolly",
+        "item":"White Herb",
+        "index":297,
+    },
+  },
+  "Baxcalibur":{
+    "Camper Justin B2B w/ Andrew": {
+        "level": 66,
+        "ability": "Thermal Exchange",
+        "moves":[
+            "Icicle Crash",
+            "Glaive Rush",
+            "Earthquake",
+            "Dragon Dance", 
+        ],
+        "nature":"Jolly",
+        "item":"Dragonium Z",
+        "index":298,
+    },
+  },
+  "Heatran": {
+    "Route 13 Picknicker Susie": {
+        "level": 66,
+        "ability": "Flash Fire",
+        "moves":[
+            "Magma Storm",
+            "Solar Beam",
+            "Earth Power",
+            "Protect", 
+        ],
+        "nature":"Timid",
+        "item":"Air Balloon",
+        "index":307,
+    },
+  },
+  "Alcremie-Gmax": {
+    "Route 13 Picknicker Susie": {
+        "level": 66,
+        "ability": "Self Sufficient",
+        "moves":[
+            "Moonblast",
+            "Mystical Fire",
+            "Misty Explosion",
+            "Recover", 
+        ],
+        "nature":"Bold",
+        "item":"",
+        "index":308,
+    },
+  },
+  "Krookodile": {
+    "Route 13 Picknicker Alma": {
+        "level": 66,
+        "ability": "Intimidate",
+        "moves":[
+            "Earthquake",
+            "Wicked Blow",
+            "Rock Slide",
+            "Stealth Rock", 
+        ],
+        "nature":"Jolly",
+        "item":"Focus Sash",
+        "index":309,
+    },
+  },
+  "Chandelure":{
+    "Route 13 Picknicker Alma": {
+        "level": 66,
+        "ability": "Shadow Tag",
+        "moves":[
+            "Fire Blast",
+            "Solar Beam",
+            "Shadow Ball",
+            "Trick", 
+        ],
+        "nature":"Timid",
+        "item":"Choice Scarf",
+        "index":312,
+    },
+  },
+  "Cherrim-Sunshine": {
+    "Route 13 Beauty Lola & Sheila": {
+        "level": 66,
+        "ability": "Flower Gift",
+        "moves":[
+            "Petal Blizzard",
+            "Safeguard",
+            "X-Scissor",
+            "Return", 
+        ],
+        "nature":"Jolly",
+        "item":"Focus Sash",
+        "index":314,
+    },
+  },
+  "Florges": {
+    "Route 13 Beauty Lola & Sheila": {
+        "level": 66,
+        "ability": "Natural Cure",
+        "moves":[
+            "Petal Blizzard",
+            "Safeguard",
+            "Moonblast",
+            "Hidden Power Fire", 
+        ],
+        "nature":"Calm",
+        "item":"Assault Vest",
+        "index":316,
+    },
+  },
+  "Zebstrika":{
+    "Route 13 Beauty Lola & Sheila": {
+        "level": 67,
+        "ability": "Sap Sipper",
+        "moves":[
+            "Bolt Strike",
+            "Flare Blitz",
+            "Low Kick",
+            "Return", 
+        ],
+        "nature":"Jolly",
+        "item":"Electrium Z",
+        "index":319,
+    },
+  },
+  "Dragapult": {
+    "Route 13 Bird Keeper Perry": {
+        "level": 66,
+        "ability": "Stalwart",
+        "moves":[
+            "Shadow Ball",
+            "Draco Barrage",
+            "Fire Blast",
+            "U-turn", 
+        ],
+        "nature":"Timid",
+        "item":"Ghostium Z",
+        "index":324,
+    },
+  },
+  "Crustle": {
+    "Route 13 Biker Jared": {
+        "level": 66,
+        "ability": "Sturdy",
+        "moves":[
+            "Stone Edge",
+            "Earthquake",
+            "Stealth Rock",
+            "Spikes", 
+        ],
+        "nature":"Adamant",
+        "item":"Custap Berry",
+        "index":325,
+    },
+  },
+  "Leavanny": {
+    "Route 13 Biker Jared": {
+        "level": 66,
+        "ability": "Chlorophyll",
+        "moves":[
+            "Solar Blade",
+            "X-Scissor",
+            "Sacred Sword",
+            "Swords dance", 
+        ],
+        "nature":"Adamant",
+        "item":"Focus Sash",
+        "index":326,
+    },
+  },
+  "Eelektross": {
+    "Route 13 Biker Jared": {
+        "level": 66,
+        "ability": "Levitate",
+        "moves":[
+            "Fire Blast",
+            "Thunderbolt",
+            "Giga Drain",
+            "Volt Switch", 
+        ],
+        "nature":"Calm",
+        "item":"Assault Vest",
+        "index":328,
     },
   },
 };

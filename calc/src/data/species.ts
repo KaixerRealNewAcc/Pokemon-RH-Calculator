@@ -1711,7 +1711,7 @@ const ADV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
   Weepinbell: {abilities: {0: 'Chlorophyll'}},
   Weezing: {abilities: {0: 'Levitate'}},
   Wigglytuff: {abilities: {0: 'Cute Charm'}},
-  Zapdos: {abilities: {0: 'Pressure'}},
+  Zapdos: {abilities: {0: 'Static'}},
   Zubat: {abilities: {0: 'Inner Focus'}},
   // gen 2 pokemon changes
   Aipom: {abilities: {0: 'Run Away'}},
@@ -5514,7 +5514,7 @@ const XY_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
     types: ['Dragon'],
     bs: {hp: 90, at: 100, df: 70, sa: 110, sd: 150, sp: 80},
     weightkg: 150.5,
-    abilities: {0: 'Sap Sipper'},
+    abilities: {0: 'Hydration'},
   },
   Goomy: {
     types: ['Dragon'],

@@ -1,40 +1,71 @@
 const FLAGS_RR = {
-    // 1v1 doubles, 1v2 doubles, tag battles
-    battleType: {
-        double: [
-            {
-                enemy1: "",
-                enemy2: "",
-            },
-        ],
-        trueDouble: {
-            "Mt. Moon Super Nerd Miguel": {},
-        },
-        tag: [
-            {
-                partner: "Silph Co. Tag Partner Brendan",
-            },
-        ],
-    },
-    // ignore when navigating (optionals, rematches, tag partners, rival battles)
-    hidden: [
-        ""
-    ],
-    weather: {
+    weather: { //Also counts as terrain (?)
         "": [],
         clear: [],
         sun: [
-            "",
+            "Route 10 Poke Maniac Herman",
+            "Route 13 Bird Keeper Sebastian",
+            "Route 13 Picknicker Susie",
+            "Route 13 Picknicker Alma",
+            "Route 13 Beauty Lola & Sheila",
+            "Route 13 Bird Keeper Perry",
+            "Route 13 Biker Jared",
+            "Route 13 Bird Keeper Robert",
         ],
         rain: [
-            "",
+            "Leader Misty",
+            "Leader Misty Rematch",
+            "Pkmn Tower Grunt 1",
+            "Saffron City Dumbass Kid"
         ],
         sand: [
+            "Leader Brock",
+            "Silph Co. Giovanni",
+            "Leader Brock Rematch",
+        ],
+        snow: [
+            "Route 12 Rocker Luca",
+            "Camper Justin B2B w/ Andrew"
+        ],
+    },
+    terrain: {
+        "": [],
+        none: [],
+        electric: [
+            "Leader Lt. Surge",
+            "Pkmn Tower Channeler Ruth",
+            "Leader Lt. Surge Rematch"
+        ],
+        grassy: [
+            "Mt. Moon Super Nerd Miguel",
+            "Leader Erika",
+            "Leader Erika Rematch"
+        ],
+        misty: [
+            "Leader Sabrina",
+        ],
+        psychic: [
             "",
         ],
-        hail: [
-            "",
-        ],
+    },
+    battleType: {
+        trueDouble: {
+            "Mt. Moon Super Nerd Miguel": {},
+            "Nugget Bridge Bug Catcher Cale": {},
+            "Nugget Bridge Lass Ali": {},
+            "Nugget Bridge Youngster Timmy": {},
+            "Route 6 Camper Jeff": {},
+            "S.S Anne Lass Ann & Gentleman Brooks": {},
+            "S.S Anne Sailor Edmond & Sailor Trevor": {},
+            "Route 10 Poke Maniac Herman": {},
+            "Route 8 Super Nerd Aidan": {},
+            "Celadon Gym Ace Trainer Mary": {},
+            "Game Corner Grunt": {},
+            "Rocket Hideout Left Grunt": {},
+            "Rocket Hideout Right Grunt": {},
+            "Pkmn Tower Channeler Ruth": {},
+            "Leader Sabrina": {},
+        },
     },
 };
 

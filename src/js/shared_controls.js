@@ -695,24 +695,30 @@ $(".set-selector").change(function () {
 		var pok
 
 		var weather = "clear";
-		for (var newWeather in weather) {
-			if (weather[newWeather].includes(CURRENT_TRAINER)) {
+		for (var newWeather in flagsRR.weather) {
+			if (flagsRR.weather[newWeather].includes(CURRENT_TRAINER)) {
 				weather = newWeather;
 				break;
 			}
 		}
 
-		if (weather) $(`#${weather}`).prop("checked", true).change();
-		{
-			//Leaders
-			$("#sand").prop("checked", CURRENT_TRAINER == "Leader Brock");
-			$("#rain").prop("checked", CURRENT_TRAINER == "Leader Misty");
-			$("#electric").prop("checked", CURRENT_TRAINER == "Leader Lt. Surge");
-			$("#grassy").prop("checked", CURRENT_TRAINER == "Leader Erika");
+		var terrain = "none";
+		for (var newTerrain in flagsRR.terrain) {
+			if (flagsRR.terrain[newTerrain].includes(CURRENT_TRAINER)) {
+				terrain = newTerrain;
+				break;
+			}
+		}
 
-			//Mini Bosses
-			$("#grassy").prop("checked", CURRENT_TRAINER == "Mt. Moon Super Nerd Miguel");
-			$("#sun").prop("checked", CURRENT_TRAINER == "Route 10 Poke Maniac Herman");
+		
+		if (weather) $(`#${weather}`).prop("checked", true).change();
+		if (terrain) $(`#${terrain}`).prop("checked", true).change();
+		$('#trickroom').prop("checked", CURRENT_TRAINER == "Leader Sabrina");
+		$('#solidRockR').prop("checked", CURRENT_TRAINER == "Leader Brock Rematch");
+
+
+		if (typeof applyBattleSettings === "function") {
+			applyBattleSettings(get_trainer_names(fullSetName));
 		}
 
 		for (i in next_poks) {
@@ -730,9 +736,21 @@ $(".set-selector").change(function () {
 			if (pok_name.includes("Pikachu")) {
 				pok = `<img class="trainer-pok right-side" src="https://raw.githubusercontent.com/May8th1995/sprites/master/Pikachu.png" data-id="${CURRENT_TRAINER_POKS[i].split("]")[1]}" title="${next_poks[i]}, ${next_poks[i]} BP">`
 			}
-
-			/// this ruined my day
-			trpok_html += pok
+			if (pok_name.includes("Flapple")) {
+				pok = `<img class="trainer-pok right-side" src="https://raw.githubusercontent.com/May8th1995/sprites/master/Flapple.png" data-id="${CURRENT_TRAINER_POKS[i].split("]")[1]}" title="${next_poks[i]}, ${next_poks[i]} BP">`
+			}
+			if (pok_name.includes("Appletun")) {
+				pok = `<img class="trainer-pok right-side" src="https://raw.githubusercontent.com/May8th1995/sprites/master/Appletun.png" data-id="${CURRENT_TRAINER_POKS[i].split("]")[1]}" title="${next_poks[i]}, ${next_poks[i]} BP">`
+			}
+			if (CURRENT_TRAINER in flagsRR.battleType.trueDouble) {
+				$("#doubles-format").prop("checked", true);
+				trpok_html += pok
+			}
+			else{
+				$("#singles-format").prop("checked", true);
+				// this ruined my day
+				trpok_html += pok
+			}
 		}
 	} else {
 		topPokemonIcon(fullSetName, $("#p1mon")[0])
@@ -759,6 +777,7 @@ $(".set-selector").change(function () {
 		pokeObj.find(".boost").val(0);
 		pokeObj.find(".percent-hp").val(100);
 		pokeObj.find(".status").val("Healthy");
+
 		$(".status").change();
 		var moveObj;
 		var abilityObj = pokeObj.find(".ability");
@@ -905,6 +924,11 @@ $(".set-selector").change(function () {
 		} else pokeObj.find(".gender").parent().show();
 	}
 	window.NO_CALC = false;
+
+	if (pokemon && typeof applyAutoStatBoosts === "function") {
+		applyAutoStatBoosts($sel.closest(".poke-info"), fullSetName);
+	}
+
 });
 
 function formatMovePool(moves) {
@@ -1383,6 +1407,7 @@ function createField() {
 	var isVesselOfRuin = $("#vessel").prop("checked");
 	var isMagicRoom = $("#magicroom").prop("checked");
 	var isWonderRoom = $("#wonderroom").prop("checked");
+	var isTrickRoom = $("#trickroom").prop("checked");
 	var isGravity = $("#gravity").prop("checked");
 	var isSR = [$("#srL").prop("checked"), $("#srR").prop("checked")];
 	var weather;
@@ -1402,6 +1427,8 @@ function createField() {
 	var terrain = ($("input:checkbox[name='terrain']:checked").val()) ? $("input:checkbox[name='terrain']:checked").val() : "";
 	var isReflect = [$("#reflectL").prop("checked"), $("#reflectR").prop("checked")];
 	var isLightScreen = [$("#lightScreenL").prop("checked"), $("#lightScreenR").prop("checked")];
+	var isSolidRock = [$("#solidRockL").prop("checked"), $("#solidRockR").prop("checked")];
+	var isMagnetRise = [$("#magnetRiseL").prop("checked"), $("#magnetRiseR").prop("checked")];
 	var isProtected = [$("#protectL").prop("checked"), $("#protectR").prop("checked")];
 	var isSeeded = [$("#leechSeedL").prop("checked"), $("#leechSeedR").prop("checked")];
 	var isSaltCured = [$("#saltCureL").prop("checked"), $("#saltCureR").prop("checked")];
@@ -1429,6 +1456,7 @@ function createField() {
 			volcalith: volcalith[i],
 			isReflect: isReflect[i],
 			isLightScreen: isLightScreen[i],
+			isSolidRock: isSolidRock[i],
 			isProtected: isProtected[i],
 			isSeeded: isSeeded[i],
 			isSaltCured: isSaltCured[i],
@@ -1455,6 +1483,7 @@ function createField() {
 		weather: weather,
 		isMagicRoom: isMagicRoom,
 		isWonderRoom: isWonderRoom,
+		isTrickRoom: isTrickRoom,
 		isGravity: isGravity,
 		attackerSide: createSide(0),
 		defenderSide: createSide(1)
@@ -1619,7 +1648,7 @@ var RANDDEX = [
 	GEN8RANDSETS,
 	GEN9RANDSETS,
 ];
-var gen, genWasChanged, notation, pokedex, setdex, randdex, typeChart, moves, abilities, items, calcHP, calcStat, GENERATION;
+var gen, genWasChanged, notation, pokedex, setdex, flagsRR, randdex, typeChart, moves, abilities, items, calcHP, calcStat, GENERATION;
 
 TR_NAMES = get_trainer_names()
 
@@ -1649,6 +1678,7 @@ $(".gen").change(function () {
 	pokedex = calc.SPECIES[gen];
 	setdex = SETDEX[gen];
 	randdex = RANDDEX[gen];
+	flagsRR = FLAGS_RR;
 	typeChart = calc.TYPE_CHART[gen];
 	moves = calc.MOVES[gen];
 	items = calc.ITEMS[gen];
@@ -1714,6 +1744,8 @@ function clearField() {
 	$("#reflectR").prop("checked", false);
 	$("#lightScreenL").prop("checked", false);
 	$("#lightScreenR").prop("checked", false);
+	$('#solidRockL').prop("checked", false);
+	$('#solidRockR').prop("checked", false);
 	$("#protectL").prop("checked", false);
 	$("#protectR").prop("checked", false);
 	$("#leechSeedL").prop("checked", false);
@@ -1939,32 +1971,39 @@ function getTerrainEffects() {
 }
 
 function loadDefaultLists() {
-	$(".set-selector").select2({
-		formatResult: function (object) {
-			if ($("#randoms").prop("checked")) {
-				return object.pokemon;
-			} else {
-				return object.set ? ("&nbsp;&nbsp;&nbsp;" + object.set) : ("<b>" + object.text + "</b>");
-			}
-		},
-		query: function (query) {
-			var pageSize = 30;
-			var results = [];
-			var options = getSetOptions();
-			for (var i = 0; i < options.length; i++) {
-				var option = options[i];
-				var pokeName = option.pokemon.toUpperCase();
-				if (!query.term || query.term.toUpperCase().split(" ").every(function (term) {
-					return pokeName.indexOf(term) === 0 || pokeName.indexOf("-" + term) >= 0 || pokeName.indexOf(" " + term) >= 0;
-				})) {
-					if ($("#randoms").prop("checked")) {
-						if (option.id) results.push(option);
-					} else {
-						results.push(option);
-					}
-				}
-			}
-			if (query.term && !$("#randoms").prop("checked")) {
+    $(".set-selector").select2({
+        formatResult: function (object) {
+            if ($("#randoms").prop("checked")) {
+                return object.pokemon;
+            } else {
+                return object.set ? ("&nbsp;&nbsp;&nbsp;" + object.set) : ("<b>" + object.text + "</b>");
+            }
+        },
+        query: function (query) {
+            var pageSize = 30;
+            var results = [];
+            var options = getSetOptions();
+            for (var i = 0; i < options.length; i++) {
+                var option = options[i];
+                var pokeName = option.pokemon.toUpperCase();
+                var setName = option.set ? option.set.toUpperCase() : "";
+                var tokens = query.term ? query.term.toUpperCase().split(" ") : [];
+                var matchesPoke = !tokens.length || tokens.every(function (term) {
+                    return pokeName.indexOf(term) === 0 || pokeName.indexOf("-" + term) >= 0 || pokeName.indexOf(" " + term) >= 0;
+                });
+                var matchesSet = !!option.set && tokens.length && tokens.every(function (term) {
+                    return setName.indexOf(term) === 0 || setName.indexOf("-" + term) >= 0 || setName.indexOf(" " + term) >= 0;
+                });
+                if (!query.term || matchesPoke || matchesSet) {
+                    if ($("#randoms").prop("checked")) {
+                        if (option.id) results.push(option);
+                    } else {
+                        results.push(option);
+                    }
+                }
+            }
+            // If searching, deduplicate by set name when matching by set (trainer/party), and pick the first mon (smallest index)
+            if (query.term && !$("#randoms").prop("checked")) {
                 var tokens = query.term.toUpperCase().split(" ");
                 var bySetBest = {};
                 var seenBestId = {};
@@ -2009,16 +2048,17 @@ function loadDefaultLists() {
                     results = filtered;
                 }
             }
-			query.callback({
-				results: results.slice((query.page - 1) * pageSize, query.page * pageSize),
-				more: results.length >= query.page * pageSize
-			});
-		},
-		initSelection: function (element, callback) {
-			callback(getFirstValidSetOption());
-		}
-	});
+            query.callback({
+                results: results.slice((query.page - 1) * pageSize, query.page * pageSize),
+                more: results.length >= query.page * pageSize
+            });
+        },
+        initSelection: function (element, callback) {
+            callback(getFirstValidSetOption());
+        }
+    });
 }
+
 
 function allPokemon(selector) {
 	var allSelector = "";
@@ -2092,6 +2132,8 @@ function addBoxed(poke) {
 	$('#box-poke-list')[0].appendChild(newPoke);
 }
 
+
+
 function getSrcImgPokemon(poke) {
 	//edge case
 	if (!poke) {
@@ -2110,12 +2152,14 @@ function getSrcImgPokemon(poke) {
 function get_trainer_poks(trainer_name, ignore_trainer_name) {
 	var true_name = trainer_name.split("(")[1].split("\n")[0].trim()
 	window.CURRENT_TRAINER = true_name.substring(0, true_name.length -1);
+
 	var matches = []
 	for (i in TR_NAMES) {
 		if (TR_NAMES[i].includes(true_name)) {
 			matches.push(TR_NAMES[i])
 		}
 	}
+
 	return matches
 }
 
@@ -2131,6 +2175,10 @@ $(document).on('click', '.right-side', function () {
 	$('.opposing').val(set);
 	$('.opposing').change();
 	$('.opposing .select2-chosen').text(set);
+
+	if (typeof applyBattleSettings === 'function') {
+		applyBattleSettings(get_trainer_names(set));
+	}
 })
 
 $(document).on('click', '.left-side', function () {
@@ -2139,6 +2187,9 @@ $(document).on('click', '.left-side', function () {
 	$('.player').val(set);
 	$('.player').change();
 	$('.player .select2-chosen').text(set);
+	if (typeof applyBattleSettings === "function") {
+		applyBattleSettings(get_trainer_names(set));
+	}
 })
 
 //select first mon of the box when loading
@@ -2162,6 +2213,10 @@ function selectTrainer(value) {
 				$('.opposing').val(set);
 				$('.opposing').change();
 				$('.opposing .select2-chosen').text(set);
+				if (typeof applyBattleSettings === "function") {
+					applyBattleSettings(get_trainer_names(set));
+				}
+				return;
 			}
 		}
 	}

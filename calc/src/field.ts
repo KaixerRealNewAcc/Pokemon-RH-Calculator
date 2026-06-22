@@ -7,6 +7,7 @@ export class Field implements State.Field {
   terrain?: Terrain;
   isMagicRoom: boolean;
   isWonderRoom: boolean;
+  isTrickRoom: boolean;
   isGravity: boolean;
   isAuraBreak?: boolean;
   isFairyAura?: boolean;
@@ -24,6 +25,7 @@ export class Field implements State.Field {
     this.weather = field.weather;
     this.isMagicRoom = !!field.isMagicRoom;
     this.isWonderRoom = !!field.isWonderRoom;
+    this.isTrickRoom = !!field.isTrickRoom;
     this.isGravity = !!field.isGravity;
     this.isAuraBreak = field.isAuraBreak || false;
     this.isFairyAura = field.isFairyAura || false;
@@ -57,6 +59,7 @@ export class Field implements State.Field {
       terrain: this.terrain,
       isMagicRoom: this.isMagicRoom,
       isWonderRoom: this.isWonderRoom,
+      isTrickRoom: this.isTrickRoom,
       isGravity: this.isGravity,
       attackerSide: this.attackerSide,
       defenderSide: this.defenderSide,
@@ -81,11 +84,14 @@ export class Side implements State.Side {
   isSR: boolean;
   isReflect: boolean;
   isLightScreen: boolean;
+  isSolidRock: boolean;
+  isMagnetRise: boolean;
   isProtected: boolean;
   isSeeded: boolean;
   isSaltCured: boolean;
   isForesight: boolean;
   isTailwind: boolean;
+  isTrickRoom: boolean;
   isHelpingHand: boolean;
   isFlowerGift: boolean;
   isPowerTrick?: boolean;
@@ -106,11 +112,14 @@ export class Side implements State.Side {
     this.isSR = !!side.isSR;
     this.isReflect = !!side.isReflect;
     this.isLightScreen = !!side.isLightScreen;
+    this.isSolidRock = !!side.isSolidRock;
+    this.isMagnetRise = !!side.isMagnetRise;
     this.isProtected = !!side.isProtected;
     this.isSeeded = !!side.isSeeded;
     this.isSaltCured = !!side.isSaltCured;
     this.isForesight = !!side.isForesight;
     this.isTailwind = !!side.isTailwind;
+    this.isTrickRoom = !! side.isTrickRoom;
     this.isHelpingHand = !!side.isHelpingHand;
     this.isFlowerGift = !!side.isFlowerGift;
     this.isPowerTrick = !!side.isPowerTrick;

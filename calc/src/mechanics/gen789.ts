@@ -48,6 +48,7 @@ import {
   getStabMod,
   getStellarStabMod,
 } from './util';
+import { Side } from '@smogon/calc';
 
 export function calculateSMSSSV(
   gen: Generation,
@@ -417,7 +418,7 @@ export function calculateSMSSSV(
       isRingTarget
     );
   }
-
+  
   if (typeEffectiveness === 0 && move.hasType('Ground') &&
     defender.hasItem('Iron Ball') && !defender.hasAbility('Klutz')) {
     typeEffectiveness = 1;
@@ -1721,6 +1722,11 @@ export function calculateFinalModsSMSSSV(
   if (field.defenderSide.isAuroraVeil && !isCritical) {
     finalMods.push(field.gameType !== 'Singles' ? 2732 : 2048);
     desc.isAuroraVeil = true;
+  }
+
+  if(field.defenderSide.isSolidRock && typeEffectiveness > 1) {
+    finalMods.push(2732);
+    desc.isSolidRock = true;
   }
 
   if (attacker.hasAbility('Neuroforce') && typeEffectiveness > 1) {

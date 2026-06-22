@@ -1,4 +1,15 @@
 /* header */
+:root {
+    --box-icon-size: 64px;
+    /* Full-size sprite tile (big icon mode); panel preview always uses this, not --box-icon-size when small */
+    --big-icon-size: 64px;
+    /* Row height for one team/box icon (for min-heights); equals height for square modes */
+    --box-icon-row: 64px;
+    /* emi.dev ck+ calc — speed column (script/display.js, style.css) */
+    --speed-faster: #3cd9f5;
+    --speed-tied: #ecdf68;
+    --speed-slower: #d47070;
+}
 a img {
     border: 0;
 }
@@ -245,6 +256,88 @@ th {
     white-space: nowrap;
 }
 
+/*
+
+    F = Faster 
+    T = Speed tie
+    S = slower
+*/
+.mon-speed-F{
+    outline: 2px solid #7ee1ff;
+    outline-offset: -2px;
+    border-radius: 6px;
+}
+.mon-speed-T{
+    outline: 2px solid #894197;
+    outline-offset: -2px;
+    border-radius: 6px;
+}
+.mon-speed-S{
+    outline: 2px solid #1c1414;
+    outline-offset: -2px;
+    border-radius: 6px;
+}
+.mon-speed-none{
+    outline: none !important;
+}
+/* Speed: same Total column width as other stats — do not pad td (padding widens the column for every row). */
+.sp-total-with-speed-cell {
+    overflow: visible;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+.sp-total-and-speed {
+    position: relative;
+    display: inline-block;
+    width: auto;
+    vertical-align: baseline;
+}
+.sp-total-and-speed .total {
+    font-variant-numeric: tabular-nums;
+}
+.sp-total-and-speed .speed-indicator {
+    position: absolute;
+    left: 100%;
+    right: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 2.9em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Ubuntu Mono", ui-monospace, monospace;
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 1;
+    pointer-events: none;
+    z-index: 1;
+    width: max-content;
+    min-width: 0;
+}
+/* Square cell so « + rotate() shares the same optical center as "-" (faster was skewing left) */
+.sp-total-and-speed .speed-indicator > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1em;
+    height: 1em;
+    margin: 0;
+    box-sizing: border-box;
+    transform-origin: center center;
+}
+.sp-total-and-speed .speed-faster {
+    transform: translateX(8px) rotate(90deg);
+    color: var(--speed-faster);
+}
+.sp-total-and-speed .speed-tied {
+    transform: translateX(8px) translateY(-2px);
+    color: var(--speed-tied);
+}
+.sp-total-and-speed .speed-slower {
+    transform: translateX(2.5px) rotate(-90deg);
+    color: var(--speed-slower);
+}
+
 /* general button styling */
 .btn {
     text-align: center;
@@ -384,6 +477,10 @@ th {
 }
 .info-group {
     margin: 1em 0;
+}
+#trashFieldset {
+    margin-top: 5px;
+    width: 400px;
 }
 .set-selector {
     width: 100%;
