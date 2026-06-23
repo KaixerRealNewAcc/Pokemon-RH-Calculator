@@ -367,15 +367,15 @@ function autosetWeather(ability, i) {
 			break;
 		case "Desolate Land":
 			lastAutoWeather[i] = "Harsh Sunshine";
-			$("#harsh-sunshine").prop("checked", true);
+			$("#harshsunshine").prop("checked", true);
 			break;
 		case "Primordial Sea":
 			lastAutoWeather[i] = "Heavy Rain";
-			$("#heavy-rain").prop("checked", true);
+			$("#heavyrain").prop("checked", true);
 			break;
 		case "Delta Stream":
 			lastAutoWeather[i] = "Strong Winds";
-			$("#strong-winds").prop("checked", true);
+			$("#strongwinds").prop("checked", true);
 			break;
 		default:
 			break;
@@ -715,20 +715,18 @@ $(".set-selector").change(function () {
 		if (terrain) $(`#${terrain}`).prop("checked", true).change();
 		$('#trickroom').prop("checked", CURRENT_TRAINER == "Leader Sabrina");
 		$('#solidRockR').prop("checked", CURRENT_TRAINER == "Leader Brock Rematch");
+		$('#tailwindR').prop("checked", CURRENT_TRAINER == "Leader Koga");
+		$('#swampR').prop("checked", CURRENT_TRAINER == "Route 22 Rival #2 Bulbasaur");
 
-
-		if (typeof applyBattleSettings === "function") {
-			applyBattleSettings(get_trainer_names(fullSetName));
-		}
 
 		for (i in next_poks) {
 			if (next_poks[i][0].includes($('input.opposing').val())) {
 				continue
 			}
 			var pok_name = next_poks[i].split("]")[1].split(" (")[0]
-			pok = `<img class="trainer-pok right-side" src="https://raw.githubusercontent.com/May8th1995/sprites/master/${pok_name}.png" data-id="${CURRENT_TRAINER_POKS[i].split("]")[1]}" title="${next_poks[i]}, ${next_poks[i]} BP">`
+			pok = `<img class="trainer-pok right-side" src="https://raw.githubusercontent.com/KaixerRealNewAcc/sprites/master/${pok_name}.png" data-id="${CURRENT_TRAINER_POKS[i].split("]")[1]}" title="${next_poks[i]}, ${next_poks[i]} BP">`
 			if (pok_name == "Zygarde-10%") {
-				pok_name = "Zygarde-10%25"
+				pok = `<img class="trainer-pok right-side" src="https://raw.githubusercontent.com/KaixerRealNewAcc/sprites/master/Zygarde-Dog.png" data-id="${CURRENT_TRAINER_POKS[i].split("]")[1]}" title="${next_poks[i]}, ${next_poks[i]} BP">`
 			}
 			if (pok_name.includes("Vivillon")) {
 				pok_name = "Vivillon";
@@ -744,12 +742,14 @@ $(".set-selector").change(function () {
 			}
 			if (CURRENT_TRAINER in flagsRR.battleType.trueDouble) {
 				$("#doubles-format").prop("checked", true);
-				trpok_html += pok
-			}
-			else{
-				$("#singles-format").prop("checked", true);
 				// this ruined my day
 				trpok_html += pok
+			}
+			else
+			{
+				// this ruined my day
+				trpok_html += pok
+				$("#singles-format").prop("checked", true);
 			}
 		}
 	} else {
@@ -1435,6 +1435,7 @@ function createField() {
 	var isForesight = [$("#foresightL").prop("checked"), $("#foresightR").prop("checked")];
 	var isHelpingHand = [$("#helpingHandL").prop("checked"), $("#helpingHandR").prop("checked")];
 	var isTailwind = [$("#tailwindL").prop("checked"), $("#tailwindR").prop("checked")];
+	var isSwamp = [$("#swampL").prop("checked"), $("#swampR").prop("checked")];
 	var isFlowerGift = [$("#flowerGiftL").prop("checked"), $("#flowerGiftR").prop("checked")];
 	var isPowerTrick = [$("#powerTrickL").prop("checked"), $("#powerTrickR").prop("checked")];
 	var isSteelySpirit = [$("#steelySpiritL").prop("checked"), $("#steelySpiritR").prop("checked")];
@@ -1462,6 +1463,7 @@ function createField() {
 			isSaltCured: isSaltCured[i],
 			isForesight: isForesight[i],
 			isTailwind: isTailwind[i],
+			isSwamp: isSwamp[i],
 			isHelpingHand: isHelpingHand[i],
 			isFlowerGift: isFlowerGift[i],
 			isPowerTrick: isPowerTrick[i],
@@ -1700,6 +1702,7 @@ $(".gen").change(function () {
 	var itemOptions = getSelectOptions(items, true);
 	$("select.item").find("option").remove().end().append("<option value=\"\">(none)</option>" + itemOptions);
 
+	selectTrainer(1);
 	$(".set-selector").val(getFirstValidSetOption().id);
 	$(".set-selector").change();
 });
@@ -1764,6 +1767,8 @@ function clearField() {
 	$("#helpingHandR").prop("checked", false);
 	$("#tailwindL").prop("checked", false);
 	$("#tailwindR").prop("checked", false);
+	$("#swampL").prop("checked", false);
+	$("#swampR").prop("checked", false);
 	$("#friendGuardL").prop("checked", false);
 	$("#friendGuardR").prop("checked", false);
 	$("#auroraVeilL").prop("checked", false);
@@ -2145,7 +2150,19 @@ function getSrcImgPokemon(poke) {
 	else if (poke.name == "Pikachu-Flying" || poke.name == "Pikachu-Surfing") {
 		return `https://raw.githubusercontent.com/May8th1995/sprites/master/Pikachu.png`
 	} else {
-		return `https://raw.githubusercontent.com/May8th1995/sprites/master/${poke.name}.png`
+		return `https://raw.githubusercontent.com/KaixerRealNewAcc/sprites/master/${poke.name}.png`
+	}
+}
+
+function getPokemonSprite(poke) {
+	//edge case
+	if (!poke) {
+		return
+	}
+	if (poke.name == "Aegislash-Shield") {
+		return `https://play.pokemonshowdown.com/sprites/gen5/aegislash.png`
+	} else {
+		return `<img class="mon-sprite" src="https://raw.githubusercontent.com/May8th1995/sprites/master/${poke.name}.png"`
 	}
 }
 
@@ -2169,8 +2186,15 @@ function topPokemonIcon(fullname, node) {
 	node.src = src;
 }
 
+function PokemonSprite(fullname, node) {
+	var mon = { name: fullname.split(" (")[0] };
+	var src = getPokemonSprite(mon);
+	node.src = src;
+}
+
 $(document).on('click', '.right-side', function () {
 	var set = $(this).attr('data-id');
+	PokemonSprite(set, $("#p2mon")[0])
 	topPokemonIcon(set, $("#p2mon")[0])
 	$('.opposing').val(set);
 	$('.opposing').change();
@@ -2213,30 +2237,26 @@ function selectTrainer(value) {
 				$('.opposing').val(set);
 				$('.opposing').change();
 				$('.opposing .select2-chosen').text(set);
-				if (typeof applyBattleSettings === "function") {
-					applyBattleSettings(get_trainer_names(set));
-				}
-				return;
 			}
 		}
 	}
 }
 
 function nextTrainer() {
-	string = ($(".trainer-pok-list-opposing")).html()
+	string = ($(".trainer-pok-list-opposing")).html();
 	initialSplit = string.split("[")
 	value = parseInt(initialSplit[initialSplit.length - 2].split("]")[0]) + 1
 	selectTrainer(value)
 }
 
 function previousTrainer() {
-	string = ($(".trainer-pok-list-opposing")).html()
-	value = parseInt(string.split("]")[0].split("[")[1]) - 1
+	string = ($(".trainer-pok-list-opposing")).html();
+	value = parseInt(string.split("]")[0].split("[")[1]) - 1;
 	selectTrainer(value)
 }
 
 function resetTrainer() {
-	if (confirm(`Are you sure you want to reset? This will clear all imported sets and change your current trainer back to Rival Oaks Lab [Squirtle]. This cannot be undone.`)){
+	if (confirm(`Are you sure you want to reset? This will clear all imported sets and change your current trainer back to Rival #1. This cannot be undone.`)){
 		selectTrainer(1);
 		localStorage.removeItem("customsets");
 		$(allPokemon("#importedSetsOptions")).hide();
@@ -2440,10 +2460,6 @@ $(document).ready(function () {
 
 		$(".set-selector").val(getFirstValidSetOption().id);
 		$(".set-selector").change();
-
-		$("#previous-trainer").click(previousTrainer);
-		$("#next-trainer").click(nextTrainer);
-		$("#reset-trainer").click(resetTrainer)
 	}
 	$("#gen" + g).prop("checked", true);
 	$("#gen" + g).change();
@@ -2476,11 +2492,38 @@ $(document).ready(function () {
 		dropzone.ondrop=drop;
 		dropzone.ondragover=allowDrop;
 	}
-	//select last trainer
-	let last = localStorage.getItem("lasttimetrainer");
-	if (last != "") {
-		selectTrainer(parseInt(last, 10));
-	};
+
+	var BATTLE_NOTES_VISIBLE_KEY = "battle-notes-visible";
+	var BATTLE_NOTES_TEXT_KEY = "battle-notes-text";
+	var battleNotesToggle = document.getElementById("battle-notes-toggle");
+	var battleNotesPanel = document.getElementById("battle-notes-panel");
+	var battleNotesTextarea = document.getElementById("battle-notes-textarea");
+	function syncBattleNotesVisibility() {
+		if (!battleNotesToggle || !battleNotesPanel) return;
+		var on = battleNotesToggle.checked;
+		battleNotesPanel.hidden = !on;
+		battleNotesPanel.setAttribute("aria-hidden", on ? "false" : "true");
+		localStorage.setItem(BATTLE_NOTES_VISIBLE_KEY, on ? "1" : "0");
+	}
+	if (battleNotesToggle && battleNotesPanel) {
+		battleNotesToggle.checked = localStorage.getItem(BATTLE_NOTES_VISIBLE_KEY) === "1";
+		syncBattleNotesVisibility();
+		battleNotesToggle.addEventListener("change", syncBattleNotesVisibility);
+	}
+	if (battleNotesTextarea) {
+		var savedNotes = localStorage.getItem(BATTLE_NOTES_TEXT_KEY);
+		if (savedNotes !== null && savedNotes !== "") {
+			battleNotesTextarea.value = savedNotes;
+		}
+		battleNotesTextarea.addEventListener(
+			"input",
+			function () {
+				localStorage.setItem(BATTLE_NOTES_TEXT_KEY, battleNotesTextarea.value);
+			},
+			{ passive: true }
+		);
+	}
+
 	loadDefaultLists();
 	$(".move-selector").select2({
 		dropdownAutoWidth: true,
@@ -2492,6 +2535,13 @@ $(document).ready(function () {
 	$(".set-selector").val(getFirstValidSetOption().id);
 	$(".set-selector").change();
 	$(".terrain-trigger").bind("change keyup", getTerrainEffects);
+
+	//select last trainer
+	var last = localStorage.getItem("lasttimetrainer");
+	if (last != null && last !== "") {
+		var t = parseInt(last, 10);
+		if (!isNaN(t)) selectTrainer(t);
+	}
 });
 
 /* Click-to-copy function */

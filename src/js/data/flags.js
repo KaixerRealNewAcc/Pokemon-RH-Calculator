@@ -11,21 +11,41 @@ const FLAGS_RR = {
             "Route 13 Bird Keeper Perry",
             "Route 13 Biker Jared",
             "Route 13 Bird Keeper Robert",
+            "Archer B2B w/Arianna",
+            "Route 22 #2 Rival Charmander",
         ],
         rain: [
             "Leader Misty",
             "Leader Misty Rematch",
             "Pkmn Tower Grunt 1",
-            "Saffron City Dumbass Kid"
+            "Saffron City Dumbass Kid",
+            "Route 18 Biker William",
+            "Route 18 Bird Keeper Jacob",
+            "Route 18 Dragon Tamer Ramiro",
+            "Route 18 Ace Trainer Wilton",
+            "Route 22 #2 Rival Squirtle",
         ],
         sand: [
             "Leader Brock",
-            "Silph Co. Giovanni",
             "Leader Brock Rematch",
+            "Silph Co. Giovanni",
+            "Biker Lao B2B2B w/Koji & Luke",
+            "Route 16 Biker Ruben",
+            "Route 16 Biker Camron",
+            "Route 16 Biker Hideo",
         ],
         snow: [
             "Route 12 Rocker Luca",
-            "Camper Justin B2B w/ Andrew"
+            "Camper Justin B2B w/ Andrew",
+            "Leader Pryce Team 1",
+            "Leader Pryce Team 2",
+            "Leader Pryce Team 3",
+        ],
+        harshsunshine: [
+            "Cinnabar Gym Ace Trainer Derek",
+            "Cinnabar Gym Ace Trainer Lucy",
+            "Cinnabar Gym Ace Trainer Zac",
+            "Leader Blaine"
         ],
     },
     terrain: {
@@ -39,13 +59,17 @@ const FLAGS_RR = {
         grassy: [
             "Mt. Moon Super Nerd Miguel",
             "Leader Erika",
-            "Leader Erika Rematch"
+            "Leader Erika Rematch",
+            "Pkmn Mansion Burglar Lewis",
         ],
         misty: [
             "Leader Sabrina",
+            "Fushia Gym Juggler Kayden",
         ],
         psychic: [
-            "",
+            "Leader Koga",
+            "Cerulean Cave Giovanni",
+            "Cerulean Cave Partner Lance",
         ],
     },
     battleType: {
@@ -65,7 +89,19 @@ const FLAGS_RR = {
             "Rocket Hideout Right Grunt": {},
             "Pkmn Tower Channeler Ruth": {},
             "Leader Sabrina": {},
+            "Route 18 Dragon Tamer Ramiro": {},
+            "Pkmn Mansion Burglar Lewis": {},
+            "Cinnabar Gym Ace Trainer Zac": {},
+            "Cerulean Cave Giovanni": {},
+            "Cerulean Cave Partner Lance": {},
         },
+        tag: [
+            {
+                enemy1: "Silph Co. Arianna & Archer",
+                enemy2: "Silph Co. Arianna & Archer",
+                partner: "Silph Co. Tag Partner Brendan"
+            }
+        ]
     },
 };
 

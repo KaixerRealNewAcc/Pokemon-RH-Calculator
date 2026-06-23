@@ -98,7 +98,7 @@ export function getFinalSpeed(gen: Generation, pokemon: Pokemon, field: Field, s
 
   if (side.isTailwind) speedMods.push(8192);
   // Pledge swamp would get applied here when implemented
-  // speedMods.push(1024);
+  if(side.isSwamp) speedMods.push(1024);
 
   if(side.isTrickRoom) speedMods.push(1024); //For Easy Use
 

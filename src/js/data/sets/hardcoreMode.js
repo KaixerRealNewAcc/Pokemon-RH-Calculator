@@ -19,7 +19,7 @@ var SETDEX_SV = {
 
    //Gen 1
    "Charmander": {
-    "Rival Route 22 Charmander": {
+    "Rival Route 22 #1 Charmander": {
         "level": 16,
         "ability":"Solar Power",
         "moves": [
@@ -49,6 +49,19 @@ var SETDEX_SV = {
     },
   },
   "Charizard": {
+    "Cinnabar Gym Ace Trainer Lucy": {
+        "level": 76,
+        "ability": "Solar Power",
+        "moves":[
+            "Fire Blast",
+            "Solar Beam",
+            "Air Slash",
+            "Scorching Sands", 
+        ],
+        "nature": "Timid",
+        "item":"Firium Z",
+        "index": 460,
+    },
   },
   "Charizard-Mega-X": {
     "Silph Co. Rival Charmander": {
@@ -77,9 +90,37 @@ var SETDEX_SV = {
         "item":"Charizardite X",
         "index":300,
     },
+    "Leader Blaine": {
+        "level": 76,
+        "ability": "Tough Claws",
+        "moves":[
+            "Earthquake",
+            "Flare Blitz",
+            "Draco Claw",
+            "Dragon Dance", 
+        ],
+        "nature": "Jolly",
+        "item":"Charizardite X",
+        "index": 471,
+    },
+  },
+  "Charizard-Mega-Y": {
+     "Route 22 Rival #2 Charmander": {
+        "level": 82,
+        "ability": "Drought",
+        "moves":[
+            "Weather Ball",
+            "Solar Beam",
+            "Focus Blast",
+            "Protect",
+        ],
+        "nature":"Timid",
+        "item":"Chardizardite Y",
+        "index":522,
+      },
   },
   "Bulbasaur": {
-    "Rival Route 22 Bulbasaur": {
+    "Rival Route 22 #1 Bulbasaur": {
         "level": 15,
         "ability": "Overgrow",
         "moves":[
@@ -122,6 +163,19 @@ var SETDEX_SV = {
         "item":"Sitrus Berry",
         "index":315,
     },
+    "Leader Blaine": {
+        "level": 76,
+        "ability": "Chlorophyll",
+        "moves":[
+            "Solar Beam",
+            "Sludge Bomb",
+            "Weather Ball",
+            "Growth", 
+        ],
+        "nature": "Modest",
+        "item":"Focus Sash",
+        "index": 469,
+    },
   },
   "Venusaur-Mega": {
     "Silph Co. Rival Bulbasaur": {
@@ -137,9 +191,22 @@ var SETDEX_SV = {
         "item":"Venusaurite",
         "index":220,
     },
+     "Route 22 Rival #2 Bulbasaur": {
+        "level": 82,
+        "ability": "Thick Fat",
+        "moves":[
+            "Chloroblast",
+            "Sludge Bomb",
+            "Earth Power",
+            "Sleep Powder",
+        ],
+        "nature":"Timid",
+        "item":"Venusaurite",
+        "index":533,
+      },
   },
   "Squirtle": {
-    "Rival Route 22 Squirtle": {
+    "Rival Route 22 #1 Squirtle": {
         "level": 16,
         "ability":"Torrent",
         "moves": [
@@ -197,6 +264,19 @@ var SETDEX_SV = {
         "item":"Blastoisinite",
         "index":290,
     },
+     "Route 22 Rival #2 Squirtle": {
+        "level": 82,
+        "ability": "Mega Launcher",
+        "moves":[
+            "Hydro Pump",
+            "Dark Pulse",
+            "Aura Sphere",
+            "Shell Smash",
+        ],
+        "nature":"Timid",
+        "item":"Blastoisinite",
+        "index":521,
+      },
   },
   "Caterpie": {
   },
@@ -223,11 +303,41 @@ var SETDEX_SV = {
   },
   "Beedrill": {
   },
+  "Beedrill-Mega":{
+   "Route 16 Biker Hideo": {
+        "level": 66,
+        "ability": "Adapatability",
+        "moves":[
+            "U-turn",
+            "Drill Run",
+            "Poison Jab",
+            "Pursuit", 
+        ],
+        "nature":"Jolly",
+        "item":"Breedrillite",
+        "index":361,
+    },
+  },
   "Pidgey": {
   },
   "Pidgeotto": {
   },
   "Pidgeot": {
+  },
+  "Pidgeot-Mega": {
+    "Pkmn Mansion Scientist Ted": {
+        "level": 73,
+        "ability": "No Guard",
+        "moves": [
+            "Hurricane",
+            "Focus Blast",
+            "Heat Wave",
+            "U-turn"
+        ],
+        "nature": "Timid",
+        "item":"Pidgeotite",
+        "index": 441,
+    }, 
   },
   "Rattata": {
   },
@@ -360,6 +470,21 @@ var SETDEX_SV = {
   },
   "Sandslash": {
   },
+  "Sandslash-Alola": {
+    "Leader Pryce Team 2": {
+        "level": 73,
+        "ability": "Slush Rush",
+        "moves": [
+            "Stealth Rock",
+            "Earthquake",
+            "Icicle Spear",
+            "Iron Head"
+        ],
+        "nature": "Adamant",
+        "item":"Focus Sash",
+        "index": 415,
+    },
+  },
   "NidoranF": {
   },
   "Nidorina": {
@@ -391,6 +516,19 @@ var SETDEX_SV = {
         "item":"Life Orb",
         "index":288,
     },
+    "Route 18 Bird Keeper Jacob": {
+        "level": 66,
+        "ability": "Sheer Force",
+        "moves":[
+            "Thunder",
+            "Earth Power",
+            "Sludge Wave",
+            "Bubble Beam",
+        ],
+        "nature":"Timid",
+        "item":"Life Orb",
+        "index":373,
+    },
   },
   "NidoranM": {
   },
@@ -409,6 +547,19 @@ var SETDEX_SV = {
         "nature":"Timid",
         "item":"Life Orb",
         "index":178,
+    },
+    "Leader Koga": {
+        "level": 68,
+        "ability": "Sheer Force",
+        "moves":[
+            "Earth Power",
+            "Poison Jab",
+            "Ice Beam",
+            "Thunderbolt",
+        ],
+        "nature":"Rash",
+        "item":"Life Orb",
+        "index":401,
     },
   },
   "Clefairy": {
@@ -466,6 +617,45 @@ var SETDEX_SV = {
         "item":"Life Orb",
         "index": 58,
     },
+    "Leader Pryce Team 1": {
+        "level": 73,
+        "ability": "Magic Guard",
+        "moves": [
+            "Thunder Wave",
+            "Teleport",
+            "Light Of Ruin",
+            "Flametrower"
+        ],
+        "nature": "Modest",
+        "item":"Life Orb",
+        "index": 411,
+    },
+    "Leader Pryce Team 2": {
+        "level": 73,
+        "ability": "Magic Guard",
+        "moves": [
+            "Thunder Wave",
+            "Teleport",
+            "Light Of Ruin",
+            "Flametrower"
+        ],
+        "nature": "Modest",
+        "item":"Life Orb",
+        "index": 417,
+    },
+    "Leader Pryce Team 3": {
+        "level": 73,
+        "ability": "Magic Guard",
+        "moves": [
+            "Blizzard",
+            "Teleport",
+            "Light Of Ruin",
+            "Flametrower"
+        ],
+        "nature": "Modest",
+        "item":"Life Orb",
+        "index": 423,
+    },
   },
   "Vulpix": {
   },
@@ -483,6 +673,19 @@ var SETDEX_SV = {
         "item":"Air Balloon",
         "index": 144,
     },
+    "Archer B2B w/Arianna": {
+        "level": 79,
+        "ability": "Drought",
+        "moves":[
+            "Weather Ball",
+            "Solar Beam",
+            "Scorching Sands",
+            "Hypnosis",
+        ],
+        "nature": "Timid",
+        "item":"Charcoal",
+        "index": 485,
+    }, 
   },
   "Ninetales-Alola": {
     "Pkmn Tower Grunt 1": {
@@ -564,6 +767,21 @@ var SETDEX_SV = {
         "index": 124,
     },
   },
+  "Dugtrio-Alola": {
+    "Biker Lao B2B2B w/Koji & Luke": {
+        "level": 66,
+        "ability": "Sand Force",
+        "moves":[
+            "Earthquake",
+            "Iron Head",
+            "Sucker Punch",
+            "Stone Edge", 
+        ],
+        "nature":"Jolly",
+        "item":"Life Orb",
+        "index":343,
+    },
+  },
   "Meowth": {
   },
   "Persian": {
@@ -620,6 +838,19 @@ var SETDEX_SV = {
         "item":"Salac Berry",
         "index":253,
     },
+    "Cerulean Cave Grunt 2": {
+        "level": 79,
+        "ability": "Defiant",
+        "moves":[
+            "Drain Punch",
+            "Rage Fist",
+            "Ice Punch",
+            "Bulk Up",
+        ],
+        "nature": "Jolly",
+        "item":"Leftovers",
+        "index": 482,
+    },
   },
   "Growlithe": {
   },
@@ -637,21 +868,60 @@ var SETDEX_SV = {
         "item":"Sitrus Berry",
         "index": 78,
     },
+    "Pkmn Mansion Burglar Lewis": {
+        "level": 73,
+        "ability": "Intimidate",
+        "moves": [
+            "Extreme Speed",
+            "Flare Blitz",
+            "Morning Sun",
+            "Will-O-Wisp"
+        ],
+        "nature": "Adamant",
+        "item":"Leftovers",
+        "index": 445,
+    }, 
+     "Ace Trainer Colby": {
+        "level": 85,
+        "ability": "Intimidate",
+        "moves":[
+            "Extreme Speed",
+            "Flare Blitz",
+            "Teleport",
+            "Will-O-Wisp"
+        ],
+        "nature":"Adamant",
+        "item":"Leftovers",
+        "index":563,
+      },
   },
   "Arcanine-Hisui": {
     "Route 8 Super Nerd Aidan": {
         "level": 43,
-        "ability": "Queenly Majest",
+        "ability": "Rock Head",
         "moves":[
-            "Brutal Swing",
-            "Power Whip",
-            "Knock Off",
-            "U-turn",
+            "Flare Blitz",
+            "Rock Slide",
+            "",
+            "",
         ],
-        "nature":"Adamant",
-        "item":"Choice Scarf",
+        "nature":"Jolly",
+        "item":"Focus Sash",
         "index":150,
     },
+    "Cinnabar Gym Ace Trainer Derek": {
+        "level": 76,
+        "ability": "Rock Head",
+        "moves":[
+            "Head Smash",
+            "Flare Blitz",
+            "Wild Charge",
+            "Accelerock", 
+        ],
+        "nature": "Jolly",
+        "item":"Fire Gem",
+        "index": 452,
+    }, 
   },
   "Poliwag" : {
   },
@@ -684,6 +954,21 @@ var SETDEX_SV = {
   },
   "Machamp": {
   },
+  "Machamp-Mega": {
+    "Dumbass Jojo Fan": {
+        "level": 73,
+        "ability": "ORAORAORAORA",
+        "moves": [
+            "Power-Up Punch",
+            "Bullet Punch",
+            "Ice Punch",
+            "Drain Punch"
+        ],
+        "nature": "Adamant",
+        "item": "",
+        "index": 408,
+    }, 
+  },
   "Bellsprout": {
   },
   "Weepinbell": {
@@ -712,6 +997,19 @@ var SETDEX_SV = {
   "Graveler": {
   },
   "Golem": {
+    "Biker Lao B2B2B w/Koji & Luke": {
+        "level": 66,
+        "ability": "Sand Veil",
+        "moves":[
+            "Head Smash",
+            "Headlong Rush",
+            "Sucker Punch",
+            "Explosion", 
+        ],
+        "nature":"Adamant",
+        "item":"Rock Gem",
+        "index":348,
+    },
   },
   "Ponyta": {
   },
@@ -731,7 +1029,7 @@ var SETDEX_SV = {
     },
   },
   "Slowpoke": {
-    "Rival Route 22 Charmander": {
+    "Rival Route 22 #1 Charmander": {
         "level": 15,
         "ability": "Regenerator",
         "moves":[
@@ -744,7 +1042,7 @@ var SETDEX_SV = {
         "item":"Leftovers",
         "index":5,
     },
-    "Rival Route 22 Bulbasaur": {
+    "Rival Route 22 #1 Bulbasaur": {
         "level": 15,
         "ability": "Regenerator",
         "moves":[
@@ -759,6 +1057,32 @@ var SETDEX_SV = {
     },
   },
   "Slowbro": {
+    "Cinnebar Island May": {
+        "level": 73,
+        "ability": "Regenerator",
+        "moves": [
+            "Scald",
+            "Body Press",
+            "Teleport",
+            "Slack Off"
+        ],
+        "nature": "Bold",
+        "item":"Leftovers",
+        "index": 436,
+    },
+    "Cerulean Cave Grunt 1": {
+        "level": 79,
+        "ability": "Regenerator",
+        "moves":[
+            "Scald",
+            "Ice Beam",
+            "Future Sight",
+            "Teleport", 
+        ],
+        "nature": "Bold",
+        "item":"Leftovers",
+        "index": 477,
+    },
   },
   "Slowbro-Galar": {
     "Leader Erika": {
@@ -792,6 +1116,32 @@ var SETDEX_SV = {
         "nature":"Timid",
         "item":"Focus Sash",
         "index":200,
+    },
+    "Route 18 Biker William": {
+        "level": 65,
+        "ability": "Sturdy",
+        "moves":[
+            "Volt Switch",
+            "Thunder",
+            "Explosion",
+            "Body Press",
+        ],
+        "nature":"Naive",
+        "item":"Custap Berry",
+        "index":365,
+    },
+    "Leader Jasmine": {
+        "level": 73,
+        "ability": "Sturdy",
+        "moves": [
+            "Thunderbolt",
+            "Flash Cannon",
+            "Hidden Power Grass",
+            "Body Press"
+        ],
+        "nature": "Modest",
+        "item":"Assault Vest",
+        "index": 431,
     },
   },
   "Farfetch’d": {
@@ -852,6 +1202,45 @@ var SETDEX_SV = {
   "Shellder": {
   },
   "Cloyster": {
+    "Leader Pryce Team 1": {
+        "level": 73,
+        "ability": "Skill Link",
+        "moves": [
+            "Icicle Spear",
+            "Waterfall",
+            "Rock Blast",
+            "Shell Smash"
+        ],
+        "nature": "Jolly",
+        "item": "White Herb",
+        "index": 410,
+    },
+    "Leader Pryce Team 3": {
+        "level": 73,
+        "ability": "Skill Link",
+        "moves": [
+            "Icicle Spear",
+            "Waterfall",
+            "Rock Blast",
+            "Shell Smash"
+        ],
+        "nature": "Jolly",
+        "item": "White Herb",
+        "index": 422,
+    },
+     "Cerulean Cave Black Belt Ketchup": {
+        "level": 81,
+        "ability": "Skill Link",
+        "moves":[
+            "Liquidation",
+            "Icicle Spear",
+            "Rock Blast",
+            "Shell Smash", 
+        ],
+        "nature":"Jolly",
+        "item":"White Herb",
+        "index":505,
+      },
   },
   "Gastly": {
   },
@@ -870,6 +1259,19 @@ var SETDEX_SV = {
         "nature":"Timid",
         "item":"Ghostium Z",
         "index":295,
+    },
+    "Fushia City Brendan": {
+        "level": 68,
+        "ability": "Levitate",
+        "moves":[
+            "Shadow Ball",
+            "Sludge Wave",
+            "Focus Blast",
+            "Giga Drain",
+        ],
+        "nature":"Timid",
+        "item":"Focus Sash",
+        "index":384,
     },
   },
   "Onix": {
@@ -895,6 +1297,34 @@ var SETDEX_SV = {
   },
   "Kingler": {
   },
+  "Kingler-Mega":{
+    "Biker Lao B2B2B w/Koji & Luke": {
+        "level": 66,
+        "ability": "Tough Claws",
+        "moves":[
+            "Crabhammer",
+            "Meteor Mash",
+            "Close Combat",
+            "Aqua Jet", 
+        ],
+        "nature":"Jolly",
+        "item":"",
+        "index":344,
+    },
+     "Ace Trainer Rolando": {
+        "level": 85,
+        "ability": "Tough Claws",
+        "moves":[
+            "Crabhammer",
+            "Close Combat",
+            "Ice Hammer",
+            "Aqua Jet",
+        ],
+        "nature":"Jolly",
+        "item":"",
+        "index":549,
+      },
+  },
   "Voltorb": {
   },
   "Voltorb-Hisui": {
@@ -913,6 +1343,19 @@ var SETDEX_SV = {
     },
   },
   "Electrode": {
+    "Fushia Gym Juggler Kayden": {
+        "level": 68,
+        "ability": "Galvanize",
+        "moves":[
+            "Explosion",
+            "Hyper Voice",
+            "Focus Blast",
+            "Hidden Power Grass",
+        ],
+        "nature":"Naive",
+        "item":"Life Orb",
+        "index":392,
+    },
   },
   "Electrode-Hisui":{
     "Leader Lt. Surge": {
@@ -945,10 +1388,38 @@ var SETDEX_SV = {
         "item":"Focus Sash",
         "index":330,
     },
+    "Archer B2B w/Arianna": {
+        "level": 79,
+        "ability": "Chlorophyll",
+        "moves":[
+            "Solar Beam",
+            "Psyshock",
+            "Weather Ball",
+            "Earth Power", 
+        ],
+        "nature": "Timid",
+        "item":"Life Orb",
+        "index": 486,
+    }, 
   },
   "Cubone"  : {
   },
   "Marowak": {
+  },
+  "Marowak-Alola":{
+     "Route 23 Brendan": {
+        "level": 82,
+        "ability": "Bone Zone",
+        "moves":[
+            "Shadow Bone",
+            "Fire Punch",
+            "Bonemerang",
+            "Swords Dance",
+        ],
+        "nature":"Adamant",
+        "item":"Thick Club",
+        "index":535,
+      },
   },
   "Hitmonlee": {
     "Cerulean City Rival Squirtle": {
@@ -1045,6 +1516,19 @@ var SETDEX_SV = {
         "item":"Rindo Berry",
         "index":320,
     },
+    "Cinnabar Gym Ace Trainer Derek": {
+        "level": 76,
+        "ability": "Solid Rock",
+        "moves":[
+            "Stone Edge",
+            "Earthquake",
+            "Fire Punch",
+            "Megahorn", 
+        ],
+        "nature": "Jolly",
+        "item":"Rockium Z",
+        "index": 453,
+    }, 
   },
   "Chansey":{
     "Route 13 Picknicker Alma": {
@@ -1076,6 +1560,19 @@ var SETDEX_SV = {
         "nature":"Timid",
         "item":"Assault Vest",
         "index":310,
+    },
+    "Cerulean Cave Grunt 1": {
+        "level": 79,
+        "ability": "Regenerator",
+        "moves":[
+            "Giga Drain",
+            "Knock Off",
+            "Earthquake",
+            "Hidden Power Fire", 
+        ],
+        "nature": "Sassy",
+        "item":"Assault Vest",
+        "index": 476,
     },
   },
   "Kangaskhan":{
@@ -1119,8 +1616,60 @@ var SETDEX_SV = {
         "item":"Mystic Water",
         "index": 90,
     },
+    "Route 15 Ace Trainer Haley": {
+        "level": 68,
+        "ability": "Illuminate",
+        "moves":[
+            "Meteor Beam",
+            "Hydro Pump",
+            "Blizzard",
+            "Psyshock", 
+        ],
+        "nature":"Timid",
+        "item":"Power Herb",
+        "index":338,
+    },
+    "Route 18 Biker William": {
+        "level": 66,
+        "ability": "Analytic",
+        "moves":[
+            "Flip Turn",
+            "Hydro Pump",
+            "Thunder",
+            "Psychic",
+        ],
+        "nature":"Timid",
+        "item":"Life Orb",
+        "index":369,
+    },
+     "Ace Trainer George": {
+        "level": 85,
+        "ability": "Illuminate",
+        "moves":[
+            "Thunder",
+            "Hydro Pump",
+            "Blizzard",
+            "Psyshock",
+        ],
+        "nature":"Timid",
+        "item":"Life Orb",
+        "index":552,
+      },
   },
   "Mr. Mime":{
+    "Fushia Gym Juggler Kayden": {
+        "level": 68,
+        "ability": "Misty Surge",
+        "moves":[
+            "Misty Explosion",
+            "Psyshock",
+            "Mystical Fire",
+            "Focus Blast",
+        ],
+        "nature":"Timid",
+        "item":"Life Orb",
+        "index":390,
+    },
   },
   "Mr. Mime-Galar":{
    "Route 6 Camper Jeff": {
@@ -1155,6 +1704,32 @@ var SETDEX_SV = {
   "Scyther":{
   },
   "Jynx":{
+    "Leader Pryce Team 1": {
+        "level": 73,
+        "ability": "Dry Skin",
+        "moves": [
+            "Lovely Kiss",
+            "Psystrike",
+            "Blizzard",
+            "Focus Blast"
+        ],
+        "nature": "Timid",
+        "item": "Focus Sash",
+        "index": 409,
+    }, 
+    "Leader Pryce Team 3": {
+        "level": 73,
+        "ability": "Dry Skin",
+        "moves": [
+            "Lovely Kiss",
+            "Psystrike",
+            "Blizzard",
+            "Focus Blast"
+        ],
+        "nature": "Timid",
+        "item": "Focus Sash",
+        "index": 421,
+    }, 
   },
   "Electabuzz":{
   },
@@ -1219,8 +1794,47 @@ var SETDEX_SV = {
   "Pinsir":{
   },
   "Pinsir-Mega":{
+    "Route 18 Ace Trainer Wilton": {
+        "level": 66,
+        "ability": "Aerilate",
+        "moves":[
+            "X-Scissor",
+            "Double-Edge",
+            "Quick Attack",
+            "Close Combat",
+        ],
+        "nature":"Jolly",
+        "item":"Pinsirite",
+        "index":381,
+    },
+     "Ace Trainer George": {
+        "level": 85,
+        "ability": "Aerilate",
+        "moves":[
+            "Return",
+            "Quick Attack",
+            "Close Combat",
+            "Swords Dance",
+        ],
+        "nature":"Jolly",
+        "item":"Pinsirite",
+        "index":556,
+      },
   },
   "Tauros":{
+     "Ace Trainer George": {
+        "level": 85,
+        "ability": "Sheer Force",
+        "moves":[
+            "Head Charge",
+            "Close Combat",
+            "Ice Beam",
+            "Flamethrower",
+        ],
+        "nature":"Naive",
+        "item":"Life Orb",
+        "index":555,
+      },
   },
   "Tauros-Paldea-Combat":{
   },
@@ -1275,7 +1889,20 @@ var SETDEX_SV = {
   },
   "Lapras":{
   },
-  "Lapras-Gmax":{
+  "Lapras-Mega":{
+    "Route 18 Dragon Tamer Ramiro": {
+        "level": 66,
+        "ability": "Liquid Voice",
+        "moves":[
+            "Boomburst",
+            "Draco Barrage",
+            "Thunder",
+            "Freeze-Dry",
+        ],
+        "nature":"Modest",
+        "item":"",
+        "index":376,
+    },
   },
   "Ditto":{
   },
@@ -1365,6 +1992,21 @@ var SETDEX_SV = {
         "index": 133,
     },
   },
+  "Leafeon": {
+    "Pkmn Mansion Scientist Ted": {
+        "level": 73,
+        "ability": "Sap Sipper",
+        "moves": [
+            "Sappy Seed",
+            "Jump Kick",
+            "Knock Off",
+            "Last Resort"
+        ],
+        "nature": "Jolly",
+        "item":"Eevium Z",
+        "index": 443,
+    }, 
+  },
   "Sylveon": {
     "Route 10 Poke Maniac Herman": {
         "level": 44,
@@ -1398,10 +2040,36 @@ var SETDEX_SV = {
   "Omanyte":{
   },
   "Omastar":{
+    "Route 18 Ace Trainer Wilton": {
+        "level": 66,
+        "ability": "Swift Swim",
+        "moves":[
+            "Hydro Pump",
+            "Ice Beam",
+            "Power Gem",
+            "Shell Smash",
+        ],
+        "nature":"Modest",
+        "item":"Focus Sash",
+        "index":382,
+    },
   },
   "Kabuto":{
   },
   "Kabutops":{
+    "Route 18 Ace Trainer Wilton": {
+        "level": 66,
+        "ability": "Swift Swim",
+        "moves":[
+            "Waterfall",
+            "Stone Axe",
+            "Sacred Sword",
+            "Aqua Jet",
+        ],
+        "nature":"Adamant",
+        "item":"Water Gem",
+        "index":380,
+    },
   },
   "Aerodactyl":{
     "Game Corner Grunt": {
@@ -1417,6 +2085,19 @@ var SETDEX_SV = {
         "item":"Focus Sash",
         "index":164,
     },
+   "Route 16 Biker Camron": {
+        "level": 66,
+        "ability": "Rock Head",
+        "moves":[
+            "Brave Bird",
+            "Head Smash",
+            "Earthquake",
+            "U-turn", 
+        ],
+        "nature":"Jolly",
+        "item":"Rock Gem",
+        "index":355,
+    }, 
   },
   "Aerodactyl-Mega":{
     "Leader Brock Rematch": {
@@ -1434,8 +2115,21 @@ var SETDEX_SV = {
     },
   },
   "Snorlax":{
+    "Cinnebar Island May": {
+        "level": 73,
+        "ability": "Thick Fat",
+        "moves": [
+            "Body Slam",
+            "Darkest Lariat",
+            "Curse",
+            "Rest"
+        ],
+        "nature": "Careful",
+        "item":"Leftovers",
+        "index": 437,
+    },
   },
-  "Snorlax-Gmax":{
+  "Snorlax-Mega":{
   },
   "Articuno":{
   },
@@ -1453,6 +2147,19 @@ var SETDEX_SV = {
         "item":"Colbur Berry",
         "index":222,
     },
+    "Pkmn Mansion Burglar Lewis": {
+        "level": 73,
+        "ability": "Competitive",
+        "moves":[
+            "Calm Mind",
+            "Freezing Glare",
+            "Air Slash",
+            "Roost", 
+        ],
+        "nature": "Timid",
+        "item":"Grassy Seed",
+        "index": 450,
+    }, 
   },
   "Zapdos":{
     "Saffron City Dumbass Kid": {
@@ -1468,20 +2175,100 @@ var SETDEX_SV = {
         "item":"Flyinium Z",
         "index":237,
     },
+     "Route 22 Rival #2 Squirtle": {
+        "level": 82,
+        "ability": "Static",
+        "moves":[
+            "Hurricane",
+            "Thunder",
+            "Weather Ball",
+            "Roost",
+        ],
+        "nature":"Timid",
+        "item":"Flyinium Z",
+        "index":516,
+      },
   },
   "Zapdos-Galar":{
+    "Cinnabar Gym Ace Trainer Derek": {
+        "level": 76,
+        "ability": "Defiant",
+        "moves":[
+            "Acrobatics",
+            "Close Combat",
+            "U-turn",
+            "Thunderous Kick", 
+        ],
+        "nature": "Jolly",
+        "item":"Flying Gem",
+        "index": 451,
+    }, 
   },
   "Moltres":{
   },
   "Moltres-Galar":{
+    "Cerulean Cave Giovanni": {
+        "level": 80,
+        "ability": "Berserk",
+        "moves":[
+            "Nasty Plot",
+            "Fiery Wrath",
+            "Hurricane",
+            "Roost",
+        ],
+        "nature":"Timid",
+        "item":"Flyinium Z",
+        "index":497,
+    },
   },
   "Dratini":{
   },
   "Dragonair":{
   },
   "Dragonite":{
+    "Route 18 Dragon Tamer Ramiro": {
+        "level": 66,
+        "ability": "Mulstiscale",
+        "moves":[
+            "Hurricane",
+            "Thunder",
+            "Hydro Pump",
+            "Ice Beam",
+        ],
+        "nature":"Modest",
+        "item":"Flying Gem",
+        "index":378,
+    },
   },
   "Mewtwo":{
+    "Cerulean Cave Giovanni": {
+        "level": 80,
+        "ability": "Unnerve",
+        "moves":[
+            "Expanding Force",
+            "Soul Robbery",
+            "Aura Sphere",
+            "Flamethrower",
+        ],
+        "nature":"Timid",
+        "item":"",
+        "index":499,
+    },
+  },
+  "Mewtwo-Mega-Y": {
+    "Cerulean Cave Giovanni": {
+        "level": 80,
+        "ability": "Insomnia",
+        "moves":[
+            "Expanding Force",
+            "Soul Robbery",
+            "Aura Sphere",
+            "Flamethrower",
+        ],
+        "nature":"Timid",
+        "item":"",
+        "index":500,
+    },
   },
   "Mew":{
   },
@@ -1534,6 +2321,19 @@ var SETDEX_SV = {
         "item":"Scope Lens",
         "index": 83,
     },
+     "Ace Trainer Rolando": {
+        "level": 85,
+        "ability": "Sniper",
+        "moves":[
+            "Hurricane",
+            "Giga Drain",
+            "Heat Wave",
+            "Nasty Plot",
+        ],
+        "nature":"Timid",
+        "item":"Sitrus Berry",
+        "index":548,
+      },
   },
   "Chinchou":{
   },
@@ -1629,6 +2429,19 @@ var SETDEX_SV = {
     },
   },
   "Bellosom":{
+     "Ace Trainer George": {
+        "level": 85,
+        "ability": "Chlorophyll",
+        "moves":[
+            "Quiver Dance",
+            "Sleep Powder",
+            "Giga Drain",
+            "Fiery Dance",
+        ],
+        "nature":"Timid",
+        "item":"Leftovers",
+        "index":558,
+      },
   },
   "Marill":{
   },
@@ -1682,6 +2495,19 @@ var SETDEX_SV = {
         "item":"Sharp Beak",
         "index":210,
     },
+    "Cinnebar Island May": {
+        "level": 73,
+        "ability": "Aerilate",
+        "moves": [
+            "Double-Edge",
+            "U-turn",
+            "Spore",
+            "Synthesis"
+        ],
+        "nature": "Jolly",
+        "item":"Flying Gem",
+        "index": 434,
+    },
   },
   "Aimpom":{
   },
@@ -1716,6 +2542,32 @@ var SETDEX_SV = {
         "item":"Assault Vest",
         "index":321,
     },
+    "Archer B2B w/Arianna": {
+        "level": 79,
+        "ability": "Chlorophyll",
+        "moves":[
+            "Solar Beam",
+            "Weather Ball",
+            "Hidden Power Rock",
+            "Growth", 
+        ],
+        "nature":"Timid",
+        "item":"Focus Sash",
+        "index": 489,
+    }, 
+     "Route 22 Rival #2 Charmander": {
+        "level": 82,
+        "ability": "Chlorophyll",
+        "moves":[
+            "Solar Beam",
+            "Fiery Dance",
+            "Hidden Power Rock",
+            "Growth", 
+        ],
+        "nature":"Timid",
+        "item":"Focus Sash",
+        "index":524,
+      },
   },
   "Yanma": {
     "Leader Falkner": {
@@ -1769,6 +2621,32 @@ var SETDEX_SV = {
     },
   },
   "Espeon":{
+    "Arianna B2B w/Archer": {
+        "level": 79,
+        "ability": "Magic Bounce",
+        "moves":[
+            "Psychic",
+            "Mystical Fire",
+            "Shadow Ball",
+            "Last Resort", 
+        ],
+        "nature":"Timid",
+        "item":"Eevium Z",
+        "index": 491,
+    }, 
+     "Ace Trainer George": {
+        "level": 85,
+        "ability": "Magic Bounce",
+        "moves":[
+            "Last Resort",
+            "Stored Power",
+            "Fiery Dance",
+            "Dazzling Gleam",
+        ],
+        "nature":"Timid",
+        "item":"Eevium Z",
+        "index":554,
+      },
   },
   "Umbreon":{
   },
@@ -1842,7 +2720,7 @@ var SETDEX_SV = {
   "Steelix-Mega":{
   },
   "Snubbull": {
-    "Rival Route 22 Squirtle": {
+    "Rival Route 22 #1 Squirtle": {
         "level": 15,
         "ability": "Intimidate",
         "moves":[
@@ -1855,7 +2733,7 @@ var SETDEX_SV = {
         "item":"Muscle Band",
         "index":1,
     },
-    "Rival Route 22 Charmander": {
+    "Rival Route 22 #1 Charmander": {
         "level": 15,
         "ability": "Intimidate",
         "moves":[
@@ -1868,7 +2746,7 @@ var SETDEX_SV = {
         "item":"Muscle Band",
         "index":4,
     },
-    "Rival Route 22 Bulbasaur": {
+    "Rival Route 22 #1 Bulbasaur": {
         "level": 15,
         "ability": "Intimidate",
         "moves":[
@@ -1932,8 +2810,34 @@ var SETDEX_SV = {
     },
   },
   "Scizor-Mega":{
+   "Route 16 Biker Camron": {
+        "level": 66,
+        "ability": "Technician",
+        "moves":[
+            "Bullet Punch",
+            "U-turn",
+            "Rock Smash",
+            "Knock Off", 
+        ],
+        "nature":"Adamant",
+        "item":"Scizorite",
+        "index":356,
+    }, 
   },
   "Shuckle":{
+     "Leader Clair": {
+        "level": 81,
+        "ability": "Solid Rock",
+        "moves":[
+            "Stealth Rock",
+            "Knock Off",
+            "Sticky Web",
+            "Toxic",
+        ],
+        "nature":"Impish",
+        "item":"Sitrus Berry",
+        "index":510,
+      },
   },
   "Heracross":{
   },
@@ -1974,6 +2878,19 @@ var SETDEX_SV = {
   "Teddiursa":{
   },
   "Ursaring":{
+    "Cerulean Cave Grunt 2": {
+        "level": 79,
+        "ability": "Guts",
+        "moves":[
+            "Crunch",
+            "Facade",
+            "Close Combat",
+            "Play Rough", 
+        ],
+        "nature": "Adamant",
+        "item":"Eviolite",
+        "index": 480,
+    },
   },
   "Slugma":{   
   },
@@ -2014,6 +2931,21 @@ var SETDEX_SV = {
   "Corsola":{   
   },
   "Corsola-Galar":{   
+  },
+  "Cursola": {
+    "Route 15 Ace Trainer Haley": {
+        "level": 68,
+        "ability": "Unburden",
+        "moves":[
+            "Meteor Beam",
+            "Shadow Ball",
+            "Earth Power",
+            "Mystical Fire", 
+        ],
+        "nature":"Timid",
+        "item":"Power Herb",
+        "index":339,
+    },
   },
   "Remoraid":{   
   },
@@ -2066,9 +2998,22 @@ var SETDEX_SV = {
             "Pursuit",
         ],
         "nature":"Naive",
-        "item":"Houndoomite",
+        "item":"Houndoominite",
         "index":226,
     },
+    "Archer B2B w/Arianna": {
+        "level": 79,
+        "ability": "Solar Power",
+        "moves":[
+            "Dark Hole",
+            "Flamethrower",
+            "Sucker Punch",
+            "Solar Beam", 
+        ],
+        "nature":"Naive",
+        "item":"Houndoominite",
+        "index": 488,
+    }, 
   },
   "Kingdra":{ 
     "Leader Misty Rematch": {
@@ -2089,7 +3034,20 @@ var SETDEX_SV = {
   },
   "Donphan":{   
   },
-  "Porygon2":{   
+  "Porygon2":{  
+    "Route 18 Bird Keeper Jacob": {
+        "level": 66,
+        "ability": "Trace",
+        "moves":[
+            "Thunder",
+            "Ice Beam",
+            "Foul Play",
+            "Teleport",
+        ],
+        "nature":"Bold",
+        "item":"Eviolite",
+        "index":371,
+    }, 
   },
   "Stantler":{   
   },
@@ -2118,9 +3076,35 @@ var SETDEX_SV = {
   },
   "Miltank":{   
   },
-  "Blissey":{   
+  "Blissey":{  
+    "Cerulean Cave Grunt 1": {
+        "level": 79,
+        "ability": "Natural Cure",
+        "moves":[
+            "Seismic Toss",
+            "Soft-Boiled",
+            "Teleport",
+            "Toxic", 
+        ],
+        "nature": "Bold",
+        "item":"Leftovers",
+        "index": 474,
+    },
   },
   "Raikou":{   
+    "Route 18 Bird Keeper Jacob": {
+        "level": 66,
+        "ability": "Inner Focus",
+        "moves":[
+            "Electro Shot",
+            "Scald",
+            "Hidden Power Ice",
+            "Shadow Ball",
+        ],
+        "nature":"Timid",
+        "item":"Air balloon",
+        "index":372,
+    },
   },
   "Entei":{   
   },
@@ -2137,8 +3121,34 @@ var SETDEX_SV = {
   "Lugia":{   
   },
   "Ho-Oh":{   
+    "Leader Blaine": {
+        "level": 76,
+        "ability": "Phoenix Down",
+        "moves":[
+            "Sacred Fire",
+            "Brave Bird",
+            "Earthquake",
+            "Solar Beam", 
+        ],
+        "nature": "Jolly",
+        "item":"Flyinium Z",
+        "index": 470,
+    },
   },
-  "Celebi":{   
+  "Celebi":{ 
+    "Dumbass Jojo Fan": {
+        "level": 73,
+        "ability": "Natural Cure",
+        "moves": [
+            "Giga Drain",
+            "Psychic",
+            "Earth Power",
+            "Nasty Plot"
+        ],
+        "nature": "Timid",
+        "item": "Life Orb",
+        "index": 407,
+    }, 
   },
   //gen 3
   "Treecko": {
@@ -2200,6 +3210,32 @@ var SETDEX_SV = {
         "item":"Sceptilite",
         "index":229,
     },
+    "Fushia City Brendan": {
+        "level": 68,
+        "ability": "Technician",
+        "moves":[
+            "Dragon Dance",
+            "Bullet Seed",
+            "Dual Chop",
+            "High Horsepower",
+        ],
+        "nature":"Jolly",
+        "item":"Sceptilite",
+        "index":389,
+    },
+     "Route 23 Brendan": {
+        "level": 82,
+        "ability": "Technician",
+        "moves":[
+            "Dual Chop",
+            "Bullet Seed",
+            "Earthquake",
+            "Swords Dance",
+        ],
+        "nature":"Jolly",
+        "item":"Sceptilite",
+        "index":539,
+      },
   },
   "Torchic":{   
   },
@@ -2220,13 +3256,39 @@ var SETDEX_SV = {
         "index":302,
     },
   },
-  "Blaziken-Mega":{   
+  "Blaziken-Mega":{ 
+    "Cinnebar Island May": {
+        "level": 73,
+        "ability": "Speed Boost",
+        "moves": [
+            "Flare Blitz",
+            "Close Combat",
+            "Thunder Punch",
+            "Swords Dance"
+        ],
+        "nature": "Jolly",
+        "item":"Blazikenite",
+        "index": 438,
+    }, 
   },
   "Mudskip":{   
   },
   "Marshtomp":{   
   },
-  "Swampert":{   
+  "Swampert":{  
+   "Route 16 Biker Camron": {
+        "level": 65,
+        "ability": "Damp",
+        "moves":[
+            "Stealth Rock",
+            "Flip Turn",
+            "Earthquake",
+            "Yawn", 
+        ],
+        "nature":"Sassy",
+        "item":"Rindo Berry",
+        "index":354,
+    }, 
   },
   "Swampert-Mega":{ 
     "Saffron City Dumbass Kid": {
@@ -2498,6 +3560,19 @@ var SETDEX_SV = {
   "Ninjask":{   
   },
   "Shedinja":{   
+     "Ace Trainer Naomi": {
+        "level": 85,
+        "ability": "Wonder Guard",
+        "moves":[
+            "Will-O-Wisp",
+            "Poltergeist",
+            "Shadow Sneak",
+            "X-Scissor",
+        ],
+        "nature":"Adamant",
+        "item":"Focus Sash",
+        "index":542,
+      },
   },
   "Whismur":{   
   },
@@ -2534,6 +3609,19 @@ var SETDEX_SV = {
         "item":"Flame Orb",
         "index": 113,
     }, 
+    "Biker Lao B2B2B w/Koji & Luke": {
+        "level": 67,
+        "ability": "Thick Fat",
+        "moves":[
+            "Fake Out",
+            "Knock Off",
+            "Drain Punch",
+            "Heavy Slam", 
+        ],
+        "nature":"Careful",
+        "item":"Assault Vest",
+        "index":347,
+    },
   },
   "Azurill":{   
   },
@@ -2589,14 +3677,66 @@ var SETDEX_SV = {
         "item":"Mawilite",
         "index":225,
     },
+    "Arianna B2B w/Archer": {
+        "level": 79,
+        "ability": "Huge Power",
+        "moves":[
+            "Play Rough",
+            "Sucker Punch",
+            "Double Iron Bash",
+            "Fire Fang",
+        ],
+        "nature":"Adamant",
+        "item":"Mawilite",
+        "index": 493,
+    }, 
   },
   "Aron":{   
+    "Route 16 Biker Hideo": {
+        "level": 1,
+        "ability": "Sturdy",
+        "moves":[
+            "Endeavor",
+            "",
+            "",
+            "", 
+        ],
+        "nature": "Bashful",
+        "item":"Shell Bell",
+        "index":364,
+    }, 
   },
   "Lairon":{   
   },
   "Aggron":{   
+    "Cinnebar Island May": {
+        "level": 73,
+        "ability": "Sturdy",
+        "moves": [
+            "Stone Edge",
+            "Heavy Slam",
+            "Heat Crash",
+            "Endeavor"
+        ],
+        "nature": "Adamant",
+        "item":"Custap Berry",
+        "index": 433,
+    },
   },
   "Aggron-Mega":{   
+    "Leader Jasmine": {
+        "level": 73,
+        "ability": "Filter",
+        "moves": [
+            "Curse",
+            "Heavy Slam",
+            "Rest",
+            "Sleep Talk"
+        ],
+        "nature": "Careful",
+        "item":"Aggronite",
+        "index": 432,
+    },
   },
   "Meditite": {
     "Viridian Forest Brendan": {
@@ -2719,11 +3859,37 @@ var SETDEX_SV = {
   },
   "Sharpedo":{   
   },
-  "Sharpedo-Mega":{   
+  "Sharpedo-Mega":{  
+    "Cerulean Cave Grunt 2": {
+        "level": 79,
+        "ability": "Strong Jaw",
+        "moves":[
+            "Aqua Fang",
+            "Crunch",
+            "Close Combat",
+            "Aqua Jet",
+        ],
+        "nature": "Jolly",
+        "item":"Sharpedonite",
+        "index": 484,
+    }, 
   },
   "Wailmer":{   
   },
   "Wailord":{   
+    "Arianna B2B w/Archer": {
+        "level": 79,
+        "ability": "Blubber Defense",
+        "moves":[
+            "Bouncy Bubble",
+            "Ice Beam",
+            "Hidden Power Grass",
+            "", 
+        ],
+        "nature":"Modest",
+        "item":"Mystic Water",
+        "index": 490,
+    }, 
   },
   "Numel": {
     "Viridian Forest Brendan": {
@@ -2796,6 +3962,32 @@ var SETDEX_SV = {
   "Vibrava":{
   },
   "Flygon":{
+    "Pkmn Mansion Scientist Ted": {
+        "level": 73,
+        "ability": "Tinted Lens",
+        "moves": [
+            "Earthquake",
+            "Draco Barrage",
+            "U-turn",
+            "Stone Edge"
+        ],
+        "nature": "Naive",
+        "item":"Life Orb",
+        "index": 444,
+    }, 
+     "Ace Trainer Rolando": {
+        "level": 85,
+        "ability": "Levitate",
+        "moves":[
+            "Earthquake",
+            "Dragon Claw",
+            "Fire Punch",
+            "Dragon Dance",
+        ],
+        "nature":"Jolly",
+        "item":"Life Orb",
+        "index":547,
+      },
   },
   "Cacnea":{
     "Leader Brock": {
@@ -2813,6 +4005,19 @@ var SETDEX_SV = {
     },
   },
   "Cacturne":{
+   "Route 16 Biker Camron": {
+        "level": 66,
+        "ability": "Sand Rush",
+        "moves":[
+            "Needle Arm",
+            "Sucker Punch",
+            "Knock Off",
+            "Swords Dance", 
+        ],
+        "nature":"Jolly",
+        "item":"Life Orb",
+        "index":358,
+    },
   },
   "Swablu":{
   },
@@ -2883,6 +4088,19 @@ var SETDEX_SV = {
   "Barboach":{
   },
   "Whiscash":{
+    "Route 18 Biker William": {
+        "level": 66,
+        "ability": "Cash Splash",
+        "moves":[
+            "Wave Crash",
+            "Earthquake",
+            "Bounce",
+            "Dragon Dance",
+        ],
+        "nature":"Jolly",
+        "item":"Flyinium Z",
+        "index":367,
+    },
   },
   "Corphish": {
     "Viridian Forest Brendan": {
@@ -2955,6 +4173,19 @@ var SETDEX_SV = {
   "Feebas":{
   },
   "Milotic":{
+    "Route 18 Dragon Tamer Ramiro": {
+        "level": 66,
+        "ability": "Competitive",
+        "moves":[
+            "Bouncy Bubble",
+            "Ice Beam",
+            "Mirror Coat",
+            "Hidden Power Grass",
+        ],
+        "nature":"Modest",
+        "item":"Sitrus Berry",
+        "index":375,
+    },
   },
   "Castform":{
   },
@@ -2996,6 +4227,19 @@ var SETDEX_SV = {
   "Absol":{
   },
   "Absol-Mega":{
+    "Ace Trainer Naomi": {
+        "level": 85,
+        "ability": "Compound Eyes",
+        "moves":[
+            "Energy Ball",
+            "Volt Switch",
+            "Bug Buzz",
+            "Thunder",
+        ],
+        "nature":"Timid",
+        "item":"Focus Sash",
+        "index":543,
+      },
   },
   "Whynaut":{
   },
@@ -3004,6 +4248,45 @@ var SETDEX_SV = {
   "Glalie":{
   },
   "Glalie-Mega":{
+    "Leader Pryce Team 1": {
+        "level": 73,
+        "ability": "Refrigirate",
+        "moves": [
+            "Fake Out",
+            "Quick Attack",
+            "Earthquake",
+            "Double-Edge"
+        ],
+        "nature": "Jolly",
+        "item":"Glalitite",
+        "index": 414,
+    },
+    "Leader Pryce Team 2": {
+        "level": 73,
+        "ability": "Refrigirate",
+        "moves": [
+            "Fake Out",
+            "Quick Attack",
+            "Earthquake",
+            "Double-Edge"
+        ],
+        "nature": "Jolly",
+        "item":"Glalitite",
+        "index": 420,
+    },
+    "Leader Pryce Team 3": {
+        "level": 73,
+        "ability": "Refrigirate",
+        "moves": [
+            "Fake Out",
+            "Quick Attack",
+            "Earthquake",
+            "Double-Edge"
+        ],
+        "nature": "Jolly",
+        "item":"Glalitite",
+        "index": 426,
+    },
   },
   "Froslass":{
     "Camper Justin B2B w/ Andrew": {
@@ -3019,6 +4302,19 @@ var SETDEX_SV = {
         "item":"Light Clay",
         "index":296,
     },
+    "Pkmn Mansion Scientist Ted": {
+        "level": 73,
+        "ability": "Stakeout",
+        "moves": [
+            "Triple Axel",
+            "Poltergeist",
+            "Destiny Bond",
+            "Spikes"
+        ],
+        "nature": "Jolly",
+        "item":"Focus Sash",
+        "index": 439,
+    }, 
   },
   "Spheal":{
   },
@@ -3106,24 +4402,128 @@ var SETDEX_SV = {
   "Shelgon":{
   },
   "Salamence":{
+    "Route 18 Biker William": {
+        "level": 66,
+        "ability": "Intimidate",
+        "moves":[
+            "Hurricane",
+            "Hydro Pump",
+            "Iron Head",
+            "Earthquake",
+        ],
+        "nature":"Naive",
+        "item":"Flying Gem",
+        "index":368,
+    },
   },
   "Salamence-Mega":{
+    "Cinnabar Gym Ace Trainer Zac": {
+        "level": 76,
+        "ability": "Aerilate",
+        "moves":[
+            "Heat Wave",
+            "Double-Edge",
+            "Draco Barrage",
+            "Tailwind", 
+        ],
+        "nature": "Naive",
+        "item":"Salamencite",
+        "index": 462,
+    },
+    "Cerulean Cave Partner Lance": {
+        "level": 83,
+        "ability": "Telepathy",
+        "moves":[
+            "Flamethrower",
+            "Double-Edge",
+            "Hyper Voice",
+            "Aqua Tail", 
+        ],
+        "nature":"Naive",
+        "item":"Salamencite",
+        "index":503,
+    },
   },
   "Beldum":{
   },
   "Metang":{
   },
   "Metagross":{
+     "Ace Trainer George": {
+        "level": 85,
+        "ability": "Tough Claws",
+        "moves":[
+            "Stealth Rock",
+            "Explosion",
+            "Meteor Mash",
+            "Earthquake",
+        ],
+        "nature":"Jolly",
+        "item":"Focus Sash",
+        "index":551,
+      },
   },
   "Metagross-Mega":{
   },
   "Regirock":{
   },
   "Regice":{
+    "Route 18 Dragon Tamer Ramiro": {
+        "level": 66,
+        "ability": "Filter",
+        "moves":[
+            "Thunder",
+            "Bulldoze",
+            "Focus Blast",
+            "Freeze-Dry",
+        ],
+        "nature":"Bold",
+        "item":"Assault Vest",
+        "index":374,
+    },
   },
   "Registeel":{
   },
   "Latias":{
+    "Route 18 Dragon Tamer Ramiro": {
+        "level": 66,
+        "ability": "Levitate",
+        "moves":[
+            "Surf",
+            "Draco Barrage",
+            "Thunder Wave",
+            "Aura Sphere",
+        ],
+        "nature":"Timid",
+        "item":"Soul Dew",
+        "index":377,
+    },
+     "Route 22 Rival #2 Charmander": {
+        "level": 82,
+        "ability": "Levitate",
+        "moves":[
+            "Mist Ball",
+            "Mystical Fire",
+            "Roost",
+            "Calm Mind",
+        ],
+        "nature":"Timid",
+        "item":"Leftovers",
+        "index":527,
+      },
+     "Ace Trainer George": {
+        "level": 85,
+        "ability": "Levitate",
+        "moves":[
+            "Draco Barrage",
+            "Psyshock",
+            "Mystical Fire",
+            "Calm Mind",
+        ],
+        "nature":"Timid",
+        "item":"Dragonium Z",
+        "index":561,
+      },
   },
   "Latias-Mega":{
   },
@@ -3148,6 +4548,19 @@ var SETDEX_SV = {
   "Deoxys":{
   },
   "Deoxys-Attack":{
+    "Fushia City Brendan": {
+        "level": 68,
+        "ability": "Pressure",
+        "moves":[
+            "Psychic",
+            "Ice Beam",
+            "Extreme Speed",
+            "Fire Punch",
+        ],
+        "nature":"Naive",
+        "item":"Life Orb",
+        "index":388,
+    },
   },
   "Deoxys-Defense":{
   },
@@ -3197,6 +4610,19 @@ var SETDEX_SV = {
   "Prinplup":{
   },
   "Empoleon":{
+     "Route 23 Brendan": {
+        "level": 82,
+        "ability": "Competitive",
+        "moves":[
+            "Scald",
+            "Ice Beam",
+            "Roost",
+            "Calm Mind",
+        ],
+        "nature":"Bold",
+        "item":"Leftovers",
+        "index":536,
+      },
   },
   "Starly":{
   },
@@ -3246,6 +4672,19 @@ var SETDEX_SV = {
         "nature":"Timid",
         "item":"Focus Sash",
         "index": 131,
+    },
+    "Route 16 Biker Ruben": {
+        "level": 66,
+        "ability": "Technician",
+        "moves":[
+            "Giga Drain",
+            "Weather Ball",
+            "hidden Power Fire",
+            "Sleep Powder", 
+        ],
+        "nature":"Timid",
+        "item":"Fire Gem",
+        "index":352,
     },
   },
   "Cranidos":{
@@ -3403,6 +4842,32 @@ var SETDEX_SV = {
     },
   },
   "Garchomp": {
+   "Route 16 Biker Camron": {
+        "level": 66,
+        "ability": "Sand Veil",
+        "moves":[
+            "Earthquake",
+            "Stone Edge",
+            "Scale Shot",
+            "Swords Dance", 
+        ],
+        "nature":"Jolly",
+        "item":"Focus Sash",
+        "index":357,
+    },
+     "Route 22 Rival #2 Charmander": {
+        "level": 82,
+        "ability": "Rough Skin",
+        "moves":[
+            "Earthquake",
+            "Stone Edge",
+            "Scale Shot",
+            "Swords Dance",
+        ],
+        "nature":"Jolly",
+        "item":"Yache Berry",
+        "index":523,
+      },
   },
   "Garchomp-Mega": {
     "Silph Co. Giovanni": {
@@ -3459,6 +4924,21 @@ var SETDEX_SV = {
         "item":"Focus Sash",
         "index":215,
     },
+  },
+  "Rotom-Heat": {
+    "Route 16 Biker Hideo": {
+        "level": 66,
+        "ability": "Levitate",
+        "moves":[
+            "Overheat",
+            "Volt Switch",
+            "Hidden Power Grass",
+            "Thunder Wave", 
+        ],
+        "nature":"Timid",
+        "item":"Firium Z",
+        "index":362,
+    }, 
   },
   "Rotom-Wash": {    
     "Rocket Hideout Right Grunt": {
@@ -3561,6 +5041,21 @@ var SETDEX_SV = {
         "index": 97,
     },
   },
+  "Samurott-Hisui": {
+    "Pkmn Mansion Scientist Ted": {
+        "level": 73,
+        "ability": "Sharpness",
+        "moves": [
+            "Ceaseless Edge",
+            "Razor shell",
+            "Aqua Jet",
+            "Sacred Sword"
+        ],
+        "nature": "Jolly",
+        "item":"Mystic Water",
+        "index": 440,
+    }, 
+  },
   "Emboar": {
     "Route 13 Bird Keeper Robert": {
         "level": 66,
@@ -3575,6 +5070,19 @@ var SETDEX_SV = {
         "item":"Fire Gem",
         "index":332,
     },
+    "Pkmn Mansion Scientist Ted": {
+        "level": 73,
+        "ability": "Bull Rush",
+        "moves": [
+            "Close Combat",
+            "Flare Blitz",
+            "Wild Charge",
+            "Grass Knot"
+        ],
+        "nature": "Naive",
+        "item":"Fighting Gem",
+        "index": 442,
+    }, 
   },
   "Simisear": {
     "Cerulean City Rival Squirtle": {
@@ -3603,6 +5111,32 @@ var SETDEX_SV = {
         "item":"Choice Scarf",
         "index": 99,
     },
+    "Dumbass Jojo Fan": {
+        "level": 73,
+        "ability": "Sage Power",
+        "moves": [
+            "Fire Blast",
+            "Hidden Power Dark",
+            "Focus Blast",
+            "Scorching Sands"
+        ],
+        "nature": "Timid",
+        "item": "Choice Scarf",
+        "index": 406,
+    },
+     "Ace Trainer George": {
+        "level": 85,
+        "ability": "Sage Power",
+        "moves":[
+            "Flamethrower",
+            "Focus Blast",
+            "Grass Knot",
+            "Hidden Power Ice",
+        ],
+        "nature":"Modest",
+        "item":"Choice Scarf",
+        "index":562,
+      },
   },
   "Simisage": {
     "Cerulean City Rival Charmander": {
@@ -3796,6 +5330,19 @@ var SETDEX_SV = {
         "item":"Life Orb",
         "index":152,
     },
+    "Cinnabar Gym Ace Trainer Zac": {
+        "level": 76,
+        "ability": "Tinted Lens",
+        "moves":[
+            "Heat Wave",
+            "Air Slash",
+            "Roost",
+            "Esper Wing", 
+        ],
+        "nature": "Timid",
+        "item":"Life Orb",
+        "index": 463,
+    },
   },
   "Klinklang":{
     "Beauty Sam B2B w/ Beauty Shelly": {
@@ -3837,7 +5384,7 @@ var SETDEX_SV = {
         ],
         "nature":"Careful",
         "item":"Rocky Helmet",
-        "index":335,
+        "index":334,
     },
   },
   "Excadrill": {
@@ -3853,6 +5400,32 @@ var SETDEX_SV = {
         "nature":"Jolly",
         "item":"Focus Sash",
         "index":234,
+    },
+    "Route 16 Biker Ruben": {
+        "level": 66,
+        "ability": "Sand Rush",
+        "moves":[
+            "Earthquake",
+            "Iron Head",
+            "Stone Edge",
+            "Swords Dance", 
+        ],
+        "nature":"Adamant",
+        "item":"Air Balloon",
+        "index":350,
+    },
+    "Cinnabar Gym Ace Trainer Zac": {
+        "level": 76,
+        "ability": "Mold Breaker",
+        "moves":[
+            "High Horsepower",
+            "Iron Head",
+            "Earthquake",
+            "Rock Slide", 
+        ],
+        "nature": "Adamant",
+        "item":"Ground Gem",
+        "index": 464,
     },
   },
   "Beartic": {
@@ -3886,7 +5459,7 @@ var SETDEX_SV = {
     },
   },
   "Litleo": {
-    "Rival Route 22 Squirtle": {
+    "Rival Route 22 #1 Squirtle": {
         "level": 15,
         "ability": "Rivalry",
         "moves":[
@@ -4045,6 +5618,19 @@ var SETDEX_SV = {
         "item":"Life Orb",
         "index":219,
     },
+    "Cinnabar Gym Ace Trainer Lucy": {
+        "level": 76,
+        "ability": "Sheer Force",
+        "moves":[
+            "Flare Blitz",
+            "Rock Slide",
+            "Earthquake",
+            "U-turn", 
+        ],
+        "nature": "Jolly",
+        "item":"Life Orb'",
+        "index": 457,
+    },
   },
   "Darmanitan-Galar": {
     "Camper Justin B2B w/ Andrew": {
@@ -4075,6 +5661,19 @@ var SETDEX_SV = {
         "item":"Life Orb",
         "index":199,
     },
+     "Route 22 Rival #2 Bulbasaur": {
+        "level": 82,
+        "ability": "Levitate",
+        "moves":[
+            "Dark Pulse",
+            "Flash Cannon",
+            "Flamethrower",
+            "Nasty Plot",
+        ],
+        "nature":"Timid",
+        "item":"Darkinium Z",
+        "index":532,
+      },
   },
   "Clawitzer":{
     "Rock Tunnel Picknicker Dana": {
@@ -4147,6 +5746,19 @@ var SETDEX_SV = {
         "nature":"Adamant",
         "item":"Grassy Seed",
         "index":282,
+    },
+    "Route 15 Ace Trainer Haley": {
+        "level": 68,
+        "ability": "Unburden",
+        "moves":[
+            "Sky Attack",
+            "Acrobatics",
+            "Close Combat",
+            "Swords Dance", 
+        ],
+        "nature":"Adamant",
+        "item":"Power Herb",
+        "index":337,
     },
   },
   "Klefki": {
@@ -4234,6 +5846,19 @@ var SETDEX_SV = {
         "item":"Assault Vest",
         "index":317,
     },
+     "Route 22 Rival #2 Squirtle": {
+        "level": 82,
+        "ability": "Hydration",
+        "moves":[
+            "Thunder",
+            "Hydro Pump",
+            "Ice Beam",
+            "Rest", 
+        ],
+        "nature":"Modest",
+        "item":"Leftovers",
+        "index":520,
+      },
   },
   "Goodra-Hisui": {
   },
@@ -4266,6 +5891,19 @@ var SETDEX_SV = {
         "item":"Life Orb",
         "index":263,
     },
+     "Route 23 Brendan": {
+        "level": 82,
+        "ability": "Sheer Force",
+        "moves":[
+            "Earth Power",
+            "Rock Slide",
+            "Psychic",
+            "Hidden Power Ice",
+        ],
+        "nature":"Rash",
+        "item":"Life Orb",
+        "index":537,
+      },
   },
   "Landorus-Therian": {
     "Route 13 Bird Keeper Sebastian": {
@@ -4280,6 +5918,34 @@ var SETDEX_SV = {
         "nature":"Jolly",
         "item":"Yache Berry",
         "index":299,
+    },
+    "Archer B2B w/Arianna": {
+        "level": 79,
+        "ability": "Intimidate",
+        "moves":[
+            "Earthquake",
+            "Stone Edge",
+            "Fly",
+            "Swords Dance", 
+        ],
+        "nature":"Jolly",
+        "item":"Flyinium Z",
+        "index": 487,
+    }, 
+  },
+  "Zygarde-10%": {
+    "Biker Lao B2B2B w/Koji & Luke": {
+        "level": 66,
+        "ability": "Inner Focus",
+        "moves":[
+            "Thousand Arrows",
+            "Draco Barrage",
+            "Extreme Speed",
+            "Glare", 
+        ],
+        "nature":"Jolly",
+        "item":"Life Orb",
+        "index":346,
     },
   },
   "Zygarde-Complete":{   
@@ -4339,6 +6005,19 @@ var SETDEX_SV = {
         "item":"Throat Spray",
         "index":223,
     },
+     "Route 22 Rival #2 Bulbasaur": {
+        "level": 82,
+        "ability": "Liquid Voice",
+        "moves":[
+            "Hyper Voice",
+            "Draining Kiss",
+            "Ice Beam",
+            "Calm Mind",
+        ],
+        "nature":"Modest",
+        "item":"Leftovers",
+        "index":530,
+      },
   },
   "Incineroar": {
     "Silph Co. Arianna & Archer": {
@@ -4534,6 +6213,34 @@ var SETDEX_SV = {
         "item":"Focus Sash",
         "index":242,
     },  
+    "Fushia City Brendan": {
+        "level": 68,
+        "ability": "Electric Surge",
+        "moves":[
+            "Wild Charge",
+            "Play Rough",
+            "Rising Voltage",
+            "Grass Knot",
+        ],
+        "nature":"Naive",
+        "item":"Leftovers",
+        "index":386,
+    },
+  },
+  "Tapu Lele" : {
+    "Leader Koga": {
+        "level": 68,
+        "ability": "Twisted Spoon",
+        "moves":[
+            "Psyshock",
+            "Moonblast",
+            "Focus Blast",
+            "Hidden Power Fire",
+        ],
+        "nature":"Modest",
+        "item":"Twisted Spoon",
+        "index":396,
+    },
   },
   "Tapu Fini": {
     "Leader Sabrina": {
@@ -4548,6 +6255,29 @@ var SETDEX_SV = {
         "nature":"Quiet",
         "item":"Focus Sash",
         "index":256,
+    },
+  },
+  "Nihilego": {
+    "Fushia City Brendan": {
+        "level": 68,
+        "ability": "Beast Boost",
+        "moves":[
+            "Meteor Beam",
+            "Sludge Wave",
+            "Thunderbolt",
+            "Grass Knot",
+        ],
+        "ivs": {
+            "hp": 31,
+            "at": 31, 
+            "df": 31,  
+            "sa": 31, 
+            "sd": 21, 
+            "sp": 31
+        },
+        "nature":"Timid",
+        "item":"Focus Sash",
+        "index":385,
     },
   },
   "Kartana": {
@@ -4577,6 +6307,21 @@ var SETDEX_SV = {
         "item":"Life Orb",
         "index":283,
     },
+  },
+  "Buzzwole": {
+    "Arianna B2B w/Archer": {
+        "level": 79,
+        "ability": "Beast Boost",
+        "moves":[
+            "Drain Punch",
+            "Leech Life",
+            "Ice Punch",
+            "Victory Dance", 
+        ],
+        "nature":"Jolly",
+        "item":"Coba Berry",
+        "index": 492,
+    }, 
   },
   "Celesteela": {
     "Silph Co. Rival Squirtle": {
@@ -4618,6 +6363,32 @@ var SETDEX_SV = {
         "item":"Weakness Policy",
         "index":216,
     },
+     "Cerulean Cave Black Belt Ketchup": {
+        "level": 81,
+        "ability": "Beast Boost",
+        "moves":[
+            "Air Slash",
+            "Flamethrower",
+            "Flash Cannon",
+            "Autotomize", 
+        ],
+        "nature":"Timid",
+        "item":"Weakness Policy",
+        "index":506,
+      },
+     "Route 22 Rival #2 Squirtle": {
+        "level": 82,
+        "ability": "Beast Boost",
+        "moves":[
+            "Air Slash",
+            "Giga Drain",
+            "Iron Head",
+            "Autotomize", 
+        ],
+        "nature":"Naive",
+        "item":"Weakness Policy",
+        "index":518,
+      },
   },
   "Inteleon":{
     "Game Corner Grunt": {
@@ -4709,6 +6480,21 @@ var SETDEX_SV = {
         "index": 103,
     },
   },
+  "Cramorant-Gorging": {
+    "Route 18 Bird Keeper Jacob": {
+        "level": 68,
+        "ability": "Gulp Missile",
+        "moves":[
+            "Surf",
+            "Hurricane",
+            "Ice Beam",
+            "Roost",
+        ],
+        "nature":"Timid",
+        "item":"Focus Sash",
+        "index":370,
+    },
+  },
   "Coalossal": {
     "Celadon Gym Ace Trainer Mary": {
         "level": 44,
@@ -4769,6 +6555,21 @@ var SETDEX_SV = {
         "index":160,
     },
   },
+  "Toxtricity-Mega": {
+    "Leader Koga": {
+        "level": 68,
+        "ability": "Punk Rock",
+        "moves":[
+            "Boomburst",
+            "Overdrive",
+            "Drain Punch",
+            "Hidden Power Grass",
+        ],
+        "nature":"Rash",
+        "item":"",
+        "index":402,
+    },
+  },
   "Pincurchin":{
     "Pkmn Tower Channeler Ruth": {
         "level": 55,
@@ -4797,6 +6598,19 @@ var SETDEX_SV = {
         "nature":"Careful",
         "item":"Light Clay",
         "index":184,
+    },
+    "Cerulean Cave Grunt 2": {
+        "level": 79,
+        "ability": "Prankster",
+        "moves":[
+            "Reflect",
+            "Light Screen",
+            "Spirit Break",
+            "Darkest Lariat", 
+        ],
+        "nature": "Careful",
+        "item":"Light Clay",
+        "index": 479,
     },
   },
   "Polteageist":{
@@ -4828,6 +6642,19 @@ var SETDEX_SV = {
         "item":"Water Gem",
         "index":192,
     },
+    "Leader Pryce Team 2": {
+        "level": 73,
+        "ability": "Slush Rush",
+        "moves": [
+            "Fishious Rend",
+            "Icicle Crash",
+            "Stone Edge",
+            "Psychic Fangs"
+        ],
+        "nature": "Adamant",
+        "item":"Life Orb",
+        "index": 419,
+    },
   },
   "Dracovish": {
     "Silph Co. Giovanni": {
@@ -4843,8 +6670,21 @@ var SETDEX_SV = {
         "item":"Water Gem",
         "index":231,
     },
+   "Route 16 Biker Hideo": {
+        "level": 66,
+        "ability": "Sand Rush",
+        "moves":[
+            "Fishious Rend",
+            "Dragon Claw",
+            "Psychic Fangs",
+            "Crunch", 
+        ],
+        "nature":"Jolly",
+        "item":"Mystic Water",
+        "index":360,
+    },
   },
-  "Flapple-Gmax":{
+  "Flapple-Mega":{
     "Beauty Sam B2B w/ Beauty Shelly": {
         "level": 57,
         "ability": "Dragon's Maw",
@@ -4859,7 +6699,7 @@ var SETDEX_SV = {
         "index":245,
     }, 
   },
-  "Appletun-Gmax": {
+  "Appletun-Mega": {
     "Beauty Sam B2B w/ Beauty Shelly": {
         "level": 57,
         "ability": "Contrary",
@@ -4873,6 +6713,21 @@ var SETDEX_SV = {
         "item":"",
         "index":249,
     }, 
+  },
+  "Basculegion":{
+     "Route 22 Rival #2 Squirtle": {
+        "level": 82,
+        "ability": "Swift Swim",
+        "moves":[
+            "Wave Crash",
+            "Last Respects",
+            "Flip Turn",
+            "Zen Headbutt", 
+        ],
+        "nature":"Jolly",
+        "item":"Mystic Water",
+        "index":519,
+      },
   },
   "Basculegion-F": {
     "Route 8 Super Nerd Aidan": {
@@ -4895,7 +6750,7 @@ var SETDEX_SV = {
         "ability": "Dauntless Shield",
         "moves":[
             "Body Press",
-            "Behememoth Bash",
+            "Behemoth Bash",
             "Wild Charge",
             "Bulk Up",
         ],
@@ -4903,6 +6758,19 @@ var SETDEX_SV = {
         "item":"Rusted Shield",
         "index":254,
     },
+     "Route 22 Rival #2 Charmander": {
+        "level": 82,
+        "ability": "Dauntless Shield",
+        "moves":[
+            "Body Press",
+            "Behemoth Bash",
+            "Wild Charge",
+            "Bulk Up",
+        ],
+        "nature":"Jolly",
+        "item":"Rusted Shield",
+        "index":525,
+      },
   },
   "Glastrier":{   
     "Leader Sabrina": {
@@ -4946,6 +6814,19 @@ var SETDEX_SV = {
         "item":"Grassy Seed",
         "index":284,
     },
+     "Leader Clair": {
+        "level": 81,
+        "ability": "Soul-Heart",
+        "moves":[
+            "Moonblast",
+            "Thunderbolt",
+            "Aura Sphere",
+            "Shift Gear",
+        ],
+        "nature":"Modest",
+        "item":"Weakness Policy",
+        "index":512,
+      },
   },
   "Meowscarada":{   
     "Leader Erika Rematch": {
@@ -4975,6 +6856,21 @@ var SETDEX_SV = {
         "nature":"Bashful",
         "item":"Berry Juice",
         "index":22,
+    },
+  },
+  "Kilowattrel": {
+    "Route 18 Ace Trainer Wilton": {
+        "level": 66,
+        "ability": "Flying Gem",
+        "moves":[
+            "Thunder",
+            "Weather Ball",
+            "Hurricane",
+            "Volt Switch",
+        ],
+        "nature":"Timid",
+        "item":"Flying Gem",
+        "index":383,
     },
   },
   "Squawkabilly": {
@@ -5125,6 +7021,21 @@ var SETDEX_SV = {
         "index": 41,
     },
   },
+  "Glimmora": {
+    "Cerulean Cave Grunt 1": {
+        "level": 79,
+        "ability": "Toxic Debris",
+        "moves":[
+            "Earth Power",
+            "Spikes",
+            "Stealth Rock",
+            "Sludge Wave", 
+        ],
+        "nature": "Timid",
+        "item":"Focus Sash",
+        "index": 472,
+    },
+  },
   "Mabosstiff":{
     "Nugget Bridge Camper Ethan": {
         "level": 26,
@@ -5169,6 +7080,19 @@ var SETDEX_SV = {
         "item":"Expert Belt",
         "index": 85,
     },
+     "Ace Trainer Naomi": {
+        "level": 85,
+        "ability": "Sharpness",
+        "moves":[
+            "Aqua Cutter",
+            "Psycho Cut",
+            "Aqua Jet",
+            "Fillet Away",
+        ],
+        "nature":"Jolly",
+        "item":"Sitrus Berry",
+        "index":541,
+      },
   },
   "Tatsugiri": {
     "S.S Anne Sailor Edmond & Sailor Trevor": {
@@ -5185,6 +7109,21 @@ var SETDEX_SV = {
         "index": 106,
     },
   },
+  "Ogerpon-Wellspring": {
+    "Route 18 Bird Keeper Jacob": {
+        "level": 66,
+        "ability": "Water Absorb",
+        "moves":[
+            "Ivy Cudgel",
+            "U-turn",
+            "Power Whip",
+            "Play Rough",
+        ],
+        "nature":"Jolly",
+        "item":"Welspring Mask",
+        "index":370,
+    },
+  },
   "Ogerpon-Cornerstone": {
     "Leader Erika": {
         "level": 44,
@@ -5198,6 +7137,20 @@ var SETDEX_SV = {
         "nature":"Jolly",
         "item":"Cornerstone Mask",
         "index":157,
+    },
+    "Dumbass Jojo Fan": {
+        "level": 73,
+        "ability": "Sturdy",
+        "moves": [
+            "Horn Leech",
+            "Ivy Cudgel",
+            "Knock Off",
+            "U-turn"
+        ],
+        "nature": "Jolly",
+        "item": "Cornerstone Mask",
+        "index": 405,
+        "shiny": 1,
     },
   },
   "Ogerpon-Hearthflame": {
@@ -5244,6 +7197,19 @@ var SETDEX_SV = {
         "item":"Assault Vest",
         "index":271,
     },
+     "Leader Clair": {
+        "level": 81,
+        "ability": "Bad Company",
+        "moves":[
+            "Draco Meteor",
+            "Steel Beam",
+            "Thunderbolt",
+            "Body Press",
+        ],
+        "nature":"Timid",
+        "item":"Assault Vest",
+        "index":515,
+      },
   },
   "Cetitan": {
     "Camper Justin B2B w/ Andrew": {
@@ -5319,6 +7285,19 @@ var SETDEX_SV = {
         "item":"Assault Vest",
         "index":277,
     },
+     "Route 22 Rival #2 Bulbasaur": {
+        "level": 82,
+        "ability": "Quark Drive",
+        "moves":[
+            "Drain Punch",
+            "Knock Off",
+            "Plasma Fists",
+            "Ice Punch",
+        ],
+        "nature":"Jolly",
+        "item":"Assault Vest",
+        "index":528,
+      },
   },
   "Iron Boulder":{   
     "Leader Brock Rematch": {
@@ -5424,6 +7403,19 @@ var SETDEX_SV = {
         "item":"Leftovers",
         "index":266,
     },
+     "Route 23 Brendan": {
+        "level": 82,
+        "ability": "Scrappy",
+        "moves":[
+            "Earth Power",
+            "Blood Moon",
+            "Hyper Voice",
+            "Aura Sphere",
+        ],
+        "nature":"Timid",
+        "item":"Assault Vest",
+        "index":538,
+      },
   },
   "Jellicent":{   
     "Leader Sabrina": {
@@ -5500,7 +7492,7 @@ var SETDEX_SV = {
         "index":307,
     },
   },
-  "Alcremie-Gmax": {
+  "Alcremie-Mega": {
     "Route 13 Picknicker Susie": {
         "level": 66,
         "ability": "Self Sufficient",
@@ -5529,6 +7521,19 @@ var SETDEX_SV = {
         "item":"Focus Sash",
         "index":309,
     },
+    "Leader Koga": {
+        "level": 68,
+        "ability": "Moxie",
+        "moves":[
+            "Wicked Blow",
+            "Earthquake",
+            "Close Combat",
+            "Stone Edge",
+        ],
+        "nature":"Adamant",
+        "item":"Black Glasses",
+        "index":399,
+    },
   },
   "Chandelure":{
     "Route 13 Picknicker Alma": {
@@ -5544,6 +7549,19 @@ var SETDEX_SV = {
         "item":"Choice Scarf",
         "index":312,
     },
+     "Route 22 Rival #2 Bulbasaur": {
+        "level": 82,
+        "ability": "Shadow Tag",
+        "moves":[
+            "Hyper Voice",
+            "Flamethrower",
+            "Energy Ball",
+            "Calm Mind",
+        ],
+        "nature":"Timid",
+        "item":"Life Orb",
+        "index":531,
+      },
   },
   "Cherrim-Sunshine": {
     "Route 13 Beauty Lola & Sheila": {
@@ -5604,6 +7622,45 @@ var SETDEX_SV = {
         "item":"Ghostium Z",
         "index":324,
     },
+    "Route 18 Ace Trainer Wilton": {
+        "level": 66,
+        "ability": "Stalwart",
+        "moves":[
+            "Shadow Ball",
+            "Thunder",
+            "Draco Barrage",
+            "U-turn",
+        ],
+        "nature":"Timid",
+        "item":"Ghostium Z",
+        "index":379,
+    },
+    "Cerulean Cave Partner Lance": {
+        "level": 83,
+        "ability": "Clear Body",
+        "moves":[
+            "Spirit Shackle",
+            "Dragon Darts",
+            "Thunderbolt",
+            "Flamethrower",
+        ],
+        "nature":"Hasty",
+        "item":"Spell Tag",
+        "index":501,
+    },
+     "Cerulean Cave Black Belt Ketchup": {
+        "level": 81,
+        "ability": "Clear Body",
+        "moves":[
+            "Dragon Dance",
+            "Spirit Shackle",
+            "Dragon Darts",
+            "Iron Tail", 
+        ],
+        "nature":"Jolly",
+        "item":"Ghostium Z",
+        "index":507,
+      },
   },
   "Crustle": {
     "Route 13 Biker Jared": {
@@ -5628,7 +7685,7 @@ var SETDEX_SV = {
             "Solar Blade",
             "X-Scissor",
             "Sacred Sword",
-            "Swords dance", 
+            "Swords Dance", 
         ],
         "nature":"Adamant",
         "item":"Focus Sash",
@@ -5650,6 +7707,1086 @@ var SETDEX_SV = {
         "index":328,
     },
   },
+  "Escavalier": {
+    "Route 15 Ace Trainer Haley": {
+        "level": 68,
+        "ability": "Overcoat",
+        "moves":[
+            "Double Iron Bash",
+            "Megahorn",
+            "Close Combat",
+            "Knock Off", 
+        ],
+        "nature":"Adamant",
+        "item":"Assault Vest",
+        "index":336,
+    },
+  },
+  "Silvally": {
+    "Fushia Gym Juggler Kayden": {
+        "level": 68,
+        "ability": "Battle Armor",
+        "moves":[
+            "Explosion",
+            "Multi-Attack",
+            "Parting Shot",
+            "Shadow Claw",
+        ],
+        "nature":"Jolly",
+        "item":"Life Orb",
+        "index":394,
+    },
+  },
+  "Silvally-Fairy": {
+    "Route 15 Ace Trainer Haley": {
+        "level": 68,
+        "ability": "Battle Armor",
+        "moves":[
+            "Mutli-Attack",
+            "Thunder Wave",
+            "Parting Shot",
+            "Explosion", 
+        ],
+        "nature":"Jolly",
+        "item":"Leftovers",
+        "index":335,
+    },
+    "Cerulean Cave Giovanni": {
+        "level": 80,
+        "ability": "Battle Armor",
+        "moves":[
+            "Multi-Attack",
+            "Flamethrower",
+            "Parting Shot",
+            "Thunder Wave",
+        ],
+        "nature":"Jolly",
+        "item":"Leftovers",
+        "index":496,
+    },
+  },
+  "Sandaconda-Mega": {
+    "Route 15 Ace Trainer Haley": {
+        "level": 68,
+        "ability": "Aerilate",
+        "moves":[
+            "Earthquake",
+            "Body Slam",
+            "Coil",
+            "Glare", 
+        ],
+        "nature":"Adamant",
+        "item":"",
+        "index":340,
+    },
+  },
+  "Mienshao": {
+    "Biker Lao B2B2B w/Koji & Luke": {
+        "level": 65,
+        "ability": "Inner Focus",
+        "moves":[
+            "Fake Out",
+            "Close Combat",
+            "Knock Off",
+            "U-turn", 
+        ],
+        "nature":"Jolly",
+        "item":"Life Orb",
+        "index":341,
+    },
+  },
+  "Heliolisk": {
+    "Biker Lao B2B2B w/Koji & Luke": {
+        "level": 66,
+        "ability": "Sand Veil",
+        "moves":[
+            "Volt Switch",
+            "Boomburst",
+            "Weather Ball",
+            "Surf", 
+        ],
+        "nature":"Timid",
+        "item":"Focus Sash",
+        "index":342,
+    },
+  },
+  "Dracozolt":{
+    "Biker Lao B2B2B w/Koji & Luke": {
+        "level": 66,
+        "ability": "Sand Rush",
+        "moves":[
+            "Bolt Beak",
+            "Dragon Claw",
+            "Earthquake",
+            "Fire Blast", 
+        ],
+        "nature":"Jolly",
+        "item":"Electric Gem",
+        "index":345,
+    },
+  },
+  "Accelgor": {
+    "Route 16 Biker Ruben": {
+        "level": 65,
+        "ability": "Sheer Force",
+        "moves":[
+            "Bug Buzz",
+            "Focus Blast",
+            "Sludge Bomb",
+            "U-turn", 
+        ],
+        "nature":"Timid",
+        "item":"Life Orb",
+        "index":349,
+    },
+  },
+  "Gigalith": {
+    "Route 16 Biker Ruben": {
+        "level": 66,
+        "ability": "Sand Force",
+        "moves":[
+            "Earthquake",
+            "Explosion",
+            "Stone Edge",
+            "Body Press", 
+        ],
+        "nature":"Careful",
+        "item":"Assault Vest",
+        "index":351,
+    },
+  },
+  "Lopunny-Mega": {
+    "Route 16 Biker Ruben": {
+        "level": 66,
+        "ability": "Scrappy",
+        "moves":[
+            "Fake Out",
+            "Return",
+            "Close Combat",
+            "Triple Axel", 
+        ],
+        "nature":"Jolly",
+        "item":"Lopunnite",
+        "index":353,
+    },
+    "Pkmn Mansion Burglar Lewis": {
+        "level": 73,
+        "ability": "Scrappy",
+        "moves":[
+            "Fake Out",
+            "Return",
+            "Close Combat",
+            "Triple Axel", 
+        ],
+        "nature": "Jolly",
+        "item":"Lopunnite",
+        "index": 448,
+    }, 
+     "Ace Trainer George": {
+        "level": 85,
+        "ability": "Scrappy",
+        "moves":[
+            "Return",
+            "Fake Out",
+            "Close Combat",
+            "U-turn",
+        ],
+        "nature":"Jolly",
+        "item":"Lopunnite",
+        "index":557,
+      },
+  },
+  "Stunfisk":{
+   "Route 16 Biker Hideo": {
+        "level": 65,
+        "ability": "Sand Veil",
+        "moves":[
+            "Stealth Rock",
+            "Thunder Wave",
+            "Earth Power",
+            "Volt Switch", 
+        ],
+        "nature":"Calm",
+        "item":"Focus Sash",
+        "index":359,
+    },
+  },
+  "Greninja": {
+    "Route 16 Biker Hideo": {
+        "level": 66,
+        "ability": "Protean",
+        "moves":[
+            "U-turn",
+            "Hydro Pump",
+            "Gunk Shot",
+            "Ice Beam", 
+        ],
+        "nature": "Naive",
+        "item":"Life Orb",
+        "index":363,
+    }, 
+  },
+  "Delphox": {
+    "Cinnabar Gym Ace Trainer Derek": {
+        "level": 76,
+        "ability": "Magic Guard",
+        "moves":[
+            "Mind Blown",
+            "Psychic",
+            "Grass Knot",
+            "Shadow Ball", 
+        ],
+        "nature": "Timid",
+        "item":"Life Orb",
+        "index": 454,
+    }, 
+    "Cerulean Cave Giovanni": {
+        "level": 80,
+        "ability": "Magic Guard",
+        "moves":[
+            "Heat Wave",
+            "Expanding Force",
+            "Shadow Ball",
+            "Grass Knot",
+        ],
+        "nature":"Timid",
+        "item":"Focus Sash",
+        "index":495,
+    },
+  },
+  "Bisharp": {
+    "Route 18 Biker William": {
+        "level": 66,
+        "ability": "Defiant",
+        "moves":[
+            "Knock Off",
+            "Sucker Punch",
+            "Iron Head",
+            "Swords Dance",
+        ],
+        "nature":"Jolly",
+        "item":"Eviolite",
+        "index":366,
+    },
+  },
+  "Kingambit": {
+    "Cerulean Cave Grunt 2": {
+        "level": 79,
+        "ability": "Supreme Overlord",
+        "moves":[
+            "Sucker Punch",
+            "Knock Off",
+            "Iron Head",
+            "Swords Dance", 
+        ],
+        "nature": "Jolly",
+        "item":"Life Orb",
+        "index": 481,
+    },
+     "Route 22 Rival #2 Bulbasaur": {
+        "level": 82,
+        "ability": "Supreme Overlord",
+        "moves":[
+            "Iron Head",
+            "Knock Off",
+            "Brick Break",
+            "Swords Dance",
+        ],
+        "nature":"Adamant",
+        "item":"Chople Berry",
+        "index":529,
+      },
+  },
+  "Urshifu-Rapid-Strike": {
+    "Fushia City Brendan": {
+        "level": 68,
+        "ability": "Unseen Fist",
+        "moves":[
+            "Surging Strikes",
+            "Close Combat",
+            "Aqua Jet",
+            "U-turn",
+        ],
+        "nature":"Jolly",
+        "item":"Mystic Water",
+        "index":387,
+    },
+     "Cerulean Cave Black Belt Ketchup": {
+        "level": 81,
+        "ability": "Unseen Fist",
+        "moves":[
+            "Surging Strikes",
+            "Close Combat",
+            "Aqua Jet",
+            "Bulk Up",
+        ],
+        "nature":"Jolly",
+        "item":"Salac Berry",
+        "index":508,
+      },
+  },
+  "Urshifu": {
+     "Cerulean Cave Black Belt Ketchup": {
+        "level": 81,
+        "ability": "Unseen Fist",
+        "moves":[
+            "Wicked Blow",
+            "Close Combat",
+            "Poison Jab",
+            "U-turn",
+        ],
+        "nature":"Jolly",
+        "item":"Choice Scarf",
+        "index":509,
+      },
+  },
+  "Hatterene":{
+    "Fushia Gym Juggler Kayden": {
+        "level": 68,
+        "ability": "Magic Bounce",
+        "moves":[
+            "Misty Explosion",
+            "Psyshock",
+            "Mystical Fire",
+            "Draining Kiss",
+        ],
+        "nature":"Bold",
+        "item":"Life Orb",
+        "index":391,
+    },
+     "Ace Trainer Rolando": {
+        "level": 85,
+        "ability": "Magic Bounce",
+        "moves":[
+            "Calm Mind",
+            "Draining Kiss",
+            "Psyshock",
+            "Mystical Fire",
+        ],
+        "nature":"Modest",
+        "item":"Leftovers",
+        "index":550,
+      },
+  },
+  "Turtonator": {
+    "Fushia Gym Juggler Kayden": {
+        "level": 68,
+        "ability": "Shell Armor",
+        "moves":[
+            "Explosion",
+            "Flamethrower",
+            "Focus Blast",
+            "Dragon Pulse",
+        ],
+        "nature":"Brave",
+        "item":"Leftovers",
+        "index":393,
+    },
+  },
+  "Volcanion": {
+    "Fushia Gym Juggler Kayden": {
+        "level": 68,
+        "ability": "Water Absorb",
+        "moves":[
+            "Explosion",
+            "Steam Eruption",
+            "Flamethrower",
+            "Earth Power",
+        ],
+        "nature":"Naive",
+        "item":"Life Orb",
+        "index":395,
+    },
+     "Ace Trainer Rolando": {
+        "level": 85,
+        "ability": "Water Absorb",
+        "moves":[
+            "Steam Eruption",
+            "Flamethrower",
+            "Sludge Bomb",
+            "Earth Power",
+        ],
+        "nature":"Timid",
+        "item":"Waterium Z",
+        "index":546,
+      },
+  },
+  "Hoopa-Unbound" : {
+    "Leader Koga": {
+        "level": 68,
+        "ability": "Magician",
+        "moves":[
+            "Dark Pulse",
+            "Expanding Force",
+            "Thunderbolt",
+            "Focus Blast",
+        ],
+        "nature":"Modest",
+        "item":"Darkinium Z",
+        "index":398,
+    },
+    "Dumbass Jojo Fan": {
+        "level": 73,
+        "ability": "Magician",
+        "moves": [
+            "Drain Punch",
+            "Fire Punch",
+            "Gunk Shot",
+            "Hyperspace Fury"
+        ],
+        "nature": "Jolly",
+        "item": "Focus Sash",
+        "index":403,
+    },
+  },
+  "Chi-Yu":{
+    "Leader Koga": {
+        "level": 68,
+        "ability": "Beads Of Ruin",
+        "moves":[
+            "Dark Pulse",
+            "Flamethrower",
+            "Psychic",
+            "Hidden Power Grass",
+        ],
+        "nature":"Modest",
+        "item":"Focus Sash",
+        "index":400,
+    },
+  },
+  "Aegislash": {
+    "Dumbass Jojo Fan": {
+        "level": 73,
+        "ability": "Stance Change",
+        "moves": [
+            "Flash Cannon",
+            "King's Shield",
+            "Shadow Ball",
+            "Shadow Sneak"
+        ],
+        "nature": "Quiet",
+        "item": "Leftovers",
+        "index": 404
+    },
+  },
+  "Kyurem-Black": {    
+    "Leader Pryce Team 1": {
+        "level": 73,
+        "ability": "Teravolt",
+        "moves": [
+            "Icicle Crash",
+            "Fusion Bolt",
+            "Roost",
+            "Dragon Dance"
+        ],
+        "nature": "Jolly",
+        "item":"Icium Z",
+        "index": 412,
+    },
+    "Leader Pryce Team 2": {
+        "level": 73,
+        "ability": "Teravolt",
+        "moves": [
+            "Icicle Crash",
+            "Fusion Bolt",
+            "Roost",
+            "Dragon Dance"
+        ],
+        "nature": "Jolly",
+        "item":"Icium Z",
+        "index": 418,
+    },
+    "Leader Pryce Team 3": {
+        "level": 73,
+        "ability": "Teravolt",
+        "moves": [
+            "Icicle Crash",
+            "Fusion Bolt",
+            "Roost",
+            "Dragon Dance"
+        ],
+        "nature": "Jolly",
+        "item":"Icium Z",
+        "index": 424,
+    },
+  },
+  "Arctozolt": {    
+    "Leader Pryce Team 1": {
+        "level": 73,
+        "ability": "Slush Rush",
+        "moves": [
+            "Icicle Crash",
+            "Bolt Beak",
+            "Freeze-Dry",
+            "Low Kick"
+        ],
+        "nature": "Lonely",
+        "item":"Life Orb",
+        "index": 413,
+    },
+    "Leader Pryce Team 3": {
+        "level": 73,
+        "ability": "Slush Rush",
+        "moves": [
+            "Icicle Crash",
+            "Bolt Beak",
+            "Freeze-Dry",
+            "Low Kick"
+        ],
+        "nature": "Lonely",
+        "item":"Life Orb",
+        "index": 425,
+    },
+  },
+  "Reuniclus": {
+    "Leader Pryce Team 2": {
+        "level": 73,
+        "ability": "Regenerator",
+        "moves": [
+            "Calm Mind",
+            "Recover",
+            "Psychic",
+            "Focus Blast"
+        ],
+        "nature": "Bold",
+        "item":"Leftovers",
+        "index": 416,
+    },
+  },
+  "Gliscor": {
+    "Leader Jasmine": {
+        "level": 73,
+        "ability": "Poison Heal",
+        "moves": [
+            "Stealth Rock",
+            "High Horsepower",
+            "Protect",
+            "Toxic"
+        ],
+        "nature": "Jolly",
+        "item":"Poison Heal",
+        "index": 427,
+    },
+    "Cinnabar Gym Ace Trainer Lucy": {
+        "level": 76,
+        "ability": "Hyper Cutter",
+        "moves":[
+            "Acrobatics",
+            "Rock Slide",
+            "Earthquake",
+            "Swords Dance", 
+        ],
+        "nature": "Jolly",
+        "item":"Flying Gem",
+        "index": 458,
+    },
+     "Route 22 Rival #2 Charmander": {
+        "level": 82,
+        "ability": "Poison Heal",
+        "moves":[
+            "Swords Dance",
+            "Facade",
+            "Earthquake",
+            "Protect",
+        ],
+        "nature":"Jolly",
+        "item":"Toxic Orb",
+        "index":526,
+      },
+  },
+  "Tapu Bulu": {
+    "Leader Jasmine": {
+        "level": 73,
+        "ability": "Grassy Surge",
+        "moves": [
+            "Grassy Glide",
+            "Play Rough",
+            "Close Combat",
+            "Swords Dance"
+        ],
+        "nature": "Jolly",
+        "item":"Life Orb",
+        "index": 428,
+    },
+  },
+  "Necrozma-Dusk-Mane": {
+    "Leader Jasmine": {
+        "level": 73,
+        "ability": "Prism Armor",
+        "moves": [
+            "Sunsteel Strike",
+            "Stone Edge",
+            "High Horsepower",
+            "Dragon Dance"
+        ],
+        "nature": "Jolly",
+        "item":"Weakness Policy",
+        "index": 429,
+    },
+  },
+  "Genesect": {
+    "Leader Jasmine": {
+        "level": 73,
+        "ability": "Download",
+        "moves": [
+            "Extreme Speed",
+            "U-turn",
+            "Flamethrower",
+            "Thunderbolt"
+        ],
+        "nature": "Naive",
+        "item":"Life Orb",
+        "index": 430,
+    },
+    "Cerulean Cave Giovanni": {
+        "level": 80,
+        "ability": "Download",
+        "moves":[
+            "U-turn",
+            "Iron Head",
+            "Ice Beam",
+            "Flamethrower",
+        ],
+        "nature":"Hasty",
+        "item":"Assault Vest",
+        "index":498,
+    },
+  },
+  "Regieleki": {
+    "Cinnebar Island May": {
+        "level": 73,
+        "ability": "Transistor",
+        "moves": [
+            "Thunderbolt",
+            "Electro Ball",
+            "Volt Switch",
+            "Explosion"
+        ],
+        "nature": "Naive",
+        "item":"Life Orb",
+        "index": 435,
+    },
+  },
+  "Rillaboom": {
+    "Pkmn Mansion Burglar Lewis": {
+        "level": 73,
+        "ability": "Grassy Surge",
+        "moves": [
+            "Fake Out",
+            "Grassy Glide",
+            "U-turn",
+            "Knock Off"
+        ],
+        "nature": "Adamant",
+        "item":"Assault Vest",
+        "index": 446,
+    }, 
+  },
+  "Drapion": {
+    "Pkmn Mansion Burglar Lewis": {
+        "level": 73,
+        "ability": "Sniper",
+        "moves": [
+            "Leech Life",
+            "Poison Jab",
+            "Wicked Blow",
+            "Aqua Tail"
+        ],
+        "nature": "Jolly",
+        "item":"Life orb",
+        "index": 447,
+    }, 
+  },
+  "Spectrier": {
+    "Pkmn Mansion Burglar Lewis": {
+        "level": 73,
+        "ability": "Grim Neigh",
+        "moves":[
+            "Shadow Ball",
+            "Hidden Power Fighting",
+            "Dark Pulse",
+            "Sleep Talk", 
+        ],
+        "nature": "Timid",
+        "item":"Ghostium Z",
+        "index": 449,
+    }, 
+  },
+  "Centiskorch-Mega": {
+    "Cinnabar Gym Ace Trainer Derek": {
+        "level": 76,
+        "ability": "Mountaineer",
+        "moves":[
+            "Flare Blitz",
+            "Leech Life",
+            "Power Whip",
+            "Coil", 
+        ],
+        "nature": "Jolly",
+        "item":"",
+        "index": 455,
+    }, 
+  },
+  "Lycanroc": {
+    "Cinnabar Gym Ace Trainer Lucy": {
+        "level": 76,
+        "ability": "Steadfast",
+        "moves":[
+            "Stealth Rock",
+            "Endeavor",
+            "Accelerock",
+            "Rock Tomb", 
+        ],
+        "nature": "Jolly",
+        "item":"Focus Sash",
+        "index": 456,
+    }, 
+  },
+  "Raging Bolt": {
+    "Cinnabar Gym Ace Trainer Lucy": {
+        "level": 76,
+        "ability": "Protosynthesis",
+        "moves":[
+            "Thunderclap",
+            "Weather Ball",
+            "Volt Switch",
+            "Solar Beam", 
+        ],
+        "nature": "Jolly",
+        "item":"Assault Vest",
+        "index": 459,
+    },
+  },
+  "Cinderace": {
+    "Cinnabar Gym Ace Trainer Zac": {
+        "level": 76,
+        "ability": "Libero",
+        "moves":[
+            "Pyro Ball",
+            "High Jump Kick",
+            "Gunk Shot",
+            "Sucker Punch", 
+        ],
+        "nature": "Jolly",
+        "item":"Focus Sash",
+        "index": 461,
+    },
+  },
+  "Volcarona": {
+    "Cinnabar Gym Ace Trainer Zac": {
+        "level": 76,
+        "ability": "Flame Body",
+        "moves":[
+            "Fire Blast",
+            "Bug Buzz",
+            "Giga Drain",
+            "Psychic", 
+        ],
+        "nature": "Timid",
+        "item":"Fire Gem",
+        "index": 465,
+    },
+  },
+  "Great Tusk": {
+    "Leader Blaine": {
+        "level": 76,
+        "ability": "Protosynthesis",
+        "moves":[
+            "Headlong Rush",
+            "Knock Off",
+            "Ice Spinner",
+            "Close Combat", 
+        ],
+        "nature": "Jolly",
+        "item":"Fighting Gem",
+        "index": 467,
+    },
+  },
+  "Walking Wake": {
+    "Leader Blaine": {
+        "level": 76,
+        "ability": "Protosynthesis",
+        "moves":[
+            "Draco Barrage",
+            "Hydro Steam",
+            "Flamethrower",
+            "Sleep Talk", 
+        ],
+        "nature": "Timid",
+        "item":"Water Gem",
+        "index": 468,
+    },
+  },
+  "Sandy Shocks": {
+    "Leader Blaine": {
+        "level": 76,
+        "ability": "Protosynthesis",
+        "moves":[
+            "Earth Power",
+            "Thunderbolt",
+            "Volt Switch",
+            "Hidden Power Dark", 
+        ],
+        "nature": "Timid",
+        "item":"Shuca Berry",
+        "index": 466,
+    },
+  },
+  "Mandibuzz": {
+    "Cerulean Cave Grunt 1": {
+        "level": 79,
+        "ability": "Overcoat",
+        "moves":[
+            "Foul Play",
+            "U-turn",
+            "Roost",
+            "Toxic", 
+        ],
+        "nature": "Careful",
+        "item":"Leftovers",
+        "index": 473,
+    },
+  },
+  "Garbodor-Mega": {
+    "Cerulean Cave Grunt 1": {
+        "level": 79,
+        "ability": "Parasitic Waste",
+        "moves":[
+            "Poison Jab",
+            "Drain Punch",
+            "Fire Punch",
+            "Earthquake", 
+        ],
+        "nature": "Adamant",
+        "item":"",
+        "index": 478,
+    },
+  },
+  "Espathra": {
+    "Cerulean Cave Grunt 2": {
+        "level": 79,
+        "ability": "Speed Boost",
+        "moves":[
+            "Psychic",
+            "Dazzling Gleam",
+            "Protect",
+            "Calm Mind",
+        ],
+        "nature": "Modest",
+        "item":"Focus Sash",
+        "index": 483,
+    },
+  },
+  "Spiritomb": {
+    "Cerulean Cave Giovanni": {
+        "level": 80,
+        "ability": "Intimidate",
+        "moves":[
+            "Shadow Ball",
+            "Sucker Punch",
+            "Parting Shot",
+            "Will-O-Wisp",
+        ],
+        "nature":"Sassy",
+        "item":"Figy Berry",
+        "index":494,
+      }
+    },
+    "Dialga": {
+     "Cerulean Cave Partner Lance": {
+        "level": 83,
+        "ability": "Telepathy",
+        "moves":[
+            "Body Press",
+            "Dragon Pulse",
+            "Flash Cannon",
+            "Flamethrower",
+        ],
+        "nature":"Modest",
+        "item":"Assault Vest",
+        "index":502,
+      },
+    },
+    "Galvantula": {
+     "Cerulean Cave Black Belt Ketchup": {
+        "level": 81,
+        "ability": "Compound Eyes",
+        "moves":[
+            "Sticky Web",
+            "Thunder",
+            "Bug Buzz",
+            "Energy Ball", 
+        ],
+        "nature":"Timid",
+        "item":"Petaya Berry",
+        "index":504,
+      },
+    },
+    "Roaring Moon": {
+     "Leader Clair": {
+        "level": 81,
+        "ability": "Protosynthesis",
+        "moves":[
+            "Dragon Dance",
+            "Knock Off",
+            "Earthquake",
+            "Scale Shot",
+        ],
+        "nature":"Jolly",
+        "item":"Booster Energy",
+        "index":511,
+      },
+    },
+    "Necrozma-Ultra": {
+     "Leader Clair": {
+        "level": 81,
+        "ability": "Neuroforce",
+        "moves":[
+            "Photon Geyser",
+            "Earthquake",
+            "Dragon Hammer",
+            "Dragon Dance",
+        ],
+        "nature":"Adamant",
+        "item":"Ultranecrozium Z",
+        "index":513,
+      },
+    },
+    "Eternatus": {
+     "Leader Clair": {
+        "level": 81,
+        "ability": "Pressure",
+        "moves":[
+            "Dynamax Cannon",
+            "Meteor Beam",
+            "Flamethrower",
+            "Recover",
+        ],
+        "nature":"Timid",
+        "item":"Power Herb",
+        "index":514,
+      },
+    },
+    "Ferrothorn": {
+     "Route 22 Rival #2 Squirtle": {
+        "level": 82,
+        "ability": "Iron Barbs",
+        "moves":[
+            "Power Whipe",
+            "Gyro Ball",
+            "Thunder",
+            "Leech Seed",
+        ],
+        "nature":"Relaxed",
+        "item":"Rocky Helmet",
+        "index":517,
+      },
+    },
+    "Tyrantrum": {
+     "Route 23 Brendan": {
+        "level": 82,
+        "ability": "Rock Head",
+        "moves":[
+            "Dragon Claw",
+            "Head Smash",
+            "Earthquake",
+            "Close Combat",
+        ],
+        "nature":"Adamant",
+        "item":"Focus Sash",
+        "index":534,
+      },
+    },
+    "Maushold": {
+     "Ace Trainer Naomi": {
+        "level": 85,
+        "ability": "Technician",
+        "moves":[
+            "Population Bomb",
+            "Bullet Seed",
+            "U-turn",
+            "Beat Up",
+        ],
+        "nature":"Jolly",
+        "item":"Wide Lens",
+        "index":540,
+      },
+    },
+    "Blacephalon": {
+     "Ace Trainer Naomi": {
+        "level": 85,
+        "ability": "Beast Boost",
+        "moves":[
+            "Shadow Ball",
+            "Flamethrower",
+            "Psyshock",
+            "Calm Mind",
+        ],
+        "nature":"Timid",
+        "item":"Ghostium Z",
+        "index":544,
+      },
+    },
+    "Cyclizar": {
+     "Ace Trainer Rolando": {
+        "level": 85,
+        "ability": "Regenerator",
+        "moves":[
+            "Knock Off",
+            "Body Slam",
+            "Dragon Claw",
+            "Shed Tail",
+        ],
+        "nature":"Jolly",
+        "item":"Sitrus Berry",
+        "index":545,
+      },
+    },
+    "Pangoro": {
+     "Ace Trainer George": {
+        "level": 85,
+        "ability": "Iron Fist",
+        "moves":[
+            "Bullet Punch",
+            "Drain Punch",
+            "Wicked Blow",
+            "Sucker Punch",
+        ],
+        "nature":"Adamant",
+        "item":"Black Glasses",
+        "index":553,
+      },
+    },
+    "Stakataka": {
+     "Ace Trainer George": {
+        "level": 85,
+        "ability": "Beast Boost",
+        "moves":[
+            "Body Press",
+            "Gyro Ball",
+            "Rock Blast",
+            "Earthquake",
+        ],
+        "nature":"Sassy",
+        "item":"Assault Vest",
+        "index":559,
+      },
+    },
+    "Morpeko": {
+     "Ace Trainer George": {
+        "level": 85,
+        "ability": "Hunger Switch",
+        "moves":[
+            "Aura Wheel",
+            "Seed Bomb",
+            "Zippy Zap",
+            "Parting Shot",
+        ],
+        "nature":"Jolly",
+        "item":"Life Orb",
+        "index":560,
+      },
+    },
 };
 
 var MEGA_BASE_ABILITIES = {

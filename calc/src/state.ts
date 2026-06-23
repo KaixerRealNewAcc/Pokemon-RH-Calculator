@@ -72,6 +72,7 @@ export namespace State {
     isSaltCured?: boolean;
     isForesight?: boolean;
     isTailwind?: boolean;
+    isSwamp?: boolean;
     isTrickRoom?: boolean;
     isHelpingHand?: boolean;
     isFlowerGift?: boolean;

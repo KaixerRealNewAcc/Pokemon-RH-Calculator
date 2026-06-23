@@ -91,6 +91,7 @@ export class Side implements State.Side {
   isSaltCured: boolean;
   isForesight: boolean;
   isTailwind: boolean;
+  isSwamp: boolean;
   isTrickRoom: boolean;
   isHelpingHand: boolean;
   isFlowerGift: boolean;
@@ -119,6 +120,7 @@ export class Side implements State.Side {
     this.isSaltCured = !!side.isSaltCured;
     this.isForesight = !!side.isForesight;
     this.isTailwind = !!side.isTailwind;
+    this.isSwamp = !!side.isSwamp;
     this.isTrickRoom = !! side.isTrickRoom;
     this.isHelpingHand = !!side.isHelpingHand;
     this.isFlowerGift = !!side.isFlowerGift;

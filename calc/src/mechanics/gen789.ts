@@ -169,14 +169,14 @@ export function calculateSMSSSV(
     'Keen Eye', 'Leaf Guard', 'Levitate', 'Light Metal',
     'Lightning Rod', 'Limber', 'Magic Bounce', 'Magma Armor',
     'Marvel Scale', "Mind's Eye", 'Mirror Armor', 'Motor Drive',
-    'Multiscale', 'Oblivious', 'Overcoat', 'Own Tempo',
+    'Multiscale', 'Blubber Defense', 'Oblivious', 'Overcoat', 'Own Tempo',
     'Pastel Veil', 'Punk Rock', 'Purifying Salt', 'Queenly Majesty',
     'Sand Veil', 'Sap Sipper', 'Shell Armor', 'Shield Dust',
     'Simple', 'Snow Cloak', 'Solid Rock', 'Soundproof',
     'Sticky Hold', 'Storm Drain', 'Sturdy', 'Suction Cups',
     'Sweet Veil', 'Tangled Feet', 'Telepathy', 'Tera Shell',
     'Thermal Exchange', 'Thick Fat', 'Unaware', 'Vital Spirit',
-    'Volt Absorb', 'Water Absorb', 'Water Bubble', 'Water Veil',
+    'Volt Absorb', 'Water Absorb', 'Water Bubble', 'Cash Splash' , 'Water Veil',
     'Well-Baked Body', 'White Smoke', 'Wind Rider', 'Wonder Guard',
     'Wonder Skin'
   );
@@ -1420,6 +1420,7 @@ export function calculateAtModsSMSSSV(
     atMods.push(8192);
     desc.attackerAbility = attacker.ability;
   } else if (
+    (defender.hasAbility('Cash Splash') && move.hasType('Water')) ||
     (attacker.hasAbility('Water Bubble') && move.hasType('Water')) ||
     (attacker.hasAbility('Huge Power', 'Pure Power') && move.category === 'Physical') ||
     (attacker.hasAbility('Feline Prowess') && move.category === 'Special')
@@ -1447,6 +1448,7 @@ export function calculateAtModsSMSSSV(
   }
 
   if ((defender.hasAbility('Thick Fat') && move.hasType('Fire', 'Ice')) ||
+      (defender.hasAbility('Cash Splash') && move.hasType('Fire')) ||
       (defender.hasAbility('Water Bubble') && move.hasType('Fire')) ||
      (defender.hasAbility('Purifying Salt') && move.hasType('Ghost'))) {
     atMods.push(2048);
@@ -1747,7 +1749,7 @@ export function calculateFinalModsSMSSSV(
     finalMods.push(8192);
   }
 
-  if (defender.hasAbility('Multiscale', 'Shadow Shield') &&
+  if (defender.hasAbility('Multiscale', 'Shadow Shield', "Blubber Defense") &&
       defender.curHP() === defender.maxHP() &&
       hitCount === 0 &&
       (!field.defenderSide.isSR && (!field.defenderSide.spikes || defender.hasType('Flying')) ||

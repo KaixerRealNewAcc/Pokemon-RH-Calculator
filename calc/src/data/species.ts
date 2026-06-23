@@ -1575,7 +1575,7 @@ const ADV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
   Butterfree: {abilities: {0: 'Compound Eyes'}},
   Caterpie: {abilities: {0: 'Shield Dust'}},
   Chansey: {abilities: {0: 'Natural Cure'}},
-  Charizard: {abilities: {0: 'Blaze'}},
+  Charizard: {abilities: {0: 'Solar Power'}},
   Charmander: {abilities: {0: 'Blaze'}},
   Charmeleon: {abilities: {0: 'Blaze'}},
   Clefable: {abilities: {0: 'Cute Charm'}},
@@ -10709,6 +10709,7 @@ const ZA_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 };
 
 const RR_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
+  "Gengar": {abilities: {0: 'Levitate'}},
   Aegislash: {
     types: ['Steel', 'Ghost'],
     bs: {hp: 60, at: 50, df: 140, sa: 50, sd: 140, sp: 60},
