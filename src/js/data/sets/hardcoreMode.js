@@ -8352,6 +8352,21 @@ var SETDEX_SV = {
         "index":498,
     },
   },
+  "Iron Leaves": {     
+    "Ace Trainer Colby": {
+        "level": 85,
+        "ability": "Sharpness",
+        "moves":[
+            "Leaf Blade",
+            "Psycho Cut",
+            "Sacred Sword",
+            "Swords Dance"
+        ],
+        "nature":"Jolly",
+        "item":"Scope Lens",
+        "index":565,
+      },
+  },
   "Regieleki": {
     "Cinnebar Island May": {
         "level": 73,
@@ -8785,6 +8800,21 @@ var SETDEX_SV = {
         "nature":"Jolly",
         "item":"Life Orb",
         "index":560,
+      },
+    },
+    "Diancie-Mega": {
+     "Ace Trainer Colby": {
+        "level": 85,
+        "ability": "Magic Bounce",
+        "moves":[
+            "Moonblast",
+            "Diamond Storm",
+            "Earth Power",
+            "Misty Explosion"
+        ],
+        "nature":"Timid",
+        "item":"Diancite",
+        "index":564,
       },
     },
 };

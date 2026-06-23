@@ -275,9 +275,10 @@ $(".mode").change(function () {
 	var mode = params.get('mode');
 	if(mode === 'hardcore'){
 		window.location.replace('hardcore' + linkExtension + '?' + params);
-	}
-	else if(mode === 'normal'){
+	} else if(mode === 'normal'){
 		window.location.replace('normal' + linkExtension + '?' + params);
+	} else if ($('brilliantblue').prop('checked')) {
+		window.location.replace('brilliantblue' + linkExtension + '?' + params);
 	}
 });
 
@@ -306,6 +307,10 @@ $(document).ready(function () {
 			} else if ($('hardcore').prop('checked')) {
 				if(m === 'normal') {
 					window.location.replace('normal' + linkExtension + '?' + params);
+				}
+			} else if ($('brilliantblue').prop('checked')) {
+				if(m === 'brilliantblue') {
+					window.location.replace('brilliantblue' + linkExtension + '?' + params);
 				}
 			}
 		}

@@ -65,6 +65,8 @@ if (process.argv[2] !== 'view') {
 cpdir('src', 'dist');
 cpdir('calc/dist', 'dist/calc');
 makeCachebuster('src/index.html', 'dist/index.html');
-makeCachebuster('dist/hardcore.html', 'dist/hardcore.html');
-makeCachebuster('src/index.html', 'dist/normal.html');
+makeCachebuster('src/hardcore.html', 'dist/hardcore.html');
+makeCachebuster('src/normal.html', 'dist/normal.html');
+//Brilliant Blue
+makeCachebuster('src/brilliantblue.html', 'dist/brilliantblue.html');
 
