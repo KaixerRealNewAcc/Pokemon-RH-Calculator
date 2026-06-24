@@ -686,6 +686,9 @@ function sortmons(a, b) {
 $(".set-selector").change(function () {
 	window.NO_CALC = true;
 	var fullSetName = $(this).val();
+	var params = new URLSearchParams(window.location.search);
+	params.set('mode', $(this).attr("id"));
+	var mode = params.get('mode');
 	if ($(this).hasClass('opposing')) {
 		topPokemonIcon(fullSetName, $("#p2mon")[0])
 		CURRENT_TRAINER_POKS = get_trainer_poks(fullSetName)
@@ -694,29 +697,35 @@ $(".set-selector").change(function () {
 		var trpoktag_html = ""
 		var pok
 
-		var weather = "clear";
-		for (var newWeather in flagsRR.weather) {
-			if (flagsRR.weather[newWeather].includes(CURRENT_TRAINER)) {
-				weather = newWeather;
-				break;
+		if(($('hardcore').prop('checked'))) 
+		{
+			if(m === 'brilliantblue') {
+				var weatherRR = "clear";
+				for (var newWeatherRR in flagsRR.weather) {if (flagsRR.weather[newWeatherRR].includes(CURRENT_TRAINER)) { weatherRR = newWeatherRR; break;} }
+
+				var terrainRR = "none";
+				for (var newTerrainRR in flagsRR.terrain){ if (flagsRR.terrain[newTerrainRR].includes(CURRENT_TRAINER)) { terrainRR = newTerrainRR; break; } }
+
+				if (weatherRR) $(`#${weatherRR}`).prop("checked", true).change();
+				if (terrainRR) $(`#${terrainRR}`).prop("checked", true).change();
+				$('#trickroom').prop("checked", CURRENT_TRAINER == "Leader Sabrina");
+				$('#solidRockR').prop("checked", CURRENT_TRAINER == "Leader Brock Rematch");
+				$('#tailwindR').prop("checked", CURRENT_TRAINER == "Leader Koga");
+				$('#swampR').prop("checked", CURRENT_TRAINER == "Route 22 Rival #2 Bulbasaur");
+			}
+
+		} else if ($('brilliantblue').prop('checked')) {
+			if(m === 'brilliantblue') {
+				var weatherBB = "clear";
+				for (var newWeatherBB in flagsBB.weather){ if (flagsBB.weather[newWeatherBB].includes(CURRENT_TRAINER)) { weatherBB = newWeatherBB; break; }}
+
+				var terrainBB = "none";
+				for (var newTerrainBB in flagsBB.terrain){ if (flagsBB.terrain[newTerrainBB].includes(CURRENT_TRAINER)) { terrainBB = newTerrainBB; break; }}
+
+				if (weatherBB) $(`#${weatherBB}`).prop("checked", true).change();
+				if (terrainBB) $(`#${terrainBB}`).prop("checked", true).change();
 			}
 		}
-
-		var terrain = "none";
-		for (var newTerrain in flagsRR.terrain) {
-			if (flagsRR.terrain[newTerrain].includes(CURRENT_TRAINER)) {
-				terrain = newTerrain;
-				break;
-			}
-		}
-
-		
-		if (weather) $(`#${weather}`).prop("checked", true).change();
-		if (terrain) $(`#${terrain}`).prop("checked", true).change();
-		$('#trickroom').prop("checked", CURRENT_TRAINER == "Leader Sabrina");
-		$('#solidRockR').prop("checked", CURRENT_TRAINER == "Leader Brock Rematch");
-		$('#tailwindR').prop("checked", CURRENT_TRAINER == "Leader Koga");
-		$('#swampR').prop("checked", CURRENT_TRAINER == "Route 22 Rival #2 Bulbasaur");
 
 
 		for (i in next_poks) {
@@ -1650,7 +1659,8 @@ var RANDDEX = [
 	GEN8RANDSETS,
 	GEN9RANDSETS,
 ];
-var gen, genWasChanged, notation, pokedex, setdex, flagsRR, randdex, typeChart, moves, abilities, items, calcHP, calcStat, GENERATION;
+
+var gen, genWasChanged, notation, pokedex, setdex, flagsRR, flagsBB, randdex, typeChart, moves, abilities, items, calcHP, calcStat, GENERATION;
 
 TR_NAMES = get_trainer_names()
 
@@ -1681,6 +1691,7 @@ $(".gen").change(function () {
 	setdex = SETDEX[gen];
 	randdex = RANDDEX[gen];
 	flagsRR = FLAGS_RR;
+	flagsBB = FLAGS_BB;
 	typeChart = calc.TYPE_CHART[gen];
 	moves = calc.MOVES[gen];
 	items = calc.ITEMS[gen];

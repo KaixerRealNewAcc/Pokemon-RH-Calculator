@@ -277,7 +277,7 @@ $(".mode").change(function () {
 		window.location.replace('hardcore' + linkExtension + '?' + params);
 	} else if(mode === 'normal'){
 		window.location.replace('normal' + linkExtension + '?' + params);
-	} else if ($('brilliantblue').prop('checked')) {
+	} else if (mode === 'brilliantblue') {
 		window.location.replace('brilliantblue' + linkExtension + '?' + params);
 	}
 });

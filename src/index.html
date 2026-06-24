@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
+    <meta name="color-scheme" content="dark">
     <title>Pok&eacute;mon Radical Red Calculator By Kaixer.</title>
     <link type="text/css" rel="stylesheet" href="./js/vendor/select2/select2.css" />
     <link type="text/css" rel="stylesheet" href="./css/main.css?" />
@@ -10,6 +11,15 @@
     <link type="text/css" rel="stylesheet" href="./css/vendor/bootstrap.css" />
     <link type="text/css" rel="stylesheet" href="./css/dark-theme.css" id="dark-theme-styles">
     <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script>
+        params = new URLSearchParams(window.location.search)
+        SOURCES = { "RRNormal": "Radical Red Normal Mode",
+       "RRHardcore": "Radical Red Hardcore Mode",
+       "BrilliantBlue": "Brilliant Blue", }
+        if (SOURCES[params.get('data')]) {
+            TITLE = SOURCES[params.get('data')] || "NONE"
+            document.title = TITLE + " Calculator" }
+    </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-26211653-3"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -23,27 +33,13 @@
             return false;
         };
     </script>
-    <!-- Immediately loads the dark theme in order to reduce FOIT -->
-    <script>
-        /*
-        * localStorage will only store strings
-        * This means that if it has the value 'false',
-        * It will be truey and incorrectly cause the
-        * dark theme to load.
-        */
-        if (localStorage.getItem('darkTheme') !== 'true') {
-            document.getElementById('dark-theme-styles').disabled = true;
-        }
-    </script>
 </head>
 
 <body class="dark-theme">
     <div class="hide" id="popup-container"></div>
 
-<div class="wrapper" id="calc-wrapper">
-        <span class="title-text"><legend align="center">Pok&eacute;mon Radical Red Calculator By Kaixer.</legend></span>
-        <span class="title-text"><legend align="center">For simplicity sake, the calc always assumes you are at the level cap</legend></span>
-        <span class="title-text"><legend align="center">and the calc uses the chronological order for bosses.</legend></span>
+    <div class="wrapper" id="calc-wrapper">
+        <span class="title-text">Pok&eacute;mon Radical Red Calculator By Kaixer.</span>
         <div class="settings" aria-label="Settings" role="region">
             <span class="tabSelection" aria-labelledby="tabSelectionInstruction" role="radiogroup" title="Select the current tab.">
                 <span class="visually-hidden" id="tabSelectionInstruction">Select the current tab.</span>
@@ -52,13 +48,33 @@
             </span>
         <span class="genSelection" aria-labelledby="selectGenInstruction" role="radiogroup" title="Select the generation.">
             <span class="visually-hidden" id="selectGenInstruction">Select the generation.</span>
+            <input class="gen visually-hidden" type="radio" name="gen" value="1" id="gen1" />
+            <input class="gen visually-hidden" type="radio" name="gen" value="2" id="gen2" />
+            <input class="gen visually-hidden" type="radio" name="gen" value="3" id="gen3" />
+            <input class="gen visually-hidden" type="radio" name="gen" value="4" id="gen4" />
+            <input class="gen visually-hidden" type="radio" name="gen" value="5" id="gen5" />
+            <input class="gen visually-hidden" type="radio" name="gen" value="6" id="gen6" />
+            <input class="gen visually-hidden" type="radio" name="gen" value="7" id="gen7" />
+            <input class="gen visually-hidden" type="radio" name="gen" value="7" id="gen7" />
             <input class="gen visually-hidden" type="radio" name="gen" value="9" id="gen9" checked="checked" />
         </span>
-        <span class="notationSelection" aria-labelledby="selectNotationInstruction" role="radiogroup" title="Select the output notation.">
-            <span class="visually-hidden" id="selectNotationInstruction">Select the output notation.</span>
-            <input class="notation visually-hidden" type="radio" name="notation" id="pixels" value="px" />
-            <input class="notation visually-hidden" type="radio" name="notation" id="percentage" value="%" />
-        </span>
+        <select class="calc-select">
+                    
+                    <optgroup label="Romhacks">
+                        <option selected="selected" >Rom Hacks</option>
+                        <option data-source="https://kaixernewrealacc.github.io/Pokemon-RH-Calculator/?data=RRNormal">Radical Red Normal Mode</option>
+                        <option data-source="https://kaixernewrealacc.github.io/Pokemon-RH-Calculator/?data=RRHardcore">Radical Red Hardcore Mode</option>
+                        <option data-source="https://kaixernewrealacc.github.io/Pokemon-RH-Calculator/?data=BrilliantDiamond">Brilliant Blue</option>
+                    </optgroup>
+                        
+                    
+
+                    <optgroup label="Vanilla Games">
+                    </optgroup>
+                    
+                </select>
+            </div>
+            <hr />
             <span class="modeSelection" aria-labelledby="selectModeInstruction" role="radiogroup" title="Select the calculator's mode of function.">
                 <span class="visually-hidden" id="selectModeInstruction">Select the calculator's mode of function.</span>
                 <input class="mode visually-hidden" type="radio" name="mode" id="normal" checked="checked" /><label class="btn btn-left" for="normal">Normal</label>

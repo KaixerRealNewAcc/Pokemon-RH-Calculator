@@ -5,11 +5,23 @@
     <meta charset="UTF-8" />
     <title>Pok&eacute;mon Brilliant Blue Calculator By Kaixer.</title>
     <link type="text/css" rel="stylesheet" href="./js/vendor/select2/select2.css" />
-    <link type="text/css" rel="stylesheet" href="./css/BrilliantBlue/mainBB.css" />
+    <link type="text/css" rel="stylesheet" href="./css/BrilliantBlue/main.css?" />
     <link type="text/css" rel="stylesheet" href="./css/settings.css?" />
     <link type="text/css" rel="stylesheet" href="./css/vendor/bootstrap.css" />
-    <link type="text/css" rel="stylesheet" href="./css/BrilliantBlue/dark-themeBB.css" id="dark-theme-stylesBB">
+    <link type="text/css" rel="stylesheet" href="./css/BrilliantBlue/dark-theme.css" id="dark-theme-stylesBB">
     <!-- Global site tag (gtag.js) - Google Analytics -->
+   <script>
+        params = new URLSearchParams(window.location.search)
+        SOURCES = { "RRNormal": "Radical Red Normal Mode",
+       "RRHardcore": "Radical Red Hardcore Mode",
+       "BrilliantBlue": "Brilliant Blue",
+    }
+        if (SOURCES[params.get('data')]) {
+            TITLE = SOURCES[params.get('data')] || "NONE"
+            document.title = TITLE + " Calculator"
+            
+    }
+    </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-26211653-3"></script>
     <script>
         window.dataLayer = window.dataLayer || [];

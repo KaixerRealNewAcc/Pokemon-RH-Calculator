@@ -105,18 +105,45 @@ const FLAGS_RR = {
     },
 };
 
-function getTagBattle(trainerName) {
-    for (var i in Object.values(FLAGS_RR.battleType.tag)) {
-        var battle = Object.values(FLAGS_RR.battleType.tag)[i];
-        if (battle.enemy1 == trainerName || battle.enemy2 == trainerName) return battle;
-    }
-    return undefined;
-}
+const FLAGS_BB = {
+       weather: { //Also counts as terrain (?)
+        "": [],
+        clear: [],
+        sun: [
+            "",
+        ],
+        rain: [
+            "",
+        ],
+        sand: [
+            "Camper Liam",
+            "Camper Beth",
+            "Gym Leader Brock",
+        ],
+        snow: [
+            "",
+        ],
+    },
+    terrain: {
+        "": [],
+        none: [],
+        electric: [
+            "",
+        ],
+        grassy: [
+            "",
+        ],
+        misty: [
+            "",
+        ],
+        psychic: [
+            "",
+        ],
+    },
+    battleType: {
+        trueDouble: {
+            "": {},
+        },
+    },     
+};
 
-function getDoubleBattle(trainerName) {
-    for (var i in Object.values(FLAGS_RR.battleType.double)) {
-        var battle = Object.values(FLAGS_RR.battleType.double)[i];
-        if (battle.enemy1 == trainerName || battle.enemy2 == trainerName) return battle;
-    }
-    return undefined;
-}
