@@ -689,6 +689,30 @@ $(".set-selector").change(function () {
 	var params = new URLSearchParams(window.location.search);
 	params.set('mode', $(this).attr("id"));
 	var mode = params.get('mode');
+
+   $(document).on('click', '#clear-filters', function(){
+		params = new URLSearchParams(window.location.search)
+		SOURCES = { "RRNormal": "Radical Red Normal Mode",
+		"RRHardcore": "Radical Red Hardcore Mode",
+		"BrilliantBlue": "Brilliant Blue", }
+
+		if (SOURCES[params.get('data')]) {
+			TITLE = SOURCES[params.get('data')] || "NONE"
+
+			$('.genSelection').hide()
+
+		} else {
+			TITLE = "NONE"
+		}
+	});
+
+	$(document).on('change', '.calc-select', function() {
+			var calc_url = $('.calc-select option:selected').attr('data-source')
+			if (calc_url) {
+				location.href = $('.calc-select option:selected').attr('data-source')
+			}
+	})
+
 	if ($(this).hasClass('opposing')) {
 		topPokemonIcon(fullSetName, $("#p2mon")[0])
 		CURRENT_TRAINER_POKS = get_trainer_poks(fullSetName)
@@ -697,9 +721,6 @@ $(".set-selector").change(function () {
 		var trpoktag_html = ""
 		var pok
 
-		if(($('hardcore').prop('checked'))) 
-		{
-			if(m === 'brilliantblue') {
 				var weatherRR = "clear";
 				for (var newWeatherRR in flagsRR.weather) {if (flagsRR.weather[newWeatherRR].includes(CURRENT_TRAINER)) { weatherRR = newWeatherRR; break;} }
 
@@ -712,20 +733,6 @@ $(".set-selector").change(function () {
 				$('#solidRockR').prop("checked", CURRENT_TRAINER == "Leader Brock Rematch");
 				$('#tailwindR').prop("checked", CURRENT_TRAINER == "Leader Koga");
 				$('#swampR').prop("checked", CURRENT_TRAINER == "Route 22 Rival #2 Bulbasaur");
-			}
-
-		} else if ($('brilliantblue').prop('checked')) {
-			if(m === 'brilliantblue') {
-				var weatherBB = "clear";
-				for (var newWeatherBB in flagsBB.weather){ if (flagsBB.weather[newWeatherBB].includes(CURRENT_TRAINER)) { weatherBB = newWeatherBB; break; }}
-
-				var terrainBB = "none";
-				for (var newTerrainBB in flagsBB.terrain){ if (flagsBB.terrain[newTerrainBB].includes(CURRENT_TRAINER)) { terrainBB = newTerrainBB; break; }}
-
-				if (weatherBB) $(`#${weatherBB}`).prop("checked", true).change();
-				if (terrainBB) $(`#${terrainBB}`).prop("checked", true).change();
-			}
-		}
 
 
 		for (i in next_poks) {
@@ -937,7 +944,6 @@ $(".set-selector").change(function () {
 	if (pokemon && typeof applyAutoStatBoosts === "function") {
 		applyAutoStatBoosts($sel.closest(".poke-info"), fullSetName);
 	}
-
 });
 
 function formatMovePool(moves) {

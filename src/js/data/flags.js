@@ -33,6 +33,11 @@ const FLAGS_RR = {
             "Route 16 Biker Ruben",
             "Route 16 Biker Camron",
             "Route 16 Biker Hideo",
+
+            //Brilliant Blue
+            "Camper Liam",
+            "Camper Beth",
+            "Gym Leader Brock",
         ],
         snow: [
             "Route 12 Rocker Luca",

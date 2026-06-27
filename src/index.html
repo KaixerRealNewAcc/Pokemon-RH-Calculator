@@ -62,13 +62,11 @@
                     
                     <optgroup label="Romhacks">
                         <option selected="selected" >Rom Hacks</option>
-                        <option data-source="https://kaixernewrealacc.github.io/Pokemon-RH-Calculator/?data=RRNormal">Radical Red Normal Mode</option>
-                        <option data-source="https://kaixernewrealacc.github.io/Pokemon-RH-Calculator/?data=RRHardcore">Radical Red Hardcore Mode</option>
-                        <option data-source="https://kaixernewrealacc.github.io/Pokemon-RH-Calculator/?data=BrilliantDiamond">Brilliant Blue</option>
+                        <option data-source="https://kaixerrealnewacc.github.io/Pokemon-RH-Calculator/normal.html?mode=normal">Radical Red Normal Mode</option>
+                        <option data-source="https://kaixerrealnewacc.github.io/Pokemon-RH-Calculator/hardcore.html?mode=hardcore">Radical Red Hardcore Mode</option>
+                        <option data-source="https://kaixerrealnewacc.github.io/Pokemon-RH-Calculator/brilliantblue.html?mode=brilliantblue">Brilliant Blue</option>
                     </optgroup>
                         
-                    
-
                     <optgroup label="Vanilla Games">
                     </optgroup>
                     
@@ -77,9 +75,9 @@
             <hr />
             <span class="modeSelection" aria-labelledby="selectModeInstruction" role="radiogroup" title="Select the calculator's mode of function.">
                 <span class="visually-hidden" id="selectModeInstruction">Select the calculator's mode of function.</span>
-                <input class="mode visually-hidden" type="radio" name="mode" id="normal" checked="checked" /><label class="btn btn-left" for="normal">Normal</label>
-                <input class="mode visually-hidden" type="radio" name="mode" id="hardcore" /><label class="btn btn-wide btn-right" for="hardcore">Hardcore</label>
-                <input class="mode visually-hidden" type="radio" name="mode" id="brilliantblue" /><label class="btn btn-wide btn-right" for="brilliantblue">Brilliant Blue</label>
+                <input class="mode hidden" type="radio" name="mode" id="normal" checked="checked" /><label class="btn btn-left" for="normal">Normal</label>
+                <input class="mode hidden" type="radio" name="mode" id="hardcore" /><label class="btn btn-wide btn-right" for="hardcore">Hardcore</label>
+                <input class="mode hidden" type="radio" name="mode" id="brilliantblue" /><label class="btn btn-wide btn-right" for="brilliantblue">Brilliant Blue</label>
             </span>
     </div>
     <hr />
@@ -1692,7 +1690,6 @@
     <script type="text/javascript" src="./calc/util.js?"></script>
     <script type="text/javascript" src="./calc/stats.js?"></script>
     <script type="text/javascript" src="./calc/data/species.js?"></script>
-    <script type="text/javascript" src="./js/data/sets/hardcoreMode.js?"></script>
     <script type="text/javascript" src="./js/data/flags.js?"></script>
     <script type="text/javascript" src="./calc/data/types.js?"></script>
     <script type="text/javascript" src="./calc/data/natures.js?"></script>
@@ -1753,14 +1750,6 @@
         <li>
             <label class="unselectable" for="teamsOnTop">Pokemon Box On Top</label>
             <input class="" type="checkbox" name="teamsOnTop" id="teamsOnTop" aria-describedby="aiOption" checked />
-        </li>
-        <li>
-            <label class="unselectable" for="showCritPercentages">Show Crit Percentages</label>
-            <input class="" type="checkbox" name="showCritPercentages" id="showCritPercentages" aria-describedby="aiOption" checked />
-        </li>
-        <li>
-            <label class="unselectable" for="iconSizeSmall">Small Icons</label>
-            <input class="" type="checkbox" name="iconSizeSmall" id="iconSizeSmall" aria-describedby="aiOption" checked />
         </li>
         <li><a href="https://twitch.tv/kaixerreal" class="links-lighten" target="_blank">Follow my Twitch! cause why not.</a></li>
     </ul>  

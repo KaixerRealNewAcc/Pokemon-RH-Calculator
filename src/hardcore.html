@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
+    <meta name="color-scheme" content="dark">
     <title>Pok&eacute;mon Radical Red Calculator By Kaixer.</title>
     <link type="text/css" rel="stylesheet" href="./js/vendor/select2/select2.css" />
     <link type="text/css" rel="stylesheet" href="./css/main.css?" />
@@ -10,6 +11,15 @@
     <link type="text/css" rel="stylesheet" href="./css/vendor/bootstrap.css" />
     <link type="text/css" rel="stylesheet" href="./css/dark-theme.css" id="dark-theme-styles">
     <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script>
+        params = new URLSearchParams(window.location.search)
+        SOURCES = { "RRNormal": "Radical Red Normal Mode",
+       "RRHardcore": "Radical Red Hardcore Mode",
+       "BrilliantBlue": "Brilliant Blue", }
+        if (SOURCES[params.get('data')]) {
+            TITLE = SOURCES[params.get('data')] || "NONE"
+            document.title = TITLE + " Calculator" }
+    </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-26211653-3"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -23,52 +33,12 @@
             return false;
         };
     </script>
-    <!-- Immediately loads the dark theme in order to reduce FOIT -->
-    <script>
-        /*
-        * localStorage will only store strings
-        * This means that if it has the value 'false',
-        * It will be truey and incorrectly cause the
-        * dark theme to load.
-        */
-        if (localStorage.getItem('darkTheme') !== 'true') {
-            document.getElementById('dark-theme-styles').disabled = true;
-        }
-    </script>
 </head>
 
 <body class="dark-theme">
     <div class="hide" id="popup-container"></div>
 
-<div class="wrapper" id="calc-wrapper">
-
-    <div class="app-header-bar">
-    <div class="app-menu-dropdown">
-        <button type="button" id="app-menu-toggle" class="app-menu-cog" aria-expanded="false" aria-haspopup="true" aria-controls="app-menu-panel" title="Menu">
-            <svg class="app-menu-cog-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
-                <path d="M19.14 12.94c.04-.31.06-.63.06-.94 0-.31-.02-.63-.06-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.04.31-.07.63-.07.94s.02.63.06.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/>
-            </svg>
-        </button>
-        <div id="app-menu-panel" class="app-menu-panel" role="region" aria-label="Settings" hidden>
-            <div id="theme-picker-section" class="app-menu-row app-menu-row--theme" role="group" aria-label="Color theme">
-                <span class="app-menu-row-label">Theme</span>
-                <div class="app-menu-theme-buttons">
-                    <button type="button" class="theme-option" data-theme="original" aria-pressed="false" title="Original calculator dark colors">Original</button>
-                    <button type="button" class="theme-option" data-theme="light" aria-pressed="false">Light</button>
-                    <button type="button" class="theme-option" data-theme="dark" aria-pressed="false">Dark</button>
-                </div>
-            </div>
-            <label class="app-menu-row app-menu-toggle-row">
-                <span class="app-menu-row-label">Battle Notes</span>
-                <span class="app-menu-toggle">
-                    <input type="checkbox" id="battle-notes-toggle" class="app-menu-toggle-input" role="switch" checked />
-                    <span class="app-menu-toggle-track" aria-hidden="true"></span>
-                </span>
-            </label>
-        </div>
-    </div>
-    </div>
-
+    <div class="wrapper" id="calc-wrapper">
         <span class="title-text">Pok&eacute;mon Radical Red Calculator By Kaixer.</span>
         <div class="settings" aria-label="Settings" role="region">
             <span class="tabSelection" aria-labelledby="tabSelectionInstruction" role="radiogroup" title="Select the current tab.">
@@ -78,18 +48,36 @@
             </span>
         <span class="genSelection" aria-labelledby="selectGenInstruction" role="radiogroup" title="Select the generation.">
             <span class="visually-hidden" id="selectGenInstruction">Select the generation.</span>
+            <input class="gen visually-hidden" type="radio" name="gen" value="1" id="gen1" />
+            <input class="gen visually-hidden" type="radio" name="gen" value="2" id="gen2" />
+            <input class="gen visually-hidden" type="radio" name="gen" value="3" id="gen3" />
+            <input class="gen visually-hidden" type="radio" name="gen" value="4" id="gen4" />
+            <input class="gen visually-hidden" type="radio" name="gen" value="5" id="gen5" />
+            <input class="gen visually-hidden" type="radio" name="gen" value="6" id="gen6" />
+            <input class="gen visually-hidden" type="radio" name="gen" value="7" id="gen7" />
+            <input class="gen visually-hidden" type="radio" name="gen" value="7" id="gen7" />
             <input class="gen visually-hidden" type="radio" name="gen" value="9" id="gen9" checked="checked" />
         </span>
-        <span class="notationSelection" aria-labelledby="selectNotationInstruction" role="radiogroup" title="Select the output notation.">
-            <span class="visually-hidden" id="selectNotationInstruction">Select the output notation.</span>
-            <input class="notation visually-hidden" type="radio" name="notation" id="pixels" value="px" />
-            <input class="notation visually-hidden" type="radio" name="notation" id="percentage" value="%" />
-        </span>
+        <select class="calc-select">
+                    
+                    <optgroup label="Romhacks">
+                        <option selected="selected" >Rom Hacks</option>
+                        <option data-source="https://kaixerrealnewacc.github.io/Pokemon-RH-Calculator/normal.html?mode=normal">Radical Red Normal Mode</option>
+                        <option data-source="https://kaixerrealnewacc.github.io/Pokemon-RH-Calculator/hardcore.html?mode=hardcore">Radical Red Hardcore Mode</option>
+                        <option data-source="https://kaixerrealnewacc.github.io/Pokemon-RH-Calculator/brilliantblue.html?mode=brilliantblue">Brilliant Blue</option>
+                    </optgroup>
+                        
+                    <optgroup label="Vanilla Games">
+                    </optgroup>
+                    
+                </select>
+            </div>
+            <hr />
             <span class="modeSelection" aria-labelledby="selectModeInstruction" role="radiogroup" title="Select the calculator's mode of function.">
                 <span class="visually-hidden" id="selectModeInstruction">Select the calculator's mode of function.</span>
-                <input class="mode visually-hidden" type="radio" name="mode" id="normal" /><label class="btn btn-left" for="normal">Normal</label>
-                <input class="mode visually-hidden" type="radio" name="mode" id="hardcore" checked="checked" /><label class="btn btn-wide btn-mid" for="hardcore">Hardcore</label>
-                <input class="mode visually-hidden" type="radio" name="mode" id="brilliantblue" /><label class="btn btn-wide btn-right" for="brilliantblue">Brilliant Blue</label>
+                <input class="mode hidden" type="radio" name="mode" id="normal"/><label class="btn btn-left" for="normal">Normal</label>
+                <input class="mode hidden" type="radio" name="mode" id="hardcore" checked="checked" /><label class="btn btn-wide btn-right" for="hardcore">Hardcore</label>
+                <input class="mode hidden" type="radio" name="mode" id="brilliantblue" /><label class="btn btn-wide btn-right" for="brilliantblue">Brilliant Blue</label>
             </span>
     </div>
     <hr />
@@ -99,7 +87,7 @@
             </div>
             <div>
                 <input class="result-move visually-hidden" type="radio" name="resultMove" id="resultMoveL1" checked="checked" aria-describedby="resultDamageL1" />
-                <label class="btn btn-xxxwide btn-mid" for="resultMoveL1">Loading...</label>
+                <label class="btn btn-xxxwide btn-top" for="resultMoveL1">Loading...</label>
                 <span id="resultDamageL1">??? - ???%</span>
                 <input aria-describedby="criticalHitInstruction" class="result-move visually-hidden top-crit" type="checkbox" id="critTopL1" />
                 <label class="btn small-crit-btn" for="critTopL1" title="Force this attack to be a critical hit?">Crit</label>
@@ -120,7 +108,7 @@
             </div>
             <div>
                 <input class="result-move visually-hidden" type="radio" name="resultMove" id="resultMoveL4" aria-describedby="resultDamageL4" />
-                <label class="btn btn-xxxwide btn-mid" for="resultMoveL4">Loading...</label>
+                <label class="btn btn-xxxwide btn-bottom" for="resultMoveL4">Loading...</label>
                 <span id="resultDamageL4">??? - ???%</span>
                 <input aria-describedby="criticalHitInstruction" class="result-move visually-hidden top-crit" type="checkbox" id="critTopL4" />
                 <label class="btn small-crit-btn" for="critTopL4" title="Force this attack to be a critical hit?">Crit</label>
@@ -131,8 +119,8 @@
             </div>
             <div>
                 <input class="result-move visually-hidden" type="radio" name="resultMove" id="resultMoveR1" aria-describedby="resultDamageR1" />
-                <label class="btn btn-xxxwide btn-mid" for="resultMoveR1">Loading...</label>
-                <span  id="resultDamageR1">??? - ???%</span>
+                <label class="btn btn-xxxwide btn-top" for="resultMoveR1">Loading...</label>
+                <span id="resultDamageR1">??? - ???%</span>
                 <input aria-describedby="criticalHitInstruction" class="result-move visually-hidden top-crit" type="checkbox" id="critTopR1" />
                 <label class="btn small-crit-btn" for="critTopR1" title="Force this attack to be a critical hit?">Crit</label>
             </div>
@@ -152,7 +140,7 @@
             </div>
             <div>
                 <input class="result-move visually-hidden" type="radio" name="resultMove" id="resultMoveR4" aria-describedby="resultDamageR4" />
-                <label class="btn btn-xxxwide btn-mid" for="resultMoveR4">Loading...</label>
+                <label class="btn btn-xxxwide btn-bottom" for="resultMoveR4">Loading...</label>
                 <span id="resultDamageR4">??? - ???%</span>
                 <input aria-describedby="criticalHitInstruction" class="result-move visually-hidden top-crit" type="checkbox" id="critTopR4" />
                 <label class="btn small-crit-btn" for="critTopR4" title="Force this attack to be a critical hit?">Crit</label>
@@ -175,7 +163,7 @@
                 </legend>
                 <input type="text" class="set-selector calc-trigger player" />
                 <span id="importedSetsOptions" style="width:auto; display:none">
-                    <input type="checkbox" id="importedSets">Refresh Teams</input> 
+                    <input type="checkbox" id="importedSets"> Only show imported sets</input> 
                 </span>
                 <div class="info-group top i-f-type">
                     <div>
@@ -764,7 +752,7 @@
                     <div id ="cc-sets" hidden>
                         <input type="checkbox" name="cc-spe-border" id="cc-spe-border" checked>Speed Border
                         <input type="checkbox" name="cc-ohko-color" id="cc-ohko-color" checked>OHKO Color
-                        <input type="checkbox" name="cc-auto-refr" id="cc-auto-refr">Auto-Refresh
+                        <input type="checkbox" name="cc-auto-refr" id="cc-auto-refr" autocomplete="off">Auto-Refresh
                     </div>
                 </div>
             </fieldset>
@@ -819,12 +807,12 @@
                         <label class="btn btn-small btn-right" for="snow">Snow</label>
                     </div>
                     <div class="gen-specific g6 g7 g8 g9" title="Select the current weather condition.">
-                        <input class="visually-hidden calc-trigger" type="radio" name="weather" value="Harsh Sunshine" id="harshsunshine" />
-                        <label class="btn btn-xxxwide btn-left" for="harshsunshine">Harsh Sunshine</label>
-                        <input class="visually-hidden calc-trigger" type="radio" name="weather" value="Heavy Rain" id="heavyrain" />
-                        <label class="btn btn-xxxwide btn-mid" for="heavyrain">Heavy Rain</label>
-                        <input class="visually-hidden calc-trigger" type="radio" name="weather" value="Strong Winds" id="strongwinds" />
-                        <label class="btn btn-xxxwide btn-right" for="strongwinds">Strong Winds</label>
+                        <input class="visually-hidden calc-trigger" type="radio" name="weather" value="Harsh Sunshine" id="harsh-sunshine" />
+                        <label class="btn btn-xxxwide btn-left" for="harsh-sunshine">Harsh Sunshine</label>
+                        <input class="visually-hidden calc-trigger" type="radio" name="weather" value="Heavy Rain" id="heavy-rain" />
+                        <label class="btn btn-xxxwide btn-mid" for="heavy-rain">Heavy Rain</label>
+                        <input class="visually-hidden calc-trigger" type="radio" name="weather" value="Strong Winds" id="strong-winds" />
+                        <label class="btn btn-xxxwide btn-right" for="strong-winds">Strong Winds</label>
                     </div>
                   </div>
                 <div aria-labelledby="selectGscWeatherInstruction" class="gen-specific g2 hide" role="radiogroup" style="width: 17.8em; margin: 0 auto 5px;" title="Select the current weather condition.">
@@ -961,13 +949,13 @@
                                 <input aria-describedby="selectScreenInstruction" class="visually-hidden calc-trigger" type="checkbox" id="reflectR" />
                                 <label class="btn btn-right" for="reflectR">Reflect</label>
                             </div></td>
-                            <td><div class="left" title="Is this Pok&eacute;mon protected by Solid Rock 33%">
-                                <input aria-describedby="selectScreenInstruction" class="visually-hidden calc-trigger" type="checkbox hidden" id="solidRockR" />
-                                <label class="btn btn-left hidden" for="solidRockR">Solid Rock</label>
+                            <td><div class="right" title="Is this Pok&eacute;mon protected by Solid Rock 33%">
+                                <input aria-describedby="selectScreenInstruction" class="visually-hidden calc-trigger" type="checkbox" id="solidRockR" />
+                                <label class="btn btn-right" for="solidRockR">Solid Rock</label>
                             </div></td>
-                            <td><div class="left" title="Is this Pok&eacute;mon protected by Magnet Rise">
-                                <input aria-describedby="selectScreenInstruction" class="visually-hidden calc-trigger" type="checkbox hidden" id="magnetRiseR" />
-                                <label class="btn btn-left hidden" for="magnetRiseR">Magnet Rise</label>
+                            <td><div class="right" title="Is this Pok&eacute;mon protected by Magnet Rise">
+                                <input aria-describedby="selectScreenInstruction" class="visually-hidden calc-trigger" type="checkbox" id="magnetRiseR" />
+                                <label class="btn btn-right" for="magnetRiseR">Magnet Rise</label>
                             </div></td>
                         </tr>
                         <tr class="gen-specific g2 g3 g4 g5 g6 g7 g8 g9">
@@ -1125,15 +1113,8 @@
                 </table>
             </fieldset>
         </div>
-        <fieldset class="poke-import">
         <div aria-label="Import team" role="region">
-            <fieldset id="battle-notes-panel" class="battle-notes-box" aria-label="Battle notes" role="region" hidden>
-                <legend class="team-box-title"></legend>
-                <div>
-                    <legend align="center">Battle Notes</legend>
-                    <textarea id="battle-notes-textarea" class="battle-notes-textarea" rows="6"></textarea>
-                </div>
-            </fieldset>
+            <fieldset class="poke-import">
                 <legend align="center">Import / Export</legend>
                 <div id="import-1_wrapper" class="dataTables_wrapper no-footer">
                     <form class="import-team">
@@ -1153,7 +1134,7 @@
                 </legend>
                 <input type="text" class="set-selector calc-trigger opposing" />
                 <span id="importedSetsOptions" style="width:auto; display:none">
-                    <input type="checkbox" id="importedSets">Refresh Teams</input>
+                    <input type="checkbox" id="importedSets"> Only show imported sets</input>
                 </span>
                 <div class="info-group top i-f-o-type">
                     <div>
@@ -1672,11 +1653,18 @@
         </div>
         <div aria-label="trainer-poks" role="region">
             <fieldset class="poke-info" id="opp-trainer-mons-hc">
-                <legend align="center">Enemy Team</legend>
+                <legend align="center"> Enemy Team</legend>
                 <div class="trainer-poks">
                     <div class="trainer-pok-list-opposing">
                         <div class="trainer-pok-container">
                             <img class="trainer-pok-opposing" src="https://play.pokemonshowdown.com/sprites/gen5/charizard.png" title="Focus Blast 120">
+                            <div class="trainer-tag-opposing hide">
+                            <div id="enemy-tag" class="trainer-tag-container">
+                                <legend align="center">Tag Partner</legend>
+                                    <img class="trainer-tag-opposing" src="https://play.pokemonshowdown.com/sprites/gen5/charizard.png" title="Focus Blast 120">
+                                </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 <hr>
@@ -1690,7 +1678,6 @@
         var linkExtension = '.template.html';
     </script>
     <script type="text/javascript" src="./js/vendor/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" src="./js/app-menu.js?"></script>
     <script type="text/javascript" src="./js/vendor/select2/select2.min.js"></script>
     <script type="text/javascript" src="./js/vendor/url-search-params-0.1.2.min.js"></script>
     <script type="text/javascript">
@@ -1731,6 +1718,29 @@
     <script type="text/javascript" src="./js/moveset_import.js?"></script>
 </div>
 
+    <div class="wrapper hide" id="settings-wrapper">
+        <span class="title-text">Platinum Kaizo Damage Calculator</span>
+        <div class="settings" aria-label="Settings" role="region"></div>
+        <hr />
+        <fieldset class="settings-container">
+            <p class="label" align="center">Starter</p>
+            <span class="starterSelection" aria-labelledby="selectStarterInstruction" role="radiogroup" title="Select your starter Pokémon.">
+                <span class="visually-hidden" id="selectStarterInstruction">Select your starter Pokémon.</span>
+                <input class="visually-hidden" type="radio" name="starter" value="Grass" id="grass" checked="checked" /><label class="btn btn-wide btn-left" for="grass">Grass</label>
+                <input class="visually-hidden" type="radio" name="starter" value="Fire" id="fire" /><label class="btn btn-wide btn-mid" for="fire">Fire</label>
+                <input class="visually-hidden" type="radio" name="starter" value="Water" id="water" /><label class="btn btn-wide btn-right" for="water">Water</label>
+            </span>
+            <hr />
+            <p class="label" align="center">Theme</p>
+            <span class="themeSelection" aria-labelledby="selectThemeInstruction" role="radiogroup" title="Select the calculator theme.">
+                <span class="visually-hidden" id="selectThemeInstruction">Select the calculator theme.</span>
+                <input class="visually-hidden" type="radio" name="theme" value="Dark" id="dark" checked="checked" /><label class="btn btn-left" for="dark">Dark</label>
+                <input class="visually-hidden" type="radio" name="theme" value="Light" id="light" /><label class="btn btn-right" for="light">Light</label>
+            </span>
+            <hr />
+        </fieldset>
+    </div>
+
 <div class="credits">Modification by ForwardFeed Originaly Created by Honko, maintained by Austin and Kris, Special thanks to Hzla
     <ul>
         <li><a href="https://github.com/ForwardFeed/runbuncalc" class="links-lighten" target="_blank">Modification Repository</a></li>
@@ -1738,7 +1748,6 @@
         <li><a href="https://github.com/smogon/damage-calc/contributors" class="links-lighten" target="_blank">Smogon Contributors</a></li>
         <li><a href="https://www.smogon.com/forums/threads/pok%C3%A9mon-showdown-damage-calculator.3593546/" class="links-lighten" target="_blank">Smogon Bug Reports</a></li>
         <li><a href="https://github.com/smogon/damage-calc" class="links-lighten" target="_blank">Smogon GitHub repository</a></li></ul>
-
         <li>
             <label class="unselectable" for="teamsOnTop">Pokemon Box On Top</label>
             <input class="" type="checkbox" name="teamsOnTop" id="teamsOnTop" aria-describedby="aiOption" checked />
