@@ -987,6 +987,14 @@ table.field {
     float: right;
 }
 
+#rom-title {
+    font-size: 30px;
+    width: 600px;
+    position: absolute;
+    left: calc(50% - 300px);
+    text-align: center;
+}
+
 #popup-container {
     top: 0;
     width: 100vw;

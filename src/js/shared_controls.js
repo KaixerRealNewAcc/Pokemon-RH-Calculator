@@ -734,6 +734,10 @@ $(".set-selector").change(function () {
 				$('#tailwindR').prop("checked", CURRENT_TRAINER == "Leader Koga");
 				$('#swampR').prop("checked", CURRENT_TRAINER == "Route 22 Rival #2 Bulbasaur");
 
+		$(document).on('click', '#open-menu', function() {
+        	$('#settings-menu').toggle()
+   		})
+
 
 		for (i in next_poks) {
 			if (next_poks[i][0].includes($('input.opposing').val())) {
