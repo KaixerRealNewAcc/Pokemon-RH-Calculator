@@ -181,6 +181,21 @@ var SETDEX_SV = {
         "index": 7,
     },
    },
+   "Ledian": {
+    "Bug Catcher Colton": {
+        "level": 21,
+        "ability": "Iron Fist",
+        "moves":[
+            "Force Palm",
+            "Mach Punch",
+            "Pounce",
+            "Thunder Punch",
+        ],
+        "nature":"Jolly",
+        "item":"Punching Glove",
+        "index": 26,
+    },
+   },
    "Marill": {
     "Bug Catcher Anthony": {
         "level": 13,
