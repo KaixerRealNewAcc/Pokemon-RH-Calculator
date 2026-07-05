@@ -690,29 +690,6 @@ $(".set-selector").change(function () {
 	params.set('mode', $(this).attr("id"));
 	var mode = params.get('mode');
 
-   $(document).on('click', '#clear-filters', function(){
-		params = new URLSearchParams(window.location.search)
-		SOURCES = { "RRNormal": "Radical Red Normal Mode",
-		"RRHardcore": "Radical Red Hardcore Mode",
-		"BrilliantBlue": "Brilliant Blue", }
-
-		if (SOURCES[params.get('data')]) {
-			TITLE = SOURCES[params.get('data')] || "NONE"
-
-			$('.genSelection').hide()
-
-		} else {
-			TITLE = "NONE"
-		}
-	});
-
-	$(document).on('change', '.calc-select', function() {
-			var calc_url = $('.calc-select option:selected').attr('data-source')
-			if (calc_url) {
-				location.href = $('.calc-select option:selected').attr('data-source')
-			}
-	})
-
 	if ($(this).hasClass('opposing')) {
 		topPokemonIcon(fullSetName, $("#p2mon")[0])
 		CURRENT_TRAINER_POKS = get_trainer_poks(fullSetName)

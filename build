@@ -67,6 +67,4 @@ cpdir('calc/dist', 'dist/calc');
 makeCachebuster('index.html', 'dist/index.html');
 makeCachebuster('hardcore.html', 'dist/hardcore.html');
 makeCachebuster('normal.html', 'dist/normal.html');
-//Brilliant Blue
-makeCachebuster('brilliantblue.html', 'dist/brilliantblue.html');
 

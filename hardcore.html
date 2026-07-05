@@ -11,15 +11,6 @@
     <link type="text/css" rel="stylesheet" href="./css/vendor/bootstrap.css" />
     <link type="text/css" rel="stylesheet" href="./css/dark-theme.css" id="dark-theme-styles">
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script>
-        params = new URLSearchParams(window.location.search)
-        SOURCES = { "RRNormal": "Radical Red Normal Mode",
-       "RRHardcore": "Radical Red Hardcore Mode",
-       "BrilliantBlue": "Brilliant Blue", }
-        if (SOURCES[params.get('data')]) {
-            TITLE = SOURCES[params.get('data')] || "NONE"
-            document.title = TITLE + " Calculator" }
-    </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-26211653-3"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -39,46 +30,52 @@
     <div class="hide" id="popup-container"></div>
 
     <div class="wrapper" id="calc-wrapper">
-        <span class="title-text">Pok&eacute;mon Radical Red Calculator By Kaixer.</span>
-        <div class="settings" aria-label="Settings" role="region">
-            <span class="tabSelection" aria-labelledby="tabSelectionInstruction" role="radiogroup" title="Select the current tab.">
-                <span class="visually-hidden" id="tabSelectionInstruction">Select the current tab.</span>
-                <input class="tab visually-hidden" type="radio" name="tab" id="calc" value="calc" checked="checked" /><label class="btn btn-wide btn-left" for="calc">Calculator</label>
-                <input class="tab visually-hidden" type="radio" name="tab" id="settings" value="settings" /><label class="btn btn-right" for="settings">Settings</label>
-            </span>
-        <span class="genSelection" aria-labelledby="selectGenInstruction" role="radiogroup" title="Select the generation.">
-            <span class="visually-hidden" id="selectGenInstruction">Select the generation.</span>
-            <input class="gen visually-hidden" type="radio" name="gen" value="1" id="gen1" />
-            <input class="gen visually-hidden" type="radio" name="gen" value="2" id="gen2" />
-            <input class="gen visually-hidden" type="radio" name="gen" value="3" id="gen3" />
-            <input class="gen visually-hidden" type="radio" name="gen" value="4" id="gen4" />
-            <input class="gen visually-hidden" type="radio" name="gen" value="5" id="gen5" />
-            <input class="gen visually-hidden" type="radio" name="gen" value="6" id="gen6" />
-            <input class="gen visually-hidden" type="radio" name="gen" value="7" id="gen7" />
-            <input class="gen visually-hidden" type="radio" name="gen" value="7" id="gen7" />
-            <input class="gen visually-hidden" type="radio" name="gen" value="9" id="gen9" checked="checked" />
-        </span>
-        <select class="calc-select">
-                    
-                    <optgroup label="Romhacks">
-                        <option selected="selected" >Rom Hacks</option>
-                        <option data-source="https://kaixerrealnewacc.github.io/Pokemon-RH-Calculator/normal.html?mode=normal">Radical Red Normal Mode</option>
-                        <option data-source="https://kaixerrealnewacc.github.io/Pokemon-RH-Calculator/hardcore.html?mode=hardcore">Radical Red Hardcore Mode</option>
-                        <option data-source="https://kaixerrealnewacc.github.io/Pokemon-RH-Calculator/brilliantblue.html?mode=brilliantblue">Brilliant Blue</option>
-                    </optgroup>
-                        
-                    <optgroup label="Vanilla Games">
-                    </optgroup>
-                    
-                </select>
+
+        <div class="app-header-bar">
+        <div class="app-menu-dropdown">
+            <button type="button" id="app-menu-toggle" class="app-menu-cog" aria-expanded="false" aria-haspopup="true" aria-controls="app-menu-panel" title="Menu">
+                <svg class="app-menu-cog-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                    <path d="M19.14 12.94c.04-.31.06-.63.06-.94 0-.31-.02-.63-.06-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.04.31-.07.63-.07.94s.02.63.06.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/>
+                </svg>
+            </button>
+            <div id="app-menu-panel" class="app-menu-panel" role="region" aria-label="Settings" hidden>
+                <div id="theme-picker-section" class="app-menu-row app-menu-row--theme" role="group" aria-label="Color theme">
+                    <span class="app-menu-row-label">Theme</span>
+                    <div class="app-menu-theme-buttons">
+                        <button type="button" class="theme-option" data-theme="original" aria-pressed="false" title="Original calculator dark colors">Original</button>
+                        <button type="button" class="theme-option" data-theme="light" aria-pressed="false">Light</button>
+                        <button type="button" class="theme-option" data-theme="dark" aria-pressed="false">Dark</button>
+                    </div>
+                </div>
+                <label class="app-menu-row app-menu-toggle-row">
+                    <span class="app-menu-row-label">Battle Notes</span>
+                    <span class="app-menu-toggle">
+                        <input type="checkbox" id="battle-notes-toggle" class="app-menu-toggle-input" role="switch" />
+                        <span class="app-menu-toggle-track" aria-hidden="true"></span>
+                    </span>
+                </label>
             </div>
-            <hr />
-            <span class="modeSelection" aria-labelledby="selectModeInstruction" role="radiogroup" title="Select the calculator's mode of function.">
-                <span class="visually-hidden" id="selectModeInstruction">Select the calculator's mode of function.</span>
-                <input class="mode hidden" type="radio" name="mode" id="normal"/><label class="btn btn-left" for="normal">Normal</label>
-                <input class="mode hidden" type="radio" name="mode" id="hardcore" checked="checked" /><label class="btn btn-wide btn-right" for="hardcore">Hardcore</label>
-                <input class="mode hidden" type="radio" name="mode" id="brilliantblue" /><label class="btn btn-wide btn-right" for="brilliantblue">Brilliant Blue</label>
-            </span>
+        </div>
+        
+        <span class="title-text">Hardcore Mode</span>
+
+        <span class="genSelection hide" aria-labelledby="selectGenInstruction" role="radiogroup" title="Select the generation.">
+            <span class="visually-hidden" id="selectGenInstruction">Select the generation.</span>
+            <input class="gen visually-hidden" type="radio" name="gen" value="1" id="gen1" /><label class="btn btn-small btn-left" for="gen1">RBY</label>
+            <input class="gen visually-hidden" type="radio" name="gen" value="2" id="gen2" /><label class="btn btn-small btn-mid" for="gen2">GSC</label>
+            <input class="gen visually-hidden" type="radio" name="gen" value="3" id="gen3" /><label class="btn btn-small btn-mid" for="gen3">ADV</label>
+            <input class="gen visually-hidden" type="radio" name="gen" value="4" id="gen4" /><label class="btn btn-small btn-mid" for="gen4">DPP</label>
+            <input class="gen visually-hidden" type="radio" name="gen" value="5" id="gen5" /><label class="btn btn-small btn-mid" for="gen5">B/W</label>
+            <input class="gen visually-hidden" type="radio" name="gen" value="6" id="gen6" /><label class="btn btn-small btn-mid" for="gen6">X/Y</label>
+            <input class="gen visually-hidden" type="radio" name="gen" value="7" id="gen7" /><label class="btn btn-small btn-mid" for="gen7">S/M</label>
+            <input class="gen visually-hidden" type="radio" name="gen" value="8" id="gen8" /><label class="btn btn-small btn-right" for="gen8">S/S</label>
+            <input class="gen visually-hidden" type="radio" name="gen" value="9" id="gen9" checked="checked" /><label class="btn btn-small btn-right" for="gen9">S/V</label>
+        </span>< <!--Yes this works and looks cool!-->
+        <span class="modeSelection" aria-labelledby="selectModeInstruction" role="radiogroup" title="Select the calculator's mode of function.">
+            <span class="visually-hidden" id="selectModeInstruction">Select the calculator's mode of function.</span>
+            <input class="mode visually-hidden" type="radio" name="mode" id="normal"  /><label class="btn btn-mid" for="normal">Normal</label>
+            <input class="mode visually-hidden" type="radio" name="mode" id="hardcore" checked="checked" /><label class="btn btn-wide btn-mid" for="hardcore">Hardcore</label>
+        </span>> <!--Yes this works and looks cool!-->
     </div>
     <hr />
     <div aria-label="Move selection" class="move-result-group" role="region" title="Select a move to show detailed results.">
@@ -949,24 +946,15 @@
                                 <input aria-describedby="selectScreenInstruction" class="visually-hidden calc-trigger" type="checkbox" id="reflectR" />
                                 <label class="btn btn-right" for="reflectR">Reflect</label>
                             </div></td>
-                            <td><div class="right" title="Is this Pok&eacute;mon protected by Solid Rock 33%">
-                                <input aria-describedby="selectScreenInstruction" class="visually-hidden calc-trigger" type="checkbox" id="solidRockR" />
-                                <label class="btn btn-right" for="solidRockR">Solid Rock</label>
-                            </div></td>
-                            <td><div class="right" title="Is this Pok&eacute;mon protected by Magnet Rise">
-                                <input aria-describedby="selectScreenInstruction" class="visually-hidden calc-trigger" type="checkbox" id="magnetRiseR" />
-                                <label class="btn btn-right" for="magnetRiseR">Magnet Rise</label>
-                            </div></td>
                         </tr>
                         <tr class="gen-specific g2 g3 g4 g5 g6 g7 g8 g9">
-                            <td><div class="left" title="Is this Pok&eacute;mon protected?">
-                                <div hidden id="selectProtectInstruction">Is this Pok&eacute;mon protected?</div>
-                                <input aria-describedby="selectProtectInstruction" class="visually-hidden calc-trigger" type="checkbox" id="protectL" />
-                                <label class="btn btn-wide" for="protectL">Protect</label>
+                            <td><div class="left" title="Is this Pok&eacute;mon protected by Solid Rock 33%">
+                                <input aria-describedby="selectProtectInstruction" class="visually-hidden calc-trigger" type="checkbox" id="solidRockL" />
+                                <label class="btn btn-xxwide" for="solidRockL">Solid Rock</label>
                             </div></td>
-                            <td><div class="right" title="Is this Pok&eacute;mon protected?">
-                                <input aria-describedby="selectProtectInstruction" class="visually-hidden calc-trigger" type="checkbox" id="protectR" />
-                                <label class="btn btn-wide" for="protectR">Protect</label>
+                            <td><div class="right" title="Is this Pok&eacute;mon protected by Solid Rock 33%">
+                                <input aria-describedby="selectProtectInstruction" class="visually-hidden calc-trigger" type="checkbox" id="solidRockR" />
+                                <label class="btn btn-xxwide" for="solidRockR">Solid Rock</label>
                             </div></td>
                         </tr>
                         <tr>
@@ -981,14 +969,13 @@
                             </div></td>
                         </tr>
                         <tr class="gen-specific g2 g3 g4 g5 g6 g7 g8 g9">
-                            <td><div class="left" title="Has this Pok&eacute;mon been revealed with Foresight or Odor Sleuth?">
-                                <div hidden id="selectRevealInstruction">Has this Pok&eacute;mon been revealed with Foresight or Odor Sleuth?</div>
-                                <input aria-describedby="selectRevealInstruction" class="visually-hidden calc-trigger" type="checkbox" id="foresightL" />
-                                <label class="btn btn-wide" for="foresightL">Foresight</label>
+                            <td><div class="left" title="Is this Pok&eacute;mon protected by Magnet Rise">
+                                <input aria-describedby="selectScreenInstruction" class="visually-hidden calc-trigger" type="checkbox" id="magnetRiseL" />
+                                <label class="btn btn-xxwide" for="magnetRiseL">Magnet Rise</label>
                             </div></td>
-                            <td><div class="right" title="Has this Pok&eacute;mon been revealed with Foresight or Odor Sleuth?">
-                                <input aria-describedby="selectRevealInstruction" class="visually-hidden calc-trigger" type="checkbox" id="foresightR" />
-                                <label class="btn btn-wide" for="foresightR">Foresight</label>
+                            <td><div class="right" title="Is this Pok&eacute;mon protected by Magnet Rise">
+                                <input aria-describedby="selectScreenInstruction" class="visually-hidden calc-trigger" type="checkbox" id="magnetRiseR" />
+                                <label class="btn btn-xxwide" for="magnetRiseR">Magnet Rise</label>
                             </div></td>
                         </tr>
                         <tr class="gen-specific g3 g4 g5 g6 g7 g8 g9">
@@ -1114,7 +1101,14 @@
             </fieldset>
         </div>
         <div aria-label="Import team" role="region">
-            <fieldset class="poke-import">
+        <fieldset class="poke-import">
+            <fieldset id="battle-notes-panel" class="battle-notes-box" aria-label="Battle notes" role="region" hidden checked="checked">
+                <legend class="team-box-title"></legend>
+                <div>
+                    <legend align="center">Battle Notes</legend>
+                    <textarea id="battle-notes-textarea" class="battle-notes-textarea" rows="6"></textarea>
+                </div>
+            </fieldset>
                 <legend align="center">Import / Export</legend>
                 <div id="import-1_wrapper" class="dataTables_wrapper no-footer">
                     <form class="import-team">
@@ -1716,9 +1710,10 @@
     <script type="text/javascript" src="./js/shared_controls.js?"></script>
     <script type="text/javascript" src="./js/index_randoms_controls.js?"></script>
     <script type="text/javascript" src="./js/moveset_import.js?"></script>
+    <script type="text/javascript" src="./js/app-menu.js?"></script>
 </div>
 
-    <div class="wrapper hide" id="settings-wrapper">
+<!-- <div class="wrapper hide" id="settings-wrapper">
         <span class="title-text">Platinum Kaizo Damage Calculator</span>
         <div class="settings" aria-label="Settings" role="region"></div>
         <hr />
@@ -1739,7 +1734,7 @@
             </span>
             <hr />
         </fieldset>
-    </div>
+    </div>-->
 
 <div class="credits">Modification by ForwardFeed Originaly Created by Honko, maintained by Austin and Kris, Special thanks to Hzla
     <ul>

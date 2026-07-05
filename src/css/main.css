@@ -326,6 +326,14 @@ html, body {
 .app-menu-toggle-input:focus-visible + .app-menu-toggle-track {
     box-shadow: 0 0 0 2px #2563eb;
 }
+.app-menu-theme-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    justify-content: flex-end;
+    flex: 1 1 auto;
+    min-width: 0;
+}
 .app-menu-toggle-track {
     display: block;
     width: 36px;
