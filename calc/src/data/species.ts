@@ -6997,7 +6997,7 @@ const SM_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
     bs: {hp: 75, at: 70, df: 70, sa: 98, sd: 70, sp: 93},
     weightkg: 3.4,
     abilities: {0: 'Dancer'},
-    otherFormes: ['Oricorio-Pa\'u', 'Oricorio-Pom-Pom', 'Oricorio-Sensu'],
+    otherFormes: ['Oricorio-Pa\'u', 'Oricorio-Pom-Pom', 'Oricorio-S'],
   },
   'Oricorio-Pa\'u': {
     types: ['Psychic', 'Flying'],
@@ -7013,7 +7013,7 @@ const SM_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
     abilities: {0: 'Dancer'},
     baseSpecies: 'Oricorio',
   },
-  'Oricorio-Sensu': {
+  'Oricorio-S': {
     types: ['Ghost', 'Flying'],
     bs: {hp: 75, at: 70, df: 70, sa: 98, sd: 70, sp: 93},
     weightkg: 3.4,

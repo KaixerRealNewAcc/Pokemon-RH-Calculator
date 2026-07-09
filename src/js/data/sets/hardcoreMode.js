@@ -62,6 +62,19 @@ var SETDEX_SV = {
         "item":"Firium Z",
         "index": 460,
     },
+    "Silph Co. Rival Charmander": {
+        "level": 56,
+        "ability": "Blaze",
+        "moves":[
+            "Flare Blitz",
+            "Dragon Claw",
+            "Earthquake",
+            "Dragon Dance",
+        ],
+        "nature":"Jolly",
+        "item":"Charizardite X",
+        "index":214,
+    },
   },
   "Charizard-Mega-X": {
     "Silph Co. Rival Charmander": {
@@ -150,6 +163,19 @@ var SETDEX_SV = {
     },
   },
   "Venusaur": {
+    "Silph Co. Rival Bulbasaur": {
+        "level": 56,
+        "ability": "Overgrow",
+        "moves":[
+            "Giga Drain",
+            "Sludge Bomb",
+            "Earth Power",
+            "Sleep Powder",
+        ],
+        "nature":"Timid",
+        "item":"Venusaurite",
+        "index":220,
+    },
     "Route 13 Beauty Lola & Sheila": {
         "level": 66,
         "ability": "Chlorophyll",
@@ -236,6 +262,19 @@ var SETDEX_SV = {
     },
   },
   "Blastoise": {
+    "Silph Co. Rival Squirtle": {
+        "level": 56,
+        "ability": "Torrent",
+        "moves":[
+            "Water Pulse",
+            "Dark Pulse",
+            "Aura Sphere",
+            "Shell Smash",
+        ],
+        "nature":"Modest",
+        "item":"Blastoiseite",
+        "index":208,
+    },
   },
   "Blastoise-Mega": {
     "Silph Co. Rival Squirtle": {
@@ -1576,6 +1615,19 @@ var SETDEX_SV = {
     },
   },
   "Kangaskhan":{
+    "Rocket Hideout Giovanni": {
+        "level": 47,
+        "ability": "Inner Focus",
+        "moves":[
+            "Power-Up Punch",
+            "Body Slam",
+            "Crunch",
+            "Rock Tomb",
+        ],
+        "nature":"Jolly",
+        "item":"Kangaskhanite",
+        "index":182,
+    },
   },
   "Kangaskhan-Mega":{
     "Rocket Hideout Giovanni": {
@@ -2100,7 +2152,7 @@ var SETDEX_SV = {
     }, 
   },
   "Aerodactyl-Mega":{
-    "Leader Brock Rematch": {
+    "#Leader Brock Rematch": {
         "level": 68,
         "ability": "Tough Claws",
         "moves":[
@@ -2399,6 +2451,19 @@ var SETDEX_SV = {
   "Flaafy":{
   },
   "Ampharos":{
+    "Leader Lt. Surge": {
+        "level": 36,
+        "ability": "Plus",
+        "moves":[
+            "Volt Switch",
+            "Dragon Pulse",
+            "Focus Blast",
+            "Hidden Power Grass", 
+        ],
+        "nature":"Modest",
+        "item":"Ampharosite",
+        "index": 130,
+    },
   },
   "Ampharos-Mega":{
     "Leader Lt. Surge": {
@@ -2986,6 +3051,19 @@ var SETDEX_SV = {
     },
   },
   "Houndoom":{   
+    "Silph Co. Arianna & Archer": {
+        "level": 56,
+        "ability": "Early Bird",
+        "moves":[
+            "Fiery Wrath",
+            "Heat Wave",
+            "Scorching Sands",
+            "Pursuit",
+        ],
+        "nature":"Naive",
+        "item":"Houndoominite",
+        "index":226,
+    },
   },
   "Houndoom-Mega":{   
     "Silph Co. Arianna & Archer": {
@@ -3182,6 +3260,58 @@ var SETDEX_SV = {
         "item":"Life Orb",
         "index": 112,
     },
+    "Leader Erika": {
+        "level": 44,
+        "ability": "Overgrow",
+        "moves":[
+            "Swords Dance",
+            "Bullet Seed",
+            "Draco Barrage",
+            "High Horsepower",
+        ],
+        "nature":"Jolly",
+        "item":"Sceptilite",
+        "index":159,
+    },
+    "Silph Co. Tag Partner Brendan": {
+        "level": 55,
+        "ability": "Overgrow",
+        "moves":[
+            "Mega Drain",
+            "Dragon Breath",
+            "Focus Blast",
+            "Hidden Power Fire",
+        ],
+        "nature":"Timid",
+        "item":"Sceptilite",
+        "index":229,
+    },
+    "Fushia City Brendan": {
+        "level": 68,
+        "ability": "Overgrow",
+        "moves":[
+            "Dragon Dance",
+            "Bullet Seed",
+            "Dual Chop",
+            "High Horsepower",
+        ],
+        "nature":"Jolly",
+        "item":"Sceptilite",
+        "index":389,
+    },
+     "Route 23 Brendan": {
+        "level": 82,
+        "ability": "Overgrow",
+        "moves":[
+            "Dual Chop",
+            "Bullet Seed",
+            "Earthquake",
+            "Swords Dance",
+        ],
+        "nature":"Jolly",
+        "item":"Sceptilite",
+        "index":539,
+      },
   },
   "Sceptile-Mega":{   
     "Leader Erika": {
@@ -3662,6 +3792,19 @@ var SETDEX_SV = {
         "item":"Leftovers",
         "index": 35,
     },
+    "Silph Co. Arianna & Archer": {
+        "level": 56,
+        "ability": "Intimidate",
+        "moves":[
+            "Play Rough",
+            "Sucker Punch",
+            "Iron Head",
+            "Thunder Punch",
+        ],
+        "nature":"Adamant",
+        "item":"Mawilite",
+        "index":225,
+    },
   },
   "Mawile-Mega":{   
     "Silph Co. Arianna & Archer": {
@@ -3990,7 +4133,7 @@ var SETDEX_SV = {
       },
   },
   "Cacnea":{
-    "Leader Brock": {
+    "#Leader Brock": {
         "level": 15,
         "ability": "Sand Rush",
         "moves":[
@@ -4022,6 +4165,19 @@ var SETDEX_SV = {
   "Swablu":{
   },
   "Altaria":{
+    "Route 11 Leader Whitney": {
+        "level": 36,
+        "ability": "Natural Cure",
+        "moves":[
+            "Calm Mind",
+            "Hyper Voice",
+            "Flamethrower",
+            "Roost", 
+        ],
+        "nature":"Timid",
+        "item":"Altarianite",
+        "index": 119,
+    },
   },
   "Altaria-Mega":{
     "Route 11 Leader Whitney": {
@@ -4069,7 +4225,7 @@ var SETDEX_SV = {
     },
   },
   "Lunatone":{
-    "Leader Brock": {
+    "#Leader Brock": {
         "level": 14,
         "ability": "Levitate",
         "moves":[
@@ -4137,7 +4293,7 @@ var SETDEX_SV = {
   "Claydol":{
   },
   "Lileep":{
-    "Leader Brock": {
+    "#Leader Brock": {
         "level": 16,
         "ability": "Storm Drain",
         "moves":[
@@ -5227,7 +5383,7 @@ var SETDEX_SV = {
     },
   },
   "Hippopotas":{
-    "Leader Brock": {
+    "#Leader Brock": {
         "level": 13,
         "ability": "Sand Stream",
         "moves":[
@@ -5272,7 +5428,7 @@ var SETDEX_SV = {
     },
   },
   "Archen":{
-    "Leader Brock": {
+    "#Leader Brock": {
         "level": 14,
         "ability": "Defeatist",
         "moves":[
@@ -5878,7 +6034,7 @@ var SETDEX_SV = {
     },
   },
   "Landorus":{   
-    "Leader Brock Rematch": {
+    "#Leader Brock Rematch": {
         "level": 68,
         "ability": "Sand Force",
         "moves":[
@@ -5949,7 +6105,7 @@ var SETDEX_SV = {
     },
   },
   "Zygarde-Complete":{   
-    "Leader Brock Rematch": {
+    "#Leader Brock Rematch": {
         "level": 68,
         "ability": "Power Construct",
         "moves":[
@@ -6079,7 +6235,7 @@ var SETDEX_SV = {
         "index":21,
     },
   },
-  "Oricorio-Sensu": {
+  "Oricorio-S": {
     "Route 3 Lass Sally": {
         "level": 22,
         "ability": "Dancer",
@@ -6977,7 +7133,7 @@ var SETDEX_SV = {
     },
   },
   "Varoom":{
-    "Leader Brock": {
+    "#Leader Brock": {
         "level": 15,
         "ability": "Filter",
         "moves":[
@@ -7300,7 +7456,7 @@ var SETDEX_SV = {
       },
   },
   "Iron Boulder":{   
-    "Leader Brock Rematch": {
+    "#Leader Brock Rematch": {
         "level": 68,
         "ability": "Quark Drive",
         "moves":[
@@ -7315,7 +7471,7 @@ var SETDEX_SV = {
     },
   },
   "Iron Treads":{   
-    "Leader Brock Rematch": {
+    "#Leader Brock Rematch": {
         "level": 68,
         "ability": "Quark Drive",
         "moves":[
@@ -7390,7 +7546,7 @@ var SETDEX_SV = {
     },
   },
   "Ursaluna-Bloodmoon":{   
-    "Leader Brock Rematch": {
+    "#Leader Brock Rematch": {
         "level": 68,
         "ability": "Scappy",
         "moves":[

@@ -164,9 +164,7 @@
     <div class="panel">
         <div aria-label="Pok&eacute;mon 1" role="region">
             <fieldset class="poke-info" id="p1">
-                <legend align="center">Pok&eacute;mon 1
-                    <img id="p1mon" src="" alt="">
-                </legend>
+                <legend align="center">Pok&eacute;mon 1</legend>
                 <input type="text" class="set-selector calc-trigger player" />
                 <span id="importedSetsOptions" style="width:auto; display:none">
                     <input type="checkbox" id="importedSets"> Only show imported sets</input> 
@@ -426,7 +424,7 @@
                                 <td class="gen-specific g1 g2 hide">
                                     <input class="dvs calc-trigger" value="15" />
                                 </td>
-                                <td><span class="total">236</span>
+                                <td><span class="total totalMod">236</span>
                                 </td>
                                 <td>
                                     <select class="boost calc-trigger">
@@ -714,7 +712,7 @@
                 <hr>
                 <div>
                     <legend align="center">Trash</legend>
-                    <div id="trash-box" class="box-poke dropzone">
+                    <div id="trash-box" class="box-poke-trash dropzone">
                     </div>
                     <button class="deadzone" id="trash-pok">Remove Pokémon from the trash</button>
                     <button class="deadzone" id="clearSets">Remove Pokémon from all boxes</button>
@@ -768,8 +766,8 @@
         <div aria-label="Field information" role="region">
             <fieldset class="field-info">
                 <legend align="center">Field
-                    <img id="monSingle" src="https://raw.githubusercontent.com/May8th1995/sprites/master/Houndoom-Mega.png" alt="">
-                    <img id="monDouble" src="https://raw.githubusercontent.com/May8th1995/sprites/master/Houndoom-Mega.png" alt="" hidden>
+                    <img id="monSingle" src="https://raw.githubusercontent.com/May8th1995/sprites/master/Houndoom-Mega.png" >
+                    <img id="monDouble" src="https://raw.githubusercontent.com/May8th1995/sprites/master/Houndoom-Mega.png"  hidden>
                 </legend>
                 <div aria-labelledby="selectBattleFormatInstruction" class="gen-specific g3 g4 g5 g6 g7 g8 g9" role="radiogroup" style="width: 10.6em; margin: 0 auto 5px;" title="Select the battle format.">
                     <span class="visually-hidden" id="selectBattleFormatInstruction">Select the battle format.</span>
@@ -1142,13 +1140,12 @@
     <div class="panel">
         <div aria-label="Pok&eacute;mon 2" role="region">
             <fieldset class="poke-info" id="p2">
-                <legend align="center">Pok&eacute;mon 2
-                    <img id="p2mon" src="" alt="">
-                </legend>
+                <legend align="center">Pok&eacute;mon 2</legend>
                 <input type="text" class="set-selector calc-trigger opposing" />
                 <span id="importedSetsOptions" style="width:auto; display:none">
                     <input type="checkbox" id="importedSets"> Only show imported sets</input>
                 </span>
+                <img class="poke-sprite-opp" src="" >
                 <div class="info-group top i-f-o-type">
                     <div>
                         <label>Type</label>
@@ -1404,7 +1401,7 @@
                                 <td class="gen-specific g1 g2 hide">
                                     <input class="dvs calc-trigger" value="15" />
                                 </td>
-                                <td><span class="total">236</span>
+                                <td><span class="total totalMod">236</span>
                                 </td>
                                 <td>
                                     <select class="boost calc-trigger">

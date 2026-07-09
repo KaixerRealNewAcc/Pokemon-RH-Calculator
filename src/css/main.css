@@ -146,8 +146,6 @@ html, body {
     background-color: white;
     color: black;
     margin: 0;
-    padding: 0;
-    min-width: 100em;
 }
 
 .trainer-poks-label {
@@ -170,17 +168,105 @@ html, body {
     margin-right:  10px;
     cursor: pointer;
     box-sizing: border-box;
+    height: 48px;
 }
 
 .trainer-pok:hover {
-    outline: 3px solid;
-    outline-color: #bc321a69;
+    outline: 2px solid;
+    outline-color: #f56f5769;
+}
+
+.poke-sprite-right {
+    right: 3px;
+}
+
+.poke-sprite-opp { 
+    position: absolute;
+    max-width: 430px;
+    right: 13px;
+    top: 30px;
+    border-bottom-left-radius: 10px;
+    height: 128px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius:  20px;
+    padding: 20px;
+    z-index:  12;
+}
+
+.poke-sprite { 
+    position: absolute;
+    max-width: 430px;
+    right: 13px;
+    top: 30px;
+    border-bottom-left-radius: 10px;
+    height: 128px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius:  20px;
+    padding: 20px;
+    z-index:  12;
+    transform: scaleX(-1);
+}
+
+.poke-sprite-opp, .poke-sprite {
+    cursor: pointer;
+}
+
+.poke-sprite-opp:hover, .poke-sprite:hover {
+    border: 2px solid #f56f5769;
+}
+
+.calc-select {
+    height:  40px;
+    border-radius: 10px;
+    padding: 0px 10px;
+}
+
+select {
+    background: rgb(37, 37, 37);
+    border: 1px solid rgb(104, 104, 104);
+    color: rgb(248, 248, 242);
+    font-size: 13px;
+}
+
+/* Level and stats inputs: same border as select (Tera Type) so they are visible */
+.poke-info input.level,
+.poke-info input.base,
+.poke-info input.ivs,
+.poke-info input.evs {
+    background: rgb(37, 37, 37);
+    border: 1px solid rgb(104, 104, 104);
+    color: rgb(248, 248, 242);
+    font-size: 13px;
+}
+
+/* Set Level: same border & text as level field; override .btn:hover border */
+.poke-info .level-row-with-set-btn .set-level-from-box-btn,
+.poke-info .level-row-with-set-btn .set-level-from-box-btn:hover,
+.poke-info .level-row-with-set-btn .set-level-from-box-btn:focus-visible {
+    background: rgb(37, 37, 37);
+    border: 1px solid rgb(104, 104, 104);
+    color: rgb(248, 248, 242);
+    font-size: 13px;
+}
+
+/* Base power, Crit / Z / Commander buttons: same border as Tera Type */
+.poke-info input.move-bp,
+.poke-info .crit-btn,
+.poke-info .z-btn,
+.poke-info .commander-dondozo-btn {
+    background: rgb(37, 37, 37);
+    border: 1px solid rgb(104, 104, 104);
+    color: rgb(248, 248, 242);
+    font-size: 13px;
 }
 
 .wrapper {
     padding: 0 1em;
-    max-width: 1250px;
+    max-width: 1460px;
     margin: 30px auto 0 auto;
+    position: relative;
 }
 .app-header-bar {
     display: flex;
@@ -379,10 +465,18 @@ html, body {
 div.wrapper > div > span {
     padding-right: 5px;
 }
+.panel-wrapper {
+    display:flex;
+    justify-content: space-between;
+    min-width:  1540px;
+}
+.panel-wrapper {
+    display: flex;
+}
 fieldset {
     float: left;
     background-color: #F1F4F9;
-    border: 1px solid #310000e1;
+    border: 2px solid #310000e1;
 }
 legend {
     font-weight: bold;
@@ -396,10 +490,10 @@ th {
 }
 .title-text {
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 2em;
     margin: 0.5em 1em 0.5em 0;
     position: relative;
-    top: -5px;
+    top: 4px;
 }
 .big-text {
     text-align: left;
@@ -431,15 +525,40 @@ th {
 }
 .poke-info {
     box-sizing: content-box;
-    width: 30em;
-    max-width: 30em;
+    width: 37.5em;
+    max-width: 37.5em;
     min-width: 0;
-    overflow-x: clip;
-    border: 2px solid #310000e1 !important;
+    min-inline-size: auto;
+    border: 2px solid #310000e1;
+    float: left;
+    position: relative;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
 }
 .field-info, .poke-import {
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
     text-align: center;
     width: 27.5em;
+}
+.field-info.sun {
+    background-color: rgba(168, 71, 0, 0.15);
+}
+
+.field-info.rain {
+    background-color: rgba(26, 88, 174, 0.15);
+}
+
+.field-info.sand {
+    background-color: rgba(120, 102, 0, 0.15);
+}
+
+.field-info.snow, .field-info.hail {
+    background-color: rgba(92, 153, 153, 0.15);
+}
+
+.panel-mid {
+    flex-direction: column;
 }
 .holder-0 {
     position: absolute;
@@ -534,7 +653,7 @@ th {
 /* general button styling */
 .btn {
     text-align: center;
-    border: solid 1px #aaaaaa;
+    border: solid 1px rgba(255,255,255,0.4);
     padding: 4px 4px;
     position: relative;
     cursor: pointer;
@@ -544,6 +663,26 @@ th {
     display: inline-block;
     width: 5em;
     border-radius: 8px;
+}
+.btn-mode {
+    text-align: center;
+    border: none;
+    padding: 4px 4px;
+    position: relative;
+    cursor: pointer;
+    color: #555555;
+    background: #222222;
+    margin: -1px -3px 0;
+    display: inline-block;
+    border-radius: 8px;
+}
+.btn-mode:hover {
+    outline: 1px solid;
+    outline-color: #f56f5769;
+    color: #fd927f69;
+}
+.btn-normal {
+    width: 5em;
 }
 .btn-wide {
     width: 7em;
@@ -635,6 +774,11 @@ th {
     min-width: 50em;
     margin: 1em 0 11.5em;
 }
+
+.move-result-subgroup.results-right .btn {
+    margin-right: 0px;
+}
+
 .move-result-subgroup {
     float: left;
     width: 50%;
@@ -649,6 +793,30 @@ th {
     font-size: 0.8em;
     font-weight: bold;
     margin: 0 0 5px;
+}
+
+.resultDamage:hover {
+    outline: 2px solid;
+    outline-color: #f56f5769;
+}
+
+.results-right > div  {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.results-right > div > span {
+    margin-right: 4em;
+}
+
+.abilityToggle {
+    position: absolute;
+    top: auto;
+    bottom: 40px;
+    right: 12.3em;
+    margin: 0;
+    background: #6b6b6b;
 }
 
 /* pokemon info */
@@ -671,12 +839,44 @@ th {
 .info-group {
     margin: 1em 0;
 }
+.stat-changer {
+    width: 22px;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font-size: inherit;
+    line-height: 1;
+    white-space: nowrap;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), inset 0 -1px 2px rgba(255, 255, 255, 0.15);
+    color: #fff;
+    border: solid 1px #6b6b6b;
+    background: #6b6b6b;
+}
+.stat-changer + .stat-changer {
+    margin-left: -1px;
+}
+#p1 .stat-changer + .stat-changer {
+    margin-left: -3px;
+}
+.stat-changer:hover {
+    background: #7a7a7a;
+    background: linear-gradient(to bottom, #8a8a8a, #6a6a6a);
+    border-color: #5a5a5a;
+}
+.stat-changer:active {
+    background: linear-gradient(to bottom, #6a6a6a, #8a8a8a);
+}
 #trashFieldset {
     margin-top: 5px;
-    width: 400px;
+    width: 430px;
 }
 .set-selector {
-    width: 100%;
+    width: 65%;
 }
 .info-selectors select {
     width: 12em;
@@ -684,11 +884,21 @@ th {
 select.toxic-counter {
     width: 5.5em;
 }
+.info-group.info-selectors {
+    position: absolute;
+    right: 20px;
+    top: 195px;
+    max-width: 390px;
+}
 .move-selector, .move-bp, .move-type, .move-cat, .move-hits {
     font-size: 0.9em;
 }
 .move-selector {
-    width: 11.5em;
+    background: rgb(37, 37, 37);
+    border: 1px solid rgb(104, 104, 104);
+    color: rgb(248, 248, 242);
+    font-size: 13px;
+    width: 13.5em;
 }
 .poke-info input.move-bp {
     width: 2em;
@@ -773,7 +983,8 @@ table.field {
     box-sizing: border-box;
     font: inherit;
     color: inherit;
-    border: 1px solid #222222;
+    border: solid;
+    border-color: #333333;
     border-radius: 6px;
     padding: 8px;
     resize: vertical;
@@ -795,6 +1006,14 @@ table.field {
     min-height: 1em;
     overflow: auto;
     display: inline;
+}
+
+option {
+    color: black;
+    background: #f1f1f1;
+}
+.boost,.totalModSpe, .totalModSpd, .totalModAtk, .totalModDef, .totalModSpa {
+    margin-left: 4px;
 }
 
 .hpbar {
@@ -838,6 +1057,59 @@ table.field {
 .extraSetItems,
 .extraSetMoves {
     width: 100%;
+}
+/* Trace: optional checkbox to mirror opponent's ability */
+.trace-copy-label {
+    display: inline-flex;
+    align-items: center;
+    flex: 0 0 auto;
+    margin-top: 1px;
+    cursor: pointer;
+    user-select: none;
+}
+.trace-copy-label[hidden] {
+    display: none !important;
+}
+.trace-copy-label input.traceCopyOpponent {
+    width: 1.05em;
+    height: 1.05em;
+    margin: 0;
+    vertical-align: middle;
+}
+.ability-and-boost-wrap {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 4px;
+    flex: 0 1 auto;
+    min-width: 0;
+}
+.ability-and-boost-wrap select.ability {
+    width: 12em;
+    min-width: 12em;
+    max-width: 12em;
+    flex: 0 0 12em;
+    box-sizing: border-box;
+}
+.ability-and-boost-wrap > .select2-container {
+    width: 12em !important;
+    min-width: 12em;
+    max-width: 12em;
+    flex: 0 0 12em;
+    box-sizing: border-box;
+}
+.ability-and-boost-wrap select.boostedStat {
+    flex: 0 1 auto;
+    width: auto;
+    min-width: 7.5em;
+    max-width: 12em;
+    margin-top: 1px;
+}
+.item-row select.item {
+    margin-top: 2px;
+}
+select.status {
+    margin-top: 2px;
 }
 
 /*
@@ -918,8 +1190,25 @@ table.field {
     background: linear-gradient(to right, #daff08 50%, #dd0b0b 0%);
 }
 
-.box-poke{
-    min-height: 30px;
+.box-poke, .box-poke-trash{
+    min-height: 48px;
+}
+
+
+.right-table {
+    min-height: 100px;
+}
+
+.info-group.top {
+    min-height: 100px;
+}
+
+.info-group.left-table, .info-group.right-table {
+    margin-bottom: 0px;
+}
+
+.info-group.top.opp {
+    margin-top:  20px;
 }
 
 .deadzone:hover{
@@ -965,7 +1254,7 @@ table.field {
     float: none;
 }
 
-#p2mon, #p1mon, #monSingle, #monSprite, #monDouble {
+#monSingle, #monSprite, #monDouble {
     min-height: 32px;
 }
 
@@ -979,6 +1268,7 @@ table.field {
 
 .small-crit-btn {
     font-size: 0.8em;
+    margin-right: 0.8em;
     width: 2.5em;
     height: 1em;
     padding: 3px 3px;

@@ -120,6 +120,15 @@ $(".level").bind("keyup change", function () {
 	calcHP(poke);
 	calcStats(poke);
 });
+$(".stat-changer").on("click", function () {
+	var $row = $(this).closest("tr");
+	var $boost = $row.find("select.boost");
+	if (!$boost.length) return;
+	var delta = $(this).text().trim() === "+" ? 1 : -1;
+	var v = parseInt($boost.val(), 10) + delta;
+	v = Math.max(-6, Math.min(6, v));
+	$boost.val(v).change();
+});
 $(".nature").bind("keyup change", function () {
 	calcStats($(this).closest(".poke-info"));
 });
@@ -689,13 +698,15 @@ $(".set-selector").change(function () {
 	var params = new URLSearchParams(window.location.search);
 	params.set('mode', $(this).attr("id"));
 	var mode = params.get('mode');
+	var pokemonName = fullSetName.substring(0, fullSetName.indexOf(" ("));
 
 	if ($(this).hasClass('opposing')) {
-		topPokemonIcon(fullSetName, $("#p2mon")[0])
+		//PokemonSprite(fullSetName, $("#poke-sprite-opp")[0])
 		CURRENT_TRAINER_POKS = get_trainer_poks(fullSetName)
 		var next_poks = CURRENT_TRAINER_POKS.sort(sortmons)
 		var trpok_html = ""
 		var trpoktag_html = ""
+		var enemyTagHtml2 = ""
 		var pok
 
 				var weatherRR = "clear";
@@ -707,7 +718,7 @@ $(".set-selector").change(function () {
 				if (weatherRR) $(`#${weatherRR}`).prop("checked", true).change();
 				if (terrainRR) $(`#${terrainRR}`).prop("checked", true).change();
 				$('#trickroom').prop("checked", CURRENT_TRAINER == "Leader Sabrina");
-				$('#solidRockR').prop("checked", CURRENT_TRAINER == "Leader Brock Rematch");
+				$('#solidRockR').prop("checked", CURRENT_TRAINER == "#Leader Brock Rematch");
 				$('#tailwindR').prop("checked", CURRENT_TRAINER == "Leader Koga");
 				$('#swampR').prop("checked", CURRENT_TRAINER == "Route 22 Rival #2 Bulbasaur");
 
@@ -715,46 +726,41 @@ $(".set-selector").change(function () {
         	$('#settings-menu').toggle()
    		})
 
-
 		for (i in next_poks) {
 			if (next_poks[i][0].includes($('input.opposing').val())) {
 				continue
 			}
 			var pok_name = next_poks[i].split("]")[1].split(" (")[0]
-			pok = `<img class="trainer-pok right-side" src="https://raw.githubusercontent.com/KaixerRealNewAcc/sprites/master/${pok_name}.png" data-id="${CURRENT_TRAINER_POKS[i].split("]")[1]}" title="${next_poks[i]}, ${next_poks[i]} BP">`
-			if (pok_name == "Zygarde-10%") {
-				pok = `<img class="trainer-pok right-side" src="https://raw.githubusercontent.com/KaixerRealNewAcc/sprites/master/Zygarde-Dog.png" data-id="${CURRENT_TRAINER_POKS[i].split("]")[1]}" title="${next_poks[i]}, ${next_poks[i]} BP">`
+
+			if(pok_name == "Ursaluna-Bloodmoon") {
+				pok_name = "Ursaluna-BM";
 			}
-			if (pok_name.includes("Vivillon")) {
-				pok_name = "Vivillon";
-			}
-			if (pok_name.includes("Pikachu")) {
-				pok = `<img class="trainer-pok right-side" src="https://raw.githubusercontent.com/May8th1995/sprites/master/Pikachu.png" data-id="${CURRENT_TRAINER_POKS[i].split("]")[1]}" title="${next_poks[i]}, ${next_poks[i]} BP">`
-			}
-			if (pok_name.includes("Flapple")) {
-				pok = `<img class="trainer-pok right-side" src="https://raw.githubusercontent.com/May8th1995/sprites/master/Flapple.png" data-id="${CURRENT_TRAINER_POKS[i].split("]")[1]}" title="${next_poks[i]}, ${next_poks[i]} BP">`
-			}
-			if (pok_name.includes("Appletun")) {
-				pok = `<img class="trainer-pok right-side" src="https://raw.githubusercontent.com/May8th1995/sprites/master/Appletun.png" data-id="${CURRENT_TRAINER_POKS[i].split("]")[1]}" title="${next_poks[i]}, ${next_poks[i]} BP">`
-			}
+			pok = `<img class="trainer-pok right-side" src="https://raw.githubusercontent.com/darkbooker/RadicalRedSprites/main/Sprites/${pok_name.toUpperCase().replace("-", "_").replace("’", "").replace(" ","")}.png" data-id="${CURRENT_TRAINER_POKS[i].split("]")[1]}" title="${next_poks[i]}, ${next_poks[i]} BP">`
+
 			if (CURRENT_TRAINER in flagsRR.battleType.trueDouble) {
+
 				$("#doubles-format").prop("checked", true);
 				// this ruined my day
 				trpok_html += pok
-			}
-			else
-			{
+				
+			} else {
 				// this ruined my day
 				trpok_html += pok
 				$("#singles-format").prop("checked", true);
 			}
 		}
+		var pokesprite = pokemonName.toUpperCase().replace("-", "_").replace("’", "").replace(" ","")
+
+		if(pokesprite == "Ursaluna-Bloodmoon") {
+			pokesprite = "Ursaluna-bm"; 
+		}
+		$('#p2 .poke-sprite-opp').attr('src', `https://raw.githubusercontent.com/darkbooker/RadicalRedSprites/main/Sprites/${pokesprite}.png`)
 	} else {
-		topPokemonIcon(fullSetName, $("#p1mon")[0])
+		var pokesprite = pokemonName.toUpperCase().replace("-", "_").replace("’", "").replace(" ","")
+		$('#p1 .poke-sprite').attr('src', `https://raw.githubusercontent.com/darkbooker/RadicalRedSprites/main/Sprites/${pokesprite}.png`)
 	}
 
 	$('.trainer-pok-list-opposing').html(trpok_html);
-	var pokemonName = fullSetName.substring(0, fullSetName.indexOf(" ("));
 	var setName = fullSetName.substring(fullSetName.indexOf("(") + 1, fullSetName.lastIndexOf(")"));
 	var pokemon = pokedex[pokemonName];
 	if (pokemon) {
@@ -1678,7 +1684,6 @@ $(".gen").change(function () {
 	setdex = SETDEX[gen];
 	randdex = RANDDEX[gen];
 	flagsRR = FLAGS_RR;
-	flagsBB = FLAGS_BB;
 	typeChart = calc.TYPE_CHART[gen];
 	moves = calc.MOVES[gen];
 	items = calc.ITEMS[gen];
@@ -2129,27 +2134,10 @@ function addBoxed(poke) {
 	var newPoke = document.createElement("img");
 	newPoke.id = `${poke.name}${poke.nameProp}`
 	newPoke.className = "trainer-pok left-side";
-	newPoke.src = getSrcImgPokemon(poke);
+	newPoke.src = getPokemonSprite(poke);
 	newPoke.dataset.id = `${poke.name} (${poke.nameProp})`
 	newPoke.addEventListener("dragstart", dragstart_handler);
 	$('#box-poke-list')[0].appendChild(newPoke);
-}
-
-
-
-function getSrcImgPokemon(poke) {
-	//edge case
-	if (!poke) {
-		return
-	}
-	if (poke.name == "Aegislash-Shield") {
-		return `https://raw.githubusercontent.com/May8th1995/sprites/master/Aegislash.png`
-	}
-	else if (poke.name == "Pikachu-Flying" || poke.name == "Pikachu-Surfing") {
-		return `https://raw.githubusercontent.com/May8th1995/sprites/master/Pikachu.png`
-	} else {
-		return `https://raw.githubusercontent.com/KaixerRealNewAcc/sprites/master/${poke.name}.png`
-	}
 }
 
 function getPokemonSprite(poke) {
@@ -2160,7 +2148,7 @@ function getPokemonSprite(poke) {
 	if (poke.name == "Aegislash-Shield") {
 		return `https://play.pokemonshowdown.com/sprites/gen5/aegislash.png`
 	} else {
-		return `<img class="mon-sprite" src="https://raw.githubusercontent.com/May8th1995/sprites/master/${poke.name}.png"`
+		return `https://raw.githubusercontent.com/darkbooker/RadicalRedSprites/main/Sprites/${poke.name.toUpperCase().replace("-", "_").replace("’", "")}.png`
 	}
 }
 
@@ -2178,12 +2166,6 @@ function get_trainer_poks(trainer_name, ignore_trainer_name) {
 	return matches
 }
 
-function topPokemonIcon(fullname, node) {
-	var mon = { name: fullname.split(" (")[0] };
-	var src = getSrcImgPokemon(mon);
-	node.src = src;
-}
-
 function PokemonSprite(fullname, node) {
 	var mon = { name: fullname.split(" (")[0] };
 	var src = getPokemonSprite(mon);
@@ -2192,27 +2174,84 @@ function PokemonSprite(fullname, node) {
 
 $(document).on('click', '.right-side', function () {
 	var set = $(this).attr('data-id');
-	PokemonSprite(set, $("#p2mon")[0])
-	topPokemonIcon(set, $("#p2mon")[0])
 	$('.opposing').val(set);
 	$('.opposing').change();
 	$('.opposing .select2-chosen').text(set);
-
-	if (typeof applyBattleSettings === 'function') {
-		applyBattleSettings(get_trainer_names(set));
-	}
 })
 
 $(document).on('click', '.left-side', function () {
 	var set = $(this).attr('data-id');
-	topPokemonIcon(set, $("#p1mon")[0])
 	$('.player').val(set);
 	$('.player').change();
 	$('.player .select2-chosen').text(set);
-	if (typeof applyBattleSettings === "function") {
-		applyBattleSettings(get_trainer_names(set));
-	}
 })
+
+/** Tag Partner row (Partner Rival / Partner Steven): load set into player side for calculations. */
+$(document).on("click", ".tag-partner-pok", function () {
+	var set = $(this).attr("data-id");
+	$(".player").val(set);
+	$(".player").change();
+	$(".player .select2-chosen").text(set);
+});
+
+/** SETDEX species string → filename stem (matches getSrcImgPokemon rules). */
+function normalizeTrainerIconSpeciesName(pok_name) {
+	if (pok_name == "Zygarde-10%") pok_name = "Zygarde-10%25";
+	else if (pok_name == "Tauros-Paldea-Water") pok_name = "Tauros-Paldea-Aqua";
+	else if (pok_name == "Tauros-Paldea-Fire") pok_name = "Tauros-Paldea-Blaze";
+	else if (pok_name == "Tauros-Paldea") pok_name = "Tauros-Paldea-Combat";
+	else if (pok_name == "Pumpkaboo-Super") pok_name = "Pumpkaboo";
+	else if (pok_name == "Mime Jr.") pok_name = "Mime%20Jr";
+	else if (pok_name == "Aegislash-Shield") pok_name = "Aegislash";
+	else if (/^genesect/i.test(String(pok_name || "").replace(/ /g, "-"))) pok_name = "Genesect";
+	// Gourgeist: all size formes use Gourgeist.png
+	else if (/^gourgeist-/i.test(String(pok_name || "").replace(/ /g, "-"))) pok_name = "Gourgeist";
+	return pok_name;
+}
+
+/** Opponent doubles fight: show ally Pokémon under the player team for reference (setdex trainer key varies). */
+var TAG_PARTNER_OPPONENT_TRAINER_SILPHCO = "Silph Co. Arianna & Archer";
+
+function isTagPartnerOpponentTrainer(trainerName) {
+	if (!trainerName) return false;
+	if (trainerName === TAG_PARTNER_OPPONENT_TRAINER_SILPHCO) return true;
+	if (typeof trainerNamesMatch === "function") {
+		return (
+			trainerNamesMatch(TAG_PARTNER_OPPONENT_TRAINER_SILPHCO, trainerName) ||
+			trainerNamesMatch(trainerName, TAG_PARTNER_OPPONENT_TRAINER_SILPHCO)
+		);
+	}
+	return false;
+}
+
+function getTagPartnerSetTrainerKey(opponentTrainerName) {
+	if (opponentTrainerName === TAG_PARTNER_OPPONENT_TRAINER_SILPHCO) return "Silph Co. Tag Partner Brendan";
+	if (typeof trainerNamesMatch === "function") {
+		if (
+			trainerNamesMatch(TAG_PARTNER_OPPONENT_TRAINER_SILPHCO, opponentTrainerName) ||
+			trainerNamesMatch(opponentTrainerName, TAG_PARTNER_OPPONENT_TRAINER_SILPHCO)
+		) {
+			return "Silph Co. Tag Partner Brendan";
+		}
+	}
+}
+
+function buildTagPartnerTeamHtml(sortedPoks) {
+	var trpok_html = "";
+	for (var i in sortedPoks) {
+		var pok_name_raw = sortedPoks[i].split("]")[1].split(" (")[0];
+		try {
+			pok_name_raw = decodeURIComponent(pok_name_raw);
+		} catch (e) {}
+		var pok_name = normalizeTrainerIconSpeciesName(pok_name_raw);
+		var poke = { name: pok_name };
+		var idAttr = sortedPoks[i].split("]")[1];
+		var pok =
+			`<img class="trainer-pok tag-partner-pok" src="https://raw.githubusercontent.com/darkbooker/RadicalRedSprites/main/Sprites/${pok_name.toUpperCase().replace("-", "_").replace("’", "").replace(" ","")}.png" alt="" data-id="${idAttr}" title="${sortedPoks[i]}, ${sortedPoks[i]} BP">`;
+		trpok_html += pok;
+	}
+	return trpok_html;
+}
 
 //select first mon of the box when loading
 function selectFirstMon() {
@@ -2391,27 +2430,41 @@ function handleDragLeave(ev) {
 }
 
 function SpeedBorderSetsChange(ev){
+	var monImgsOpp = document.getElementsByClassName("right-side");
 	var monImgs = document.getElementsByClassName("left-side");
 	if (ev.target.checked){
 		for (let monImg of monImgs){
 			monImg.classList.remove("mon-speed-none")
 		}
+		for (let monImgOpp of monImgsOpp){
+			monImgOpp.classList.remove("mon-speed-none")
+		}
 	}else{
 		for (let monImg of monImgs){
 			monImg.classList.add("mon-speed-none")
+		}
+		for (let monImgOpp of monImgsOpp){
+			monImgOpp.classList.add("mon-speed-none")
 		}
 	}
 }
 
 function ColorCodeSetsChange(ev){
+	var monImgsOpp = document.getElementsByClassName("right-side");
 	var monImgs = document.getElementsByClassName("left-side");
 	if (ev.target.checked){
 		for (let monImg of monImgs){
 			monImg.classList.remove("mon-dmg-none")
 		}
+		for (let monImgOpp of monImgsOpp){
+			monImgOpp.classList.remove("mon-dmg-none")
+		}
 	}else{
 		for (let monImg of monImgs){
 			monImg.classList.add("mon-dmg-none")
+		}
+		for (let monImgOpp of monImgsOpp){
+			monImgOpp.classList.add("mon-dmg-none")
 		}
 	}
 }
@@ -2521,6 +2574,15 @@ $(document).ready(function () {
 			{ passive: true }
 		);
 	}
+
+	$(".resultDamage").on("click", function () {
+		$("#critR1")[0].checked = !$("#critR1")[0].checked
+		$("#critR2")[0].checked = !$("#critR2")[0].checked
+		$("#critR3")[0].checked = !$("#critR3")[0].checked
+		$("#critR4")[0].checked = !$("#critR4")[0].checked
+		$('#resultDamageR1, #resultDamageR2, #resultDamageR3, #resultDamageR4').toggleClass('crit-text')
+		$('.move-crit').last().change()
+	});
 
 	loadDefaultLists();
 	$(".move-selector").select2({

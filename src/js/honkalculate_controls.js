@@ -123,6 +123,9 @@ function performCalculations() {
 		}
 	}
 	var pokemon = mode === "one-vs-all" ? attacker : defender;
+	console.log(pokemon.stats.spe)
+
+	
 	if (pokemon) pokeInfo.find(".sp .totalMod").text(pokemon.stats.spe);
 	table.rows.add(dataSet).draw();
 }

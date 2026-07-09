@@ -111,6 +111,8 @@ var SETDEX_SV = {
    },
    "Golbat": {
    },
+   "Crobat":{
+   },
    "Oddish": {
    },
    "Gloom": {
@@ -469,4 +471,444 @@ var SETDEX_SV = {
    },
    "Feraligatr": {
    },
+   "Sentret":{
+   },
+   "Furret":{
+   },
+   "Hoothoot":{
+   },
+   "Noctowl":{
+   },   
+   "Ledyba":{
+   },
+   "Ledian":{
+   },
+   "Spinarak":{
+   },
+   "Ariados":{
+   },
+   "Chinchou":{
+   },
+   "Lanturn":{
+   },
+   "Pichu":{
+   },
+   "Cleffa":{
+   },
+   "Igglybuff":{
+   },
+   "Togepi":{
+   },
+   "Togetic":{
+   },
+   "Togekiss":{
+   },
+   "Natu":{
+   },
+   "Xatu":{
+   },
+   "Mareep":{
+   },
+   "Flaaffy":{
+   },
+   "Ampharos":{
+   },
+   "Ampharos-Mega":{
+   },
+   "Bellossom":{
+   },
+   "Marill":{
+   },
+   "Azumarill":{
+   },
+   "Sudowoodo":{
+   },
+   "Politoed":{
+   },
+   "Hoppip":{
+   },
+   "Skiploom":{
+   },
+   "Jumpluff":{
+   },   
+   "Aipom":{
+   },
+   "Ambipom":{
+   },
+   "Sunkern":{
+   },
+   "Sunflora":{
+   },
+   "Yanma":{
+   },
+   "Yanmega":{
+   },   
+   "Wooper":{
+   },
+   "Wooper-Paldea":{
+   },
+   "Quagsire":{
+   },
+   "Clodsire":{
+   },
+   "Murkrow":{
+   },
+   "Honchkrow":{
+   },
+   "Misdreavous":{
+   },
+   "Mismagius":{
+   },
+   "Unown":{
+   },
+   "Wobbuffet":{
+   },
+   "Girafarig":{
+   },
+   "Pineco":{
+   },
+   "Forretress":{
+   },
+   "Dunsparce":{
+   },
+   "Gligar":{
+   },
+   "Gliscor":{
+   },
+   "Steelix":{
+   },
+   "Steelix-Mega":{
+   },
+   "Snubbull":{
+   },
+   "Granbull":{
+   },
+   "Qwilfish":{
+   },
+   "Qwilfish-Hisui":{
+   },
+   "Scizor":{
+   },
+   "Scizor-Mega":{
+   },
+   "Shuckle":{
+   },   
+   "Heracross":{
+   },
+   "Heracross-Mega":{
+   },
+   "Sneasel":{
+   },
+   "Sneasel-Hisui":{
+   },
+   "Weavile":{
+   },
+   "Teddiursa":{
+   },
+   "Ursaring":{
+   },
+   "Slugma":{
+   },
+   "Magcargo":{
+   },
+   "Swinub":{
+   },
+   "Piloswine":{
+   },
+   "Mamoswine":{
+   },
+   "Corsola":{
+   },
+   "Corsola-Galar":{
+   },
+   "Cursola":{
+   },
+   "Remoraid":{
+   },
+   "Octillery":{
+   },       
+   "Mantine":{
+   },
+   "Skarmory": {
+   },
+   "Houndour": {
+   },
+   "Houndoom": {
+   },
+   "Houndoom-Mega": {
+   },
+   "Kingdra": {
+   },   
+   "Phanpy": {
+   },
+   "Donphan": {
+   },
+   "Porygon": {
+   },
+   "Porygon2": {
+   },
+   "Porygon-Z": {
+   },
+   "Stantler": {
+   },
+   "Smeargle": {
+   },
+   "Tyrogue": {
+   },
+   "Hitmontop": {
+   },       
+   "Smoochum": {
+   },
+   "Elekid": {
+   },
+   "Electabuzz": {
+   },
+   "Electivire": {
+   },
+   "Magby": {
+   },
+   "Magmar": {
+   },
+   "Magmortar": {
+   },
+   "Miltank": {
+   },               
+   "Blissey": {
+   },
+   "Raikou": {      
+   },
+   "Entei": {
+   },
+   "Suicune": {
+   },
+   "Larvitar": {
+   },
+   "Pupitar": {
+   },
+   "Tyranitar": {
+   },
+   "Tyranitar-Mega": {
+   },
+   "Lugia": {
+   },
+   "Ho-Oh": {
+   },
+   "Celebi": {
+   },   
+   "Treecko": {
+   },
+   "Grovyle": {
+   },
+   "Sceptile": {    
+   },
+   "Sceptile-Mega": {
+   },
+   "Torchic": {
+   },
+   "Combusken": {
+   },
+   "Blaziken": {
+   },
+   "Blaziken-Mega": {
+   },
+   "Mudkip": {
+   },
+   "Marshtomp": {
+   },
+   "Swampert": {
+   },
+   "Swampert-Mega": {   
+   },
+   "Poochyena": {
+   },
+   "Mightyena": {
+   },
+   "Zigzagoon": {
+   },
+   "Zigzagoon-Galar": {
+   },
+   "Linoone": { 
+   },
+   "Linoone-Galar": {
+   },
+   "Obstagoon": {
+   },
+   "Wurmple": {
+   },   
+   "Silcoon": {
+   },
+   "Beautifly": {
+   },
+   "Cascoon": {
+   },
+   "Dustox": {
+   },
+   "Lotad": {
+   },
+   "Lombre": {
+   },
+   "Ludicolo": {
+   },
+   "Seedot": {
+   },
+   "Nuzleaf": {
+   },
+   "Shiftry": {
+   },
+   "Taillow": {
+   },
+   "Swellow": {
+   },
+   "Wingull": {
+   },
+   "Pelipper": {    
+   },
+   "Ralts": {
+   },
+   "Kirlia": {
+   },
+   "Gardevoir": {   
+   },
+   "Gardevoir-Mega": {
+   },
+   "Surskit": {
+   },   
+   "Masquerain": {
+   },
+   "Shroomish": {
+   },
+   "Breloom": {
+   },
+   "Slakoth": {
+   },
+   "Vigoroth": {
+   },
+   "Slaking": {
+   },
+   "Nincada": {
+   },
+   "Ninjask": {
+   },
+   "Shedinja": {
+   },
+   "Whismur": {
+   },
+   "Loudred": {
+   },
+   "Exploud": { 
+   },
+   "Makuhita": {
+   },
+   "Hariyama": {
+   },
+   "Azurill": {
+   },   
+   "Nosepass": {
+   },
+   "Skitty": {
+   },
+   "Delcatty": {
+   },
+   "Sableye": {
+   },
+   "Sableye-Mega": {
+   },
+   "Mawile": {
+   },
+   "Mawile-Mega": {
+   },
+   "Aron": {
+   },
+   "Lairon": {
+   },
+   "Aggron": {
+   },
+   "Aggron-Mega": {
+   },
+   "Meditite": {
+   },
+   "Medicham": {
+   },
+   "Medicham-Mega": {
+   },
+   "Electrike": {
+   },
+   "Manectric": {   
+   },
+   "Manectric-Mega": {
+   },
+   "Plusle": {
+   },
+   "Minun": {   
+   },
+    "Volbeat": {
+    },
+    "Illumise": {
+    },
+    "Roselia": {
+    },
+    "Roserade": {
+    },
+    "Gulpin": {
+    },
+    "Swalot": {
+    },
+    "Carvanha": {
+    },
+    "Sharpedo": {
+    },
+    "Sharpedo-Mega": {
+    },
+    "Wailmer": {
+    },
+    "Wailord": {
+    },
+    "Numel": {
+    },
+    "Camerupt": {
+    },
+    "Camerupt-Mega": {
+    },
+    "Torkoal": {    
+    },
+    "Spoink": {
+    },
+    "Grumpig": {
+    },
+    "Spinda": {
+    },
+    "Trapinch": {
+    },
+    "Vibrava": {
+    },
+    "Flygon": {
+    },
+    "Cacnea": {
+    },
+    "Cacturne": {
+    },
+    "Swablu": { 
+    },
+    "Altaria": {
+    },
+    "Altaria-Mega": {
+    },
+    "Zangoose": {
+    },
+    "Seviper": {
+    },
+    "Lunatone": {
+    },      
+    "Solrock": {
+    },
+    "Barboach": {
+    },
+    "Whiscash": {
+    },
+    "Corphish": {
+    },
+    "Crawdaunt": {
+    },
+    "Baltoy": { 
+    }
 };

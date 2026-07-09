@@ -26,18 +26,13 @@ const FLAGS_RR = {
             "Route 22 #2 Rival Squirtle",
         ],
         sand: [
-            "Leader Brock",
-            "Leader Brock Rematch",
+            "#Leader Brock",
+            "#Leader Brock Rematch",
             "Silph Co. Giovanni",
             "Biker Lao B2B2B w/Koji & Luke",
             "Route 16 Biker Ruben",
             "Route 16 Biker Camron",
             "Route 16 Biker Hideo",
-
-            //Brilliant Blue
-            "Camper Liam",
-            "Camper Beth",
-            "Gym Leader Brock",
         ],
         snow: [
             "Route 12 Rocker Luca",
@@ -100,55 +95,29 @@ const FLAGS_RR = {
             "Cerulean Cave Giovanni": {},
             "Cerulean Cave Partner Lance": {},
         },
-        tag: [
+        tagBattle: [
             {
-                enemy1: "Silph Co. Arianna & Archer",
-                enemy2: "Silph Co. Arianna & Archer",
-                partner: "Silph Co. Tag Partner Brendan"
+                enemy1: "",
+                enemy2: "",
+                partner: ""
             }
         ]
     },
 };
 
-const FLAGS_BB = {
-       weather: { //Also counts as terrain (?)
-        "": [],
-        clear: [],
-        sun: [
-            "",
-        ],
-        rain: [
-            "",
-        ],
-        sand: [
-            "Camper Liam",
-            "Camper Beth",
-            "Gym Leader Brock",
-        ],
-        snow: [
-            "",
-        ],
-    },
-    terrain: {
-        "": [],
-        none: [],
-        electric: [
-            "",
-        ],
-        grassy: [
-            "",
-        ],
-        misty: [
-            "",
-        ],
-        psychic: [
-            "",
-        ],
-    },
-    battleType: {
-        trueDouble: {
-            "": {},
-        },
-    },     
-};
+function getTagBattle(trainerName) {
+    for (var i in Object.values(FLAGS_RR.battleType.tagBattle)) {
+        var battle = Object.values(FLAGS_RR.battleType.tagBattle)[i];
+        if (battle.enemy1 == trainerName || battle.enemy2 == trainerName) return battle;
+    }
+    return undefined;
+}
+
+function getDoubleBattle(trainerName) {
+    for (var i in Object.values(FLAGS_RR.battleType.trueDouble)) {
+        var battle = Object.values(FLAGS_RR.battleType.trueDouble)[i];
+        if (battle.enemy1 == trainerName || battle.enemy2 == trainerName) return battle;
+    }
+    return undefined;
+}
 

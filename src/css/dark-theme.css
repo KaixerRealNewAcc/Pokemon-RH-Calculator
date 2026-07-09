@@ -52,41 +52,6 @@ fieldset {
     background-color: var(--fieldset-color);
 }
 
-select {
-    background-color: var(--background);
-    color: var(--text);
-    border: 1px solid black !important;
-    border-radius: 6px;
-}
-
-/* Level and stats inputs: same border as select (Tera Type) so they are visible */
-.poke-info input.level,
-.poke-info input.base,
-.poke-info input.ivs,
-.poke-info input.evs {
-    border: 1px solid black !important;
-    border-radius: 6px;
-}
-
-/* Set Level: same border & text as level field; override .btn:hover border */
-.poke-info .level-row-with-set-btn .set-level-from-box-btn,
-.poke-info .level-row-with-set-btn .set-level-from-box-btn:hover,
-.poke-info .level-row-with-set-btn .set-level-from-box-btn:focus-visible {
-    border: 1px solid black !important;
-    border-radius: 6px;
-    font: inherit;
-    color: var(--text);
-}
-
-/* Base power, Crit / Z / Commander buttons: same border as Tera Type */
-.poke-info input.move-bp,
-.poke-info .crit-btn,
-.poke-info .z-btn,
-.poke-info .commander-dondozo-btn {
-    border: 1px solid black !important;
-    border-radius: 6px;
-}
-
 a.links-lighten {
     color: #7A9CFF;
 }

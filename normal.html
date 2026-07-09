@@ -66,7 +66,7 @@
             </div>
         </div>
         
-        <span class="title-text">Normal Mode</span>
+        <span class="title-text">Radical Red Calculator By Kaixer - Normal Mode</span>
 
         <span class="genSelection hide" aria-labelledby="selectGenInstruction" role="radiogroup" title="Select the generation.">
             <span class="visually-hidden" id="selectGenInstruction">Select the generation.</span>
@@ -93,8 +93,8 @@
             </div>
             <div>
                 <input class="result-move visually-hidden" type="radio" name="resultMove" id="resultMoveL1" checked="checked" aria-describedby="resultDamageL1" />
-                <label class="btn btn-xxxwide btn-top" for="resultMoveL1">Loading...</label>
-                <span id="resultDamageL1">??? - ???%</span>
+                <label class="btn btn-xxxwide btn-mid" for="resultMoveL1">Loading...</label>
+                <span id="resultDamageL1" >??? - ???%</span>
                 <input aria-describedby="criticalHitInstruction" class="result-move visually-hidden top-crit" type="checkbox" id="critTopL1" />
                 <label class="btn small-crit-btn" for="critTopL1" title="Force this attack to be a critical hit?">Crit</label>
             </div>
@@ -114,42 +114,42 @@
             </div>
             <div>
                 <input class="result-move visually-hidden" type="radio" name="resultMove" id="resultMoveL4" aria-describedby="resultDamageL4" />
-                <label class="btn btn-xxxwide btn-bottom" for="resultMoveL4">Loading...</label>
+                <label class="btn btn-xxxwide btn-mid" for="resultMoveL4">Loading...</label>
                 <span id="resultDamageL4">??? - ???%</span>
                 <input aria-describedby="criticalHitInstruction" class="result-move visually-hidden top-crit" type="checkbox" id="critTopL4" />
                 <label class="btn small-crit-btn" for="critTopL4" title="Force this attack to be a critical hit?">Crit</label>
             </div>
         </div>
-        <div aria-labelledby="resultHeaderR" class="move-result-subgroup" role="radiogroup">
+        <div aria-labelledby="resultHeaderR" class="move-result-subgroup results-right" role="radiogroup">
             <div class="result-move-header"><span id="resultHeaderR">Pok&eacute;mon 2's Moves (select one to show detailed results)</span>
             </div>
             <div>
-                <input class="result-move visually-hidden" type="radio" name="resultMove" id="resultMoveR1" aria-describedby="resultDamageR1" />
-                <label class="btn btn-xxxwide btn-top" for="resultMoveR1">Loading...</label>
                 <span id="resultDamageR1">??? - ???%</span>
                 <input aria-describedby="criticalHitInstruction" class="result-move visually-hidden top-crit" type="checkbox" id="critTopR1" />
                 <label class="btn small-crit-btn" for="critTopR1" title="Force this attack to be a critical hit?">Crit</label>
+                <input class="result-move visually-hidden" type="radio" name="resultMove" id="resultMoveR1" aria-describedby="resultDamageR1" />
+                <label class="btn btn-xxxwide btn-mid" for="resultMoveR1">Loading...</label>
             </div>
             <div>
-                <input class="result-move visually-hidden" type="radio" name="resultMove" id="resultMoveR2" aria-describedby="resultDamageR2" />
-                <label class="btn btn-xxxwide btn-mid" for="resultMoveR2">Loading...</label>
                 <span id="resultDamageR2">??? - ???%</span>
                 <input aria-describedby="criticalHitInstruction" class="result-move visually-hidden top-crit" type="checkbox" id="critTopR2" />
                 <label class="btn small-crit-btn" for="critTopR2" title="Force this attack to be a critical hit?">Crit</label>
+                <input class="result-move visually-hidden" type="radio" name="resultMove" id="resultMoveR2" aria-describedby="resultDamageR2" />
+                <label class="btn btn-xxxwide btn-mid" for="resultMoveR2">Loading...</label>
             </div>
             <div>
-                <input class="result-move visually-hidden" type="radio" name="resultMove" id="resultMoveR3" aria-describedby="resultDamageR3" />
-                <label class="btn btn-xxxwide btn-mid" for="resultMoveR3">Loading...</label>
                 <span id="resultDamageR3">??? - ???%</span>
                 <input aria-describedby="criticalHitInstruction" class="result-move visually-hidden top-crit" type="checkbox" id="critTopR3" />
                 <label class="btn small-crit-btn" for="critTopR3" title="Force this attack to be a critical hit?">Crit</label>
+                <input class="result-move visually-hidden" type="radio" name="resultMove" id="resultMoveR3" aria-describedby="resultDamageR3" />
+                <label class="btn btn-xxxwide btn-mid" for="resultMoveR3">Loading...</label>
             </div>
             <div>
-                <input class="result-move visually-hidden" type="radio" name="resultMove" id="resultMoveR4" aria-describedby="resultDamageR4" />
-                <label class="btn btn-xxxwide btn-bottom" for="resultMoveR4">Loading...</label>
                 <span id="resultDamageR4">??? - ???%</span>
                 <input aria-describedby="criticalHitInstruction" class="result-move visually-hidden top-crit" type="checkbox" id="critTopR4" />
                 <label class="btn small-crit-btn" for="critTopR4" title="Force this attack to be a critical hit?">Crit</label>
+                <input class="result-move visually-hidden" type="radio" name="resultMove" id="resultMoveR4" aria-describedby="resultDamageR4" />
+                <label class="btn btn-xxxwide btn-mid" for="resultMoveR4">Loading...</label>
             </div>
         </div>
     </div>
@@ -164,12 +164,11 @@
     <div class="panel">
         <div aria-label="Pok&eacute;mon 1" role="region">
             <fieldset class="poke-info" id="p1">
-                <legend align="center">Pok&eacute;mon 1
-                    <img id="p1mon" src="" alt="">
-                </legend>
+                <img class="poke-sprite" src="">
+                <legend align="center">Pok&eacute;mon 1</legend>
                 <input type="text" class="set-selector calc-trigger player" />
                 <span id="importedSetsOptions" style="width:auto; display:none">
-                    <input type="checkbox" id="importedSets"> Only show imported sets</input> 
+                    <input type="checkbox" id="importedSets"> Reset Teams </input> 
                 </span>
                 <div class="info-group top i-f-type">
                     <div>
@@ -768,8 +767,8 @@
         <div aria-label="Field information" role="region">
             <fieldset class="field-info">
                 <legend align="center">Field
-                    <img id="monSingle" src="https://raw.githubusercontent.com/May8th1995/sprites/master/Houndoom-Mega.png" alt="">
-                    <img id="monDouble" src="https://raw.githubusercontent.com/May8th1995/sprites/master/Houndoom-Mega.png" alt="" hidden>
+                    <img id="monSingle" src="https://raw.githubusercontent.com/May8th1995/sprites/master/Houndoom-Mega.png" >
+                    <img id="monDouble" src="https://raw.githubusercontent.com/May8th1995/sprites/master/Houndoom-Mega.png"  hidden>
                 </legend>
                 <div aria-labelledby="selectBattleFormatInstruction" class="gen-specific g3 g4 g5 g6 g7 g8 g9" role="radiogroup" style="width: 10.6em; margin: 0 auto 5px;" title="Select the battle format.">
                     <span class="visually-hidden" id="selectBattleFormatInstruction">Select the battle format.</span>
@@ -1142,13 +1141,12 @@
     <div class="panel">
         <div aria-label="Pok&eacute;mon 2" role="region">
             <fieldset class="poke-info" id="p2">
-                <legend align="center">Pok&eacute;mon 2
-                    <img id="p2mon" src="" alt="">
-                </legend>
+                <legend align="center">Pok&eacute;mon 2</legend>
                 <input type="text" class="set-selector calc-trigger opposing" />
                 <span id="importedSetsOptions" style="width:auto; display:none">
                     <input type="checkbox" id="importedSets"> Only show imported sets</input>
                 </span>
+                <img class="poke-sprite-opp" src="" >
                 <div class="info-group top i-f-o-type">
                     <div>
                         <label>Type</label>

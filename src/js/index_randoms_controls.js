@@ -61,10 +61,18 @@ function performCalculations() {
 	var battling = [p1, p2];
 	p1.maxDamages = [];
 	p2.maxDamages = [];
-	p1info.find(".sp .totalMod").text(p1.stats.spe);
-	p2info.find(".sp .totalMod").text(p2.stats.spe);
-	updateSpeedTierIcons(p1.stats.spe, p2.stats.spe);
+
 	var fastestSide = p1.stats.spe > p2.stats.spe ? 0 : p1.stats.spe === p2.stats.spe ? "tie" : 1;
+	p1info.find(".sp .totalModAtk").text(p1.stats.atk);
+	p2info.find(".sp .totalModAtk").text(p2.stats.atk);
+	p1info.find(".sp .totalModDef").text(p1.stats.def);
+	p2info.find(".sp .totalModDef").text(p2.stats.def);
+	p1info.find(".sp .totalModSpa").text(p1.stats.spa);
+	p2info.find(".sp .totalModSpa").text(p2.stats.spa);
+	p1info.find(".sp .totalModSpd").text(p1.stats.spd);
+	p2info.find(".sp .totalModSpd").text(p2.stats.spd);
+	p1info.find(".sp .totalModSpe").text(p1.stats.spe).css("color", p1.stats.spe > p2.stats.spe ? "green" : p1.stats.spe < p2.stats.spe ? "red" : "orange");
+	p2info.find(".sp .totalModSpe").text(p2.stats.spe).css("color", p1.stats.spe < p2.stats.spe ? "green" : p1.stats.spe > p2.stats.spe ? "red" : "orange");
 
 	var result, maxDamage;
 	var bestResult;
@@ -120,6 +128,7 @@ function performCalculations() {
 	bestResult.change();
 	$("#resultHeaderL").text(p1.name + "'s Moves (select one to show detailed results)");
 	$("#resultHeaderR").text(p2.name + "'s Moves (select one to show detailed results)");
+
 }
 
 

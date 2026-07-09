@@ -957,7 +957,7 @@ table.field {
     float: none;
 }
 
-#p2mon, #p1mon, #monSingle, #monSprite, #monDouble {
+#monSingle, #monSprite, #monDouble {
     min-height: 32px;
 }
 
@@ -980,6 +980,11 @@ table.field {
 .small-crit-btn[id*="TopL"] {
     margin-left: 0.8em;
 }
+
+.small-crit-btn[id*="TopR"] {
+    margin-left: 5em;
+}
+
 
 /* settings */
 
