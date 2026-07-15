@@ -495,12 +495,12 @@ select {
     font-weight: bold;
     z-index: 2;
 }
-.app-hardcore-subpage {
+.app-dex-subpage {
     display: none;
     width: 100%;
     margin-top: 0.5em;
 }
-.app-hardcore-iframe {
+.app-dex-iframe {
     display: block;
     width: 100%;
     min-height: 0;
@@ -510,11 +510,37 @@ select {
     background: transparent;
     outline: 0;
 }
+body.dex-mode .wrapper > :not(.app-header-bar):not(.app-dex-subpage) {
+    display: none !important;
+}
+body.dex-mode .app-dex-subpage {
+    display: block;
+    margin-top: 0;
+}
+
+/* In Dex mode, let the iframe span full page width */
+body.dex-mode .wrapper {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+}
+body.dex-mode .app-header-bar {
+    /* Same horizontal box as .wrapper on the calculator page (centered 1285px + 1em side padding) */
+    max-width: 1460px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1em;
+    padding-right: 1em;
+    transform: translateX(-8px);
+}
 .credits {
     clear: both;
     padding: 20px;
     max-width: 1285px;
     margin: 0px auto;
+}
+body.dex-mode .credits {
+    display: none;
 }
 div.wrapper > div > span {
     padding-right: 5px;
