@@ -456,6 +456,54 @@ select {
     flex: 1 1 auto;
     min-width: 0;
 }
+.app-header-tabs {
+    margin-left: auto;
+    margin-right: 0;
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 0;
+}
+.app-header-tab {
+    min-width: 7.5em;
+    /* Use base `.btn` negative margins to visually connect. */
+    margin-right: 0;
+}
+.app-header-tabs .app-header-tab {
+    border-radius: 0;
+}
+.app-header-tabs .app-header-tab:first-child {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+.app-header-tabs .app-header-tab:last-child {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+.app-header-tabs .app-header-tab.app-header-tab-active,
+.app-header-tabs .app-header-tab.app-header-tab-active:hover,
+.app-header-tabs .app-header-tab.app-header-tab-active:focus {
+    background: var(--button-selected, #f5f5f5);
+    border-color: var(--fieldset-color, #222222);
+    color: var(--text, #111111);
+    font-weight: bold;
+    z-index: 2;
+}
+.app-hardcore-subpage {
+    display: none;
+    width: 100%;
+    margin-top: 0.5em;
+}
+.app-hardcore-iframe {
+    display: block;
+    width: 100%;
+    min-height: 0;
+    height: calc(100vh - var(--app-header-bar-height, 80px));
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    outline: 0;
+}
 .credits {
     clear: both;
     padding: 20px;

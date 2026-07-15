@@ -23,6 +23,71 @@
             gtag('event', 'exception', {'description': uri + ':' + line + ': ' + err});
             return false;
         };
+
+        (function () {
+            var calcButton = document.getElementById("header-calc-button");
+            var dexButton = document.getElementById("header-dex-button");
+            var dexPage = document.getElementById("dex-subpage");
+            var dexFrame = document.getElementById("porydex-frame");
+            if (!calcButton || !dexButton || !dexPage || !dexFrame) return;
+
+            var lastAppMode = null;
+            var headerBar = document.querySelector(".app-header-bar");
+
+            function syncDexTheme() {
+                try {
+                    var frameDoc = dexFrame.contentDocument;
+                    if (!frameDoc || !frameDoc.documentElement) return;
+                    var theme = document.documentElement.getAttribute("data-theme") || "original";
+                    frameDoc.documentElement.setAttribute("data-host-theme", theme);
+                } catch (e) {}
+            }
+
+            function syncDexLayoutVars() {
+                try {
+                    if (!headerBar) return;
+                    var h = headerBar.offsetHeight || 0;
+                    if (h) document.documentElement.style.setProperty("--app-header-bar-height", h + "px");
+                } catch (e) {}
+            }
+
+            function setMode(mode) {
+                var isHardcore = mode === "hardcore";
+                syncDexLayoutVars();
+                if (!isHardcore) {
+                    requestAnimationFrame(function () {
+                        requestAnimationFrame(function () {
+                        var $ = window.jQuery;
+                        if (!$ || !$.fn || !$.fn.select2) return;
+                        var setValues = [];
+                        var moveValues = [];
+                        $(".set-selector").each(function () {
+                                setValues.push($(this).val());
+                                try { $(this).select2("destroy"); } catch (e) {}
+                            });
+                        $(".move-selector").each(function () {
+                                moveValues.push($(this).val());
+                                try { $(this).select2("destroy"); } catch (e) {}
+                        });
+                            if (typeof loadDefaultLists === "function") loadDefaultLists();
+                            $(".move-selector").select2({
+                                dropdownAutoWidth: true,
+                                matcher: function (term, text) {
+                                    return text.toUpperCase().indexOf(term.toUpperCase()) === 0 || text.toUpperCase().indexOf(" " + term.toUpperCase()) >= 0;
+                                }
+                            });
+                            $(".set-selector").each(function (i) {
+                                if (setValues[i] !== undefined && setValues[i] !== null) $(this).val(setValues[i]).trigger("change");
+                            });
+                            $(".move-selector").each(function (i) {
+                                if (moveValues[i] !== undefined && moveValues[i] !== null) $(this).val(moveValues[i]).trigger("change");
+                            });
+                            $(window).trigger("resize");
+                        });
+                    });
+                }
+            }
+        });
     </script>
 </head>
 
@@ -59,6 +124,10 @@
         </div>
         
         <span class="title-text">Radical Red Calculator By Kaixer - Hardcore Mode</span>
+        <div class="app-header-tabs" aria-label="Calculator navigation" role="group">
+            <button type="button" class="btn btn-small app-header-tab" id="header-normal-button">Normal</button>
+            <button type="button" class="btn btn-small app-header-tab" id="header-hardcore-button">Hardcore</button>
+        </div>
 
         <span class="genSelection hide" aria-labelledby="selectGenInstruction" role="radiogroup" title="Select the generation.">
             <span class="visually-hidden" id="selectGenInstruction">Select the generation.</span>
@@ -781,11 +850,11 @@
                 <hr class="gen-specific g6 g7 g8 g9" />
                 <div aria-labelledby="selectTerrainInstruction" class="gen-specific g6 g7 g8 g9" role="group" title="Select the current terrain.">
                     <span class="visually-hidden" id="selectTerrainInstruction">Select the current terrain.</span>
-                    <input class="visually-hidden terrain-trigger calc-trigger" type="checkbox" name="terrain" value="None" id="none" /><label class="btn btn-xxxwide btn-mid" for="none">None</label>
-                    <input class="visually-hidden terrain-trigger calc-trigger" type="checkbox" name="terrain" value="Electric" id="electric" /><label class="btn btn-xxxwide btn-mid" for="electric">Electric</label>
-                    <input class="visually-hidden terrain-trigger calc-trigger" type="checkbox" name="terrain" value="Grassy" id="grassy" /><label class="btn btn-xxxwide btn-mid" for="grassy">Grassy</label>
-                    <input class="visually-hidden terrain-trigger calc-trigger" type="checkbox" name="terrain" value="Misty" id="misty" /><label class="btn btn-xxxwide btn-mid" for="misty">Misty</label>
-                    <input class="visually-hidden terrain-trigger calc-trigger" type="checkbox" name="terrain" value="Psychic" id="psychic" /><label class="btn btn-xxxwide btn-mid" for="psychic">Psychic</label>
+                    <input class="visually-hidden terrain-trigger calc-trigger" type="checkbox" name="terrain" value="None" id="none" /><label class="btn btn-left" for="none">None</label>
+                    <input class="visually-hidden terrain-trigger calc-trigger" type="checkbox" name="terrain" value="Electric" id="electric" /><label class="btn btn-mid" for="electric">Electric</label>
+                    <input class="visually-hidden terrain-trigger calc-trigger" type="checkbox" name="terrain" value="Grassy" id="grassy" /><label class="btn btn-mid" for="grassy">Grassy</label>
+                    <input class="visually-hidden terrain-trigger calc-trigger" type="checkbox" name="terrain" value="Misty" id="misty" /><label class="btn btn-mid" for="misty">Misty</label>
+                    <input class="visually-hidden terrain-trigger calc-trigger" type="checkbox" name="terrain" value="Psychic" id="psychic" /><label class="btn btn-right" for="psychic">Psychic</label>
                 </div>
                 <div aria-labelledby="selectWeatherInstruction" role="radiogroup">
                     <span class="visually-hidden" id="selectWeatherInstruction">Select the current weather condition.</span>
@@ -1701,6 +1770,105 @@
     <script type="text/javascript" src="./js/index_randoms_controls.js?"></script>
     <script type="text/javascript" src="./js/moveset_import.js?"></script>
     <script type="text/javascript" src="./js/app-menu.js?"></script>
+    <script type="text/javascript">
+        (function () {
+            var normalButton = document.getElementById("header-normal-button");
+            var hardcoreButton = document.getElementById("header-hardcore-button");
+            if (!normalButton || !hardcoreButton) return;
+
+            var lastAppMode = null;
+            var headerBar = document.querySelector(".app-header-bar");
+
+            function syncDexTheme() {
+                try {
+                    var frameDoc = dexFrame.contentDocument;
+                    if (!frameDoc || !frameDoc.documentElement) return;
+                    var theme = document.documentElement.getAttribute("data-theme") || "original";
+                    frameDoc.documentElement.setAttribute("data-host-theme", theme);
+                } catch (e) {}
+            }
+
+            function syncDexLayoutVars() {
+                try {
+                    if (!headerBar) return;
+                    var h = headerBar.offsetHeight || 0;
+                    if (h) document.documentElement.style.setProperty("--app-header-bar-height", h + "px");
+                } catch (e) {}
+            }
+
+            function setMode(mode) {
+                var isHardcore = mode === "hardcore";
+                var comingFromHardcore = lastAppMode === "normal";
+                lastAppMode = mode;
+                document.body.classList.toggle("hardcore-mode", isHardcore);
+                normalButton.classList.toggle("app-header-tab-active", !isHardcore);
+                hardcoreButton.classList.toggle("app-header-tab-active", isHardcore);
+                syncDexLayoutVars();
+                if (!isHardcore && comingFromHardcore) {
+                    requestAnimationFrame(function () {
+                        requestAnimationFrame(function () {
+                            var $ = window.jQuery;
+                            if (!$ || !$.fn || !$.fn.select2) return;
+                            var setValues = [];
+                            var moveValues = [];
+                            $(".set-selector").each(function () {
+                                setValues.push($(this).val());
+                                try { $(this).select2("destroy"); } catch (e) {}
+                            });
+                            $(".move-selector").each(function () {
+                                moveValues.push($(this).val());
+                                try { $(this).select2("destroy"); } catch (e) {}
+                            });
+                            if (typeof loadDefaultLists === "function") loadDefaultLists();
+                            $(".move-selector").select2({
+                                dropdownAutoWidth: true,
+                                matcher: function (term, text) {
+                                    return text.toUpperCase().indexOf(term.toUpperCase()) === 0 || text.toUpperCase().indexOf(" " + term.toUpperCase()) >= 0;
+                                }
+                            });
+                            $(".set-selector").each(function (i) {
+                                if (setValues[i] !== undefined && setValues[i] !== null) $(this).val(setValues[i]).trigger("change");
+                            });
+                            $(".move-selector").each(function (i) {
+                                if (moveValues[i] !== undefined && moveValues[i] !== null) $(this).val(moveValues[i]).trigger("change");
+                            });
+                            $(window).trigger("resize");
+                        });
+                    });
+                }
+            }
+
+            normalButton.addEventListener("click", function () {
+                history.replaceState(null, "", location.pathname + location.search);
+                setMode("normal");
+            });
+            hardcoreButton.addEventListener("click", function () {
+                if (location.hash !== "#hardcore") {
+                    location.hash = "hardcore";
+                } else {
+                    setMode("hardcore");
+                }
+            });
+
+            window.addEventListener("hashchange", function () {
+                setMode(location.hash === "#hardcore" ? "hardcore" : "normal");
+            });
+            dexFrame.addEventListener("load", syncDexTheme);
+            new MutationObserver(syncDexTheme).observe(document.documentElement, {
+                attributes: true,
+                attributeFilter: ["data-theme", "class"]
+            });
+            window.addEventListener("resize", syncDexLayoutVars);
+
+            setMode(location.hash === "#hardcore" ? "hardcore" : "normal");
+            syncDexTheme();
+            syncDexLayoutVars();
+            requestAnimationFrame(function () {
+                if (window.jQuery) window.jQuery(window).trigger("resize");
+                else window.dispatchEvent(new Event("resize"));
+            });
+        })();
+    </script>
 </div>
 
 <!-- <div class="wrapper hide" id="settings-wrapper">
