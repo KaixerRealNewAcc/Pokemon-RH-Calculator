@@ -6,7 +6,7 @@
     <meta name="color-scheme" content="dark">
     <title>Pok&eacute;mon Radical Red Calculator By Kaixer.</title>
     <link type="text/css" rel="stylesheet" href="./js/vendor/select2/select2.css" />
-    <link type="text/css" rel="stylesheet" href="./css/main.css?2632a5fb" />
+    <link type="text/css" rel="stylesheet" href="./css/main.css?758b265e" />
     <link type="text/css" rel="stylesheet" href="./css/settings.css?06ca8e4a" />
     <link type="text/css" rel="stylesheet" href="./css/vendor/bootstrap.css" />
     <link type="text/css" rel="stylesheet" href="./css/dark-theme.css" id="dark-theme-styles">
@@ -23,6 +23,71 @@
             gtag('event', 'exception', {'description': uri + ':' + line + ': ' + err});
             return false;
         };
+
+        (function () {
+            var calcButton = document.getElementById("header-calc-button");
+            var dexButton = document.getElementById("header-dex-button");
+            var dexPage = document.getElementById("dex-subpage");
+            var dexFrame = document.getElementById("porydex-frame");
+            if (!calcButton || !dexButton || !dexPage || !dexFrame) return;
+
+            var lastAppMode = null;
+            var headerBar = document.querySelector(".app-header-bar");
+
+            function syncDexTheme() {
+                try {
+                    var frameDoc = dexFrame.contentDocument;
+                    if (!frameDoc || !frameDoc.documentElement) return;
+                    var theme = document.documentElement.getAttribute("data-theme") || "original";
+                    frameDoc.documentElement.setAttribute("data-host-theme", theme);
+                } catch (e) {}
+            }
+
+            function syncDexLayoutVars() {
+                try {
+                    if (!headerBar) return;
+                    var h = headerBar.offsetHeight || 0;
+                    if (h) document.documentElement.style.setProperty("--app-header-bar-height", h + "px");
+                } catch (e) {}
+            }
+
+            function setMode(mode) {
+                var isHardcore = mode === "hardcore";
+                syncDexLayoutVars();
+                if (!isHardcore) {
+                    requestAnimationFrame(function () {
+                        requestAnimationFrame(function () {
+                        var $ = window.jQuery;
+                        if (!$ || !$.fn || !$.fn.select2) return;
+                        var setValues = [];
+                        var moveValues = [];
+                        $(".set-selector").each(function () {
+                                setValues.push($(this).val());
+                                try { $(this).select2("destroy"); } catch (e) {}
+                            });
+                        $(".move-selector").each(function () {
+                                moveValues.push($(this).val());
+                                try { $(this).select2("destroy"); } catch (e) {}
+                        });
+                            if (typeof loadDefaultLists === "function") loadDefaultLists();
+                            $(".move-selector").select2({
+                                dropdownAutoWidth: true,
+                                matcher: function (term, text) {
+                                    return text.toUpperCase().indexOf(term.toUpperCase()) === 0 || text.toUpperCase().indexOf(" " + term.toUpperCase()) >= 0;
+                                }
+                            });
+                            $(".set-selector").each(function (i) {
+                                if (setValues[i] !== undefined && setValues[i] !== null) $(this).val(setValues[i]).trigger("change");
+                            });
+                            $(".move-selector").each(function (i) {
+                                if (moveValues[i] !== undefined && moveValues[i] !== null) $(this).val(moveValues[i]).trigger("change");
+                            });
+                            $(window).trigger("resize");
+                        });
+                    });
+                }
+            }
+        });
     </script>
 </head>
 
@@ -58,11 +123,7 @@
             </div>
         </div>
         
-        <span class="title-text">Radical Red Calculator By Kaixer - Normal Mode</span>
-        <div class="app-header-tabs" aria-label="Calculator navigation" role="group">
-            <button type="button" class="btn btn-small app-header-tab" id="header-normal-button">Normal</button>
-            <button type="button" class="btn btn-small app-header-tab" id="header-hardcore-button">Hardcore</button>
-        </div>
+        <span class="title-text">Radical Red Calculator By Kaixer - Hardcore Mode</span>
 
         <span class="genSelection hide" aria-labelledby="selectGenInstruction" role="radiogroup" title="Select the generation.">
             <span class="visually-hidden" id="selectGenInstruction">Select the generation.</span>
@@ -76,17 +137,12 @@
             <input class="gen visually-hidden" type="radio" name="gen" value="8" id="gen8" /><label class="btn btn-small btn-right" for="gen8">S/S</label>
             <input class="gen visually-hidden" type="radio" name="gen" value="9" id="gen9" checked="checked" /><label class="btn btn-small btn-right" for="gen9">S/V</label>
         </span>
-        <!--<span class="modeSelection" aria-labelledby="selectModeInstruction" role="radiogroup" title="Select the calculator's mode of function.">
+        <span class="app-header-tabs" aria-labelledby="selectModeInstruction" role="radiogroup" title="Select the calculator's mode of function.">
             <span class="visually-hidden" id="selectModeInstruction">Select the calculator's mode of function.</span>
-            <input class="mode visually-hidden" type="radio" name="mode" id="normal"  /><label class="btn-mode btn-normal btn-left" for="normal">Normal</label>
-            <input class="mode visually-hidden" type="radio" name="mode" id="hardcore" checked="checked" /><label class="btn-mode btn-normal btn-right" for="hardcore">Hardcore</label>
-        </span>-->
+            <input class="mode visually-hidden" type="radio" name="mode" id="normal"  /><label class="btn btn-left app-header-tab" for="normal">Normal</label>
+            <input class="mode visually-hidden" type="radio" name="mode" id="hardcore" checked="checked" /><label class="btn btn-right app-header-tab" for="hardcore">Hardcore</label>
+        </span>
     </div>
-
-    <main id="hardcore-subpage" class="app-hardcore-subpage" hidden aria-hidden="true" aria-label="Hardcore Mode">
-        <iframe id="hardcore-frame" class="app-hardcore-iframe" title="hardcore" src="hardcore.html"></iframe>
-    </main>
-
     <hr />
     <div aria-label="Move selection" class="move-result-group" role="region" title="Select a move to show detailed results.">
         <div  aria-labelledby="resultHeaderL" class="move-result-subgroup" role="radiogroup">
@@ -200,16 +256,16 @@
                         <input class="level calc-trigger" id="levelL1" value="100" ></input>  
                     </div>
                     <div class="hide">
+                        <label for="weightL1">Weight (kg)</label>
+                        <input class="weight calc-trigger" id="weightL1" value="10.0" />
+                    </div>
+                    <div class="hide">
                         <label>Gender</label>
                         <select class="gender calc-trigger"><option></option><option selected="selected">Male</option><option>Female</option></select>
                     </div>
                     <div class="hide">
                         <label>Forme</label>
                         <select class="forme calc-trigger"></select>
-                    </div>
-                    <div class="hide">
-                        <label for="weightL1">Weight (kg)</label>
-                        <input class="weight calc-trigger" id="weightL1" value="10.0" />
                     </div>
                 </div>
                 <div class="info-group i-f-stats">
@@ -1138,13 +1194,13 @@
                         <label for="weightR1">Weight (kg)</label>
                         <input class="weight calc-trigger" id="weightR1" value="10.0" />
                     </div>
-                    <div class="hide">
-                        <label>Forme</label>
-                        <select class="forme calc-trigger"></select>
-                    </div>
                     <div>
                         <label>Gender</label>
                         <select class="gender calc-trigger"><option></option><option selected="selected">Male</option><option>Female</option></select>
+                    </div>
+                    <div class="hide">
+                        <label>Forme</label>
+                        <select class="forme calc-trigger"></select>
                     </div>
                 </div>
                 <div class="info-group i-f-stats">
@@ -1556,6 +1612,8 @@
                     <input class="move-bp calc-trigger" value="0" />
                     <select class="move-type calc-trigger"></select>
 
+                    <input aria-describedby="criticalHitInstruction" class="move-crit calc-trigger visually-hidden" type="checkbox" id="critR2" />
+                    <label class="btn crit-btn" for="critR2" title="Force this attack to be a critical hit?">Crit</label>
                     <input aria-describedby="zMoveInstruction" class="move-z calc-trigger visually-hidden" type="checkbox" id="zR2"/>
                     <label class="btn z-btn gen-specific g7" for="zR2" title="Make this attack a Z-move?">Z</label>
                     <select class="move-hits calc-trigger hide">
@@ -1682,9 +1740,9 @@
     </script>
     <script type="text/javascript" src="./calc/util.js?80153268"></script>
     <script type="text/javascript" src="./calc/stats.js?cee46f1d"></script>
-    <script type="text/javascript" src="./calc/data/species.js?ae164210"></script>
-    <script type="text/javascript" src="./js/data/sets/normalMode.js?387d4d52"></script>
-    <script type="text/javascript" src="./js/data/flags.js?1568bedb"></script>
+    <script type="text/javascript" src="./calc/data/species.js?524f6940"></script>
+    <script type="text/javascript" src="./js/data/sets/hardcoreMode.js?175ba8ad"></script>
+    <script type="text/javascript" src="./js/data/flags.js?dc641a65"></script>
     <script type="text/javascript" src="./calc/data/types.js?a52a5105"></script>
     <script type="text/javascript" src="./calc/data/natures.js?28612810"></script>
     <script type="text/javascript" src="./calc/data/abilities.js?a9748753"></script>
@@ -1696,8 +1754,8 @@
     <script type="text/javascript" src="./calc/field.js?2f116a56"></script>
     <script type="text/javascript" src="./calc/items.js?7274d586"></script>
     <script type="text/javascript" src="./calc/mechanics/util.js?b7b37712"></script>
-    <script type="text/javascript" src="./calc/mechanics/gen789.js?3bc8192e"></script>
-    <script type="text/javascript" src="./calc/mechanics/gen56.js?4c89c6f4"></script>
+    <script type="text/javascript" src="./calc/mechanics/gen789.js?c899a101"></script>
+    <script type="text/javascript" src="./calc/mechanics/gen56.js?4ad299a5"></script>
     <script type="text/javascript" src="./calc/mechanics/gen4.js?70e59991"></script>
     <script type="text/javascript" src="./calc/mechanics/gen3.js?0a1113c4"></script>
     <script type="text/javascript" src="./calc/mechanics/gen12.js?fafc47a4"></script>
@@ -1706,7 +1764,7 @@
     <script type="text/javascript" src="./calc/result.js?9b18f412"></script>
     <script type="text/javascript" src="./calc/adaptable.js?92e49194"></script>
     <script type="text/javascript" src="./calc/index.js?0b1745b9"></script>
-    <script type="text/javascript" src="./js/shared_controls.js?19d44da7"></script>
+    <script type="text/javascript" src="./js/shared_controls.js?30f749aa"></script>
     <script type="text/javascript" src="./js/index_randoms_controls.js?572ec7f8"></script>
     <script type="text/javascript" src="./js/moveset_import.js?83086917"></script>
     <script type="text/javascript" src="./js/app-menu.js?c160c3d8"></script>
@@ -1714,9 +1772,7 @@
         (function () {
             var normalButton = document.getElementById("header-normal-button");
             var hardcoreButton = document.getElementById("header-hardcore-button");
-            var hardcorePage = document.getElementById("hardcore-subpage");
-            var hardcoreFrame = document.getElementById("hardcore-frame");
-            if (!normalButton || !hardcoreButton || !hardcorePage || !hardcoreFrame) return;
+            if (!normalButton || !hardcoreButton) return;
 
             var lastAppMode = null;
             var headerBar = document.querySelector(".app-header-bar");
@@ -1740,8 +1796,8 @@
 
             function setMode(mode) {
                 var isHardcore = mode === "hardcore";
-                lastAppMode = mode;
                 var comingFromHardcore = lastAppMode === "normal";
+                lastAppMode = mode;
                 document.body.classList.toggle("hardcore-mode", isHardcore);
                 normalButton.classList.toggle("app-header-tab-active", !isHardcore);
                 hardcoreButton.classList.toggle("app-header-tab-active", isHardcore);
@@ -1753,7 +1809,6 @@
                             if (!$ || !$.fn || !$.fn.select2) return;
                             var setValues = [];
                             var moveValues = [];
-                            loadDefaultLists();
                             $(".set-selector").each(function () {
                                 setValues.push($(this).val());
                                 try { $(this).select2("destroy"); } catch (e) {}
@@ -1762,6 +1817,7 @@
                                 moveValues.push($(this).val());
                                 try { $(this).select2("destroy"); } catch (e) {}
                             });
+                            if (typeof loadDefaultLists === "function") loadDefaultLists();
                             $(".move-selector").select2({
                                 dropdownAutoWidth: true,
                                 matcher: function (term, text) {

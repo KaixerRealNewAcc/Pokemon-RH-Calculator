@@ -32,7 +32,7 @@ var SETDEX_SV = {
         "index": 16,
     },
    },
-   "Rattata-A": {
+   "Rattata-Alola": {
     "Bug Catcher Anthony": {
         "level": 13,
         "ability": "Gluttony",
@@ -77,7 +77,7 @@ var SETDEX_SV = {
         "index": 33,
     },
    },
-   "Sandshrew-A":{
+   "Sandshrew-Alola":{
     "Gym Leader Brock": {
         "level": 16,
         "ability": "Ice Body",

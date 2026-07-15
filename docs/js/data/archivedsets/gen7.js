@@ -457,7 +457,7 @@ var SETDEX_SM = {
   "Rattata": {
     "LC Hustle Wallbreaker": {"level":5,"ability":"Hustle","item":"Life Orb","nature":"Jolly","evs":{"at":232,"df":76,"sp":180},"moves":["Double-Edge","Flame Wheel","Sucker Punch","Zen Headbutt"]}
   },
-  "Rattata-A": {
+  "Rattata-Alola": {
     "LC Life Orb": {"level":5,"ability":"Hustle","item":"Life Orb","nature":"Jolly","evs":{"at":228,"df":76,"sp":180},"moves":["Double-Edge","Sucker Punch","U-turn","Pursuit"]}
   },
   "Raticate": {
@@ -465,7 +465,7 @@ var SETDEX_SM = {
     "ZU Guts": {"ability":"Guts","item":"Flame Orb","nature":"Jolly","evs":{"at":252,"df":4,"sp":252},"moves":["Facade","Crunch","Stomping Tantrum","U-turn"]},
     "ZU Choice Band": {"ability":"Hustle","item":"Choice Band","nature":"Jolly","evs":{"at":252,"df":4,"sp":252},"moves":["Double-Edge","Crunch","Pursuit","Sucker Punch"]}
   },
-  "Raticate-A": {
+  "Raticate-Alola": {
     "PU Swords Dance": {"ability":"Hustle","item":"Normalium Z","nature":"Jolly","evs":{"at":252,"sd":4,"sp":252},"moves":["Swords Dance","Double-Edge","Knock Off","Sucker Punch"]}
   },
   "Spearow": {
@@ -491,7 +491,7 @@ var SETDEX_SM = {
     "VGC 2019 Showdown Usage": {"level":50,"ability":"Lightning Rod","item":"Fightinium Z","nature":"Timid","evs":{"hp":4,"sa":252,"sp":252},"moves":["Fake Out","Feint","Knock Off","Focus Blast"]},
     "Battle Spot Doubles Showdown Usage": {"level":50,"ability":"Lightning Rod","item":"Focus Sash","nature":"Timid","evs":{"hp":88,"sa":164,"sd":4,"sp":252},"moves":["Encore","Fake Out","Volt Switch","Hidden Power Ice"]}
   },
-  "Raichu-A": {
+  "Raichu-Alola": {
     "PU Nasty Plot": {"ability":"Surge Surfer","item":"Psychium Z","nature":"Timid","evs":{"df":4,"sa":252,"sp":252},"moves":["Nasty Plot","Thunderbolt","Psyshock","Focus Blast"]},
     "Monotype Offensive": {"ability":"Surge Surfer","item":"Life Orb","nature":"Modest","evs":{"sa":252,"sd":4,"sp":252},"moves":["Thunderbolt","Psychic","Focus Blast","Grass Knot"]},
     "Monotype Stoked Sparksurfer (Electric)": {"ability":"Surge Surfer","item":"Aloraichium Z","nature":"Modest","evs":{"df":4,"sa":252,"sp":252},"moves":["Thunderbolt","Psychic","Nasty Plot","Focus Blast"]},
@@ -500,7 +500,7 @@ var SETDEX_SM = {
   "Sandshrew": {
     "LC Bulky Support": {"level":5,"ability":"Sand Rush","item":"Eviolite","nature":"Adamant","evs":{"hp":36,"at":156,"df":76,"sd":36,"sp":196},"moves":["Rapid Spin","Stealth Rock","Earthquake","Knock Off"]}
   },
-  "Sandshrew-A": {
+  "Sandshrew-Alola": {
     "LC Hail Sweeper": {"level":5,"ability":"Slush Rush","item":"Life Orb","nature":"Adamant","evs":{"hp":36,"at":236,"df":36,"sp":196},"moves":["Icicle Spear","Iron Head","Earthquake","Swords Dance"]},
     "LC Choice Scarf": {"level":5,"ability":"Slush Rush","item":"Choice Scarf","nature":"Jolly","evs":{"at":236,"sd":76,"sp":196},"moves":["Icicle Spear","Iron Head","Rapid Spin","Earthquake"]}
   },
@@ -508,7 +508,7 @@ var SETDEX_SM = {
     "PU Utility": {"ability":"Sand Rush","item":"Leftovers","nature":"Jolly","evs":{"hp":252,"at":4,"sp":252},"moves":["Earthquake","Knock Off","Rapid Spin","Stealth Rock"]},
     "ZU Rapid Spin": {"ability":"Sand Rush","item":"Figy Berry","nature":"Impish","evs":{"hp":252,"df":160,"sp":96},"moves":["Rapid Spin","Stealth Rock","Earthquake","Knock Off"]}
   },
-  "Sandslash-A": {
+  "Sandslash-Alola": {
     "UU Aurora Veil Setter": {"ability":"Slush Rush","item":"Light Clay","nature":"Jolly","evs":{"at":252,"df":4,"sp":252},"moves":["Aurora Veil","Rapid Spin","Icicle Crash","Earthquake"]},
     "PU Hail Sweeper": {"ability":"Slush Rush","item":"Icium Z","nature":"Jolly","evs":{"at":252,"df":4,"sp":252},"moves":["Swords Dance","Icicle Crash","Iron Head","Earthquake"]},
     "PU Choice Scarf": {"ability":"Slush Rush","item":"Choice Scarf","nature":"Jolly","evs":{"at":252,"sd":4,"sp":252},"moves":["Icicle Crash","Iron Head","Earthquake","Rapid Spin"]},
@@ -562,7 +562,7 @@ var SETDEX_SM = {
     "RU Nasty Plot Wallbreaker": {"ability":"Drought","item":"Firium Z","nature":"Timid","evs":{"sa":252,"sd":4,"sp":252},"moves":["Nasty Plot","Fire Blast","Solar Beam","Hidden Power Ice"]},
     "RU Choice Specs": {"ability":"Drought","item":"Choice Specs","nature":"Timid","evs":{"sa":252,"sd":4,"sp":252},"moves":["Overheat","Fire Blast","Solar Beam","Hidden Power Ice"]}
   },
-  "Ninetales-A": {
+  "Ninetales-Alola": {
     "OU Aurora Veil": {"ability":"Snow Warning","item":"Light Clay","nature":"Timid","evs":{"hp":252,"sa":4,"sp":252},"moves":["Aurora Veil","Freeze-Dry","Hypnosis","Hail"]},
     "Doubles OU Support Attacker": {"ability":"Snow Warning","item":"Light Clay","nature":"Timid","evs":{"hp":184,"df":72,"sp":252},"moves":["Blizzard","Aurora Veil","Encore","Protect"]},
     "VGC 2018 Hail Setter": {"level":50,"ability":"Snow Warning","item":"Focus Sash","nature":"Timid","ivs":{"at":0},"evs":{"hp":4,"sa":252,"sp":252},"moves":["Blizzard","Freeze-Dry","Aurora Veil","Protect"]},
@@ -605,7 +605,7 @@ var SETDEX_SM = {
     "LC Choice Scarf": {"level":5,"ability":"Arena Trap","item":"Choice Scarf","nature":"Jolly","evs":{"hp":36,"at":236,"sp":236},"moves":["Earthquake","Rock Slide","Final Gambit","Beat Up"]},
     "LC Focus Sash": {"level":5,"ability":"Arena Trap","item":"Focus Sash","nature":"Jolly","evs":{"hp":36,"at":236,"sp":236},"moves":["Earthquake","Sucker Punch","Rock Slide","Memento"]}
   },
-  "Diglett-A": {
+  "Diglett-Alola": {
     "LC Sand Sweeper": {"level":5,"ability":"Sand Force","item":"Life Orb","nature":"Jolly","evs":{"hp":36,"at":236,"df":36,"sp":196},"moves":["Iron Head","Earthquake","Rock Slide","Substitute"]}
   },
   "Dugtrio": {
@@ -615,14 +615,14 @@ var SETDEX_SM = {
     "ZU SubToxic": {"ability":"Sand Force","item":"Leftovers","nature":"Jolly","evs":{"at":252,"sd":4,"sp":252},"moves":["Earthquake","Stone Edge","Substitute","Toxic"]},
     "ZU Hyper Offense Lead": {"ability":"Sand Force","item":"Focus Sash","nature":"Jolly","evs":{"at":252,"sd":4,"sp":252},"moves":["Earthquake","Toxic","Stealth Rock","Memento"]}
   },
-  "Dugtrio-A": {
+  "Dugtrio-Alola": {
     "PU Substitute + Toxic": {"ability":"Tangling Hair","item":"Leftovers","nature":"Jolly","evs":{"at":252,"sd":4,"sp":252},"moves":["Earthquake","Iron Head","Substitute","Toxic"]},
     "PU All-out Attacker": {"ability":"Tangling Hair","item":"Life Orb","nature":"Jolly","evs":{"at":252,"sd":4,"sp":252},"moves":["Earthquake","Iron Head","Sucker Punch","Pursuit"]}
   },
   "Meowth": {
     "LC Mixed Attacker": {"level":5,"ability":"Technician","item":"Life Orb","nature":"Hasty","ivs":{"hp":19},"evs":{"at":236,"sa":36,"sd":36,"sp":196},"moves":["Fake Out","Feint","Water Pulse","Aerial Ace"]}
   },
-  "Meowth-A": {
+  "Meowth-Alola": {
     "LC Z-Parting Shot": {"level":5,"ability":"Technician","item":"Darkinium Z","nature":"Timid","ivs":{"df":30,"sa":30,"sd":30,"sp":30},"evs":{"hp":36,"sa":200,"sd":40,"sp":200},"moves":["Parting Shot","Dark Pulse","Hidden Power Fighting","Taunt"]},
     "LC Nasty Plot": {"level":5,"ability":"Technician","item":"Life Orb","nature":"Timid","ivs":{"hp":19,"df":30,"sa":30,"sd":30,"sp":30},"evs":{"sa":200,"sd":40,"sp":200},"moves":["Nasty Plot","Dark Pulse","Hidden Power Fighting","Thunderbolt"]}
   },
@@ -630,7 +630,7 @@ var SETDEX_SM = {
     "PU Nasty Plot": {"ability":"Technician","item":"Life Orb","nature":"Timid","evs":{"df":4,"sa":252,"sp":252},"moves":["Nasty Plot","Hyper Voice","Hidden Power Ghost","Water Pulse"]},
     "ZU Showdown Usage": {"ability":"Technician","item":"Choice Specs","nature":"Jolly","evs":{"at":252,"df":4,"sp":252},"moves":["Fake Out","Taunt","Knock Off","Frustration"]}
   },
-  "Persian-A": {
+  "Persian-Alola": {
     "PU Nasty Plot": {"ability":"Fur Coat","item":"Darkinium Z","nature":"Timid","evs":{"sa":252,"sd":4,"sp":252},"moves":["Nasty Plot","Dark Pulse","Parting Shot","Thunderbolt"]},
     "PU Bulky Pivot": {"ability":"Fur Coat","item":"Darkinium Z","nature":"Jolly","evs":{"hp":252,"df":4,"sp":252},"moves":["Parting Shot","Taunt","Foul Play","Toxic"]},
     "VGC 2018 Showdown Usage": {"level":50,"ability":"Fur Coat","item":"Black Glasses","nature":"Jolly","evs":{"hp":132,"at":4,"df":20,"sd":100,"sp":252},"moves":["Fake Out","Parting Shot","Foul Play","Taunt"]},
@@ -730,7 +730,7 @@ var SETDEX_SM = {
   "Geodude": {
     "LC Stealth Rock": {"level":5,"ability":"Sturdy","item":"Berry Juice","nature":"Adamant","evs":{"hp":36,"at":196,"df":116,"sd":36,"sp":116},"moves":["Stealth Rock","Rock Blast","Earthquake","Sucker Punch"]}
   },
-  "Geodude-A": {
+  "Geodude-Alola": {
     "LC Magnet Pull": {"level":5,"ability":"Magnet Pull","item":"Eviolite","nature":"Adamant","evs":{"hp":36,"at":116,"df":116,"sd":196,"sp":36},"moves":["Rock Blast","Fire Punch","Superpower","Stealth Rock"]}
   },
   "Golem": {
@@ -742,7 +742,7 @@ var SETDEX_SM = {
     "ZU Choice Band": {"ability":"Sturdy","item":"Choice Band","nature":"Adamant","evs":{"at":252,"df":4,"sp":252},"moves":["Earthquake","Stone Edge","Sucker Punch","Fire Punch"]},
     "NU Showdown Usage": {"ability":"Sturdy","item":"Rockium Z","nature":"Adamant","evs":{"hp":4,"at":252,"sp":252},"moves":["Stealth Rock","Earthquake","Stone Edge","Autotomize"]}
   },
-  "Golem-A": {
+  "Golem-Alola": {
     "OU Choice Scarf": {"ability":"Magnet Pull","item":"Choice Scarf","nature":"Jolly","evs":{"at":252,"sd":4,"sp":252},"moves":["Wild Charge","Earthquake","Fire Punch","Explosion"]},
     "PU Trapper": {"ability":"Magnet Pull","item":"Choice Scarf","nature":"Jolly","evs":{"at":252,"sd":4,"sp":252},"moves":["Earthquake","Fire Punch","Thunder Punch","Stone Edge"]},
     "Monotype Trapper (Electric)": {"ability":"Magnet Pull","item":"Air Balloon","nature":"Adamant","evs":{"at":252,"df":4,"sp":252},"moves":["Stealth Rock","Earthquake","Fire Punch","Stone Edge"]},
@@ -830,7 +830,7 @@ var SETDEX_SM = {
   "Grimer": {
     "LC Tank": {"level":5,"ability":"Sticky Hold","item":"Berry Juice","nature":"Brave","evs":{"hp":36,"at":196,"df":196,"sa":36,"sd":36},"moves":["Gunk Shot","Fire Punch","Giga Drain","Thief"]}
   },
-  "Grimer-A": {
+  "Grimer-Alola": {
     "LC Pursuit Trap": {"level":5,"ability":"Poison Touch","item":"Eviolite","nature":"Adamant","evs":{"hp":36,"at":196,"df":196,"sd":36},"moves":["Pursuit","Knock Off","Poison Jab","Shadow Sneak"]},
     "LC RestTalk": {"level":5,"ability":"Poison Touch","item":"Eviolite","nature":"Adamant","evs":{"hp":36,"at":196,"df":196,"sd":36},"moves":["Rest","Sleep Talk","Knock Off","Poison Jab"]},
     "NFE Offensive Trapper": {"ability":"Poison Touch","item":"Eviolite","nature":"Adamant","evs":{"hp":244,"at":176,"sd":88},"moves":["Poison Jab","Knock Off","Pursuit","Clear Smog"]},
@@ -842,7 +842,7 @@ var SETDEX_SM = {
     "PU Choice Band": {"ability":"Sticky Hold","item":"Choice Band","nature":"Adamant","evs":{"hp":204,"at":252,"sp":52},"moves":["Gunk Shot","Shadow Sneak","Thunder Punch","Ice Punch"]},
     "ZU Curse": {"ability":"Sticky Hold","item":"Leftovers","nature":"Careful","evs":{"hp":252,"at":4,"sd":252},"moves":["Rest","Sleep Talk","Curse","Poison Jab"]}
   },
-  "Muk-A": {
+  "Muk-Alola": {
     "OU Assault Vest": {"ability":"Poison Touch","item":"Assault Vest","nature":"Careful","evs":{"hp":248,"at":36,"df":28,"sd":192,"sp":4},"moves":["Knock Off","Pursuit","Poison Jab","Fire Punch"]},
     "Ubers Assault Vest": {"ability":"Poison Touch","item":"Assault Vest","nature":"Brave","evs":{"hp":252,"at":80,"df":28,"sd":148},"moves":["Pursuit","Knock Off","Shadow Sneak","Clear Smog"]},
     "UU Pursuit Trapper": {"ability":"Poison Touch","item":"Assault Vest","nature":"Adamant","evs":{"hp":4,"at":252,"sd":252},"moves":["Pursuit","Gunk Shot","Knock Off","Fire Punch"]},
@@ -951,7 +951,7 @@ var SETDEX_SM = {
     "1v1 Harvest Stall": {"ability":"Harvest","item":"Iapapa Berry","nature":"Calm","evs":{"hp":244,"df":40,"sd":224},"moves":["Protect","Substitute","Leech Seed","Psywave"]},
     "Battle Spot Doubles Showdown Usage": {"level":50,"ability":"Chlorophyll","item":"Focus Sash","nature":"Modest","evs":{"sa":252,"sd":4,"sp":252},"moves":["Solar Beam","Protect","Psychic","Sunny Day"]}
   },
-  "Exeggutor-A": {
+  "Exeggutor-Alola": {
     "NU Choice Specs": {"ability":"Frisk","item":"Choice Specs","nature":"Modest","evs":{"sa":252,"sd":4,"sp":252},"moves":["Draco Meteor","Leaf Storm","Flamethrower","Giga Drain"]},
     "RU Showdown Usage": {"ability":"Frisk","item":"Dragonium Z","nature":"Quiet","evs":{"hp":252,"sa":252,"sd":4},"moves":["Giga Drain","Flamethrower","Trick Room","Draco Meteor"]}
   },
@@ -963,7 +963,7 @@ var SETDEX_SM = {
     "ZU Offensive Stealth Rock": {"ability":"Battle Armor","item":"Thick Club","nature":"Adamant","evs":{"at":252,"df":4,"sp":252},"moves":["Bonemerang","Stone Edge","Knock Off","Stealth Rock"]},
     "ZU Trick Room Attacker": {"ability":"Rock Head","item":"Thick Club","nature":"Brave","ivs":{"sp":0},"evs":{"hp":252,"at":252,"df":4},"moves":["Bonemerang","Double-Edge","Knock Off","Swords Dance"]}
   },
-  "Marowak-A": {
+  "Marowak-Alola": {
     "OU Offensive": {"ability":"Rock Head","item":"Thick Club","nature":"Brave","ivs":{"sp":0},"evs":{"hp":248,"at":252,"sd":8},"moves":["Shadow Bone","Flare Blitz","Swords Dance","Bonemerang"]},
     "UU Offensive Wallbreaker": {"ability":"Rock Head","item":"Thick Club","nature":"Adamant","evs":{"hp":84,"at":252,"sp":172},"moves":["Shadow Bone","Flare Blitz","Stealth Rock","Low Kick"]},
     "RU Swords Dance Wallbreaker": {"ability":"Rock Head","item":"Thick Club","nature":"Adamant","evs":{"hp":212,"at":252,"sp":44},"moves":["Flare Blitz","Shadow Bone","Swords Dance","Low Kick"]},
