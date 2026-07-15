@@ -715,6 +715,11 @@ $(".set-selector").change(function () {
 				var terrainRR = "none";
 				for (var newTerrainRR in flagsRR.terrain){ if (flagsRR.terrain[newTerrainRR].includes(CURRENT_TRAINER)) { terrainRR = newTerrainRR; break; } }
 
+
+				var statusRR = "Healthy";
+				for (var newStatusRR in flagsRR.status){ if (flagsRR.preStatus[newStatusRR].includes(CURRENT_TRAINER)) { statusRR = newStatusRR; break; } }
+
+				if (statusRR) $(`#${statusRR}`).prop("checked", true).change();
 				if (weatherRR) $(`#${weatherRR}`).prop("checked", true).change();
 				if (terrainRR) $(`#${terrainRR}`).prop("checked", true).change();
 				$('#trickroom').prop("checked", CURRENT_TRAINER == "Leader Sabrina");

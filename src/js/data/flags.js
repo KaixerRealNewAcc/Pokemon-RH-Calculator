@@ -72,6 +72,11 @@ const FLAGS_RR = {
             "Cerulean Cave Partner Lance",
         ],
     },
+    preStatus: {
+        burned: [
+            "Route 11 leader Whitney",
+        ]
+    },
     battleType: {
         trueDouble: {
             "Mt. Moon Super Nerd Miguel": {},

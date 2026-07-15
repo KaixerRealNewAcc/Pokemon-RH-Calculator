@@ -176,6 +176,12 @@ html, body {
     outline-color: #f56f5769;
 }
 
+.trainer-pok.right-side.opponent-marked {
+    background: rgba(194, 68, 68, 0.5);
+    outline: 2px solid #6e1919;
+    outline-offset: -2px;
+}
+
 .poke-sprite-right {
     right: 3px;
 }
@@ -456,7 +462,7 @@ select {
     flex: 1 1 auto;
     min-width: 0;
 }
-.app-header-tabs, .modeSelection {
+.app-header-tabs {
     margin-left: auto;
     margin-right: 0;
     flex-shrink: 0;
@@ -961,7 +967,7 @@ select.toxic-counter {
     width: 4.5em;
 }
 .poke-info .crit-btn {
-    font-size: 0.5em;
+    font-size: 0.8em;
     width: 2.5em;
     height: 1em;
     padding: 3px 3px;
