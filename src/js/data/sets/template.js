@@ -69,15 +69,15 @@ var SETDEX_SV = {
    },
    "Raichu": {
    },   
-   "Raichu-Alola": {
+   "Raichu-A": {
    },
    "Sandshrew": {
    },
-   "Sandshrew-Alola": {
+   "Sandshrew-A": {
    },
    "Sandslash": {
    },
-   "Sandslash-Alola": {
+   "Sandslash-A": {
    },
    "Nidoran-F": {
    },
@@ -97,11 +97,11 @@ var SETDEX_SV = {
    },
    "Vulpix": {
    },
-   "Vulpix-Alola": {
+   "Vulpix-A": {
    },
    "Ninetales": {
    },
-   "Ninetales-Alola": {
+   "Ninetales-A": {
    },
    "Jigglypuff": {
    },
@@ -129,21 +129,21 @@ var SETDEX_SV = {
    },
    "Diglett": {
    },
-   "Diglett-Alola": {
+   "Diglett-A": {
    },
    "Dugtrio": {
    },
-   "Dugtrio-Alola": {
+   "Dugtrio-A": {
    },
    "Meowth": {
    },
-   "Meowth-Alola": {
+   "Meowth-A": {
    },
-   "Meowth-Galar": {
+   "Meowth-G": {
    },
    'Persian': {
    },
-   "Persian-Alola": {
+   "Persian-A": {
    },
    "Perserrker": {
    },
@@ -157,11 +157,11 @@ var SETDEX_SV = {
    },
    "Growlithe": {
    },
-   "Growlithe-Hisui": {
+   "Growlithe-H": {
    },
    "Arcanine": {
    },
-   "Arcanine-Hisui": {
+   "Arcanine-H": {
    },
    "Poliwag": {
    },
@@ -195,35 +195,35 @@ var SETDEX_SV = {
    },
    "Geodude": {
    },
-   "Geodude-Alola": {
+   "Geodude-A": {
    },
    "Graveler": {
    },
-   "Graveler-Alola": {
+   "Graveler-A": {
    },
    "Golem": {
    },
-   "Golem-Alola": {
+   "Golem-A": {
    },
    "Ponyta": {
    },
-   "Ponyta-Galar": {
+   "Ponyta-G": {
    },
    "Rapidash": {
    },
-   "Rapidash-Galar": {
+   "Rapidash-G": {
    },
    "Slowpoke": {
    },
-   "Slowpoke-Galar": {
+   "Slowpoke-G": {
    },
    "Slowbro": {
    },
-   "Slowbro-Galar": {
+   "Slowbro-G": {
    },
    "Slowking": {
    },   
-   "Slowking-Galar": {
+   "Slowking-G": {
    },
    "Magnemite": {
    },
@@ -233,7 +233,7 @@ var SETDEX_SV = {
    },
    "Farfetch'd": {
    },
-   "Farfetch'd-Galar": {
+   "Farfetch'd-G": {
    },
    "Sirfetch'd": {
    },
@@ -247,11 +247,11 @@ var SETDEX_SV = {
    },
    "Grimer": {
    },  
-   "Grimer-Alola": {
+   "Grimer-A": {
    },
    "Muk": {
    },
-   "Muk-Alola": {
+   "Muk-A": {
    },
    "Shellder": {
    },
@@ -281,23 +281,23 @@ var SETDEX_SV = {
    },
    "Voltorb": {
    },
-   "Voltorb-Hisui": {
+   "Voltorb-H": {
    },
    "Electrode": {
    },
-   "Electrode-Hisui": {
+   "Electrode-H": {
    },
    "Exeggcute": {
    },
    "Exeggutor": {
    },   
-   "Exeggutor-Alola": {
+   "Exeggutor-A": {
    },
    "Cubone": {
    },
    "Marowak": {
    },
-   "Marowak-Alola": {
+   "Marowak-A": {
    },   
    "Hitmonlee": {
    },
@@ -313,7 +313,7 @@ var SETDEX_SV = {
    },
    "Weezing": {
    },
-   "Weezing-Galar": {
+   "Weezing-G": {
    },
    "Rhyhorn": {
    },
@@ -349,7 +349,7 @@ var SETDEX_SV = {
    },
    "Mr. Mime": {
    },
-   "Mr. Mime-Galar": {
+   "Mr. Mime-G": {
    },
    "Mr. Rime": {
    },
@@ -463,7 +463,7 @@ var SETDEX_SV = {
    },
    "Typhlosion": {
    },
-   "Typhlosion-Hisui": {
+   "Typhlosion-H": {
    },
    "Totodile": {
    },
@@ -585,7 +585,7 @@ var SETDEX_SV = {
    },
    "Qwilfish":{
    },
-   "Qwilfish-Hisui":{
+   "Qwilfish-H":{
    },
    "Scizor":{
    },
@@ -599,7 +599,7 @@ var SETDEX_SV = {
    },
    "Sneasel":{
    },
-   "Sneasel-Hisui":{
+   "Sneasel-H":{
    },
    "Weavile":{
    },
@@ -619,7 +619,7 @@ var SETDEX_SV = {
    },
    "Corsola":{
    },
-   "Corsola-Galar":{
+   "Corsola-G":{
    },
    "Cursola":{
    },
@@ -725,11 +725,11 @@ var SETDEX_SV = {
    },
    "Zigzagoon": {
    },
-   "Zigzagoon-Galar": {
+   "Zigzagoon-G": {
    },
    "Linoone": { 
    },
-   "Linoone-Galar": {
+   "Linoone-G": {
    },
    "Obstagoon": {
    },

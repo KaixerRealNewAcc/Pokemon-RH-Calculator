@@ -23,71 +23,6 @@
             gtag('event', 'exception', {'description': uri + ':' + line + ': ' + err});
             return false;
         };
-
-        (function () {
-            var calcButton = document.getElementById("header-calc-button");
-            var dexButton = document.getElementById("header-dex-button");
-            var dexPage = document.getElementById("dex-subpage");
-            var dexFrame = document.getElementById("porydex-frame");
-            if (!calcButton || !dexButton || !dexPage || !dexFrame) return;
-
-            var lastAppMode = null;
-            var headerBar = document.querySelector(".app-header-bar");
-
-            function syncDexTheme() {
-                try {
-                    var frameDoc = dexFrame.contentDocument;
-                    if (!frameDoc || !frameDoc.documentElement) return;
-                    var theme = document.documentElement.getAttribute("data-theme") || "original";
-                    frameDoc.documentElement.setAttribute("data-host-theme", theme);
-                } catch (e) {}
-            }
-
-            function syncDexLayoutVars() {
-                try {
-                    if (!headerBar) return;
-                    var h = headerBar.offsetHeight || 0;
-                    if (h) document.documentElement.style.setProperty("--app-header-bar-height", h + "px");
-                } catch (e) {}
-            }
-
-            function setMode(mode) {
-                var isHardcore = mode === "hardcore";
-                syncDexLayoutVars();
-                if (!isHardcore) {
-                    requestAnimationFrame(function () {
-                        requestAnimationFrame(function () {
-                        var $ = window.jQuery;
-                        if (!$ || !$.fn || !$.fn.select2) return;
-                        var setValues = [];
-                        var moveValues = [];
-                        $(".set-selector").each(function () {
-                                setValues.push($(this).val());
-                                try { $(this).select2("destroy"); } catch (e) {}
-                            });
-                        $(".move-selector").each(function () {
-                                moveValues.push($(this).val());
-                                try { $(this).select2("destroy"); } catch (e) {}
-                        });
-                            if (typeof loadDefaultLists === "function") loadDefaultLists();
-                            $(".move-selector").select2({
-                                dropdownAutoWidth: true,
-                                matcher: function (term, text) {
-                                    return text.toUpperCase().indexOf(term.toUpperCase()) === 0 || text.toUpperCase().indexOf(" " + term.toUpperCase()) >= 0;
-                                }
-                            });
-                            $(".set-selector").each(function (i) {
-                                if (setValues[i] !== undefined && setValues[i] !== null) $(this).val(setValues[i]).trigger("change");
-                            });
-                            $(".move-selector").each(function (i) {
-                                if (moveValues[i] !== undefined && moveValues[i] !== null) $(this).val(moveValues[i]).trigger("change");
-                            });
-                            $(window).trigger("resize");
-                        });
-                    });
-                }
-            }
-        });
     </script>
 </head>
 
@@ -123,7 +58,7 @@
             </div>
         </div>
         
-        <span class="title-text">Radical Red Calculator By Kaixer - Hardcore Mode</span>
+        <span class="title-text">Radical Red Calculator By Kaixer - Normal Mode</span>
         <div class="app-header-tabs" aria-label="Calculator navigation" role="group">
             <button type="button" class="btn btn-small app-header-tab" id="header-normal-button">Normal</button>
             <button type="button" class="btn btn-small app-header-tab" id="header-hardcore-button">Hardcore</button>
@@ -141,12 +76,17 @@
             <input class="gen visually-hidden" type="radio" name="gen" value="8" id="gen8" /><label class="btn btn-small btn-right" for="gen8">S/S</label>
             <input class="gen visually-hidden" type="radio" name="gen" value="9" id="gen9" checked="checked" /><label class="btn btn-small btn-right" for="gen9">S/V</label>
         </span>
-        <span class="modeSelection" aria-labelledby="selectModeInstruction" role="radiogroup" title="Select the calculator's mode of function.">
+        <!--<span class="modeSelection" aria-labelledby="selectModeInstruction" role="radiogroup" title="Select the calculator's mode of function.">
             <span class="visually-hidden" id="selectModeInstruction">Select the calculator's mode of function.</span>
             <input class="mode visually-hidden" type="radio" name="mode" id="normal"  /><label class="btn-mode btn-normal btn-left" for="normal">Normal</label>
             <input class="mode visually-hidden" type="radio" name="mode" id="hardcore" checked="checked" /><label class="btn-mode btn-normal btn-right" for="hardcore">Hardcore</label>
-        </span>
+        </span>-->
     </div>
+
+    <main id="hardcore-subpage" class="app-hardcore-subpage" hidden aria-hidden="true" aria-label="Hardcore Mode">
+        <iframe id="hardcore-frame" class="app-hardcore-iframe" title="hardcore" src="hardcore.html"></iframe>
+    </main>
+
     <hr />
     <div aria-label="Move selection" class="move-result-group" role="region" title="Select a move to show detailed results.">
         <div  aria-labelledby="resultHeaderL" class="move-result-subgroup" role="radiogroup">
@@ -255,17 +195,17 @@
                         <select class="teraType terrain-trigger calc-trigger"></select>
                         <input type="checkbox" title= "Has this Pok&eacute;mon terastalized?" class="teraToggle terrain-trigger calc-trigger">
                     </div>
-                    <div class="hide">
-                        <label>Forme</label>
-                        <select class="forme calc-trigger"></select>
+                    <div>
+                        <label for="levelL1">Level</label>
+                        <input class="level calc-trigger" id="levelL1" value="100" ></input>  
                     </div>
                     <div class="hide">
                         <label>Gender</label>
                         <select class="gender calc-trigger"><option></option><option selected="selected">Male</option><option>Female</option></select>
                     </div>
-                    <div>
-                        <label for="levelL1">Level</label>
-                        <input class="level calc-trigger" id="levelL1" value="100" ></input>  
+                    <div class="hide">
+                        <label>Forme</label>
+                        <select class="forme calc-trigger"></select>
                     </div>
                     <div class="hide">
                         <label for="weightL1">Weight (kg)</label>
@@ -1190,14 +1130,6 @@
                         <select aria-label="Type 1" class="type1 terrain-trigger calc-trigger"></select>
                         <select aria-label="Type 2" class="type2 terrain-trigger calc-trigger"></select> <img class="poke-sprite-opp" src="">
                     </div>
-                    <div class="hide">
-                        <label>Forme</label>
-                        <select class="forme calc-trigger"></select>
-                    </div>
-                    <div>
-                        <label>Gender</label>
-                        <select class="gender calc-trigger"><option></option><option selected="selected">Male</option><option>Female</option></select>
-                    </div>
                     <div>
                         <label for="levelR1">Level</label>
                         <input class="level calc-trigger" id="levelR1" value="100" />
@@ -1205,6 +1137,14 @@
                     <div class="hide">
                         <label for="weightR1">Weight (kg)</label>
                         <input class="weight calc-trigger" id="weightR1" value="10.0" />
+                    </div>
+                    <div class="hide">
+                        <label>Forme</label>
+                        <select class="forme calc-trigger"></select>
+                    </div>
+                    <div>
+                        <label>Gender</label>
+                        <select class="gender calc-trigger"><option></option><option selected="selected">Male</option><option>Female</option></select>
                     </div>
                 </div>
                 <div class="info-group i-f-stats">
@@ -1743,7 +1683,7 @@
     <script type="text/javascript" src="./calc/util.js?80153268"></script>
     <script type="text/javascript" src="./calc/stats.js?cee46f1d"></script>
     <script type="text/javascript" src="./calc/data/species.js?ae164210"></script>
-    <script type="text/javascript" src="./js/data/sets/hardcoreMode.js?46eb4304"></script>
+    <script type="text/javascript" src="./js/data/sets/normalMode.js?387d4d52"></script>
     <script type="text/javascript" src="./js/data/flags.js?1568bedb"></script>
     <script type="text/javascript" src="./calc/data/types.js?a52a5105"></script>
     <script type="text/javascript" src="./calc/data/natures.js?28612810"></script>
@@ -1774,7 +1714,9 @@
         (function () {
             var normalButton = document.getElementById("header-normal-button");
             var hardcoreButton = document.getElementById("header-hardcore-button");
-            if (!normalButton || !hardcoreButton) return;
+            var hardcorePage = document.getElementById("hardcore-subpage");
+            var hardcoreFrame = document.getElementById("hardcore-frame");
+            if (!normalButton || !hardcoreButton || !hardcorePage || !hardcoreFrame) return;
 
             var lastAppMode = null;
             var headerBar = document.querySelector(".app-header-bar");
@@ -1798,8 +1740,8 @@
 
             function setMode(mode) {
                 var isHardcore = mode === "hardcore";
-                var comingFromHardcore = lastAppMode === "normal";
                 lastAppMode = mode;
+                var comingFromHardcore = lastAppMode === "normal";
                 document.body.classList.toggle("hardcore-mode", isHardcore);
                 normalButton.classList.toggle("app-header-tab-active", !isHardcore);
                 hardcoreButton.classList.toggle("app-header-tab-active", isHardcore);
@@ -1811,6 +1753,7 @@
                             if (!$ || !$.fn || !$.fn.select2) return;
                             var setValues = [];
                             var moveValues = [];
+                            loadDefaultLists();
                             $(".set-selector").each(function () {
                                 setValues.push($(this).val());
                                 try { $(this).select2("destroy"); } catch (e) {}
@@ -1819,7 +1762,6 @@
                                 moveValues.push($(this).val());
                                 try { $(this).select2("destroy"); } catch (e) {}
                             });
-                            if (typeof loadDefaultLists === "function") loadDefaultLists();
                             $(".move-selector").select2({
                                 dropdownAutoWidth: true,
                                 matcher: function (term, text) {

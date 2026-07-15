@@ -176,6 +176,12 @@ html, body {
     outline-color: #f56f5769;
 }
 
+.trainer-pok.right-side.opponent-marked {
+    background: rgba(194, 68, 68, 0.5);
+    outline: 2px solid #6e1919;
+    outline-offset: -2px;
+}
+
 .poke-sprite-right {
     right: 3px;
 }

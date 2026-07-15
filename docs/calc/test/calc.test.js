@@ -748,11 +748,11 @@ describe('calc', function () {
                     expect(result.desc()).toBe('+1 0 SpD (Def) Kommo-o Body Press vs. 0 HP / 0 Def (SpD) Jirachi in Wonder Room: 157-186 (46 - 54.5%) -- 54.3% chance to 2HKO');
                 });
                 test('Shell Side Arm category check should ignore Wonder Room', function () {
-                    var attacker = Pokemon('Slowbro-Galar');
+                    var attacker = Pokemon('Slowbro-G');
                     var defender = Pokemon('Mew', { boosts: { spd: 1 } });
                     var result = calculate(attacker, defender, Move('Shell Side Arm'), Field({ isWonderRoom: true }));
                     expect(result.move.category).toBe('Special');
-                    expect(result.desc()).toBe('0 SpA Slowbro-Galar Shell Side Arm vs. +1 0 HP / 0 SpD (Def) Mew in Wonder Room: 66-78 (19.3 - 22.8%) -- possible 5HKO');
+                    expect(result.desc()).toBe('0 SpA Slowbro-G Shell Side Arm vs. +1 0 HP / 0 SpD (Def) Mew in Wonder Room: 66-78 (19.3 - 22.8%) -- possible 5HKO');
                 });
             });
         });
@@ -760,7 +760,7 @@ describe('calc', function () {
             (0, helper_1.inGens)([0, [8, 9]], function (_a) {
                 var gen = _a.gen, calculate = _a.calculate, Pokemon = _a.Pokemon, Move = _a.Move, Field = _a.Field;
                 test('Special Shell Side Arm should not factor in Fur Coat or Fluffy', function () {
-                    var attacker = Pokemon('Slowbro-Galar');
+                    var attacker = Pokemon('Slowbro-G');
                     var defender = Pokemon('Avalugg', { ability: 'Fur Coat' });
                     var result = calculate(attacker, defender, Move('Shell Side Arm'));
                     expect(result.move.category).toBe('Special');
@@ -775,14 +775,14 @@ describe('calc', function () {
                 test('Physical Shell Side Arm should not factor in Ice Scales', function () {
                     if (gen === 0)
                         return;
-                    var attacker = Pokemon('Slowbro-Galar');
+                    var attacker = Pokemon('Slowbro-G');
                     var defender = Pokemon('Mew', { ability: 'Ice Scales', evs: { spd: 4 } });
                     var result = calculate(attacker, defender, Move('Shell Side Arm'));
                     expect(result.move.category).toBe('Physical');
                     expect(result.rawDesc.defenderAbility).toBeUndefined();
                 });
                 test('Physical Shell Side Arm should make contact', function () {
-                    var attacker = Pokemon('Slowbro-Galar');
+                    var attacker = Pokemon('Slowbro-G');
                     var defender = Pokemon('Volcarona');
                     var result = calculate(attacker, defender, Move('Shell Side Arm'));
                     expect(result.move.flags.contact).toBe(1);

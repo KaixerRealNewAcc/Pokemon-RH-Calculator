@@ -1497,7 +1497,7 @@ export function calculateAtModsSMSSSV(
   }
 
   if ((attacker.hasItem('Thick Club') &&
-       attacker.named('Cubone', 'Marowak', 'Marowak-Alola', 'Marowak-Alola-Totem') &&
+       attacker.named('Cubone', 'Marowak', 'Marowak-A', 'Marowak-A-Totem') &&
        move.category === 'Physical') ||
       (attacker.hasItem('Deep Sea Tooth') &&
        attacker.named('Clamperl') &&

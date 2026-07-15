@@ -490,7 +490,7 @@ var SETDEX_SV = {
   },
   "Raichu": {
   },
-  "Raichu-Alola": {
+  "Raichu-A": {
     "Leader Lt. Surge": {
         "level": 36,
         "ability": "Surge Surfer",
@@ -509,7 +509,7 @@ var SETDEX_SV = {
   },
   "Sandslash": {
   },
-  "Sandslash-Alola": {
+  "Sandslash-A": {
     "Leader Pryce Team 2": {
         "level": 73,
         "ability": "Slush Rush",
@@ -726,7 +726,7 @@ var SETDEX_SV = {
         "index": 485,
     }, 
   },
-  "Ninetales-Alola": {
+  "Ninetales-A": {
     "Pkmn Tower Grunt 1": {
         "level": 55,
         "ability": "Serene Grace",
@@ -806,7 +806,7 @@ var SETDEX_SV = {
         "index": 124,
     },
   },
-  "Dugtrio-Alola": {
+  "Dugtrio-A": {
     "Biker Lao B2B2B w/Koji & Luke": {
         "level": 66,
         "ability": "Sand Force",
@@ -825,7 +825,7 @@ var SETDEX_SV = {
   },
   "Persian": {
   },
-  "Persian-Alola": {
+  "Persian-A": {
     "Dig House Rocket Grunt": {
         "level": 26,
         "ability": "Feline Prowess",
@@ -934,7 +934,7 @@ var SETDEX_SV = {
         "index":563,
       },
   },
-  "Arcanine-Hisui": {
+  "Arcanine-H": {
     "Route 8 Super Nerd Aidan": {
         "level": 43,
         "ability": "Rock Head",
@@ -1123,7 +1123,7 @@ var SETDEX_SV = {
         "index": 477,
     },
   },
-  "Slowbro-Galar": {
+  "Slowbro-G": {
     "Leader Erika": {
         "level": 44,
         "ability": "Regenerator",
@@ -1198,7 +1198,7 @@ var SETDEX_SV = {
         "index": 121,
     },
   },
-  "Farfetch’d-Galar": {
+  "Farfetch’d-G": {
     "Leader Falkner": {
         "level": 14,
         "ability": "Scrappy",
@@ -1366,7 +1366,7 @@ var SETDEX_SV = {
   },
   "Voltorb": {
   },
-  "Voltorb-Hisui": {
+  "Voltorb-H": {
     "Mt. Moon Super Nerd Miguel": {
         "level": 22,
         "ability": "Reckless",
@@ -1396,7 +1396,7 @@ var SETDEX_SV = {
         "index":392,
     },
   },
-  "Electrode-Hisui":{
+  "Electrode-H":{
     "Leader Lt. Surge": {
         "level": 36,
         "ability": "Reckless",
@@ -1445,7 +1445,7 @@ var SETDEX_SV = {
   },
   "Marowak": {
   },
-  "Marowak-Alola":{
+  "Marowak-A":{
      "Route 23 Brendan": {
         "level": 82,
         "ability": "Bone Zone",
@@ -1522,7 +1522,7 @@ var SETDEX_SV = {
   },
   "Weezing": {
   },
-  "Weezing-Galar": {
+  "Weezing-G": {
     "Rocket Hideout Left Grunt": {
         "level": 47,
         "ability": "Neutralizing Gas",
@@ -1723,7 +1723,7 @@ var SETDEX_SV = {
         "index":390,
     },
   },
-  "Mr. Mime-Galar":{
+  "Mr. Mime-G":{
    "Route 6 Camper Jeff": {
         "level": 35,
         "ability": "Ice Body",
@@ -2185,7 +2185,7 @@ var SETDEX_SV = {
   },
   "Articuno":{
   },
-  "Articuno-Galar":{
+  "Articuno-G":{
     "Silph Co. Arianna & Archer": {
         "level": 55,
         "ability": "Competitive",
@@ -2241,7 +2241,7 @@ var SETDEX_SV = {
         "index":516,
       },
   },
-  "Zapdos-Galar":{
+  "Zapdos-G":{
     "Cinnabar Gym Ace Trainer Derek": {
         "level": 76,
         "ability": "Defiant",
@@ -2258,7 +2258,7 @@ var SETDEX_SV = {
   },
   "Moltres":{
   },
-  "Moltres-Galar":{
+  "Moltres-G":{
     "Cerulean Cave Giovanni": {
         "level": 80,
         "ability": "Berserk",
@@ -2734,7 +2734,7 @@ var SETDEX_SV = {
   },
   "Slowking":{
   },
-  "Slowking-Galar":{
+  "Slowking-G":{
   },
   "Misdreavus":{
     "Nugget Bridge Camper Ethan": {
@@ -2842,7 +2842,7 @@ var SETDEX_SV = {
   },
   "Qwilfish":{
   },
-  "Qwilfish-Hisui":{
+  "Qwilfish-H":{
   },
   "Overqwil": {
     "Pkmn Tower Grunt 1": {
@@ -2910,7 +2910,7 @@ var SETDEX_SV = {
   },
   "Sneasel":{
   },
-  "Sneasel-Hisui":{
+  "Sneasel-H":{
     "Route 9 Picknicker Caitlin": {
         "level": 43,
         "ability": "Inner Focus",
@@ -2995,7 +2995,7 @@ var SETDEX_SV = {
   },
   "Corsola":{   
   },
-  "Corsola-Galar":{   
+  "Corsola-G":{   
   },
   "Cursola": {
     "Route 15 Ace Trainer Haley": {
@@ -3454,11 +3454,11 @@ var SETDEX_SV = {
   },
   "Zigzagoon":{   
   },
-  "Zigzagoon-Galar":{   
+  "Zigzagoon-G":{   
   },
   "Linoone":{   
   },
-  "Linoone-Galar":{   
+  "Linoone-G":{   
   },
   "Obstagoon": {
     "Pkmn Tower Grunt 2": {
@@ -5197,7 +5197,7 @@ var SETDEX_SV = {
         "index": 97,
     },
   },
-  "Samurott-Hisui": {
+  "Samurott-H": {
     "Pkmn Mansion Scientist Ted": {
         "level": 73,
         "ability": "Sharpness",
@@ -5367,7 +5367,7 @@ var SETDEX_SV = {
         "index":294,
     },
   },
-  "Lilligant-Hisui": {
+  "Lilligant-H": {
     "Rocket Hideout Left Grunt": {
         "level": 47,
         "ability": "Hustle",
@@ -5472,7 +5472,7 @@ var SETDEX_SV = {
         "index":195,
     },
   },
-  "Braviary-Hisui": {
+  "Braviary-H": {
     "Route 8 Super Nerd Aidan": {
         "level": 44,
         "ability": "Sheer Force",
@@ -5788,7 +5788,7 @@ var SETDEX_SV = {
         "index": 457,
     },
   },
-  "Darmanitan-Galar": {
+  "Darmanitan-G": {
     "Camper Justin B2B w/ Andrew": {
         "level": 66,
         "ability": "Zen Mode",
@@ -6016,7 +6016,7 @@ var SETDEX_SV = {
         "index":520,
       },
   },
-  "Goodra-Hisui": {
+  "Goodra-H": {
   },
   "Tornadus": {
     "Route 12 Rocker Luca": {

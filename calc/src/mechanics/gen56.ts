@@ -903,7 +903,7 @@ export function calculateAtModsBWXY(
   }
 
   if ((attacker.hasItem('Thick Club') &&
-       attacker.named('Cubone', 'Marowak', 'Marowak-Alola') &&
+       attacker.named('Cubone', 'Marowak', 'Marowak-A') &&
        move.category === 'Physical') ||
       (attacker.hasItem('Deep Sea Tooth') &&
        attacker.named('Clamperl') &&

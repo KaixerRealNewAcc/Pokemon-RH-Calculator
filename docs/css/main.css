@@ -456,7 +456,7 @@ select {
     flex: 1 1 auto;
     min-width: 0;
 }
-.app-header-tabs {
+.app-header-tabs, .modeSelection {
     margin-left: auto;
     margin-right: 0;
     flex-shrink: 0;

@@ -887,12 +887,12 @@ describe('calc', () => {
           );
         });
         test('Shell Side Arm category check should ignore Wonder Room', () => {
-          const attacker = Pokemon('Slowbro-Galar');
+          const attacker = Pokemon('Slowbro-G');
           const defender = Pokemon('Mew', {boosts: {spd: 1}});
           const result = calculate(attacker, defender, Move('Shell Side Arm'), Field({isWonderRoom: true}));
           expect(result.move.category).toBe('Special');
           expect(result.desc()).toBe(
-            '0 SpA Slowbro-Galar Shell Side Arm vs. +1 0 HP / 0 SpD (Def) Mew in Wonder Room: 66-78 (19.3 - 22.8%) -- possible 5HKO'
+            '0 SpA Slowbro-G Shell Side Arm vs. +1 0 HP / 0 SpD (Def) Mew in Wonder Room: 66-78 (19.3 - 22.8%) -- possible 5HKO'
           );
         });
       });
@@ -900,7 +900,7 @@ describe('calc', () => {
     describe('Shell Side Arm', () => {
       inGens([0, [8, 9]], ({gen, calculate, Pokemon, Move, Field}) => {
         test('Special Shell Side Arm should not factor in Fur Coat or Fluffy', () => {
-          const attacker = Pokemon('Slowbro-Galar');
+          const attacker = Pokemon('Slowbro-G');
           const defender = Pokemon('Avalugg', {ability: 'Fur Coat'});
 
           let result = calculate(attacker, defender, Move('Shell Side Arm'));
@@ -915,7 +915,7 @@ describe('calc', () => {
         });
         test('Physical Shell Side Arm should not factor in Ice Scales', () => {
           if (gen === 0) return;
-          const attacker = Pokemon('Slowbro-Galar');
+          const attacker = Pokemon('Slowbro-G');
           const defender = Pokemon('Mew', {ability: 'Ice Scales', evs: {spd: 4}});
 
           const result = calculate(attacker, defender, Move('Shell Side Arm'));
@@ -923,7 +923,7 @@ describe('calc', () => {
           expect(result.rawDesc.defenderAbility).toBeUndefined();
         });
         test('Physical Shell Side Arm should make contact', () => {
-          const attacker = Pokemon('Slowbro-Galar');
+          const attacker = Pokemon('Slowbro-G');
           const defender = Pokemon('Volcarona');
 
           const result = calculate(attacker, defender, Move('Shell Side Arm'));

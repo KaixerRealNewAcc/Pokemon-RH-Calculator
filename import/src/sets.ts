@@ -161,7 +161,7 @@ const FORMES: {[name: string]: string} = {
   'Aegislash-Shield': 'Aegislash',
   'Wishiwashi-School': 'Wishiwashi',
   'Minior-Meteor': 'Minior',
-  'Darmanitan-Galar-Zen': 'Darmanitan-Galar',
+  'Darmanitan-G-Zen': 'Darmanitan-G',
   'Sirfetch’d': 'Sirfetch\'d',
   'Keldeo-Resolute': 'Keldeo',
 };

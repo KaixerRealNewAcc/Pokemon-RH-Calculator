@@ -1980,6 +1980,8 @@ function getTerrainEffects() {
 
 function loadDefaultLists() {
     $(".set-selector").select2({
+		width: "100%",
+		containerCssClass: "set-selector-select2",
         formatResult: function (object) {
             if ($("#randoms").prop("checked")) {
                 return object.pokemon;
@@ -2186,6 +2188,20 @@ $(document).on('click', '.left-side', function () {
 	$('.player .select2-chosen').text(set);
 })
 
+$(document).on('contextmenu', '.trainer-pok.right-side', function (e) {
+	e.preventDefault();
+	var id = $(this).attr('data-id');
+	if (id) {
+		if ($(this).hasClass('opponent-marked')) {
+			opposingMarkedSetIds.delete(id);
+		} else {
+			opposingMarkedSetIds.add(id);
+		}
+		$(this).toggleClass('opponent-marked');
+		syncAlliesFaintedFromOpponentMarks();
+	}
+});
+
 /** Tag Partner row (Partner Rival / Partner Steven): load set into player side for calculations. */
 $(document).on("click", ".tag-partner-pok", function () {
 	var set = $(this).attr("data-id");
@@ -2193,6 +2209,19 @@ $(document).on("click", ".tag-partner-pok", function () {
 	$(".player").change();
 	$(".player .select2-chosen").text(set);
 });
+
+// Right-click: box → team, team → box (same as calc-master)
+$(document).on('contextmenu', '.trainer-pok left-side', function (e) {
+	e.preventDefault();
+	var el = e.currentTarget;
+	var parentId = el.parentNode && el.parentNode.id;
+	if (parentId === 'team-poke-list') {
+		document.getElementById('box-poke-list').appendChild(el);
+	} else if (parentId === 'box-poke-list' || parentId === 'box-poke-list2') {
+		document.getElementById('team-poke-list').appendChild(el);
+	}
+})
+
 
 /** SETDEX species string → filename stem (matches getSrcImgPokemon rules). */
 function normalizeTrainerIconSpeciesName(pok_name) {

@@ -6,8 +6,8 @@
     <meta name="color-scheme" content="dark">
     <title>Pok&eacute;mon Radical Red Calculator By Kaixer.</title>
     <link type="text/css" rel="stylesheet" href="./js/vendor/select2/select2.css" />
-    <link type="text/css" rel="stylesheet" href="./css/main.css?" />
-    <link type="text/css" rel="stylesheet" href="./css/settings.css?" />
+    <link type="text/css" rel="stylesheet" href="./css/main.css?2632a5fb" />
+    <link type="text/css" rel="stylesheet" href="./css/settings.css?06ca8e4a" />
     <link type="text/css" rel="stylesheet" href="./css/vendor/bootstrap.css" />
     <link type="text/css" rel="stylesheet" href="./css/dark-theme.css" id="dark-theme-styles">
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -59,10 +59,6 @@
         </div>
         
         <span class="title-text">Radical Red Calculator By Kaixer - Normal Mode</span>
-        <div class="app-header-tabs" aria-label="Calculator navigation" role="group">
-            <button type="button" class="btn btn-small app-header-tab" id="header-normal-button">Normal</button>
-            <button type="button" class="btn btn-small app-header-tab" id="header-hardcore-button">Hardcore</button>
-        </div>
 
         <span class="genSelection hide" aria-labelledby="selectGenInstruction" role="radiogroup" title="Select the generation.">
             <span class="visually-hidden" id="selectGenInstruction">Select the generation.</span>
@@ -76,16 +72,12 @@
             <input class="gen visually-hidden" type="radio" name="gen" value="8" id="gen8" /><label class="btn btn-small btn-right" for="gen8">S/S</label>
             <input class="gen visually-hidden" type="radio" name="gen" value="9" id="gen9" checked="checked" /><label class="btn btn-small btn-right" for="gen9">S/V</label>
         </span>
-        <!--<span class="modeSelection" aria-labelledby="selectModeInstruction" role="radiogroup" title="Select the calculator's mode of function.">
+        <span class="app-header-tabs" aria-labelledby="selectModeInstruction" role="radiogroup" title="Select the calculator's mode of function.">
             <span class="visually-hidden" id="selectModeInstruction">Select the calculator's mode of function.</span>
-            <input class="mode visually-hidden" type="radio" name="mode" id="normal"  /><label class="btn-mode btn-normal btn-left" for="normal">Normal</label>
-            <input class="mode visually-hidden" type="radio" name="mode" id="hardcore" checked="checked" /><label class="btn-mode btn-normal btn-right" for="hardcore">Hardcore</label>
-        </span>-->
+            <input class="mode visually-hidden" type="radio" name="mode" id="index" checked="checked" /><label class="btn btn-left app-header-tab" for="index">Normal</label>
+            <input class="mode visually-hidden" type="radio" name="mode" id="hardcore"  /><label class="btn btn-right app-header-tab" for="hardcore">Hardcore</label>
+        </span>
     </div>
-
-    <main id="hardcore-subpage" class="app-hardcore-subpage" hidden aria-hidden="true" aria-label="Hardcore Mode">
-        <iframe id="hardcore-frame" class="app-hardcore-iframe" title="hardcore" src="hardcore.html"></iframe>
-    </main>
 
     <hr />
     <div aria-label="Move selection" class="move-result-group" role="region" title="Select a move to show detailed results.">
@@ -1668,7 +1660,7 @@
         </div>
     </div>
     <script type="text/javascript">
-        var linkExtension = '.template.html';
+        var linkExtension = '.html';
     </script>
     <script type="text/javascript" src="./js/vendor/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="./js/vendor/select2/select2.min.js"></script>
@@ -1683,134 +1675,33 @@
     <script type="text/javascript" src="./calc/util.js?"></script>
     <script type="text/javascript" src="./calc/stats.js?"></script>
     <script type="text/javascript" src="./calc/data/species.js?"></script>
-    <script type="text/javascript" src="./js/data/sets/normalMode.js?"></script>
-    <script type="text/javascript" src="./js/data/flags.js?"></script>
-    <script type="text/javascript" src="./calc/data/types.js?"></script>
-    <script type="text/javascript" src="./calc/data/natures.js?"></script>
-    <script type="text/javascript" src="./calc/data/abilities.js?"></script>
-    <script type="text/javascript" src="./calc/data/moves.js?"></script>
-    <script type="text/javascript" src="./calc/data/items.js?"></script>
-    <script type="text/javascript" src="./calc/data/index.js?"></script>
-    <script type="text/javascript" src="./calc/move.js?"></script>
-    <script type="text/javascript" src="./calc/pokemon.js?"></script>
-    <script type="text/javascript" src="./calc/field.js?"></script>
-    <script type="text/javascript" src="./calc/items.js?"></script>
-    <script type="text/javascript" src="./calc/mechanics/util.js?"></script>
-    <script type="text/javascript" src="./calc/mechanics/gen789.js?"></script>
-    <script type="text/javascript" src="./calc/mechanics/gen56.js?"></script>
-    <script type="text/javascript" src="./calc/mechanics/gen4.js?"></script>
-    <script type="text/javascript" src="./calc/mechanics/gen3.js?"></script>
-    <script type="text/javascript" src="./calc/mechanics/gen12.js?"></script>
-    <script type="text/javascript" src="./calc/calc.js?"></script>
-    <script type="text/javascript" src="./calc/desc.js?"></script>
-    <script type="text/javascript" src="./calc/result.js?"></script>
-    <script type="text/javascript" src="./calc/adaptable.js?"></script>
-    <script type="text/javascript" src="./calc/index.js?"></script>
-    <script type="text/javascript" src="./js/shared_controls.js?"></script>
-    <script type="text/javascript" src="./js/index_randoms_controls.js?"></script>
-    <script type="text/javascript" src="./js/moveset_import.js?"></script>
-    <script type="text/javascript" src="./js/app-menu.js?"></script>
-    <script type="text/javascript">
-        (function () {
-            var normalButton = document.getElementById("header-normal-button");
-            var hardcoreButton = document.getElementById("header-hardcore-button");
-            var hardcorePage = document.getElementById("hardcore-subpage");
-            var hardcoreFrame = document.getElementById("hardcore-frame");
-            if (!normalButton || !hardcoreButton || !hardcorePage || !hardcoreFrame) return;
-
-            var lastAppMode = null;
-            var headerBar = document.querySelector(".app-header-bar");
-
-            function syncDexTheme() {
-                try {
-                    var frameDoc = dexFrame.contentDocument;
-                    if (!frameDoc || !frameDoc.documentElement) return;
-                    var theme = document.documentElement.getAttribute("data-theme") || "original";
-                    frameDoc.documentElement.setAttribute("data-host-theme", theme);
-                } catch (e) {}
-            }
-
-            function syncDexLayoutVars() {
-                try {
-                    if (!headerBar) return;
-                    var h = headerBar.offsetHeight || 0;
-                    if (h) document.documentElement.style.setProperty("--app-header-bar-height", h + "px");
-                } catch (e) {}
-            }
-
-            function setMode(mode) {
-                var isHardcore = mode === "hardcore";
-                lastAppMode = mode;
-                var comingFromHardcore = lastAppMode === "normal";
-                document.body.classList.toggle("hardcore-mode", isHardcore);
-                normalButton.classList.toggle("app-header-tab-active", !isHardcore);
-                hardcoreButton.classList.toggle("app-header-tab-active", isHardcore);
-                syncDexLayoutVars();
-                if (!isHardcore && comingFromHardcore) {
-                    requestAnimationFrame(function () {
-                        requestAnimationFrame(function () {
-                            var $ = window.jQuery;
-                            if (!$ || !$.fn || !$.fn.select2) return;
-                            var setValues = [];
-                            var moveValues = [];
-                            $(".set-selector").each(function () {
-                                setValues.push($(this).val());
-                                try { $(this).select2("destroy"); } catch (e) {}
-                            });
-                            $(".move-selector").each(function () {
-                                moveValues.push($(this).val());
-                                try { $(this).select2("destroy"); } catch (e) {}
-                            });
-                            if (typeof loadDefaultLists === "function") loadDefaultLists();
-                            $(".move-selector").select2({
-                                dropdownAutoWidth: true,
-                                matcher: function (term, text) {
-                                    return text.toUpperCase().indexOf(term.toUpperCase()) === 0 || text.toUpperCase().indexOf(" " + term.toUpperCase()) >= 0;
-                                }
-                            });
-                            $(".set-selector").each(function (i) {
-                                if (setValues[i] !== undefined && setValues[i] !== null) $(this).val(setValues[i]).trigger("change");
-                            });
-                            $(".move-selector").each(function (i) {
-                                if (moveValues[i] !== undefined && moveValues[i] !== null) $(this).val(moveValues[i]).trigger("change");
-                            });
-                            $(window).trigger("resize");
-                        });
-                    });
-                }
-            }
-
-            normalButton.addEventListener("click", function () {
-                history.replaceState(null, "", location.pathname + location.search);
-                setMode("normal");
-            });
-            hardcoreButton.addEventListener("click", function () {
-                if (location.hash !== "#hardcore") {
-                    location.hash = "hardcore";
-                } else {
-                    setMode("hardcore");
-                }
-            });
-
-            window.addEventListener("hashchange", function () {
-                setMode(location.hash === "#hardcore" ? "hardcore" : "normal");
-            });
-            dexFrame.addEventListener("load", syncDexTheme);
-            new MutationObserver(syncDexTheme).observe(document.documentElement, {
-                attributes: true,
-                attributeFilter: ["data-theme", "class"]
-            });
-            window.addEventListener("resize", syncDexLayoutVars);
-
-            setMode(location.hash === "#hardcore" ? "hardcore" : "normal");
-            syncDexTheme();
-            syncDexLayoutVars();
-            requestAnimationFrame(function () {
-                if (window.jQuery) window.jQuery(window).trigger("resize");
-                else window.dispatchEvent(new Event("resize"));
-            });
-        })();
-    </script>
+    <script type="text/javascript" src="./js/data/sets/normalMode.js?387d4d52"></script>
+    <script type="text/javascript" src="./js/data/flags.js?1568bedb"></script>
+    <script type="text/javascript" src="./calc/data/types.js?a52a5105"></script>
+    <script type="text/javascript" src="./calc/data/natures.js?28612810"></script>
+    <script type="text/javascript" src="./calc/data/abilities.js?a9748753"></script>
+    <script type="text/javascript" src="./calc/data/moves.js?77658c2b"></script>
+    <script type="text/javascript" src="./calc/data/items.js?879b080b"></script>
+    <script type="text/javascript" src="./calc/data/index.js?abecbd82"></script>
+    <script type="text/javascript" src="./calc/move.js?358ce839"></script>
+    <script type="text/javascript" src="./calc/pokemon.js?93c95750"></script>
+    <script type="text/javascript" src="./calc/field.js?2f116a56"></script>
+    <script type="text/javascript" src="./calc/items.js?7274d586"></script>
+    <script type="text/javascript" src="./calc/mechanics/util.js?b7b37712"></script>
+    <script type="text/javascript" src="./calc/mechanics/gen789.js?3bc8192e"></script>
+    <script type="text/javascript" src="./calc/mechanics/gen56.js?4c89c6f4"></script>
+    <script type="text/javascript" src="./calc/mechanics/gen4.js?70e59991"></script>
+    <script type="text/javascript" src="./calc/mechanics/gen3.js?0a1113c4"></script>
+    <script type="text/javascript" src="./calc/mechanics/gen12.js?fafc47a4"></script>
+    <script type="text/javascript" src="./calc/calc.js?13691a43"></script>
+    <script type="text/javascript" src="./calc/desc.js?eea02e7f"></script>
+    <script type="text/javascript" src="./calc/result.js?9b18f412"></script>
+    <script type="text/javascript" src="./calc/adaptable.js?92e49194"></script>
+    <script type="text/javascript" src="./calc/index.js?0b1745b9"></script>
+    <script type="text/javascript" src="./js/shared_controls.js?19d44da7"></script>
+    <script type="text/javascript" src="./js/index_randoms_controls.js?572ec7f8"></script>
+    <script type="text/javascript" src="./js/moveset_import.js?83086917"></script>
+    <script type="text/javascript" src="./js/app-menu.js?c160c3d8"></script>
 </div>
 
 <!-- <div class="wrapper hide" id="settings-wrapper">

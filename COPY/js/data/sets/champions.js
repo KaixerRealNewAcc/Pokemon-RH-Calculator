@@ -77,11 +77,11 @@ var SETDEX_CHAMPIONS = {
     "SM OU Unaware": {"ability":"Unaware","item":"Leftovers","nature":"Bold","moves":["Moonblast","Calm Mind","Wish","Protect"],"sps":{"hp":32,"df":32,"sd":1}},
     "SM CAP Showdown Usage": {"ability":"Unaware","item":"Leftovers","nature":"Bold","moves":["Moonblast","Wish","Protect","Flamethrower"],"sps":{"hp":32,"df":32,"sd":1}}
   },
-  "Ninetales-Alola": {
+  "Ninetales-A": {
     "SM VGC 2018 Hail Setter": {"ability":"Snow Warning","item":"Focus Sash","nature":"Timid","moves":["Blizzard","Freeze-Dry","Aurora Veil","Protect"],"sps":{"hp":1,"sa":32,"sp":32}},
     "SM Battle Spot Doubles Showdown Usage": {"ability":"Snow Warning","item":"Focus Sash","nature":"Timid","moves":["Protect","Blizzard","Aurora Veil","Freeze-Dry"],"sps":{"hp":1,"sa":32,"sp":32}}
   },
-  "Arcanine-Hisui": {
+  "Arcanine-H": {
     "SV Monotype Choice Scarf (Rock)": {"ability":"Rock Head","item":"Choice Scarf","nature":"Jolly","moves":["Flare Blitz","Head Smash","Wild Charge","Close Combat"],"sps":{"at":32,"df":1,"sp":32}},
     "SV Monotype Choice Scarf (Fire)": {"ability":"Rock Head","item":"Choice Scarf","nature":"Jolly","moves":["Flare Blitz","Head Smash","Close Combat","Outrage"],"sps":{"at":32,"df":1,"sp":32}},
     "SV 1v1 Choice Scarf": {"ability":"Intimidate","item":"Choice Scarf","nature":"Adamant","moves":["Head Smash","Raging Fury","Close Combat","Outrage"],"sps":{"at":32,"sd":1,"sp":32}}
@@ -194,7 +194,7 @@ var SETDEX_CHAMPIONS = {
   "Dragonite": {
     "SM 1v1 Choice Scarf": {"ability":"Multiscale","item":"Choice Scarf","nature":"Jolly","moves":["Outrage","Iron Head","Earthquake","Fire Punch"],"sps":{"hp":1,"at":31,"sd":1,"sp":32}}
   },
-  "Typhlosion-Hisui": {
+  "Typhlosion-H": {
     "SV NU Choice Scarf": {"ability":"Frisk","item":"Choice Scarf","nature":"Timid","moves":["Eruption","Fire Blast","Shadow Ball","Focus Blast"],"sps":{"sa":32,"sd":1,"sp":32}},
     "SV PU Choice Item": {"ability":"Blaze","item":"Choice Scarf","nature":"Timid","moves":["Eruption","Fire Blast","Shadow Ball","Focus Blast"],"sps":{"df":1,"sa":32,"sp":32}},
     "SV National Dex RU Calm Mind": {"ability":"Blaze","item":"Leftovers","nature":"Timid","moves":["Calm Mind","Infernal Parade","Flamethrower","Substitute"],"sps":{"sa":32,"sd":1,"sp":32}},
@@ -489,7 +489,7 @@ var SETDEX_CHAMPIONS = {
   "Emboar": {
     "SM 1v1 Fast Choice Scarf": {"ability":"Reckless","item":"Choice Scarf","nature":"Jolly","moves":["Head Smash","Flare Blitz","Superpower","Earthquake"],"sps":{"at":32,"sd":1,"sp":32}}
   },
-  "Samurott-Hisui": {
+  "Samurott-H": {
     "SV OU Lead": {"ability":"Sharpness","item":"Focus Sash","nature":"Jolly","moves":["Ceaseless Edge","Razor Shell","Aqua Jet","Knock Off"],"sps":{"at":32,"sd":1,"sp":32}},
     "SV OU Choice Scarf": {"ability":"Sharpness","item":"Choice Scarf","nature":"Jolly","moves":["Ceaseless Edge","Razor Shell","Knock Off","Flip Turn"],"sps":{"at":32,"df":1,"sp":32}},
     "SV OU Swords Dance": {"ability":"Sharpness","item":"Black Glasses","nature":"Adamant","moves":["Swords Dance","Ceaseless Edge","Razor Shell","Sucker Punch"],"sps":{"at":32,"df":1,"sp":32}},
@@ -521,7 +521,7 @@ var SETDEX_CHAMPIONS = {
     "SM Monotype Focus Sash Lead (Dark)": {"ability":"Intimidate","item":"Focus Sash","nature":"Jolly","moves":["Stealth Rock","Taunt","Knock Off","Earthquake"],"sps":{"at":32,"df":1,"sp":32}},
     "SM Battle Spot Doubles Showdown Usage": {"ability":"Anger Point","item":"Sitrus Berry","nature":"Jolly","moves":["Earthquake","Rock Slide","Protect","Crunch"],"sps":{"hp":1,"at":32,"sp":32}}
   },
-  "Zoroark-Hisui": {
+  "Zoroark-H": {
     "SV Monotype Choice Scarf (Ghost)": {"ability":"Illusion","item":"Choice Scarf","nature":"Timid","moves":["Shadow Ball","Focus Blast","Flamethrower","U-turn"],"sps":{"df":1,"sa":32,"sp":32}},
     "SV Monotype Choice Scarf (Normal)": {"ability":"Illusion","item":"Choice Scarf","nature":"Naive","moves":["Shadow Ball","Flamethrower","Focus Blast","U-turn"],"sps":{"at":1,"sa":32,"sp":32}},
     "SV National Dex Monotype Choiced Attacker (Ghost)": {"ability":"Illusion","item":"Choice Scarf","nature":"Timid","moves":["Shadow Ball","Focus Blast","Hyper Voice","Trick"],"sps":{"sa":32,"sd":1,"sp":32}},
@@ -567,7 +567,7 @@ var SETDEX_CHAMPIONS = {
   "Goodra": {
     "SM RU Choice Scarf": {"ability":"Sap Sipper","item":"Choice Scarf","nature":"Timid","moves":["Draco Meteor","Thunderbolt","Fire Blast","Earthquake"],"sps":{"at":1,"sa":32,"sp":32}}
   },
-  "Goodra-Hisui": {
+  "Goodra-H": {
     "SV UU Offensive Tank": {"ability":"Gooey","item":"Leftovers","nature":"Modest","moves":["Draco Meteor","Flash Cannon","Thunderbolt","Surf"],"sps":{"hp":9,"sa":32,"sp":23}},
     "SV RU Bulky Attacker": {"ability":"Sap Sipper","item":"Leftovers","nature":"Quiet","moves":["Draco Meteor","Heavy Slam","Knock Off","Protect"],"sps":{"hp":32,"df":1,"sa":32}},
     "SV Monotype Specially Defensive (Steel)": {"ability":"Shell Armor","item":"Leftovers","nature":"Careful","moves":["Heavy Slam","Knock Off","Dragon Tail","Protect"],"sps":{"hp":31,"df":1,"sd":32}},
@@ -582,7 +582,7 @@ var SETDEX_CHAMPIONS = {
     "SM NU Offensive Defog": {"ability":"Overgrow","item":"Colbur Berry","nature":"Timid","moves":["Defog","Leaf Storm","Roost","U-turn"],"sps":{"sa":32,"sd":1,"sp":32}},
     "SM Monotype Defensive Defog (Ghost)": {"ability":"Long Reach","item":"Leftovers","nature":"Careful","moves":["Spirit Shackle","Roost","Defog","Swords Dance"],"sps":{"hp":32,"df":13,"sd":8,"sp":12}}
   },
-  "Decidueye-Hisui": {
+  "Decidueye-H": {
     "SV PU Choice Scarf": {"ability":"Scrappy","item":"Choice Scarf","nature":"Jolly","moves":["Triple Arrows","U-turn","Leaf Blade","Brave Bird"],"sps":{"at":32,"sd":1,"sp":32}},
     "SV PU Swords Dance": {"ability":"Scrappy","item":"Spell Tag","nature":"Adamant","moves":["Swords Dance","Triple Arrows","Shadow Claw","Shadow Sneak"],"sps":{"at":32,"df":1,"sp":32}}
   },
